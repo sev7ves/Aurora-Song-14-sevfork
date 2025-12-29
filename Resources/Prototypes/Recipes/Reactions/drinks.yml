@@ -1,3 +1,56 @@
+# SPDX-FileCopyrightText: 2020 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2020 Injazz <injazza@gmail.com>
+# SPDX-FileCopyrightText: 2020 nuke <47336974+nuke-makes-games@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Fishfish458 <47410468+Fishfish458@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Mervill <mervills.email@gmail.com>
+# SPDX-FileCopyrightText: 2022 Moony <moonheart08@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Peptide90 <78795277+Peptide90@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Plasmaguy <jrjr3000@outlook.com>
+# SPDX-FileCopyrightText: 2022 Veritius <45957058+Veritius@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 ZeroDayDaemon <60460608+ZeroDayDaemon@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 fishfish458 <fishfish458>
+# SPDX-FileCopyrightText: 2022 mirrorcult <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2023 Alzore <140123969+Blackern5000@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Floofi <126319569+Shadowtheprotogen546@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Kevin Zheng <kevinz5000@gmail.com>
+# SPDX-FileCopyrightText: 2023 Kit0vras <123590995+Kit0vras@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Velcroboy <107660393+IamVelcroboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Veritius <veritiusgaming@gmail.com>
+# SPDX-FileCopyrightText: 2023 Vordenburg <114301317+Vordenburg@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Waylon Cude <waylon531@gmail.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 keronshb <54602815+keronshb@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 lapatison <100279397+lapatison@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 lzk <124214523+lzk228@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Aidenkrz <aiden@djkraz.com>
+# SPDX-FileCopyrightText: 2024 BlitzTheSquishy <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 CatMagic <135462166+CatMagic1@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Firewatch <54725557+musicmanvr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Hanz <41141796+Hanzdegloker@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 MilenVolf <63782763+MilenVolf@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Tadeo <td12233a@gmail.com>
+# SPDX-FileCopyrightText: 2024 Ubaser <134914314+UbaserB@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Verm <32827189+Vermidia@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 potato1234_x <79580518+potato1234x@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 saga3152 <133799418+saga3152@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 BearWithMe18 <77765510+BearWithMe18@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Mish <bluscout78@yahoo.com>
+# SPDX-FileCopyrightText: 2025 Noah Leach <77765510+BearWithMe18@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 RedBookcase <crazykid1590@gmail.com>
+# SPDX-FileCopyrightText: 2025 SharkSnake98 <peanutbuttersharky@gmail.com>
+# SPDX-FileCopyrightText: 2025 SharkSnake98 <sharksnake87@gmail.com>
+# SPDX-FileCopyrightText: 2025 Tay <td12233a@gmail.com>
+# SPDX-FileCopyrightText: 2025 Zergologist <114537969+Chedd-Error@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 kosticia <kosticia46@gmail.com>
+# SPDX-FileCopyrightText: 2025 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 taydeo <td12233a@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
 - type: reaction
   id: AcidSpit
   reactants:
@@ -23,7 +76,7 @@
 - type: reaction
   id: AlliesCocktail
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Martini:
       amount: 2
@@ -35,7 +88,7 @@
 - type: reaction
   id: Amasec
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Wine:
       amount: 2
@@ -49,7 +102,7 @@
 - type: reaction
   id: Andalusia
   requiredMixerCategories:
-  - Stir
+    - Stir
   reactants:
     Rum:
       amount: 1
@@ -90,7 +143,7 @@
     Uranium:
       amount: 1
   products:
-    AtomicBomb: 10
+    AtomicBomb: 11
 
 - type: reaction
   id: B52
@@ -117,7 +170,7 @@
 - type: reaction
   id: BlueHawaiian
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     CoconutRum:
       amount: 2
@@ -147,7 +200,7 @@
 - type: reaction
   id: BahamaMama
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Ice:
       amount: 1
@@ -165,7 +218,7 @@
     BahamaMama: 6
 
 - type: reaction
-  id: Barefoot
+  id: Bigfoot
   reactants:
     Cream:
       amount: 1
@@ -174,7 +227,7 @@
     JuiceBerry:
       amount: 1
   products:
-    Barefoot: 3
+    Bigfoot: 3
 
 - type: reaction
   id: BananaHonk
@@ -191,7 +244,7 @@
 - type: reaction
   id: BeepskySmash
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Iron:
       amount: 1
@@ -215,7 +268,7 @@
 - type: reaction
   id: BloodyMary
   requiredMixerCategories:
-  - Stir
+    - Stir
   reactants:
     JuiceLime:
       amount: 1
@@ -253,7 +306,7 @@
 - type: reaction
   id: Bronx
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Gin:
       amount: 1
@@ -341,7 +394,7 @@
 - type: reaction
   id: DemonsBlood
   requiredMixerCategories:
-  - Stir
+    - Stir
   reactants:
     Rum:
       amount: 1
@@ -357,7 +410,7 @@
 - type: reaction
   id: DevilsKiss
   requiredMixerCategories:
-  - Stir
+    - Stir
   reactants:
     Rum:
       amount: 1
@@ -371,7 +424,7 @@
 - type: reaction
   id: DoctorsDelight
   requiredMixerCategories:
-  - Stir
+    - Stir
   reactants:
     Cream:
       amount: 2
@@ -389,7 +442,7 @@
 - type: reaction
   id: DriestMartini
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Gin:
       amount: 1
@@ -398,26 +451,10 @@
   products:
     DriestMartini: 2
 
-# Frontier: use our own eggnog recipe
-# - type: reaction
-#   id: Eggnog
-#   requiredMixerCategories:
-#   - Shake
-#   reactants:
-#     Egg:
-#       amount: 1
-#     Milk:
-#       amount: 4
-#     Rum:
-#       amount: 5
-#   products:
-#     Eggnog: 10
-# End Frontier
-
 - type: reaction
   id: ElectricShark
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     DarkandStormy:
       amount: 4
@@ -431,7 +468,7 @@
 - type: reaction
   id: ErikaSurprise
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Ale:
       amount: 2
@@ -450,7 +487,7 @@
   id: EthanolBreakdown
   source: true
   requiredMixerCategories:
-  - Electrolysis
+    - Electrolysis
   reactants:
     Ethanol:
       amount: 9
@@ -474,7 +511,7 @@
 - type: reaction
   id: GargleBlaster
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Cognac:
       amount: 1
@@ -514,7 +551,7 @@
 - type: reaction
   id: Gildlager
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Gold:
       amount: 1
@@ -649,13 +686,11 @@
       amount: 1
   products:
     IrishSlammer: 2
-  sound:
-    path: /Audio/Animals/penguin_squawk.ogg # Cocktail is called grenade penguin in localisation
 
 - type: reaction
   id: IrishCoffee
   requiredMixerCategories:
-  - Stir
+    - Stir
   reactants:
     Coffee:
       amount: 1
@@ -677,9 +712,9 @@
 - type: reaction
   id: JackRose
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
-    JuiceApple:
+    Applejack:
       amount: 1
     Cognac:
       amount: 1
@@ -693,7 +728,7 @@
 - type: reaction
   id: JungleBird
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Rum:
       amount: 3
@@ -717,9 +752,9 @@
     Kalimotxo: 2
 
 - type: reaction
-  id: KiraSpecial
+  id: OrangeLimeSoda
   requiredMixerCategories:
-  - Stir
+    - Stir
   reactants:
     JuiceLime:
       amount: 1
@@ -728,12 +763,12 @@
     SodaWater:
       amount: 1
   products:
-    KiraSpecial: 3
+    OrangeLimeSoda: 3
 
 - type: reaction
   id: Lemonade
   requiredMixerCategories:
-  - Stir
+    - Stir
   reactants:
     JuiceLemon:
       amount: 1
@@ -747,7 +782,7 @@
 - type: reaction
   id: LemonLime
   requiredMixerCategories:
-  - Stir
+    - Stir
   reactants:
     JuiceLemon:
       amount: 1
@@ -761,7 +796,7 @@
 - type: reaction
   id: LongIslandIcedTea
   requiredMixerCategories:
-  - Stir
+    - Stir
   reactants:
     CubaLibre:
       amount: 3
@@ -777,7 +812,7 @@
 - type: reaction
   id: Manhattan
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Whiskey:
       amount: 2
@@ -808,6 +843,8 @@
 
 - type: reaction
   id: Margarita
+  requiredMixerCategories:
+    - Shake #funkystation
   reactants:
     Tequila:
       amount: 2
@@ -819,19 +856,7 @@
 - type: reaction
   id: Martini
   requiredMixerCategories:
-  - Shake
-  reactants:
-    Gin:
-      amount: 2
-    Vermouth:
-      amount: 1
-  products:
-    Martini: 3
-
-- type: reaction # Aurora - Trying to add an alternative Martini recipe
-  id: MartiniAlt
-  requiredMixerCategories:
-  - Stir
+    - Shake
   reactants:
     Gin:
       amount: 2
@@ -854,7 +879,7 @@
 - type: reaction
   id: Mojito
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     JuiceLime:
       amount: 1
@@ -870,7 +895,7 @@
 - type: reaction
   id: MonkeyBusiness
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Gin:
       amount: 1
@@ -920,7 +945,7 @@
   id: NuclearColaBreakdown
   source: true
   requiredMixerCategories:
-  - Centrifuge
+    - Centrifuge
   reactants:
     NuclearCola:
       amount: 10 # assuming we loose all o2 released as gas in the centrifugal process
@@ -933,7 +958,7 @@
 - type: reaction
   id: Patron
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Tequila:
       amount: 10
@@ -945,7 +970,7 @@
 - type: reaction
   id: Painkiller
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     JuicePineapple:
       amount: 3
@@ -1059,7 +1084,7 @@
 - type: reaction
   id: ScrewdriverCocktail
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     JuiceOrange:
       amount: 2
@@ -1116,7 +1141,7 @@
 - type: reaction
   id: SodaWater
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Water:
       amount: 5
@@ -1200,7 +1225,7 @@
 - type: reaction
   id: Tortuga
   requiredMixerCategories:
-  - Stir
+    - Stir
   reactants:
     IcedTea:
       amount: 1
@@ -1212,7 +1237,7 @@
 - type: reaction
   id: ToxinsSpecial
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Rum:
       amount: 2
@@ -1226,7 +1251,7 @@
 - type: reaction
   id: Vampiro
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     TequilaSunrise:
       amount: 3
@@ -1242,7 +1267,7 @@
 - type: reaction
   id: VodkaMartini
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Vermouth:
       amount: 1
@@ -1361,7 +1386,7 @@
 - type: reaction
   id: Vodka
   requiredMixerCategories:
-  - Stir
+    - Stir
   reactants:
     Ethanol:
       amount: 1
@@ -1374,7 +1399,7 @@
   id: WaterBreakdown
   source: true
   requiredMixerCategories:
-  - Electrolysis
+    - Electrolysis
   reactants:
     Water:
       amount: 3
@@ -1409,7 +1434,7 @@
 - type: reaction
   id: Caipirinha
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Rum:
       amount: 1
@@ -1422,20 +1447,19 @@
   products:
     Caipirinha: 4
 
-# Removed in favor of DeltaV Daiquiri
-# - type: reaction
-#   id: Daiquiri
-#   requiredMixerCategories:
-#   - Stir
-#   reactants:
-#     Rum:
-#       amount: 4
-#     Sugar:
-#       amount: 1
-#     JuiceLime:
-#       amount: 1
-#   products:
-#     Daiquiri: 6
+- type: reaction
+  id: Daiquiri
+  requiredMixerCategories:
+    - Stir
+  reactants:
+    Rum:
+      amount: 4
+    Sugar:
+      amount: 1
+    JuiceLime:
+      amount: 1
+  products:
+    Daiquiri: 6
 
 - type: reaction
   id: DeathInTheAfternoon
@@ -1450,7 +1474,7 @@
 - type: reaction
   id: Empress75
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Champagne:
       amount: 2
@@ -1466,7 +1490,7 @@
 - type: reaction
   id: EspressoMartini
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     BlackRussian:
       amount: 1
@@ -1508,7 +1532,7 @@
 - type: reaction
   id: MoscowMule
   requiredMixerCategories:
-  - Stir
+    - Stir
   reactants:
     Vodka:
       amount: 4
@@ -1532,7 +1556,7 @@
 - type: reaction
   id: WhiskeySour
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
     Whiskey:
       amount: 2
@@ -1556,17 +1580,3 @@
       amount: 1
   products:
     ZombieCocktail: 4
-
-- type: reaction
-  id: BacchusBlessing
-  reactants:
-    Hooch:
-      amount: 1
-    Absinthe:
-      amount: 1
-    ManlyDorf:
-      amount: 1
-    SyndicateBomb:
-      amount: 1
-  products:
-    BacchusBlessing: 4

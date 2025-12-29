@@ -1,3 +1,22 @@
+# SPDX-FileCopyrightText: 2022 Alex Evgrashin <aevgrashin@yandex.ru>
+# SPDX-FileCopyrightText: 2022 Mervill <mervills.email@gmail.com>
+# SPDX-FileCopyrightText: 2022 Vordenburg <114301317+Vordenburg@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 metalgearsloth <comedian_vs_clown@hotmail.com>
+# SPDX-FileCopyrightText: 2023 Pieter-Jan Briers <pieterjan.briers@gmail.com>
+# SPDX-FileCopyrightText: 2023 SpaceCat <99134830+Verslebas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Veritius <veritiusgaming@gmail.com>
+# SPDX-FileCopyrightText: 2023 keronshb <54602815+keronshb@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Firewatch <54725557+musicmanvr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Hanz <41141796+Hanzdegloker@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 MilenVolf <63782763+MilenVolf@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Tadeo <td12233a@gmail.com>
+# SPDX-FileCopyrightText: 2024 Ubaser <134914314+UbaserB@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Tay <td12233a@gmail.com>
+# SPDX-FileCopyrightText: 2025 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 taydeo <td12233a@gmail.com>
+#
+# SPDX-License-Identifier: MIT
+
 reagent-name-absinthe = absinthe
 reagent-desc-absinthe = A anise-flavoured spirit derived from botanicals.
 
@@ -62,8 +81,7 @@ reagent-name-acid-spit = acidspit
 reagent-desc-acid-spit = A drink for the daring, can be deadly if incorrectly prepared!
 
 reagent-name-alien-brain-hemorrhage = alien brain hemorrhage
-# Frontier: no "at Med"
-reagent-desc-alien-brain-hemorrhage = You might want to get that checked out.
+reagent-desc-alien-brain-hemorrhage = You might want to get that checked out at Med.
 
 reagent-name-allies-cocktail = allies cocktail
 reagent-desc-allies-cocktail = A drink made from your allies, not as sweet as when made from your enemies.
@@ -95,8 +113,8 @@ reagent-desc-bahama-mama = Tropical cocktail.
 reagent-name-banana-honk = Banana Honk
 reagent-desc-banana-honk = A drink from Clown Heaven.
 
-reagent-name-barefoot = barefoot
-reagent-desc-barefoot = A cassis milkshake, made from cream, fruit juice, and vermouth wine.
+reagent-name-bigfoot = bigfoot
+reagent-desc-bigfoot = According to the Eta Scorpii Cryptozoology Club, this is the favourite drink of the legendary cryptid ape-man, Bigfoot. According to actual scientists, bigfoot wouldn't have the materials to make this cocktail.
 
 reagent-name-beepsky-smash = Beepsky smash
 reagent-desc-beepsky-smash = Deny drinking this and prepare for THE LAW.
@@ -143,10 +161,6 @@ reagent-desc-doctors-delight = A gulp a day keeps the MediBot away. That's proba
 reagent-name-driest-martini = driest martini
 reagent-desc-driest-martini = Only for the experienced. You think you see sand floating in the glass.
 
-reagent-name-eggnog = eggnog
-# Frontier: longer description
-reagent-desc-eggnog = Creamy, sweet, and slightly boozy. Fully nogged.
-
 reagent-name-electric-shark = electric shark
 reagent-desc-electric-shark = Fun Shark fact: Selachians make up 20% of Space Station 16’s Engineering staff!
 
@@ -177,8 +191,8 @@ reagent-desc-hooch = Either someone's failure at cocktail making or attempt in a
 reagent-name-iced-beer = iced beer
 reagent-desc-iced-beer = A beer which is so cold the air around it freezes.
 
-reagent-name-irish-slammer = Grenade Penguin
-reagent-desc-irish-slammer = What's black and white and red all over?
+reagent-name-irish-slammer = Irish slammer
+reagent-desc-irish-slammer = An unconventional mixture of irish cream and stout.
 
 reagent-name-irish-cream = Irish cream
 reagent-desc-irish-cream = Whiskey-imbued cream. What else could you expect from the Irish.
@@ -194,9 +208,6 @@ reagent-desc-jungle-bird = Despite the name, it’s not exceptionally popular am
 
 reagent-name-kalimotxo = kalimotxo
 reagent-desc-kalimotxo = A high-class Cuba Libre, for the discerning alcoholic.
-
-reagent-name-kira-special = Kira special
-reagent-desc-kira-special = Long live the guy who everyone had mistaken for a girl. Baka!
 
 reagent-name-tortuga = Tortuga
 reagent-desc-tortuga = Perfect for pirates who’ve been selected as the designated driver. Yarr!
@@ -362,7 +373,3 @@ reagent-desc-whiskey-sour = What's the secret ingredient? Eggs. It's eggs.
 
 reagent-name-zombiecocktail = Zombie
 reagent-desc-zombiecocktail = It gets in your head. Your he-eyeh-ead.
-
-# Frontier: capitalize Bacchus, no s post-apostrophe
-reagent-name-bacchus-blessing = Bacchus' blessing
-reagent-desc-bacchus-blessing = You didn't think it was possible for a liquid to be so utterly revolting. Are you sure about this...?
