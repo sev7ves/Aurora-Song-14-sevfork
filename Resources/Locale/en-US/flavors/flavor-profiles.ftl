@@ -333,6 +333,12 @@ flavor-complex-vodka-martini = like a spy movie from Russia
 flavor-complex-vodka-tonic = refreshingly bitter
 flavor-complex-coconut-rum = like nutty fermented sugar
 flavor-complex-bacchus-blessing = like a wall of bricks
+flavor-complex-cosmic-alaska = like an interstellar aurora
+flavor-complex-coconut-sake-colada = like coconut and lemongrass
+flavor-complex-bruised-melon = like sweet melons
+flavor-complex-black-japan = like a late night in Tokyo
+flavor-complex-horses-neck = like hooves to the face
+flavor-complex-ransom-note = like extortion
 
 ### This is exactly what pilk tastes like. I'm not even joking. I might've been a little drunk though
 flavor-complex-pilk = like sweet milk
