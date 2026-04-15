@@ -1,0 +1,34 @@
+- type: entity
+  name: Atmos Fix Respiron Marker
+  id: AtmosFixRespironMarker
+  description: "Respiron @ gas miner pressure, T20C"
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Markers/atmos.rsi # {
+          state: base
+          shader: unshaded
+        - sprite: _AS/Markers/atmos.rsi
+          shader: unshaded # }
+          state: respiron
+    - type: AtmosFixMarker
+      mode: 14
+
+- type: entity
+  name: Atmos Fix Respiron Marker
+  id: AtmosFixRespironRoomMarker
+  suffix: Room
+  description: "Respiron @ 101kpa, T20C"
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Markers/atmos.rsi # {
+          state: base
+          shader: unshaded
+        - sprite: _AS/Markers/atmos.rsi
+          shader: unshaded # }
+          state: respiron
+    - type: AtmosFixMarker
+      mode: 13

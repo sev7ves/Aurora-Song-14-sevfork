@@ -1,0 +1,45 @@
+- type: entity
+  abstract: true
+  parent: AirSensorBase
+  id: AirSensorRespironBase
+  suffix: Respiron Atmosphere
+  components:
+  - type: AtmosMonitor
+    gasThresholdPrototypes:
+      Oxygen: voxOxygen # we want it to be safe for vox
+      Nitrogen: ignore
+      CarbonDioxide: stationCO2
+      Plasma: stationPlasma
+      Tritium: stationTritium
+      WaterVapor: stationWaterVapor
+      Ammonia: stationAmmonia
+      NitrousOxide: stationNO
+      Frezon: danger
+      Respiron: voxNitrogen # We want to keep it at a high level
+      Helium: stationHe
+
+- type: entity
+  parent: [AirSensorRespironBase, AirSensor]
+  id: AirSensorRespiron
+
+- type: entity
+  parent: [AirSensorRespironBase, GasVentPump]
+  id: GasVentPumpRespiron
+
+- type: entity
+  parent: [AirSensorRespironBase, GasVentScrubber]
+  id: GasVentScrubberRespiron
+  components:
+  - type: GasVentScrubber
+    wideNet: true # Air alarm with auto mode overrides filters with hardcoded defaults so default to widenet
+    filterGases:
+    - Oxygen # bad for vox :(
+    - Nitrogen # we only want respiron
+    - CarbonDioxide
+    - Plasma
+    - Tritium
+    - WaterVapor
+    - Ammonia
+    - NitrousOxide
+    - Frezon
+    - Helium # Frontier
