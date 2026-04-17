@@ -91,7 +91,7 @@ public sealed partial class AtmosphereSystem
        mixtures[13].AdjustMoles(Gas.Respiron, Atmospherics.MolesCellStandard);
 
        // Aurora - 14: Respiron (GM), for the motel
-       mixtures[14].AdjustMoles(Gas.Respiron, Atmospherics.MolesCellStandard);
+       mixtures[14].AdjustMoles(Gas.Respiron, Atmospherics.MolesCellGasMiner);
 
        foreach (var arg in args)
        {
