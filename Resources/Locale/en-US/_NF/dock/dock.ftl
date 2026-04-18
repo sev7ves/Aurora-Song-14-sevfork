@@ -23,6 +23,11 @@ dock-label-station-seven-c = 7C
 dock-label-station-eight-a = 8A
 dock-label-station-eight-b = 8B
 dock-label-station-eight-c = 8C
+dock-label-station-one-d = 1D
+dock-label-station-two-d = 2D
+dock-label-station-three-d = 3D
+dock-label-station-four-d = 4D
+dock-label-station-five-d = 5D
 
 dock-label-trade-cargo-bay-one = CB1
 dock-label-trade-cargo-bay-two = CB2
@@ -74,3 +79,12 @@ dock-label-preferred-three-c = Pr-3C
 dock-label-preferred-four-a = Pr-4A
 dock-label-preferred-four-b = Pr-4B
 dock-label-preferred-four-c = Pr-4C
+
+#Aurora's Song - added service docks
+
+dock-label-service-one = SRV-1
+dock-label-service-two = SRV-2
+dock-label-service-three = SRV-3
+dock-label-service-four = SRV-4
+dock-label-service-five = SRV-5
+dock-label-service-six = SRV-6
