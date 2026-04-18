@@ -17,3 +17,28 @@
     #- Ammonia
     #- NitrousOxide
     #- Frezon
+
+
+- type: entity
+  parent: EnergyAirConverter
+  id: EnergyRespironConverter
+  name: energy-to-respiron converter
+  description: An enormous machine that converts huge amounts of power into superheated respiron.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: GasSpawnPowerConsumer
+    spawnMixture:
+      moles:
+      - 0 # oxygen
+      - 0 # nitrogen
+      - 0 # CO2
+      - 0 # Plasma
+      - 0 # Tritium
+      - 0 # Water vapor
+      - 0 # Ammonia
+      - 0 # N2O
+      - 0 # Frezon
+      - 1 # Respiron
+      - 0 # Helium
+      temperature: 5273 # ~ 5000 deg C, roughly when plasma turns back into gas
