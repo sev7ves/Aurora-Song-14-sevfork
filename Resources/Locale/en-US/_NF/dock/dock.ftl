@@ -88,3 +88,34 @@ dock-label-service-three = SRV-3
 dock-label-service-four = SRV-4
 dock-label-service-five = SRV-5
 dock-label-service-six = SRV-6
+
+#Aurora's Song - added staff docks
+dock-label-staff-one-a = Stf-1A
+dock-label-staff-one-b = Stf-1B
+dock-label-staff-one-c = Stf-1C
+dock-label-staff-two-a = Stf-2A
+dock-label-staff-two-b = Stf-2B
+dock-label-staff-two-c = Stf-2C
+dock-label-staff-three-a = Stf-3A
+dock-label-staff-three-b = Stf-3B
+dock-label-staff-three-c = Stf-3C
+dock-label-staff-four-a = Stf-4A
+dock-label-staff-four-b = Stf-4B
+dock-label-staff-four-c = Stf-4C
+dock-label-staff-five-a = Stf-5A
+dock-label-staff-five-b = Stf-5B
+dock-label-staff-five-c = Stf-5C
+dock-label-staff-six-a = Stf-6A
+dock-label-staff-six-b = Stf-6B
+dock-label-staff-six-c = Stf-6C
+
+#Aurora's Song - added public docks
+dock-label-public-one-a = Pub-1A
+dock-label-public-one-b = Pub-1B
+dock-label-public-one-c = Pub-1C
+dock-label-public-two-a = Pub-2A
+dock-label-public-two-b = Pub-2B
+dock-label-public-two-c = Pub-2C
+dock-label-public-three-a = Pub-3A
+dock-label-public-three-b = Pub-3B
+dock-label-public-three-c = Pub-3C

@@ -54,6 +54,20 @@
     sprite: _AS/Clothing/OuterClothing/Misc/sle_long.rsi
   - type: Clothing
     sprite: _AS/Clothing/OuterClothing/Misc/sle_long.rsi
+  - type: Armor # Equivalent to the standard vest officers get
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.65
+        Heat: 0.7
+        Caustic: 0.65
+  - type: ExplosionResistance
+    damageCoefficient: 0.60
+  - type: ClothingSpeedModifier
+    walkModifier: 1.0
+    sprintModifier: 1.0
+  - type: GroupExamine
 
 #region Command
 

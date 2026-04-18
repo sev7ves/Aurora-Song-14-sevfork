@@ -259,7 +259,7 @@
   suffix: Chemistry, Locked
   components:
   - type: AccessReader
-    access: [["Chemistry"]]
+    access: [["Chemistry"], ["Medical"]] # Aurora's Song - Gave medics access to chemistry
 
 - type: entity
   parent: DoorElectronics

@@ -107,6 +107,7 @@
       - NewsReaderCartridge
       - BountyContractsCartridge # Frontier
       - AstroNavCartridge # Frontier
+      - NanoChatCartridge # Auroras Song
     cartridgeSlot:
       priority: -1
       name: device-pda-slot-component-slot-name-cartridge
@@ -193,6 +194,7 @@
     - NewsReaderCartridge
     - BountyContractsCartridge # Frontier
     - AstroNavCartridge # Frontier
+    - NanoChatCartridge # Auroras Song
     - WantedListCartridge
 
 - type: entity
@@ -534,6 +536,7 @@
     - NanoTaskCartridge
     - NewsReaderCartridge
     - AstroNavCartridge
+    - NanoChatCartridge # Auroras Song
 
 - type: entity
   parent: BasePDA
@@ -1004,6 +1007,7 @@
       - WantedListCartridge
       - LogProbeCartridge
       - AstroNavCartridge
+      - NanoChatCartridge # Auroras Song
 
 - type: entity
   parent: CentcomPDA
@@ -1022,6 +1026,7 @@
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     notificationsEnabled: false
+    diskSpace: 10 # DeltaV
     preinstalled:
       - CrewManifestCartridge
       - NotekeeperCartridge
@@ -1031,6 +1036,7 @@
       - WantedListCartridge
       - MedTekCartridge
       - AstroNavCartridge
+      - NanoChatCartridge # Auroras Song
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
@@ -1151,6 +1157,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - AstroNavCartridge # Frontier
+      - NanoChatCartridge # Auroras Song
 
 - type: entity
   parent: BaseSecurityPDA
@@ -1184,6 +1191,7 @@
       - LogProbeCartridge
       - AstroNavCartridge
       - MailMetricsCartridge # Frontier
+      - NanoChatCartridge # Auroras Song
 
 - type: entity
   parent: ERTLeaderPDA

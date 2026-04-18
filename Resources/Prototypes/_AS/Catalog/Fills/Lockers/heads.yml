@@ -68,3 +68,24 @@
         - id: DemagUnlimited
         - id: Flash
         - id: DoorRemoteCommand
+
+#region Site Manager
+- type: entity
+  id: LockerSiteManagerFilled
+  suffix: Filled
+  parent: LockerChiefEngineer
+  components:
+    - type: StorageFill
+      contents:
+      - id: AccessConfigurator 
+      - id: BoxEncryptionKeyEngineering 
+      - id: ClothingBeltChiefEngineerFilled 
+      - id: ClothingEyesGlassesMeson
+      - id: ClothingHandsGlovesColorYellow
+      - id: ClothingHeadsetAltEngineeringSiteManager
+      - id: DoorRemoteEngineering 
+      - id: ASRubberStampSiteManager
+      - id: MetalFoamGrenade
+      - id: ShipyardRCD 
+      - id: ShipyardRCDAmmo 
+      - id: trayScanner 

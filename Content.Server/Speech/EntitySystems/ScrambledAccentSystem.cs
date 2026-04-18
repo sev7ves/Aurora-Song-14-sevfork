@@ -17,11 +17,11 @@ namespace Content.Server.Speech.EntitySystems
             SubscribeLocalEvent<ScrambledAccentComponent, AccentGetEvent>(OnAccent);
         }
 
-        public string Accentuate(string message)
+        public string Accentuate(string message, ScrambledAccentComponent comp) // Aurora - pass component
         {
             var words = message.ToLower().Split();
 
-            if (words.Length < 2)
+            if (words.Length < 2 && comp.ScrambleSingleWords) // Aurora - check if filter is enabled for single word messages.
             {
                 var pick = _random.Next(1, 8);
                 // If they try to weasel out of it by saying one word at a time we give them this.
@@ -43,7 +43,7 @@ namespace Content.Server.Speech.EntitySystems
 
         private void OnAccent(EntityUid uid, ScrambledAccentComponent component, AccentGetEvent args)
         {
-            args.Message = Accentuate(args.Message);
+            args.Message = Accentuate(args.Message, component); // Aurora - pass component
         }
     }
 }

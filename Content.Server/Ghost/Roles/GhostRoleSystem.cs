@@ -35,6 +35,7 @@ using Content.Shared.Ghost.Roles.Components;
 using Content.Shared.Roles.Jobs;
 using Content.Shared.Silicons.StationAi; // AS
 using Content.Server._NF.Players.GhostRole.Events; // Frontier
+using Content.Shared._Impstation.NotifierExamine;//imp
 
 namespace Content.Server.Ghost.Roles;
 
@@ -536,6 +537,7 @@ public sealed class GhostRoleSystem : EntitySystem
 
         DebugTools.AssertNotNull(player.ContentData());
 
+        EnsureComp<NotifierExamineComponent>(mob); //imp add
         // After taking a ghost role, the player cannot return to the original body, so wipe the player's current mind
         // unless it is a visiting mind
         if(_mindSystem.TryGetMind(player.UserId, out _, out var mind) && !mind.IsVisitingEntity)

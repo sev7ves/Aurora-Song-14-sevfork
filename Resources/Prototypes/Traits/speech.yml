@@ -95,7 +95,14 @@
   - type: ReplacementAccent
     accent: liar
 
-# 2 Cost
+- type: trait # Imp addition
+  id: Scrambled
+  name: trait-scrambled-name
+  description: trait-scrambled-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+  - type: ScrambledAccent
 
 - type: trait
   id: SocialAnxiety

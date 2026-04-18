@@ -59,6 +59,7 @@
     - BountyContractsCartridge
     - AstroNavCartridge
     - WantedListCartridge
+    - NanoChatCartridge # Auroras Song
 
 #region Medical
 
@@ -95,6 +96,7 @@
     - BountyContractsCartridge
     - AstroNavCartridge
     - MedTekCartridge
+    - NanoChatCartridge # Auroras Song
 
 #region Service
 
@@ -130,6 +132,7 @@
     - NewsReaderCartridge
     - BountyContractsCartridge
     - AstroNavCartridge
+    - NanoChatCartridge # Auroras Song
 
 #region SLE
 
@@ -174,6 +177,7 @@
     - AstroNavCartridge
     - WantedListCartridge
     - LedgerCartridge
+    - NanoChatCartridge # Auroras Song
 
 - type: entity
   parent: ASBaseSecurityPDA
@@ -398,6 +402,7 @@
     - AstroNavCartridge
     - LedgerCartridge
     - MailMetricsCartridge
+    - NanoChatCartridge # Auroras Song
 
 #region Colonial Command
 
@@ -435,6 +440,7 @@
       - WantedListCartridge
       - LogProbeCartridge
       - AstroNavCartridge
+      - NanoChatCartridge # Auroras Song
 
 - type: entity
   parent: ASBaseSecurityPDA
@@ -468,6 +474,7 @@
       - LogProbeCartridge
       - AstroNavCartridge
       - MailMetricsCartridge # Frontier
+      - NanoChatCartridge # Auroras Song
 
 #- type: entity # commenting out until CAF Chaplain role is added
 #  parent: CAFLeaderPDA
@@ -554,6 +561,7 @@
     - BountyContractsCartridge
     - AstroNavCartridge
     - LedgerCartridge
+    - NanoChatCartridge # Auroras Song
 
 - type: entity
   parent: ASBasePDA
@@ -626,6 +634,7 @@
       - MailMetricsCartridge
       - AppraisalCartridge
       - NetProbeCartridge
+      - NanoChatCartridge # Auroras Song
 
 - type: entity
   parent: ASBasePDA

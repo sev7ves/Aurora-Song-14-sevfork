@@ -3,7 +3,7 @@
   name: reagent-name-pomelustine
   group: Aphrodisiacs # DEN
   desc: reagent-desc-pomelustine
-  physicalDesc: reagent-physical-desc-sticky
+  physicalDesc: reagent-physical-desc-gold-flecked # Aurora's Song | Refactor pomelustine to avoid unexpecting exposure
   flavor: fruity
   color: "#45072f"
   metabolisms:

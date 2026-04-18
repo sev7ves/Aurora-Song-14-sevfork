@@ -27,6 +27,7 @@
       - MailMetricsCartridge
       - AppraisalCartridge
       - NetProbeCartridge
+      - NanoChatCartridge # Auroras Song
 
 - type: entity
   parent: BasePDA
@@ -158,6 +159,7 @@
     - AstroNavCartridge
     - WantedListCartridge
     - LedgerCartridge
+    - NanoChatCartridge # Auroras Song
 
 - type: entity
   parent: BaseSecurityPDA
@@ -380,6 +382,7 @@
     - AstroNavCartridge
     - LedgerCartridge
     - MailMetricsCartridge
+    - NanoChatCartridge # Auroras Song
 
 - type: entity
   parent: PiratePDA
@@ -495,6 +498,7 @@
     - AstroNavCartridge
     - LedgerCartridge
     - MedTekCartridge
+    - NanoChatCartridge # Auroras Song
 
 #- type: entity # Autora's Song - disabled
 #  parent: BasePDA

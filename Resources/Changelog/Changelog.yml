@@ -7482,3 +7482,112 @@ Entries:
   id: 9115
   time: '2026-04-14T04:24:51.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/938
+- author: assignedgod
+  changes:
+    - type: Add
+      message: 'Updated height and width sliders to be more convenient '
+    - type: Tweak
+      message: Made fairies bigger
+    - type: Tweak
+      message: Made Oni bigger
+    - type: Tweak
+      message: Made Sheleg bigger
+  id: 9116
+  time: '2026-04-16T03:15:44.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/889
+- author: entings
+  changes:
+    - type: Add
+      message: Added the scrambled speech accent, for fun and profit.
+  id: 9117
+  time: '2026-04-16T03:46:02.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/898
+- author: Oberonics
+  changes:
+    - type: Tweak
+      message: >-
+        Changed the emote system so that you are no longer restricted on the
+        emotes you can send in chat. Everyone can yap!
+  id: 9118
+  time: '2026-04-16T03:47:54.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/924
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: >-
+        Auroran Public Transit is proud to present a new engine for their buses,
+        presenting a 4 fold decrease in transit time.
+  id: 9119
+  time: '2026-04-16T03:51:27.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/950
+- author: BudaLope
+  changes:
+    - type: Add
+      message: Imp accessibility notifier
+  id: 9120
+  time: '2026-04-16T05:32:43.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/946
+- author: BudaLope
+  changes:
+    - type: Add
+      message: Ported nanochat from DeltaV
+  id: 9121
+  time: '2026-04-16T05:37:43.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/944
+- author: emergency-ketchup
+  changes:
+    - type: Tweak
+      message: Wooden railings to Little Byte Key in place of the old metal railings
+    - type: Tweak
+      message: Boardwalk layout changes on Little Byte Key
+    - type: Fix
+      message: Fixed missing floor tile on Little Byte Key
+  id: 9122
+  time: '2026-04-16T07:14:26.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/954
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Added a ChemVend and a medical gun safe to the Caladrius.
+    - type: Tweak
+      message: Changed the power generator on the Caladrius to an AME.
+    - type: Tweak
+      message: Replaced thrusters on the Caladrius with their medic variant.
+  id: 9123
+  time: '2026-04-16T07:18:58.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/947
+- author: Phoenix51505
+  changes:
+    - type: Add
+      message: Prison timers are announced over SLE comms when they are over
+    - type: Tweak
+      message: SLEO Polished
+    - type: Tweak
+      message: SLE Basic equipment made more accessible
+    - type: Tweak
+      message: SLE Long Coat is now armoured
+    - type: Fix
+      message: DoC Accessed added to ID Console
+    - type: Fix
+      message: STC was given command comms and access
+    - type: Fix
+      message: Medics have access to chemistry
+  id: 9124
+  time: '2026-04-16T10:26:14.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/955
+- author: GreyScaleHarlequin
+  changes:
+    - type: Tweak
+      message: >-
+        Pomelustine now requires fabrication, no more accidental horny while
+        eating.
+  id: 9125
+  time: '2026-04-17T15:48:50.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/956
+- author: BudaLope
+  changes:
+    - type: Fix
+      message: Fixed nanochat notifications
+  id: 9126
+  time: '2026-04-18T09:37:57.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/957

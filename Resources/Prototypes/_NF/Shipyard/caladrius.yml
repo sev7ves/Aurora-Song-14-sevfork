@@ -7,7 +7,7 @@
 # Discord: dustylens
 
 # Shuttle Notes:
-#
+# Map yml tweaked by Zenixic for Aurora's Song
 
 - type: vessel
   id: Caladrius
@@ -17,13 +17,13 @@
   price: 200000 # 133217 0.5 199825.5
   category: Large
   group: Medical
-  access: Medical # Aurora
+  access: Medical # Aurora's Song
   shuttlePath: /Maps/_NF/Shuttles/caladrius.yml
   guidebookPage: ShipyardCaladrius
   class:
   - Medical
   engine:
-  - Bananium
+  - AME
 
 - type: gameMap
   id: Caladrius

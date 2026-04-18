@@ -272,6 +272,10 @@ public sealed class CartridgeLoaderSystem : SharedCartridgeLoaderSystem
         if (!loader.BackgroundPrograms.Contains(programUid))
             RaiseLocalEvent(programUid, new CartridgeActivatedEvent(loaderUid));
 
+        // Imp: Logic for raising the active program changed event
+        var ev = new ActiveProgramChangedEvent(loaderUid, loader.ActiveProgram, programUid);
+        RaiseLocalEvent(loaderUid, ref ev);
+
         loader.ActiveProgram = programUid;
         UpdateUserInterfaceState(loaderUid, loader);
     }
@@ -291,6 +295,11 @@ public sealed class CartridgeLoaderSystem : SharedCartridgeLoaderSystem
             RaiseLocalEvent(programUid, new CartridgeDeactivatedEvent(programUid));
 
         loader.ActiveProgram = default;
+
+        // Imp: Logic for raising the active program changed event
+        var ev = new ActiveProgramChangedEvent(loaderUid, programUid, loader.ActiveProgram);
+        RaiseLocalEvent(loaderUid, ref ev);
+
         UpdateUserInterfaceState(loaderUid, loader);
     }
 
@@ -531,3 +540,9 @@ public sealed class CartridgeAfterInteractEvent : EntityEventArgs
 /// </summary>
 [ByRefEvent]
 public record struct ProgramInstallationAttempt(EntityUid LoaderUid, string Prototype, bool Cancelled = false);
+
+/// <summary>
+/// Imp: Raised whenever the currently open program changes
+/// </summary>
+[ByRefEvent]
+public readonly record struct ActiveProgramChangedEvent(EntityUid LoaderUid, EntityUid? OldActiveProgram, EntityUid? NewActiveProgram);

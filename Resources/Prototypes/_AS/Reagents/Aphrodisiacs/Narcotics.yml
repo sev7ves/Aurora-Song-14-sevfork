@@ -196,3 +196,19 @@
         - !type:Consent
           effectTypes:
           - Aphrodisiacs
+
+- type: reagent
+  id: Nymphalexine
+  name: reagent-name-nymphalex
+  group: Medicine
+  desc: reagent-desc-nymphalex
+  physicalDesc: reagent-physical-desc-nympha
+  flavor: fruity
+  color: "#f0b3ff"
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 1
+      - !type:SatiateHunger
+        factor: 1

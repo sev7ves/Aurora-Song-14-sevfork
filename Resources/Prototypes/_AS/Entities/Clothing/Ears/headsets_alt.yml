@@ -92,3 +92,20 @@
     sprite: _AS/Clothing/Ears/Headsets/colcom.rsi
   - type: Clothing
     sprite: _AS/Clothing/Ears/Headsets/colcom.rsi
+
+#region Site Manager
+- type: entity
+  parent: [ClothingHeadsetAlt, BaseCommandContraband]
+  id: ClothingHeadsetAltEngineeringSiteManager
+  name: site manager's over-ear headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySiteManager
+      - EncryptionKeyTraffic
+      - EncryptionKeyShipboard
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/engineering.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/engineering.rsi

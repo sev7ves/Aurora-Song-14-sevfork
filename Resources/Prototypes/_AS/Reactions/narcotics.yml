@@ -140,3 +140,16 @@
   products:
       FreyjasKiss: 6
 
+- type: reaction
+  id: pomelustineReaction
+  impact: Medium
+  reactants:
+    Nymphalexine:
+      amount: 1
+    Silver:
+      amount: 1
+    Gold:
+      amount: 1
+      catalyst: true
+  products:
+      Pomelustine: 3

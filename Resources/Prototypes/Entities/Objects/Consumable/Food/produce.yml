@@ -2776,7 +2776,7 @@
       food:
         maxVol: 40
         reagents:
-        - ReagentId: Pomelustine
+        - ReagentId: Nymphalexine # Aurora's Song | refactor to remove horny popups from what is just a fruit.
           Quantity: 30
         - ReagentId: Nutriment
           Quantity: 10

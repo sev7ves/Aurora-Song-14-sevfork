@@ -15,6 +15,12 @@
   youngAge: 80
   oldAge: 400
   maxAge: 800
+  # Aurora Song: Add scale limiters. They are tall because they are Elves
+  minHeight: 1.1
+  maxHeight: 1.3
+  minWidth: 1.1
+  maxWidth: 1.3
+  #Aurora song changes end
 
 - type: speciesBaseSprites
   id: MobShelegSprites

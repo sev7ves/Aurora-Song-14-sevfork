@@ -1281,7 +1281,7 @@
   idealLight: 6
   waterConsumption: 0.60
   chemicals:
-    Pomelustine:
+    Nymphalexine: # Aurora's Song | refactor to remove horny popups from what is just a fruit.
       Min: 5
       Max: 30
       PotencyDivisor: 10

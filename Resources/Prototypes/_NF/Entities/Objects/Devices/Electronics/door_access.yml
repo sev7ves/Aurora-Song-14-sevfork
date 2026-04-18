@@ -18,10 +18,10 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsFrontierCommand
-  suffix: Chapel, Locked
+  suffix: Chapel, Locked # Huh
   components:
   - type: AccessReader
-    access: [["HeadOfSecurity"], ["HeadOfPersonnel"]]
+    access: [["HeadOfSecurity"], ["HeadOfPersonnel"], ["StationTrafficController"]] # Aurora's Song - Gave STC command accesses
 
 - type: entity
   parent: DoorElectronics

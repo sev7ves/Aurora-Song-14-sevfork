@@ -34,6 +34,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using Content.Shared._Impstation.NotifierExamine;//imp
 
 namespace Content.Server.Antag;
 
@@ -446,6 +447,10 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             spawnerComp.Definition = def;
             return;
         }
+
+        // imp start
+        EnsureComp<NotifierExamineComponent>(player);
+        // imp end
 
         // The following is where we apply components, equipment, and other changes to our antagonist entity.
         EntityManager.AddComponents(player, def.Components);

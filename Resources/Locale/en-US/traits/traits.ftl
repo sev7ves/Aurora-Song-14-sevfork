@@ -31,7 +31,7 @@ trait-pirate-accent-name = Pirate accent
 trait-pirate-accent-desc = You can't stop speaking like a pirate!
 
 trait-accentless-name = Accentless
-trait-accentless-desc = You don't have the accent that your species would usually have
+trait-accentless-desc = You don't have the accent that your species would usually have.
 
 trait-wheelchair-user-name = Wheelchair User
 trait-wheelchair-user-desc = You cannot move without your wheelchair. Wheelchair included.
@@ -64,7 +64,11 @@ trait-french-name = French accent
 trait-french-desc = Your accent seems to have a certain «je ne sais quoi».
 
 trait-spanish-name = Spanish accent
-trait-spanish-desc = Hola señor, donde esta la biblioteca.
+trait-spanish-desc = You speak with the accent of someone who grew up in Earth Spain.
+# Imp: edited from upstream "Hola señor, donde esta la biblioteca."
+
+trait-scrambled-name = Scrambled speech
+trait-scrambled-desc = There was an accident with a tesla engine, now others have trouble understanding you.
 
 trait-painnumbness-name = Numb
 trait-painnumbness-desc = You lack any sense of feeling pain, being unaware of how hurt you may be.

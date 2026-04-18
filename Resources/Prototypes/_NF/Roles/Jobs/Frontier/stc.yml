@@ -39,12 +39,13 @@
     - RubberStampStc
     - ShipVoucherFrontierStc
     - BoxFolderStc
-  encryptionKeys: # Aurora's Song - Added traffic, shipboard, security, greeting, and service encryption keys
+  encryptionKeys: # Aurora's Song - Added traffic, shipboard, security, greeting, command and service encryption keys
   - EncryptionKeyTraffic
   - EncryptionKeyShipboard
   - EncryptionKeySecurity
   - EncryptionKeyGreeting
   - EncryptionKeyService
+  - EncryptionKeyCommand
 
 - type: chameleonOutfit
   id: StationTrafficControllerChameleonOutfit

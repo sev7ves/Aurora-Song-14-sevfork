@@ -25,7 +25,7 @@ public sealed partial class PublicTransitRoutePrototype : IPrototype
     /// The amount of time to spend in FTL between stations.
     /// </summary>
     [DataField]
-    public TimeSpan TravelTime { get; private set; } = TimeSpan.FromSeconds(80);
+    public TimeSpan TravelTime { get; private set; } = TimeSpan.FromSeconds(20); // Aurora's Song: 80 -> 20 | Here at AS we want to respect your time and make it so you don't spend 10 minutes in a bus trying to get somewhere
 
     /// <summary>
     /// The amount of time to spend in FTL between stations.

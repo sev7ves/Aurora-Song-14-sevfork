@@ -10,9 +10,9 @@
   maleFirstNames: names_fairy_first
   femaleFirstNames: names_fairy_first
   lastNames: names_fairy_last
-  minHeight: 0.2
+  minHeight: 0.35
   maxHeight: 0.4
-  minWidth: 0.2
+  minWidth: 0.35
   maxWidth: 0.4
 
 - type: markingPoints

@@ -29,9 +29,9 @@
       # - Cargo # Frontier
       # - Chapel # Frontier
       # - Chemistry # Frontier
-      # - ChiefMedicalOfficer # Frontier
       - Command
       - Corpsman # Aurora's Song - Added Corpsman access
+      - ChiefMedicalOfficer # Aurora's Song: Readded, moved w.r.t DoC
       - Detective # Frontier - moved down
       - Engineering
       - External

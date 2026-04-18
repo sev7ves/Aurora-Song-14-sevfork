@@ -4,10 +4,13 @@ using Content.Server.Chat.Systems;
 using Content.Server.Kitchen.Components;
 using Content.Server.Popups;
 using Content.Shared.Access;
+using Content.Server.Radio.EntitySystems; // Aurora's Song
+using Content.Shared.Security.Components; // Aurora's Song
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Database;
 using Content.Shared.Popups;
+using Content.Shared.Radio; // Aurora's Song
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Content.Server.Kitchen.EntitySystems;
@@ -22,6 +25,8 @@ public sealed class IdCardSystem : SharedIdCardSystem
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly MicrowaveSystem _microwave = default!;
+
+    [Dependency] private readonly RadioSystem _radio = default!; // Aurora's Song
 
     public override void Initialize()
     {
@@ -119,5 +124,13 @@ public sealed class IdCardSystem : SharedIdCardSystem
                 ChatTransmitRange.Normal,
                 true);
         }
+        if (HasComp<GenpopIdCardComponent>(ent.Owner) && TryComp<IdCardComponent>(ent.Owner, out var id) && id.FullName is { } name) // Aurora's Song - Verbose prisoner sentencing
+        {
+            var radio = new ProtoId<RadioChannelPrototype>("Sle"); // I apologize for the hardcodedness.
+            _radio.SendRadioMessage(ent,
+            Loc.GetString($"genpop-prisoner-id-expire-security", ("fullName", name)),
+            radio,
+            ent);
+        } // End AS
     }
 }

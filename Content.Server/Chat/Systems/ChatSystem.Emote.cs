@@ -184,8 +184,8 @@ public partial class ChatSystem
         var validEmote = false; // DeltaV - Multiple emotes for the same trigger
         foreach (var emote in emotes)
         {
-            if (!AllowedToUseEmote(uid, emote))
-                continue;
+            // if (!AllowedToUseEmote(uid, emote)) AS: Remove emote restrictions.
+            //     continue;
 
             if (TryInvokeEmoteEvent(uid, emote))
             {

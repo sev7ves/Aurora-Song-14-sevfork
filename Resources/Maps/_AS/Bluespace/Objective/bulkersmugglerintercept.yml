@@ -645,78 +645,56 @@ entities:
     - type: Transform
       pos: -4.5,-1.5
       parent: 1
-    - type: AccessReader
-      access: []
   - uid: 584
     components:
     - type: Transform
       pos: -3.5,-0.5
       parent: 1
-    - type: AccessReader
-      access: []
   - uid: 585
     components:
     - type: Transform
       pos: -3.5,-1.5
       parent: 1
-    - type: AccessReader
-      access: []
   - uid: 586
     components:
     - type: Transform
       pos: -4.5,0.5
       parent: 1
-    - type: AccessReader
-      access: []
   - uid: 587
     components:
     - type: Transform
       pos: -3.5,1.5
       parent: 1
-    - type: AccessReader
-      access: []
   - uid: 588
     components:
     - type: Transform
       pos: 4.5,-1.5
       parent: 1
-    - type: AccessReader
-      access: []
   - uid: 589
     components:
     - type: Transform
       pos: 5.5,-1.5
       parent: 1
-    - type: AccessReader
-      access: []
   - uid: 590
     components:
     - type: Transform
       pos: 4.5,-0.5
       parent: 1
-    - type: AccessReader
-      access: []
   - uid: 591
     components:
     - type: Transform
       pos: 4.5,0.5
       parent: 1
-    - type: AccessReader
-      access: []
   - uid: 592
     components:
     - type: Transform
       pos: 5.5,0.5
       parent: 1
-    - type: AccessReader
-      access: []
   - uid: 593
     components:
     - type: Transform
       pos: 4.5,1.5
       parent: 1
-    - type: AccessReader
-      access: []
 - proto: ASMercenarySpawnerCaptain
   entities:
   - uid: 386

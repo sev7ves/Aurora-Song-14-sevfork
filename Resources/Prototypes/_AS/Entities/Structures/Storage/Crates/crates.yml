@@ -13,7 +13,7 @@
     access: [["NuclearOperative"], ["SyndicateAgent"]]
 
 - type: entity
-  parent: [ BaseStructureIndestructible, CrateBaseSecure ]
+  parent: [ BaseStructureIndestructible, CrateBaseSecure, BaseC2ContrabandSecure ]
   id: ASCrateSuppliesLocked
   name: locked supplies crate
   suffix: Locked

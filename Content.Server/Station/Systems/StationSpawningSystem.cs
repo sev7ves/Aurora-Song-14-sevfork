@@ -30,6 +30,7 @@ using System.Linq; // Frontier
 using Content.Server.CartridgeLoader; // Frontier
 using Content.Shared.CartridgeLoader; // Frontier
 using Robust.Server.GameObjects; // Frontier
+using Content.Shared._Impstation.NotifierExamine;//imp
 
 namespace Content.Server.Station.Systems;
 
@@ -171,6 +172,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             }
         }
 
+        EnsureComp<NotifierExamineComponent>(entity.Value); // Imp add
         if (loadout != null)
         {
             /// Frontier: overwriting EquipRoleLoadout

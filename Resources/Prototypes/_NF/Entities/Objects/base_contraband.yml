@@ -81,6 +81,16 @@
     turnInValues: &noFUCs
       FrontierUplinkCoin: 0
       Doubloon: 0
+
+- type: entity # Aurora's Song - For things that are generally worthless to the public but hold niche value to security, I.E. supply crates for smuggler events.
+  parent: BaseC2ContrabandUnredeemable
+  id: BaseC2ContrabandSecure
+  components:
+  - type: Contraband
+    turnInValues:
+      FrontierUplinkCoin: 1
+      Doubloon: 1 # To give them a reason to fight over it if they desire
+    allowedDepartments: [ Security ]
 # endregion
 
 # region Class 3 Objects

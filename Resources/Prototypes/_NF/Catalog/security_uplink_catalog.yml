@@ -438,12 +438,7 @@
     - !type:StoreWhitelistCondition
       whitelist:
         tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist: # Aurora's Song - Switched to SLE roles
-        - Lieutenant
-        - Sergeant
-        - Commissioner
+          - SecurityUplink # Aurora's Song: Removed rank whitelisting
 
 - type: listing
   id: UplinkSecurityStunbaton
@@ -594,12 +589,7 @@
     - !type:StoreWhitelistCondition
       whitelist:
         tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist: # Aurora's Song - Switched NFSD to SLE roles
-        - Lieutenant
-        - Sergeant
-        - Commissioner
+          - SecurityUplink # Aurora's Song: Removed rank whitelisting
 
 - type: listing
   id: UplinkSecurityWT550
@@ -975,6 +965,7 @@
     - !type:BuyerJobCondition
       whitelist: # Aurora's Song - Switched Sheriff to Commissioner
         - Commissioner
+        - Lieutenant # Aurora's Song - Added it to Lt, they are the keeper of the armoury after all.
 
 - type: listing
   id: UplinkSecurityKey
@@ -1106,7 +1097,9 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist: # Aurora's Song - Switched Sheriff to Commissioner
+      whitelist: # Aurora's Song - Switched Sheriff to Commissioner, added LT and Sgt. to whitelist.
+        - Lieutenant
+        - Sergeant
         - Commissioner
 
 - type: listing
@@ -1312,12 +1305,7 @@
     - !type:StoreWhitelistCondition
       whitelist:
         tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist: # Aurora's Song - Switched NFSD to SLE roles
-        - Lieutenant
-        - Sergeant
-        - Commissioner
+          - SecurityUplink # Aurora's Song: Removed rank whitelisting
 
 - type: listing
   id: UplinkSecurity30RifleMagazineRubber

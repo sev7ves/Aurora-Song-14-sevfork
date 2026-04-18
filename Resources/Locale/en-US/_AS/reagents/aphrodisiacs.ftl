@@ -60,3 +60,6 @@ reagent-effect-freyja-od4 = Use them, be used, never stop.
 reagent-effect-freyja-od5 = Ignore everything but sensation, just a bit more and you can be satisfied.
 reagent-effect-freyja-od6 = They are a toy for your use.
 reagent-effect-freyja-od7 = Never let them go. Keep them.
+
+reagent-name-nymphalex = Nymphalexine
+reagent-desc-nymphalex = A precursor to drugs with very... specific, effects on organic creatures. On its own though? Just a mildly satiating mixture of proteins.

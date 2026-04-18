@@ -215,7 +215,7 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
-- proto: ASAirlockGlassShuttleSLE
+- proto: ASAirlockGlassShuttleSLELocked # Why were these open to the public
   entities:
   - uid: 45
     components:

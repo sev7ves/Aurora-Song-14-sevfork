@@ -62,3 +62,37 @@
   components:
   - type: Label
     currentLabel: as-holopad-general-damascus-science-artifact
+
+#region Port Boreal
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadPortBorealSTC
+  suffix: Port Boreal STC, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-port-boreal-stc
+
+#region SLEO
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadSLEOutpostCommissioner
+  suffix: SLE Outpost Commissioner, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-sle-outpost-commissioner
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadSLEOutpostBullpen
+  suffix: SLE Outpost Bullpen, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-sle-outpost-bullpen
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadSLEOutpostReception
+  suffix: SLE Outpost Reception, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-sle-outpost-reception

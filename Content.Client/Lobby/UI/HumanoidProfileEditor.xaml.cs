@@ -243,17 +243,9 @@ namespace Content.Client.Lobby.UI
                 OnSkinColorOnValueChanged();
                 RefreshTraits(); // Misfit - Add trait hiding.
 
-                // Aurora: Update height/width slider limits based on species
-                var speciesProto = _prototypeManager.Index<SpeciesPrototype>(selectedSpeciesId);
-
-                HeightSlider.MinValue = speciesProto.MinHeight;
-                HeightSlider.MaxValue = speciesProto.MaxHeight;
-                WidthSlider.MinValue = speciesProto.MinWidth;
-                WidthSlider.MaxValue = speciesProto.MaxWidth;
-
-                // Aurora: Reset sliders to midpoint
-                HeightSlider.Value = (speciesProto.MinHeight + speciesProto.MaxHeight) / 2f;
-                WidthSlider.Value = (speciesProto.MinWidth + speciesProto.MaxWidth) / 2f;
+                // Aurora: Update slider limits + clamp values
+                UpdateHeightControls();
+                UpdateWidthControls();
             };
 
             #endregion Species
@@ -1422,7 +1414,7 @@ namespace Content.Client.Lobby.UI
             Profile = Profile?.WithSpawnPriorityPreference(newSpawnPriority);
             SetDirty();
         }
-// Aurora: Sliders
+        // Aurora: Sliders
         private void SetHeight(float newHeight)
         {
             if (Profile != null &&
@@ -1725,26 +1717,39 @@ namespace Content.Client.Lobby.UI
 
             SpawnPriorityButton.SelectId((int) Profile.SpawnPriority);
         }
+        // Aurora Song: Height and Width Sliders
 
         private void UpdateHeightControls()
         {
-            if (Profile == null)
-            {
+            if (Profile == null || HeightSlider == null)
                 return;
-            }
 
-            HeightSlider.Value = Profile.Appearance.Height;
+            if (_prototypeManager.TryIndex<SpeciesPrototype>(Profile.Species, out var species))
+            {
+                HeightSlider.MinValue = species.MinHeight;
+                HeightSlider.MaxValue = species.MaxHeight;
+
+                // Clamp profile value to species range
+                var clamped = Math.Clamp(Profile.Appearance.Height, species.MinHeight, species.MaxHeight);
+                HeightSlider.Value = clamped;
+            }
         }
 
         private void UpdateWidthControls()
         {
-            if (Profile == null)
-            {
+            if (Profile == null || WidthSlider == null)
                 return;
-            }
 
-            WidthSlider.Value = Profile.Appearance.Width;
+            if (_prototypeManager.TryIndex<SpeciesPrototype>(Profile.Species, out var species))
+            {
+                WidthSlider.MinValue = species.MinWidth;
+                WidthSlider.MaxValue = species.MaxWidth;
+                // Clamp profile value to species range
+                var clamped = Math.Clamp(Profile.Appearance.Width, species.MinWidth, species.MaxWidth);
+                WidthSlider.Value = clamped;
+            }
         }
+        // Aurora Song: Height and Width Sliders End
 
         private void UpdateHairPickers()
         {

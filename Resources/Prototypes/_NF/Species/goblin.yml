@@ -11,6 +11,10 @@
   maleFirstNames: NamesGoblinFirstMale
   femaleFirstNames: NamesGoblinFirstFemale
   lastNames: NamesGoblinLast
+  # Aurora Song: Add scale limiters. They are Small
+  maxHeight: 0.85
+  maxWidth: 0.85
+  #Aurora song changes end
 
 - type: speciesBaseSprites
   id: MobGoblinSprites
