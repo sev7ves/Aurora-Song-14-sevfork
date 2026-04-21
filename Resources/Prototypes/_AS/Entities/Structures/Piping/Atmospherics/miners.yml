@@ -1,0 +1,9 @@
+- type: entity
+  name: RSP gas miner
+  parent: GasMinerBase
+  id: GasMinerRespiron
+  suffix: Large Station, 4500kPa
+  components:
+  - type: GasMiner
+    spawnGas: Respiron
+    maxExternalPressure: 4500
