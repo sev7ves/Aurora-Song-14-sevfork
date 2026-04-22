@@ -12,11 +12,11 @@
   id: AirSensorFreezer
 
 - type: entity
-  parent: [AirSensorFreezerBase, GasVentPump]
+  parent: [GasVentPump, AirSensorFreezerBase]
   id: GasVentPumpFreezer
 
 - type: entity
-  parent: [AirSensorFreezerBase, GasVentScrubber]
+  parent: [GasVentScrubber, AirSensorFreezerBase]
   id: GasVentScrubberFreezer
 
 # air alarm proto with auto: false to prevent the automatic switching of modes overriding the default values

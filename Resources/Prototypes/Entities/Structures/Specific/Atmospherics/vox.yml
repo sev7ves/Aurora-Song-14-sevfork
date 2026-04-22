@@ -23,11 +23,11 @@
   id: AirSensorVox
 
 - type: entity
-  parent: [AirSensorVoxBase, GasVentPump]
+  parent: [ GasVentPump, AirSensorVoxBase]
   id: GasVentPumpVox
 
 - type: entity
-  parent: [AirSensorVoxBase, GasVentScrubber]
+  parent: [GasVentScrubber, AirSensorVoxBase]
   id: GasVentScrubberVox
   components:
   - type: GasVentScrubber
