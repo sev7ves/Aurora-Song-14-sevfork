@@ -140,3 +140,165 @@
   - type: NavMapBeacon
     defaultText: station-beacon-colonial-representative
     color: "#1C4D8D"
+
+#region motel
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomA1
+  suffix: motel room A1
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-one-a
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomA2
+  suffix: motel room A2
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-two-a
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomA3
+  suffix: motel room A3
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-three-a
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoom4
+  suffix: motel room A4
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-four-a
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomA5
+  suffix: motel room A5
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-five-a
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomB1
+  suffix: motel room B1
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-one-b
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomB2
+  suffix: motel room B2
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-two-b
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomB3
+  suffix: motel room B3
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-three-b
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomB4
+  suffix: motel room B4
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-four-b
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomB5
+  suffix: motel room B5
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-five-b
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomC1
+  suffix: motel room C1
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-one-c
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomC2
+  suffix: motel room C2
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-two-c
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomC3
+  suffix: motel room C3
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-three-c
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomC4
+  suffix: motel room C4
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-four-c
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomC5
+  suffix: motel room C5
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-five-c
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomD1
+  suffix: motel room D1
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-one-d
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomD2
+  suffix: motel room D2
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-two-d
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomD3
+  suffix: motel room D3
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-three-d
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomD4
+  suffix: motel room D4
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-four-d
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconMotelRoomD5
+  suffix: motel room D5
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-motel-five-d
