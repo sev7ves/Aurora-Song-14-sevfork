@@ -23,11 +23,16 @@
   id: AirSensorRespiron
 
 - type: entity
-  parent: [GasVentPump, AirSensorRespironBase]
+  parent: [AirSensorRespironBase, GasVentPump]
   id: GasVentPumpRespiron
+  components:
+  - type: Tag
+    tags:
+      - GasVent
+      - Unstackable
 
 - type: entity
-  parent: [GasVentScrubber, AirSensorRespironBase]
+  parent: [AirSensorRespironBase, GasVentScrubber]
   id: GasVentScrubberRespiron
   components:
   - type: GasVentScrubber
@@ -43,3 +48,4 @@
     - NitrousOxide
     - Frezon
     - Helium # Frontier
+
