@@ -23,11 +23,11 @@
   id: AirSensorRespiron
 
 - type: entity
-  parent: [AirSensorRespironBase, GasVentPump]
+  parent: [GasVentPump, AirSensorRespironBase]
   id: GasVentPumpRespiron
 
 - type: entity
-  parent: [AirSensorRespironBase, GasVentScrubber]
+  parent: [GasVentScrubber, AirSensorRespironBase]
   id: GasVentScrubberRespiron
   components:
   - type: GasVentScrubber
