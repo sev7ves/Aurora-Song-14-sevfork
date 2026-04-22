@@ -2,8 +2,8 @@
   id: BreathEZ
   parent: BasePOI
   name: "BreathEZ Motel"
-  minimumDistance: 5000
-  maximumDistance: 6000
+  minimumDistance: 1650
+  maximumDistance: 3400
   spawnGamePreset: [ NFAdventure, NFPirate ]
   spawnGroup: RestStop
   gridPath: /Maps/_AS/POI/breathEZ.yml
