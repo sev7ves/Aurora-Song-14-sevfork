@@ -19,7 +19,10 @@
   minPlayers: 0
   stations:
     BreathEZ:
-      stationProto: DeadDropFrontierOutpost
+      stationProto: StandardFrontierOutpost
       components:
         - type: StationNameSetup
           mapNameTemplate: "BreathEZ Motel"
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt
