@@ -12,7 +12,7 @@
   id: AirSensorFreezer
 
 - type: entity
-  parent: [GasVentPump, AirSensorFreezerBase]
+  parent: [AirSensorFreezerBase, GasVentPump]
   id: GasVentPumpFreezer
   components:
   - type: Tag
@@ -21,7 +21,7 @@
     - Unstackable
 
 - type: entity
-  parent: [GasVentScrubber, AirSensorFreezerBase]
+  parent: [AirSensorFreezerBase, GasVentScrubber]
   id: GasVentScrubberFreezer
   components:
   - type: Tag

@@ -23,7 +23,7 @@
   id: AirSensorVox
 
 - type: entity
-  parent: [ GasVentPump, AirSensorVoxBase]
+  parent: [AirSensorVoxBase, GasVentPump]
   id: GasVentPumpVox
   components:
   - type: Tag
@@ -32,7 +32,7 @@
     - Unstackable
 
 - type: entity
-  parent: [GasVentScrubber, AirSensorVoxBase]
+  parent: [AirSensorVoxBase, GasVentScrubber]
   id: GasVentScrubberVox
   components:
   - type: GasVentScrubber
