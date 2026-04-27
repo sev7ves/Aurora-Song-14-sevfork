@@ -1,0 +1,13 @@
+cmd-linkconveyors-desc = Link a series of conveyor belts to a signal source
+cmd-linkconveyors-help = linkconveyors <conveyor uid> <source uid> <direction> <link to reverse> <link to forward> <link to off>
+cmd-hint-conveyor = Conveyor
+cmd-hint-sourcedevice = Source Device
+cmd-hint-searchdirections = Search Directions
+cmd-hint-ew = East West
+cmd-hint-ns = North South
+cmd-hint-all = All
+cmd-hint-reverse = Link To Reverse
+cmd-hint-forward = Link To Forward
+cmd-hint-off = Link To Off
+cmd-link-none = None
+cmd-hint-none = Do Not Link
