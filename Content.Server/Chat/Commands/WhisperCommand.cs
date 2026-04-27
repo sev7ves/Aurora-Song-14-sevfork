@@ -1,5 +1,6 @@
 using Content.Server.Chat.Systems;
 using Content.Shared.Administration;
+using Content.Shared.Chat;
 using Robust.Shared.Console;
 using Robust.Shared.Enums;
 
@@ -22,7 +23,7 @@ namespace Content.Server.Chat.Commands
             if (player.Status != SessionStatus.InGame)
                 return;
 
-            if (player.AttachedEntity is not {} playerEntity)
+            if (player.AttachedEntity is not { } playerEntity)
             {
                 shell.WriteError(Loc.GetString($"shell-must-be-attached-to-entity"));
                 return;
@@ -35,9 +36,7 @@ namespace Content.Server.Chat.Commands
             if (string.IsNullOrEmpty(message))
                 return;
 
-            IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<ChatSystem>()
-                // ChatTransmitRange.Normal < ChatTransmitRange.NoGhosts | Should hide whispers from ghosts | Aurora
-                .TrySendInGameICMessage(playerEntity, message, InGameICChatType.Whisper, ChatTransmitRange.NoGhosts, false, shell, player);
+            _chatSystem.TrySendInGameICMessage(playerEntity, message, InGameICChatType.Whisper, ChatTransmitRange.NoGhosts, false, shell, player); // Aurora's Song - Hide whispers from ghosts
         }
     }
 }

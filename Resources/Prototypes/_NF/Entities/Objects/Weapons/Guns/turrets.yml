@@ -23,7 +23,7 @@
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
       params:
         variation: 0.125
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFBulletDisablerStaminaOnly
     fireCost: 10
   - type: NpcFactionMember
@@ -98,7 +98,7 @@
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
       params:
         variation: 0.125
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFRedLightLaser
     fireCost: 10
   - type: NpcFactionMember
@@ -170,7 +170,7 @@
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
       params:
         variation: 0.125
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFRedLightLaser
     fireCost: 10
   - type: NpcFactionMember

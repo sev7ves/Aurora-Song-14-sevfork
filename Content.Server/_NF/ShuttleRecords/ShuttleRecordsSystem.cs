@@ -2,7 +2,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using System.Linq;
 using System.Text.Json;
-using Content.Server._NF.SectorServices;
+using Content.Shared._NF.SectorServices;
 using Content.Server._NF.ShuttleRecords.Components;
 using Content.Server.Administration.Logs;
 using Content.Server.GameTicking;

@@ -1,202 +1,319 @@
+# Aurora's Song - Converted everything to `entityTable`s
+
 #SOFTSUITS
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitGoblin ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVAGoblin
   suffix: EVA, Goblin
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitGoblin
+
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitContractor ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVAContractor
   suffix: EVA, Contractor
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitContractor
+
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitPilot ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVAPilot
   suffix: EVA, Pilot
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitPilot
+
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitSr ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVASr
   suffix: EVA, Station Representative
   components:
   - type: AccessReader
     access: [["HeadOfPersonnel"]]
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitSr
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitStc ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVAStc
   suffix: EVA, Station Traffic Controller
   components:
   - type: AccessReader
     access: [["StationTrafficController"]]
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitStc
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitCaptain ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVACaptain
   suffix: EVA, Captain
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitCaptain
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitEngineer ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVAEngineer
   suffix: EVA, Engineer
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitEngineer
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitAtmosTech ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVAAtmosTech
   suffix: EVA, Atmospherics Technician
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitAtmosTech
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitCargo ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVACargo
   suffix: EVA, Cargo Technician
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitCargo
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitSalvage ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVASalvage
   suffix: EVA, Salvage Specialist
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitSalvage
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitMedic ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVAMedical
   suffix: EVA, Medical Doctor
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitMedic
 
 - type: entity
-  parent: [ LockerSalvageSpecialistFilled, StorageFillEVASuitSalvage ]
+  parent: [ LockerSalvageSpecialistFilled ]
   id: SuitStorageEVASalvageFilled
   suffix: EVA, Salvage Specialist, Filled
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitSalvage
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitParamedic ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageParamedic
   suffix: Voidsuit, Paramedic
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitParamedic
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitParamedicAlt ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageParamedicAlt
   suffix: EVA, Paramedic
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitParamedicAlt
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitScientist ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVAScientist
   suffix: EVA, Scientist
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitScientist
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitJanitor ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVAJanitor
   suffix: EVA, Janitor
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitJanitor
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitServiceWorker ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVAServiceWorker
   suffix: EVA, Service Worker
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitServiceWorker
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitChaplain ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVAChaplain
   suffix: EVA, Chaplain
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitChaplain
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitBoxerRed ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVABoxerRed
   suffix: EVA, Boxer, Red
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitBoxerRed
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitBoxerGreen ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVABoxerGreen
   suffix: EVA, Boxer, Green
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitBoxerGreen
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitBoxerBlue ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVABoxerBlue
   suffix: EVA, Boxer, Blue
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitBoxerBlue
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitBoxerYellow ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVABoxerYellow
   suffix: EVA, Boxer, Yellow
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitBoxerYellow
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitBoxerRandom ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVABoxerRandom
   suffix: EVA, Boxer, Random
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitBoxerRandom
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitHydro ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVAHydro
   suffix: EVA, Hydroponics
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitHydro
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitMail ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVAMail
   suffix: EVA, Mail Carrier
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitMail
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitMercenary ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVAMercenary
   suffix: EVA, Mercenary
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitMercenary
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitPrivateSec ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVAPrivateSec
   suffix: EVA, Private Security
   components:
   - type: AccessReader
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitPrivateSec
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitNfsd ]
+  parent: [ SuitStorageBase ]
   id: SuitStorageEVANfsd
   suffix: EVA, NFSD
   components:
   - type: AccessReader
     access: [["Security"]]
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitNfsd
 
 #HARDSUITS
 #Quartermaster hardsuit
@@ -205,8 +322,10 @@
   parent: SuitStorageBase
   suffix: Quartermaster
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingShoesBootsMag
         - id: ClothingOuterHardsuitLuxury
@@ -220,8 +339,10 @@
   parent: SuitStorageBase
   suffix: Mining
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingShoesBootsMag
         - id: ClothingOuterHardsuitSalvage
@@ -235,8 +356,10 @@
   parent: SuitStorageBase
   suffix: Mercenary
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitMercenary
         - id: ClothingMaskGasMercenary
@@ -250,8 +373,10 @@
   parent: SuitStorageBase
   suffix: Private Security
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitPrivateSecurity
         - id: ClothingMaskGasSecurity
@@ -266,8 +391,10 @@
   parent: SuitStorageBase
   suffix: SCAF
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitScaf
         - id: ClothingMaskGasMercenary
@@ -282,8 +409,10 @@
   parent: SuitStorageBase
   suffix: Surplus
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitSurplus
         - id: ClothingMaskGasSecurity
@@ -298,8 +427,10 @@
   parent: SuitStorageBase
   suffix: Noble
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitNoble
         - id: ClothingMaskGasSecurity
@@ -314,8 +445,10 @@
   parent: SuitStorageBase
   suffix: Pilot
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitPilot
         - id: ClothingMaskBreath
@@ -328,8 +461,10 @@
   parent: SuitStorageBase
   suffix: Clown
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitClown
         - id: ClothingMaskBreath
@@ -342,8 +477,10 @@
   parent: SuitStorageBase
   suffix: NFSD Cadet
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Bronze Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ASClothingMaskGasSLE
@@ -358,8 +495,10 @@
   parent: SuitStorageBase
   suffix: NFSD Deputy
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Bronze Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ASClothingMaskGasSLE
@@ -374,8 +513,10 @@
   parent: SuitStorageBase
   suffix: NFSD Brigmedic
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Brigmed Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ASClothingMaskGasSLE
@@ -390,8 +531,10 @@
   parent: SuitStorageBase
   suffix: NFSD Sergeant
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Gold Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ASClothingMaskGasSLECommissioner
@@ -406,8 +549,10 @@
   parent: SuitStorageBase
   suffix: NFSD Bailiff
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Gold Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ASClothingMaskGasSLECommissioner
@@ -422,8 +567,10 @@
   parent: SuitStorageBase
   suffix: NFSD Sheriff
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Sheriff Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ASClothingMaskGasSLECommissioner
@@ -438,8 +585,10 @@
   parent: SuitStorageBase
   suffix: NFSD Combat
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitNfsdCombat
         - id: ClothingMaskGasNfsd
@@ -454,8 +603,10 @@
   parent: SuitStorageBase
   suffix: NFSD Command
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitNfsdCommand
         - id: ClothingMaskGasNfsd

@@ -114,7 +114,7 @@
   - type: Machine
     board: AutolatheMachineCircuitboard
   - type: MaterialStorage
-    whitelist:
+    whitelist: &StandardMaterialWhitelist
       tags:
         - Sheet
         - RawMaterial
@@ -157,6 +157,7 @@
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic
+#    - SyndicateAmmoStatic # Aurora's Song - Disable extras
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -205,11 +206,7 @@
   - type: Machine
     board: ProtolatheMachineCircuitboard
   - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
+    whitelist: *StandardMaterialWhitelist
   - type: OreSiloClient
   - type: Lathe
     idleState: icon
@@ -233,7 +230,6 @@
     - Janitor
     - Instruments
     - Equipment
-    - FauxTiles
     - NFMedical # Frontier
     - NFEngineering # Frontier
     - NFHardsuits # Frontier
@@ -300,7 +296,6 @@
     - CargoBoardsStatic
     - MedicalBoardsStatic
     - EngineeringBoardsStatic
-    - CircuitFloorsStatic
     - NFScienceBoardsStatic # Frontier
     - NFServiceBoardsStatic # Frontier
     - NFSalvageBoardsStatic # Frontier
@@ -321,11 +316,7 @@
     emagDynamicPacks: [] # Frontier: empty list
     # - SecurityBoards # Frontier
   - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
+    whitelist: *StandardMaterialWhitelist
   - type: OreSiloClient
   - type: RequireProjectileTarget
 
@@ -371,11 +362,7 @@
     - MechParts
     - MechEquipment
   - type: MaterialStorage
-    whitelist:
-      tags:
-      - Sheet
-      - RawMaterial
-      - Ingot
+    whitelist: *StandardMaterialWhitelist
   - type: OreSiloClient
   - type: GuideHelp
     guides:
@@ -461,12 +448,12 @@
     # - SecurityAmmo # Frontier
     # - SecurityWeapons # Frontier
     # - SecurityDisablers # Frontier
+    # Aurora's Song - Disable extra emag recipies
+#  - type: EmagLatheRecipes
+#    emagStaticPacks:
+#    - SyndicateAmmoStatic
   - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
+    whitelist: *StandardMaterialWhitelist
   - type: OreSiloClient
   # - type: LatheAnnouncing # Frontier: spammy
   #   channels: [Security] # Frontier
@@ -500,12 +487,12 @@
       - SLEAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic, Aurora's Song - NFSD to SLE
       - NFMercenaryMagazineStatic
       - NFPaperAndPaperAccessories # Aurora's Song - for paper and cardboard
+    # Aurora's Song - Disable extra emag recipies
+#    - type: EmagLatheRecipes
+#      emagStaticPacks:
+#      - SyndicateAmmoStatic
     - type: MaterialStorage
-      whitelist:
-        tags:
-          - Sheet
-          - RawMaterial
-          - Ingot
+      whitelist: *StandardMaterialWhitelist
     - type: OreSiloClient
     - type: EmagLatheRecipes
       emagStaticPacks:
@@ -604,6 +591,7 @@
     idleState: icon
     runningState: building
     staticPacks:
+    - TowelsStatic
     - ClothingCivilian
     - ClothingCargo
     - ClothingCommand
@@ -631,12 +619,8 @@
     # - ClothingCentComm # Frontier
     - ClothingSyndie
   - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
-  - type: OreSiloClient # Frontier
+    whitelist: *StandardMaterialWhitelist
+  - type: OreSiloClient
 
 - type: entity
   id: Biogenerator
@@ -691,11 +675,12 @@
     - NFBioGenSeedsMedicalStatic # Frontier
     - NFBioGenSoil # Frontier
     - NFBioGenAnimalCubesStatic #Frontier
-  # Frontier: emag lathe recipes, item mapper
   - type: EmagLatheRecipes
     emagStaticPacks:
+    - BioGenEmagStatic
     - HostileCubesStatic
-    - NFBioGenIngredientsDangerous
+    - NFBioGenIngredientsDangerous # Frontier
+  # Frontier: item mapper
   - type: ItemMapper
     mapLayers:
       beaker:
@@ -704,7 +689,7 @@
     - beaker_slot
     spriteLayers:
     - beaker
-  # End Frontier: emag lathe recipes, item mapper
+  # End Frontier: item mapper
 
 - type: entity
   parent: BaseLathe
@@ -822,24 +807,30 @@
     idleState: icon
     runningState: building
     staticPacks:
-    - FloorTilesStatic
+    - FloorDarkTilesStatic
+    - FloorSteelTilesStatic
+    - FloorWhiteTilesStatic
+    - FloorMaintsTilesStatic
+    - FloorWoodTilesStatic
+    - FloorConcreteTilesStatic
+    - CircuitFloorsStatic
+    - FloorMarbleTilesStatic
     - Carpets # Frontier
-    - CircuitFloorsStatic # Frontier
     - NFFloorsMiscStatic # Frontier
     - NFFloorTiles # Frontier
     - NFFloorTilesCarpet # Frontier
-    dynamicPacks: # Frontier
-    - FauxTiles # Frontier
+    dynamicPacks:
+    - FauxTiles
   - type: EmagLatheRecipes # Frontier
     emagStaticPacks: # Frontier
     - NFFloorTilesStrange # Frontier
   - type: MaterialStorage
     whitelist:
-      tags:
+      tags: # Frontier
         - Sheet
         - Metal
         - Wooden
         - RawMaterial
         - Plastic
-        - Ingot # Frontier
-  - type: OreSiloClient # Frontier
+        - Ingot
+  - type: OreSiloClient

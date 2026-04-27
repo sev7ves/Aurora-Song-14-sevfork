@@ -1,7 +1,4 @@
 construction-recipe-diagonal-shuttle-wall = shuttle wall (diagonal)
-# Aurora - Added localization for diagonal walls to display correct names in construction menu
-construction-recipe-wall-solid-diagonal = solid wall (diagonal)
-construction-recipe-wall-reinforced-diagonal = reinforced wall (diagonal)
 construction-window-diagonal = window (diagonal)
 construction-recipe-reinforced-window-diagonal = reinforced window (diagonal)
 construction-recipe-clockwork-window-diagonal = clockwork window (diagonal)
@@ -28,3 +25,7 @@ construction-recipe-pinion-airlock-glass = glass clockwork airlock
 construction-recipe-airlock-glass-shuttle = glass shuttle airlock
 construction-recipe-plastic-flaps-clear = plastic flaps (clear)
 construction-recipe-plastic-flaps-opaque = plastic flaps (opaque)
+
+# Aurora - Added localization for diagonal walls to display correct names in construction menu
+construction-recipe-wall-solid-diagonal = solid wall (diagonal)
+construction-recipe-wall-reinforced-diagonal = reinforced wall (diagonal)

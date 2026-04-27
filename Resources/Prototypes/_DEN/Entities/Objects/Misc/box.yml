@@ -124,11 +124,13 @@
         - AnomalyScanner
         - NodeScanner
         - Flash
-  - type: StorageFill
-    contents:
-    - id: LanternMantis
-    #- id: BoxFolderMantis
-    - id: HandLabelerMantis
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: LanternMantis
+        #- id: BoxFolderMantis
+        - id: HandLabelerMantis
   - type: Tag
     tags:
     - MantisBeltStorable
@@ -155,14 +157,16 @@
         - PillCanister
         - Pill
         - MantisBoxChemicalsStorable # Possibly redundant, but it has its own tag just in case
-  - type: StorageFill
-    contents:
-    - id: SyringeMantis
-    - id: ChemistryEmptyBottleMantis
-    #- id: PillCanisterMnemolithMantis # The bottles are labeled and color coded for safety
-    #- id: PillCanisterSpaceDrugsMantis
-    #- id: PillCanisterCryptobiolinMantis
-    #- id: PillCanisterMindbreakerToxinMantis # They don't have mindbreaker bullets anymore, so they get this instead
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: SyringeMantis
+        - id: ChemistryEmptyBottleMantis
+        #- id: PillCanisterMnemolithMantis # The bottles are labeled and color coded for safety
+        #- id: PillCanisterSpaceDrugsMantis
+        #- id: PillCanisterCryptobiolinMantis
+        #- id: PillCanisterMindbreakerToxinMantis # They don't have mindbreaker bullets anymore, so they get this instead
   - type: Tag
     tags:
     - MantisBeltStorable
@@ -185,17 +189,19 @@
     whitelist:
       tags:
         - MantisBoxCandlesStorable # Only the mantis candles should have this
-  - type: StorageFill
-    contents: # A cute radial arrangement of items, like a gift box
-    - id: CandleSomberMantisSmall
-    - id: CandleSomberMantis
-    - id: CandleSomberMantisSmall
-    - id: CandleSomberMantis
-    - id: CandleSomberMantisCluster
-    - id: CandleSomberMantis
-    - id: CandleSomberMantisSmall
-    - id: CandleSomberMantis
-    - id: CandleSomberMantisSmall
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children: # A cute radial arrangement of items, like a gift box
+        - id: CandleSomberMantisSmall
+        - id: CandleSomberMantis
+        - id: CandleSomberMantisSmall
+        - id: CandleSomberMantis
+        - id: CandleSomberMantisCluster
+        - id: CandleSomberMantis
+        - id: CandleSomberMantisSmall
+        - id: CandleSomberMantis
+        - id: CandleSomberMantisSmall
   - type: Tag
     tags:
     - MantisBeltStorable
@@ -219,14 +225,16 @@
     whitelist:
       tags:
         - MantisBoxRestraintsStorable # Only the items below should have this
-  - type: StorageFill
-    contents:
-    #- id: ClothingHeadCageMantis # This version has a chain on the front to match the other restraints case items (the locker version does not)
-    - id: HandcuffsMantis # If these are ever used to selfsec I swear to god, the breakout time is already one second
-    - id: ClothingNeckMantisShackles # Just a cosmetic neck item to complete the set
-    - id: WrenchMantis # A pretty but otherwise normal wrench for anchoring chains
-    #- id: LeashMantis # Matching chain leashes with sprites made to look like anchor points rather than handles
-      amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        #- id: ClothingHeadCageMantis # This version has a chain on the front to match the other restraints case items (the locker version does not)
+        - id: HandcuffsMantis # If these are ever used to selfsec I swear to god, the breakout time is already one second
+        - id: ClothingNeckMantisShackles # Just a cosmetic neck item to complete the set
+        - id: WrenchMantis # A pretty but otherwise normal wrench for anchoring chains
+        #- id: LeashMantis # Matching chain leashes with sprites made to look like anchor points rather than handles
+          amount: 4
   - type: Tag
     tags:
     - MantisBeltStorable

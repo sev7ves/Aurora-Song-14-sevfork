@@ -120,9 +120,9 @@
         emote: Cough
         showInGuidebook: true
         conditions:
-        - !type:Breathing
-        - !type:Internals
-          usingInternals: false
+        - !type:BreathingCondition
+        - !type:InternalsCondition
+          inverted: true
 
 - type: reagent
   id: Vinegar
@@ -145,15 +145,16 @@
 #        amount: 0.1
       - !type:SatiateHunger
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           reagent: Nutriment
           min: 0.1
         factor: 0.2
       # End Frontier: no extra nutriment, but satiation instead
-      - !type:ChemVomit
+      - !type:Vomit
         probability: 0.1
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
+            reagent: Vinegar
             min: 6
 
 - type: reagent
@@ -196,7 +197,7 @@
 #        amount: 0.75
       - !type:SatiateHunger
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           reagent: Nutriment
           min: 0.1
         factor: 1
@@ -238,7 +239,7 @@
 #        amount: 0.75
       - !type:SatiateHunger
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           reagent: Nutriment
           min: 0.1
         factor: 1
@@ -249,7 +250,8 @@
           amount: 250 # thermal energy, not temp
         - !type:HealthChange
           conditions:
-            - !type:ReagentThreshold
+            - !type:ReagentCondition
+              reagent: CapsaicinOil
               min: 5
           damage:
             types:
@@ -273,7 +275,7 @@
       effects:
       - !type:SatiateHunger
         conditions:
-        - !type:ReagentThreshold #Only satiates when eaten with nutriment
+        - !type:ReagentCondition #Only satiates when eaten with nutriment
           reagent: Nutriment
           min: 0.1
         factor: 1
@@ -305,7 +307,7 @@
 #        amount: 0.75
       - !type:SatiateHunger
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           reagent: Nutriment
           min: 0.1
         factor: 1
@@ -345,7 +347,7 @@
       #   amount: 0.75
       - !type:SatiateHunger
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           reagent: Nutriment
           min: 0.1
         factor: 1
@@ -356,7 +358,8 @@
         amount: -250 # thermal energy, not temp
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: FrostOil
           min: 5
         damage:
           types:

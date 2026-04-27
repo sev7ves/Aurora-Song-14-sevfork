@@ -22,7 +22,7 @@
     wideAnimationRotation: 180
     soundHit:
       path: /Audio/Items/Toys/hew.ogg
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
     requiresSpecialDigestion: true
     useSound:
       path: /Audio/Items/Toys/hew.ogg
@@ -126,7 +126,7 @@
     wideAnimationRotation: 180
     soundHit:
       path: /Audio/_NF/Effects/silence.ogg
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
     requiresSpecialDigestion: true
     useSound:
       path: /Audio/_NF/Effects/silence.ogg
@@ -175,17 +175,16 @@
   - type: Item
     sprite: _NF/Objects/Storage/Happyhonk/rock_carrier.rsi
     heldPrefix: box
-  - type: StorageFill
-    contents:
-      - id: PetRock
-        prob: 0.8
-        orGroup: Rock
-      - id: PetRockFred
-        prob: 0.1
-        orGroup: Rock
-      - id: PetRockRoxie
-        prob: 0.1
-        orGroup: Rock
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:GroupSelector
+        children:
+        - id: PetRock
+          prob: 0.8
+        - id: PetRockFred
+          prob: 0.1
+        - id: PetRockRoxie
+          prob: 0.1
 
 - type: entity
   parent: [BaseItem, MrChips]
@@ -493,7 +492,7 @@
     wideAnimationRotation: 180
     soundHit:
       path: /Audio/_DV/Voice/Vulpkanin/dog_bark1.ogg
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
     requiresSpecialDigestion: true
     useSound:
       path: /Audio/_DV/Voice/Vulpkanin/dog_bark1.ogg
@@ -590,7 +589,7 @@
     wideAnimationRotation: 180
     soundHit:
       path: /Audio/Nyanotrasen/Voice/Felinid/cat_meow1.ogg
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
     requiresSpecialDigestion: true
     useSound:
       path: /Audio/Nyanotrasen/Voice/Felinid/cat_meow1.ogg
@@ -932,7 +931,7 @@
 #    wideAnimationRotation: 180
 #    soundHit:
 #      path: /Audio/_NF/Voice/Goblin/goblin_scream_1.ogg
-#  - type: Food
+#  - type: Edible # Aurora's Song - Food>Edible
 #    requiresSpecialDigestion: true
 #    useSound:
 #      path: /Audio/_NF/Voice/Goblin/goblin_cackle_3.ogg

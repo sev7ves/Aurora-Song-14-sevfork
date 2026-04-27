@@ -25,7 +25,7 @@
 - type: listing
   id: UplinkNFPistolCobra
   name: uplink-pistol-cobra-name
-  description: uplink-pistol-cobra45-desc
+  description: uplink-pistol-cobra-desc # Aurora's Song - restore original description
   productEntity: NFWeaponPistolCobra
   discountCategory: rareDiscounts
   cost:

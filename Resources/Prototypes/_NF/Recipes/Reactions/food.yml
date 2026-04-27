@@ -57,5 +57,5 @@
     Water:
       amount: 10
   effects:
-    - !type:CreateEntityReactionEffect
+    - !type:SpawnEntity # Aurora's Song - CreateEntityReactionEffect>SpawnEntity
       entity: FoodRiceDough

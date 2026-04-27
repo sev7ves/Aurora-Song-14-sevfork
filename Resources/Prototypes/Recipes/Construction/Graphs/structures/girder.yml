@@ -151,7 +151,7 @@
               amount: 2
               doAfter: 1
         # End Frontier: interior shuttle wall
-        
+
         #Aurora - create diagonal wall
         - to: wallSolidDiagonal
           completed:
@@ -284,7 +284,7 @@
           steps:
             - tool: Prying
               doAfter: 5
-              
+
     #Aurora - diagonal wall node
     - node: wallSolidDiagonal
       entity: WallSolidDiagonal
@@ -312,7 +312,7 @@
             - material: Plasteel
               amount: 2
               doAfter: 1
-              
+
         #Mono - create diagonal reinforced wall
         - to: wallReinforcedDiagonal
           completed:
@@ -564,7 +564,7 @@
               doAfter: 1
             - tool: Cutting
               doAfter: 1
-              
+
     #Mono - diagonal reinforced wall node
     - node: wallReinforcedDiagonal
       entity: WallReinforcedDiagonal
@@ -601,11 +601,11 @@
         - to: wall
           steps:
             - tool: Welding
-              doAfter: 5
+              doAfter: 2
         - to: wall
           steps:
             - tool: Brushing
-              doAfter: 12
+              doAfter: 4
 
     - node: reinforcedWallRust
       entity: WallReinforcedRust
@@ -613,11 +613,11 @@
         - to: reinforcedWall
           steps:
             - tool: Welding
-              doAfter: 5
+              doAfter: 2
         - to: reinforcedWall
           steps:
             - tool: Brushing
-              doAfter: 12
+              doAfter: 4
 
     # Frontier: interior shuttle walls
     - node: shuttleInteriorWall

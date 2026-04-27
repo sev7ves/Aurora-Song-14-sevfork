@@ -5,6 +5,8 @@
   suffix: Filled, Ring Bag
   description: Someone died here...
   components:
-  - type: StorageFill
-    contents:
-      - id: ASClothingBackpackSatchelSmugglerUnanchoredGraveFill
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: ASClothingBackpackSatchelSmugglerUnanchoredGraveFill

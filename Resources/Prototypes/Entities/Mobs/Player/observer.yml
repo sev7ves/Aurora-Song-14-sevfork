@@ -54,7 +54,7 @@
   - type: Examiner
     skipChecks: true
   - type: Ghost
-  - type: GhostHearing
+  # - type: GhostHearing # Aurora Song commented out to make the default ghost hearing be local only
   - type: ShowElectrocutionHUD
   - type: IntrinsicRadioReceiver
   - type: ActiveRadio
@@ -93,7 +93,7 @@
   components:
   - type: Spectral
   - type: Tag
-    tags:
+    tags: # BAD: Intentional removal of inherited tag
     - AllowGhostShownByEvent
 
 - type: entity
@@ -159,12 +159,12 @@
   parent: BaseMentalAction
   id: ActionToggleGhostHearing
   name: Toggle Ghost Hearing
-  description: Toggle between hearing all messages and hearing only radio & nearby messages.
+  description: Toggle between hearing all messages and hearing only radio & nearby messages. User discretion is advised. # Aurora Song
   components:
   - type: Action
-    icon:
+    icon: Interface/Actions/ghostHearingToggled.png # Aurora Song: Flipped icon states
+    iconOn:
       sprite: Clothing/Ears/Headsets/base.rsi
       state: icon
-    iconOn: Interface/Actions/ghostHearingToggled.png
   - type: InstantAction
     event: !type:ToggleGhostHearingActionEvent

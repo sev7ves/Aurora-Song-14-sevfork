@@ -56,7 +56,6 @@ A change to a value (note: `OLD>NEW`)
 A cyborg module with an added moduleId field (inline blank comment), a commented out bucket (inline blank comment), and a DroppableBorgModule that we've added (begin/end block comment).
 ```yml
   - type: ItemBorgModule
-    moduleId: Gardening # Aurora Song
     items:
     - HydroponicsToolMiniHoe
     - HydroponicsToolSpade
@@ -64,7 +63,6 @@ A cyborg module with an added moduleId field (inline blank comment), a commented
     # - Bucket # Aurora Song
   # Aurora Song: droppable borg items
   - type: DroppableBorgModule
-    moduleId: Gardening
     items:
     - id: Bucket
       whitelist:

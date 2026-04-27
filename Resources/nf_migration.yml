@@ -649,3 +649,6 @@ SpawnMobWizFedWizardRedHardsuit: SpawnNFMobWizardRedAdept
 SpawnMobWizFedWizardVioletHardsuit: SpawnNFMobWizardPurpleAdept
 SpawnMobWizFedWizardBrickHardsuit: SpawnNFMobWizardBrickMaster
 SpawnMobWizFedWizardSoapHardsuit: SpawnNFMobWizardPurpleMaster
+
+# 2026-01-16 Aurora's Song Upmerge
+BoxMagazinePistolCaselessRiflePractice: null

@@ -6,7 +6,7 @@
   dollPrototype: MobShelegDummy
   markingLimits: MobShelegMarkingLimits
   sprites: MobShelegSprites
-  skinColoration: ShelegToned
+  skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
   defaultSkinTone: "#2A48CC"
   forcedMarkingColor: "#FFFFFF"
   maleFirstNames: NamesShelegFirstMale

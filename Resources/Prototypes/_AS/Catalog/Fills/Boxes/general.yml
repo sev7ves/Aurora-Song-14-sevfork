@@ -1,0 +1,29 @@
+- type: entity
+  name: arcadia encryption key box
+  parent: [BoxEncryptionKeyPassenger, BaseC3Contraband]
+  id: BoxEncryptionKeyArcadia
+  description: A box of ominous red and white encryption keys.
+  components:
+  - type: Item
+    size: Normal
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: EncryptionKeyArcadia
+        amount: 4
+  - type: Storage
+
+- type: entity
+  name: nanotrasen encryption key box
+  parent: [BoxEncryptionKeyPassenger, BaseC3Contraband]
+  id: BoxEncryptionKeyNanotrasen
+  description: A box of clean, corporate blue encryption keys.
+  components:
+  - type: Item
+    size: Normal
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: EncryptionKeyNanotrasen
+        amount: 4
+  - type: Storage

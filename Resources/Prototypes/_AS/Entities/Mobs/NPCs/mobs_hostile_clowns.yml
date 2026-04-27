@@ -8,14 +8,13 @@
     - type: HTN
       rootTask:
         task: SimpleRangedHostileCompound
-    - type: HitscanBatteryAmmoProvider
+    - type: BatteryAmmoProvider
       proto: NFRedMediumLaser
       fireCost: 62.5
     - type: Battery
       maxCharge: 1000
       startingCharge: 1000
     - type: BatterySelfRecharger
-      autoRecharge: true
       autoRechargeRate: 40
     - type: Gun
       fireRate: 0.75
@@ -105,8 +104,10 @@
     - type: Input
       context: "human"
     - type: Bloodstream
-      bloodMaxVolume: 300
-      bloodReagent: Laughter
+      bloodReferenceSolution:
+        reagents:
+        - ReagentId: Laughter
+          Quantity: 300
 
 - type: entity
   name: behonker
@@ -221,8 +222,10 @@
     - type: Speech
       speechVerb: Cluwne
     - type: Bloodstream
-      bloodMaxVolume: 150
-      bloodReagent: Laughter
+      bloodReferenceSolution:
+        reagents:
+        - ReagentId: Laughter
+          Quantity: 150
 
 #UIV NPC clown mob base
 - type: entity
@@ -248,7 +251,7 @@
       types:
         Heat: 0
   - type: Stamina
-    critThreshold: 400
+    baseCritThreshold: 400
   - type: SlowOnDamage
     speedModifierThresholds:
       72: 0.7
@@ -280,7 +283,7 @@
     prototypes:
       - ClownUIVMimeGear
   - type: Stamina
-    critThreshold: 500
+    baseCritThreshold: 500
   - type: MovementSpeedModifier
     baseWalkSpeed: 4
     baseSprintSpeed: 6
@@ -324,7 +327,7 @@
     - sprite: _NF/Mobs/Species/Templates/human.rsi
       state: human
   - type: Stamina
-    critThreshold: 500
+    baseCritThreshold: 500
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -350,7 +353,7 @@
     prototypes:
       - ClownUIVClownGearPie
   - type: Stamina
-    critThreshold: 500
+    baseCritThreshold: 500
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -387,7 +390,7 @@
     - sprite: _NF/Mobs/Species/Templates/human.rsi
       state: human
   - type: Stamina
-    critThreshold: 500
+    baseCritThreshold: 500
   - type: MovementSpeedModifier
     baseWalkSpeed: 4
     baseSprintSpeed: 6

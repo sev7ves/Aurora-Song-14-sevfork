@@ -4,10 +4,12 @@
   id: WeaponCaseShortSMG35LethalStick
   description: A box full of SMG .35 auto magazines.
   components:
-  - type: StorageFill
-    contents:
-    - id: NFMagazineSubMachineGun35
-      amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFMagazineSubMachineGun35
+          amount: 4
 
 - type: entity
   name: A box of SMG .35 auto stick magazines (P+)
@@ -15,10 +17,12 @@
   id: WeaponCaseShortSMG35OverpressureStick
   description: A box full of SMG .35 auto magazines loaded with P+
   components:
-  - type: StorageFill
-    contents:
-    - id: NFMagazineSubMachineGun35Overpressure
-      amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFMagazineSubMachineGun35Overpressure
+          amount: 4
 
 - type: entity # Funny
   name: A box of .35 honk boxes
@@ -26,10 +30,12 @@
   id: StorageFillAmmoBoxHonk35
   suffix: .35, Nonlethal, x2 boxes
   components:
-  - type: StorageFill
-    contents:
-    - id: ASAmmunitionBoxPistol35Funny
-      amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASAmmunitionBoxPistol35Funny
+          amount: 4
 
 - type: entity # Funny
   name: A box of .35 honk SMG mags
@@ -37,7 +43,9 @@
   id: StorageFillAmmoBoxHonk35SMG
   suffix: .35 SMG, Nonlethal, x4 mags
   components:
-  - type: StorageFill
-    contents:
-    - id: ASMagazineSubMachineGun35Funny
-      amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASMagazineSubMachineGun35Funny
+          amount: 4

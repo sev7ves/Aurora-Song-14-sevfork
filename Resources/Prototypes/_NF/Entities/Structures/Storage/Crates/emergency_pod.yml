@@ -60,7 +60,7 @@
     whitelist: # Frontier - whitelist
       components:
       - MedicalBounty
-    forceWhitelist: true # Frontier - force whitelist
+#    forceWhitelist: true # Frontier - force whitelist # Aurora's Song
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Metallic

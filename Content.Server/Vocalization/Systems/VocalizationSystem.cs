@@ -2,9 +2,10 @@ using Content.Server.Chat.Systems;
 using Content.Server.Power.Components;
 using Content.Server.Vocalization.Components;
 using Content.Shared.ActionBlocker;
+using Content.Shared.Chat;
+using Robust.Shared.Player; // Frontier
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
-using Robust.Shared.Player; // Frontier
 
 namespace Content.Server.Vocalization.Systems;
 
@@ -26,8 +27,6 @@ public sealed partial class VocalizationSystem : EntitySystem
 
         SubscribeLocalEvent<VocalizerComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<VocalizerRequiresPowerComponent, TryVocalizeEvent>(OnRequiresPowerTryVocalize);
-        SubscribeLocalEvent<ActorComponent, TryVocalizeEvent>(OnActorTryVocalize);
-
     }
 
     private void OnMapInit(Entity<VocalizerComponent> ent, ref MapInitEvent args)

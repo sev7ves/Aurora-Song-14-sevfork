@@ -32,6 +32,7 @@
   name: valet ID card
   components:
   - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi # Aurora's Song - Use old textures here
     layers:
     - state: default
     - state: idintern-service

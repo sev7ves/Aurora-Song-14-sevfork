@@ -28,16 +28,18 @@
   description: A home away from home for your squawking feathered friend.
   suffix: null # Previously defined
   components:
-  - type: StorageFill
-    contents:
-      - id: MobParrotNF
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MobParrotNF
   - type: Storage
     grid:
     - 0,0,2,2
     maxItemSize: Large
     whitelist:
       components:
-        - ParrotSpeech
+        - ParrotMemory # Aurora's Song - ParrotSpeech only worked on server, so client tests would fail
   - type: StaticPrice
     vendPrice: 1000
 
@@ -59,11 +61,11 @@
   - type: Butcherable
     spawned:
     - id: FoodMeatSlime
-      amount: 2    
+      amount: 2
     - id: MaterialHideRosyMothroach
       amount: 1
       prob: 0.3
-      
+
 - type: entity
   name: bee
   suffix: Angry, Timed

@@ -33,7 +33,10 @@
     - id: FoodMeat
       amount: 1
   - type: Bloodstream
-    bloodMaxVolume: 100
+    bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+      reagents:
+      - ReagentId: Blood
+        Quantity: 100
   - type: MeleeWeapon
     attackRate: 1.0
     soundHit:

@@ -1,6 +1,6 @@
 - type: entity
   name: NTCS-101 hypospray
-  parent: BaseItem
+  parent: [BaseItem, BaseHypospray] # Aurora's Song - Add BaseHypospray
   description: A commercial hypospray designed by Nanotrasen Chemical Supply. It has two built in safety features for the consumer market, a small chemical reservoir and an injection delay.
   id: HypoMini
   components:
@@ -20,10 +20,11 @@
         maxVol: 10
   - type: RefillableSolution
     solution: hypospray
-  - type: ExaminableSolution
-    solution: hypospray
-  - type: Hypospray
-    onlyAffectsMobs: false
+  # Aurora's Song - Inheritance
+#  - type: ExaminableSolution
+#    solution: hypospray
+#  - type: Hypospray
+#    onlyAffectsMobs: false
   - type: UseDelay
     delay: 2.5
   - type: StaticPrice
@@ -105,11 +106,12 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     changeColor: false
-  - type: Hypospray
-    solutionName: pen
-    onlyAffectsMobs: false
-    injectOnly: true
-    transferAmount: 15 # Explicitly redefined in case parent changes
+  # Aurora's Song - Use inheritance
+#  - type: Hypospray
+#    solutionName: pen
+#    onlyAffectsMobs: false
+#    injectOnly: true
+#    transferAmount: 15 # Explicitly redefined in case parent changes
   - type: Tag
     tags: []
 
@@ -137,8 +139,9 @@
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: SolutionContainerVisuals
     emptySpriteName: hemostasispen_empty
-  - type: Hypospray
-    transferAmount: 20
+  # Aurora's Song - Use inheritance
+#  - type: Hypospray
+#    transferAmount: 20
   - type: SolutionContainerManager
     solutions:
       pen:
@@ -174,8 +177,9 @@
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: SolutionContainerVisuals
     emptySpriteName: stimulantpen_empty
-  - type: Hypospray
-    transferAmount: 20
+  # Aurora's Song - Use inheritance
+#  - type: Hypospray
+#    transferAmount: 20
   - type: SolutionContainerManager
     solutions:
       pen:
@@ -211,8 +215,9 @@
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: SolutionContainerVisuals
     emptySpriteName: crisispen_empty
-  - type: Hypospray
-    transferAmount: 20
+  # Aurora's Song - Use inheritance
+#  - type: Hypospray
+#    transferAmount: 20
   - type: SolutionContainerManager
     solutions:
       pen:
@@ -248,8 +253,9 @@
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: SolutionContainerVisuals
     emptySpriteName: ephedrinepen_empty
-  - type: Hypospray
-    transferAmount: 10
+  # Aurora's Song - Use inheritance
+#  - type: Hypospray
+#    transferAmount: 10
   - type: SolutionContainerManager
     solutions:
       pen:
@@ -386,8 +392,9 @@
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: SolutionContainerVisuals
     emptySpriteName: barkeepersfriend_empty
-  - type: Hypospray
-    transferAmount: 20
+  # Aurora's Song - Use inheritance
+#  - type: Hypospray
+#    transferAmount: 20
   - type: SolutionContainerManager
     solutions:
       pen:
@@ -401,7 +408,7 @@
     price: 225
 
 - type: entity
-  parent: BaseItem
+  parent: [BaseItem, BaseHypospray] # Aurora's Song - Add BaseHypospray
   id: BorgHypoNoRefill
   abstract: true
   components:
@@ -421,9 +428,13 @@
         maxVol: 30
   - type: ExaminableSolution
     solution: hypospray
-  - type: Hypospray
-    onlyAffectsMobs: false
-    injectOnly: true
+  - type: Injector # Aurora's Song - Make inject only
+    allowedModes:
+    - HyposprayInjectMode
+  # Aurora's Song - Use inheritance
+#  - type: Hypospray
+#    onlyAffectsMobs: false
+#    injectOnly: true
   - type: UseDelay
     delay: 0.5
   - type: Appearance

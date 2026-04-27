@@ -8,7 +8,8 @@
   requirements:
   - !type:RoleTimeRequirement
     role: JobBorg
-    time: 18000  # 5 hrs
+    time: 5h
+  weight: 10
   canBeAntag: false
   icon: JobIconStationAi
   supervisors: job-supervisors-hire # Frontier: rd<hire
@@ -25,7 +26,7 @@
   setPreference: true
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 43200 # 12 hrs # Frontier: 10<12 hrs
+      time: 12h # 12 hrs # Frontier: 10<12 hrs
   canBeAntag: false
   icon: JobIconBorg
   supervisors: job-supervisors-hire # Frontier

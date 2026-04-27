@@ -13,10 +13,12 @@
     sprite: _DEN/Objects/Consumable/Smokeables/Cigarettes/Packs/stinkyjoints.rsi
   - type: Item
     sprite: _DEN/Objects/Consumable/Smokeables/Cigarettes/Packs/stinkyjoints.rsi
-  - type: StorageFill
-    contents:
-    - id: Joint
-      amount: 10
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: Joint
+          amount: 10
 
 - type: entity
   id: CigPackMnemolith
@@ -57,10 +59,12 @@
       visible: false
   - type: Item
     sprite: _DEN/Objects/Consumable/Smokeables/Cigarettes/Packs/mantis.rsi
-  - type: StorageFill
-    contents:
-    - id: CigaretteMnemolith
-      amount: 10
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: CigaretteMnemolith
+          amount: 10
   - type: Tag
     tags:
     - CigPack

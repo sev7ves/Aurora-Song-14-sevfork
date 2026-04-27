@@ -1,5 +1,6 @@
 ﻿using Content.Server.Chat.Systems;
 using Content.Server.Speech.Muting;
+using Content.Shared.Chat;
 using Content.Shared.Mobs;
 using Content.Shared.Mind.Components; // AS
 using Content.Shared.Speech.Muting;

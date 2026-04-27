@@ -11,7 +11,8 @@
         reagents:
         - ReagentId: Astrotame
           Quantity: 150
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
   - type: Label
     currentLabel: reagent-name-astrotame
 
@@ -28,7 +29,8 @@
         reagents:
         - ReagentId: BbqSauce
           Quantity: 150
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
   - type: Label
     currentLabel: reagent-name-bbq-sauce
 
@@ -45,7 +47,8 @@
         reagents:
         - ReagentId: Coldsauce
           Quantity: 150
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
   - type: Label
     currentLabel: reagent-name-coldsauce
 
@@ -62,7 +65,8 @@
         reagents:
         - ReagentId: HorseradishSauce
           Quantity: 150
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
   - type: Label
     currentLabel: reagent-name-horseradish-sauce
 
@@ -79,7 +83,8 @@
         reagents:
         - ReagentId: Hotsauce
           Quantity: 150
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
   - type: Label
     currentLabel: reagent-name-hotsauce
 
@@ -96,7 +101,8 @@
         reagents:
         - ReagentId: Ketchup
           Quantity: 150
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
   - type: Label
     currentLabel: reagent-name-ketchup
 
@@ -113,7 +119,8 @@
         reagents:
         - ReagentId: Mustard
           Quantity: 150
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
   - type: Label
     currentLabel: reagent-name-mustard
 
@@ -130,7 +137,8 @@
         reagents:
         - ReagentId: Soysauce
           Quantity: 150
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
   - type: Label
     currentLabel: reagent-name-soysauce
 
@@ -147,7 +155,8 @@
         reagents:
         - ReagentId: Mayo
           Quantity: 150
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
   - type: Label
     currentLabel: reagent-name-mayo
 
@@ -166,7 +175,8 @@
         reagents:
         - ReagentId: Caramexinin
           Quantity: 80
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
   - type: Label
     currentLabel: reagent-name-caramexinin
 
@@ -184,24 +194,8 @@
         reagents:
         - ReagentId: CocoaPowder
           Quantity: 150
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
   - type: Label
     currentLabel: reagent-name-cocoapowder
 
-- type: entity
-  parent: DrinkBottlePlasticBaseFull
-  id: JugWater
-  name: water powder jug
-  suffix: For Drinks, Full
-  description: A jug of water. Also probably microplastics.
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 300
-        reagents:
-        - ReagentId: Water
-          Quantity: 300
-  - type: Drink
-  - type: Label
-    currentLabel: reagent-name-water

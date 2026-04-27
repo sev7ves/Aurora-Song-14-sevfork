@@ -1,20 +1,22 @@
-- type: entity
-  id: Suture10Lingering
-  parent: MedicatedSuture
-  suffix: 10, Lingering
-  components:
-  - type: Stack
-    lingering: true
-    count: 10
+# Aurora's Song - Unused
+# - type: entity
+#   id: Suture10Lingering
+#   parent: MedicatedSuture
+#   suffix: 10, Lingering
+#   components:
+#   - type: Stack
+#     lingering: true
+#     count: 10
 
-- type: entity
-  id: Mesh10Lingering
-  parent: RegenerativeMesh
-  suffix: 10, Lingering
-  components:
-  - type: Stack
-    lingering: true
-    count: 10
+# Aurora's Song - Unused
+# - type: entity
+#   id: Mesh10Lingering
+#   parent: RegenerativeMesh
+#   suffix: 10, Lingering
+#   components:
+#   - type: Stack
+#     lingering: true
+#     count: 10
 
 - type: entity
   parent: PillCanister
@@ -24,10 +26,12 @@
   components:
   - type: Label
     currentLabel: medicine-label-mannitol-clarpy
-  - type: StorageFill
-    contents:
-    - id: NFPillMannitol
-      amount: 10
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFPillMannitol
+          amount: 10
 
 - type: entity
   name: pill
@@ -79,7 +83,7 @@
 # region Normal Vial Fills
 
 - type: entity
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: Bruizine 30u
   id: BruizineMedicalVial
   components:
@@ -94,7 +98,7 @@
               Quantity: 30
 
 - type: entity
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: Lacerinol 30u
   id: LacerinolMedicalVial
   components:
@@ -109,7 +113,7 @@
               Quantity: 30
 
 - type: entity
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: Puncturase 30u
   id: PuncturaseMedicalVial
   components:
@@ -124,7 +128,7 @@
               Quantity: 30
 
 - type: entity
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: Dex+ 30u
   id: DexPlusMedicalVial
   components:
@@ -139,7 +143,7 @@
               Quantity: 30
 
 - type: entity
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: Saline 30u
   id: SalineMedicalVial
   components:
@@ -154,7 +158,7 @@
               Quantity: 30
 
 - type: entity
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: Pyrazine 30u
   id: PyrazineMedicalVial
   components:
@@ -169,7 +173,7 @@
               Quantity: 30
 
 - type: entity
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: Insuzine 30u
   id: InsuzineMedicalVial
   components:
@@ -184,7 +188,7 @@
               Quantity: 30
 
 - type: entity
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: Leporazine 30u
   id: LeporazineMedicalVial
   components:
@@ -199,7 +203,7 @@
               Quantity: 30
 
 - type: entity
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: Stellibinin 30u
   id: StellibininMedicalVial
   components:
@@ -214,7 +218,7 @@
               Quantity: 30
 
 - type: entity
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: Tranexamic Acid 30u
   id: TranexamicAcidMedicalVial
   components:
@@ -229,7 +233,7 @@
               Quantity: 30
 
 - type: entity
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: Olig/Arith blend 30u
   id: OligArithMedicalVial
   components:
@@ -246,7 +250,7 @@
               Quantity: 15
 
 - type: entity
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: Bicaridine 30u
   id: BicaridineMedicalVial
   components:
@@ -261,7 +265,7 @@
               Quantity: 30
 
 - type: entity
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: Dermaline 30u
   id: DermalineMedicalVial
   components:
@@ -276,7 +280,7 @@
               Quantity: 30
 
 - type: entity
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: Dylovene 30u
   id: DyloveneMedicalVial
   components:
@@ -291,7 +295,7 @@
               Quantity: 30
 
 - type: entity
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: Epinephrine 30u
   id: EpinephrineMedicalVial
   components:

@@ -65,7 +65,6 @@
     maxCharge: 800
     startingCharge: 800
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 1
   - type: NFOniFriendlyGun # AS: Staves aren't guns. Oni wizards are valid too
 
@@ -90,7 +89,7 @@
   id: WeaponMasterStaffBase
   components:
   - type: MeleeThrowOnHit
-    unanchorOnHit: true
+    unanchorOnHit: Unanchorable # Aurora's Song - true>Unanchorable
     whitelist:
       components:
       - MobThrowableOnHit
@@ -130,7 +129,7 @@
   id: WeaponChargedStaffWizardElementalAdept
   name: adept-wizard blue curacao elemental staff
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: WaterElementalConjuredStaff
     fireCost: 800
   - type: Construction
@@ -143,7 +142,7 @@
   id: WeaponChargedStaffWizardElementalMaster
   name: master-wizard blue curacao elemental staff
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: WaterElementalConjuredStaff
     fireCost: 250
   - type: Construction
@@ -187,7 +186,7 @@
   id: WeaponChargedStaffWizardIceAdept
   name: adept-wizard ice staff
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletIceGlobe
     fireCost: 80
   - type: Construction
@@ -200,7 +199,7 @@
   id: WeaponChargedStaffWizardIceMaster
   name: master-wizard ice staff
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletIceGlobe
     fireCost: 40
   - type: Construction
@@ -221,7 +220,7 @@
   - type: Item
     sprite: _NF/Objects/Weapons/Guns/Basic/staves.rsi
     heldPrefix: thunder-staff
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: WizardHitscanLightning
     fireCost: 80
   - type: Construction
@@ -234,7 +233,7 @@
   id: WeaponChargedStaffWizardLightningAdept
   name: adept-wizard lightning staff
   components:
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: WizardHitscanLightning
     fireCost: 80
   - type: Construction
@@ -247,7 +246,7 @@
   id: WeaponChargedStaffWizardLightningMaster
   name: master-wizard lightning staff
   components:
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: WizardHitscanLightning
     fireCost: 40
   - type: Construction
@@ -282,7 +281,7 @@
   id: WeaponChargedStaffWizardSoapAdept
   name: adept-wizard soap staff
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: SoapConjured
     fireCost: 80
   - type: Construction
@@ -295,7 +294,7 @@
   id: WeaponChargedStaffWizardSoapMaster
   name: master-wizard soap staff
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: SoapConjured
     fireCost: 40
   - type: Construction
@@ -330,7 +329,7 @@
   id: WeaponChargedStaffWizardBoltMagicAdept
   name: adept-wizard magic bolt staff
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMagicBolt
     fireCost: 80
   - type: Construction
@@ -343,7 +342,7 @@
   id: WeaponChargedStaffWizardBoltMagicMaster
   name: master-wizard magic bolt staff
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMagicBolt
     fireCost: 40
   - type: Construction
@@ -387,7 +386,7 @@
   id: WeaponChargedStaffWizardBoltFireAdept
   name: adept-wizard fire bolt staff
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletFireBolt
     fireCost: 80
   - type: Construction
@@ -400,7 +399,7 @@
   id: WeaponChargedStaffWizardBoltFireMaster
   name: master-wizard fire bolt staff
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletFireBolt
     fireCost: 40
   - type: Construction
@@ -444,7 +443,7 @@
   id: WeaponChargedStaffWizardCausticAdept
   name: adept-wizard caustic beam staff
   components:
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: CausticBeam
     fireCost: 80
   - type: Construction
@@ -457,7 +456,7 @@
   id: WeaponChargedStaffWizardCausticMaster
   name: master-wizard caustic beam staff
   components:
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: CausticBeam
     fireCost: 40
   - type: Construction
@@ -498,7 +497,7 @@
   id: WeaponChargedStaffWizardBrickAdept
   name: adept-wizard brick staff
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BrickConjured
     fireCost: 80
   - type: Construction
@@ -511,7 +510,7 @@
   id: WeaponChargedStaffWizardBrickMaster
   name: master-wizard brick staff
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BrickConjured
     fireCost: 40
   - type: Construction
@@ -546,7 +545,7 @@
   id: WeaponChargedStaffCultistBoltDarkAdept
   name: blood cult staff of crimson bolt
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletBloodCultDarkBolt
     fireCost: 80
   - type: Construction
@@ -559,7 +558,7 @@
   id: WeaponChargedStaffCultistBoltDarkMaster
   name: blood cult staff of crimson bolt
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletBloodCultDarkBolt
     fireCost: 40
   - type: Construction
@@ -594,7 +593,7 @@
   id: WeaponChargedStaffCultistHandAdept
   name: blood cult staff of malicious touch
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletBloodCultHand
     fireCost: 80
   - type: Construction
@@ -607,7 +606,7 @@
   id: WeaponChargedStaffCultistHandMaster
   name: blood cult staff of malicious touch
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletBloodCultHand
     fireCost: 40
   - type: Construction
@@ -642,7 +641,7 @@
   id: WeaponChargedStaffCultistLightningAdept
   name: blood cult staff of crimson lightning
   components:
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: BloodCultLaser
     fireCost: 80
   - type: Construction
@@ -655,7 +654,7 @@
   id: WeaponChargedStaffCultistLightningMaster
   name: blood cult staff of crimson lightning
   components:
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: BloodCultLaser
     fireCost: 40
   - type: Construction
@@ -690,7 +689,7 @@
   id: WeaponChargedStaffCultistSoapAdept
   name: blood cult staff of shredding soap
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: ShellSoapConjuredBloodCultCluster
     fireCost: 240
   - type: Construction
@@ -703,7 +702,7 @@
   id: WeaponChargedStaffCultistSoapMaster
   name: blood cult staff of shredding soap
   components:
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: ShellSoapConjuredBloodCultCluster
     fireCost: 120
   - type: Construction

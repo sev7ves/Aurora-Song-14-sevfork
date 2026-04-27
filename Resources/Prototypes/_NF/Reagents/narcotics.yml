@@ -15,17 +15,17 @@
         showInChat: true
         probability: 0.05
         conditions:
-        - !type:OrganType
-          type: Dwarf
-          shouldHave: false
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Dwarf ]
+          inverted: true
       - !type:Emote
         emote: Gasp
         showInChat: true
         probability: 0.025
         conditions:
-        - !type:OrganType
-          type: Dwarf
-          shouldHave: false
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Dwarf ]
+          inverted: true
       # Effects for dwarfs
       - !type:PopupMessage
         type: Local
@@ -37,9 +37,8 @@
         - "rock-dust-effect-nf-pleasant-memories-04"
         probability: 0.05
         conditions:
-        - !type:OrganType
-          type: Dwarf
-          shouldHave: true
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Dwarf ]
       - !type:PopupMessage
         type: Local
         visualType: Medium
@@ -49,9 +48,8 @@
         - "rock-dust-effect-nf-tense-memories-03"
         probability: 0.015
         conditions:
-        - !type:OrganType
-          type: Dwarf
-          shouldHave: true
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Dwarf ]
 
 - type: reagent
   id: ShroomMix
@@ -76,33 +74,29 @@
         type: Add
         time: 15
         conditions:
-        - !type:OrganType
-          type: Goblin
-          shouldHave: true
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Goblin ]
       - !type:Emote
         emote: Laugh
         showInChat: true
         probability: 0.08
         conditions:
-        - !type:OrganType
-          type: Goblin
-          shouldHave: true
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Goblin ]
       - !type:Emote
         emote: GoblinMutter
         showInChat: true
         probability: 0.05
         conditions:
-        - !type:OrganType
-          type: Goblin
-          shouldHave: true
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Goblin ]
       - !type:Emote
         emote: Hiss
         showInChat: true
         probability: 0.025
         conditions:
-        - !type:OrganType
-          type: Goblin
-          shouldHave: true
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Goblin ]
       - !type:PopupMessage
         type: Local
         visualType: Medium
@@ -117,9 +111,8 @@
         - "shroom-mix-effect-nf-procrastination-visions-08"
         probability: 0.05
         conditions:
-        - !type:OrganType
-          type: Goblin
-          shouldHave: true
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Goblin ]
       # Effects for everyone
       - !type:Emote
         emote: Scream
@@ -132,26 +125,27 @@
       # Effects for non-goblins
       - !type:Jitter
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+          reagent: ShroomMix
           min: 1
-        - !type:OrganType
-          type: Goblin
-          shouldHave: false
-      - !type:ChemVomit
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Goblin ]
+          inverted: true
+      - !type:Vomit # Aurora's Song - ChemVomit>Vomit
         probability: 0.025
         conditions:
-        - !type:OrganType
-          type: Goblin
-          shouldHave: false
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Goblin ]
+          inverted: true
       - !type:SatiateThirst
         factor: -1 # Makes non goblins thirsty, scales with reagent quantity (I think)
         conditions:
-        - !type:OrganType
-          type: Goblin
-          shouldHave: false
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Goblin ]
+          inverted: true
       - !type:SatiateHunger
         factor: -1 # Makes non goblins hungry, scales with reagent quantity (I think)
         conditions:
-        - !type:OrganType
-          type: Goblin
-          shouldHave: false
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Goblin ]
+          inverted: true

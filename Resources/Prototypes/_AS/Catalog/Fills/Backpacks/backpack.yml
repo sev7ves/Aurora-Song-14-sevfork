@@ -6,15 +6,17 @@
   name: CAF leader backpack
   suffix: Filled
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponEnergyPistolDisabler
-      - id: NFWeaponPistolN1984
-      - id: MedicatedSuture
-      - id: RegenerativeMesh
-      - id: BoxZiptie
-      - id: CrowbarRed
-      - id: NFMagazinePistol45
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFWeaponEnergyPistolDisabler
+        - id: NFWeaponPistolN1984
+        - id: MedicatedSuture
+        - id: RegenerativeMesh
+        - id: BoxZiptie
+        - id: CrowbarRed
+        - id: NFMagazinePistol45
 
 - type: entity
   parent: ClothingBackpackCAFTrooper
@@ -22,15 +24,17 @@
   name: CAF trooper backpack
   suffix: Filled
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponEnergyPistolDisabler
-      - id: NFWeaponPistolMk58
-      - id: MedicatedSuture
-      - id: RegenerativeMesh
-      - id: BoxZiptie
-      - id: CrowbarRed
-      - id: NFMagazinePistol35
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFWeaponEnergyPistolDisabler
+        - id: NFWeaponPistolMk58
+        - id: MedicatedSuture
+        - id: RegenerativeMesh
+        - id: BoxZiptie
+        - id: CrowbarRed
+        - id: NFMagazinePistol35
 
 - type: entity
   parent: ClothingBackpackCAFMedical
@@ -38,17 +42,19 @@
   name: CAF medical backpack
   suffix: Filled
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponPistolMk58
-      - id: Hypospray
-      - id: MedkitCombatFilled
-      - id: MedkitCombatFilled
-      - id: CrowbarRed
-      - id: ChemistryBottleOmnizine
-      - id: ChemistryBottleEpinephrine
-      - id: ChemistryBottleEpinephrine
-      - id: NFMagazinePistol35
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFWeaponPistolMk58
+        - id: Hypospray
+        - id: MedkitCombatFilled
+        - id: MedkitCombatFilled
+        - id: CrowbarRed
+        - id: ChemistryBottleOmnizine
+        - id: ChemistryBottleEpinephrine
+        - id: ChemistryBottleEpinephrine
+        - id: NFMagazinePistol35
 
 - type: entity
   parent: ClothingBackpackCAFEngineer
@@ -56,17 +62,19 @@
   name: CAF engineer backpack
   suffix: Filled
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponEnergyPistolDisabler
-      - id: NFWeaponPistolMk58
-      - id: trayScanner
-      - id: RCD
-      - id: RCDAmmo
-      - id: RCDAmmo
-      - id: CableMVStack
-      - id: CableHVStack
-      - id: CableApcStack
-      - id: SheetPlasteel
-      - id: SheetSteel
-      - id: SheetGlass
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFWeaponEnergyPistolDisabler
+        - id: NFWeaponPistolMk58
+        - id: trayScanner
+        - id: RCD
+        - id: RCDAmmo
+        - id: RCDAmmo
+        - id: CableMVStack
+        - id: CableHVStack
+        - id: CableApcStack
+        - id: SheetPlasteel
+        - id: SheetSteel
+        - id: SheetGlass

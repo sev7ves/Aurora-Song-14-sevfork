@@ -99,6 +99,7 @@
     reoccurrenceDelay: 240 # 4 hours
     requiredJobs:
       Sergeant: 1
+    category: SLE
   - type: BluespaceErrorBountyRule
     includeGridValue: false
     announcementChannels:
@@ -172,6 +173,7 @@
     reoccurrenceDelay: 120 # 2 hours
     requiredJobs:
       Sergeant: 1
+    category: SLE
   - type: BluespaceErrorBountyRule
     includeGridValue: false
     announcementChannels:

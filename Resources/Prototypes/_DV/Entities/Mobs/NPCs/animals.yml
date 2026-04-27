@@ -114,7 +114,10 @@
     attributes:
       gender: epicene
   - type: Bloodstream
-    bloodMaxVolume: 300 # BIG DOG. MUCH BLOOD :3
+    bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+      reagents:
+      - ReagentId: Blood
+        Quantity: 300 # BIG DOG. MUCH BLOOD :3
   - type: Puller
     needsHands: false
   - type: MobPrice

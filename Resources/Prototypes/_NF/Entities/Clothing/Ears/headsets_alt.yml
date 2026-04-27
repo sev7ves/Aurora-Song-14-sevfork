@@ -160,3 +160,8 @@
     sprite: _NF/Clothing/Ears/Headsets/arcadia.rsi
   - type: Clothing
     sprite: _NF/Clothing/Ears/Headsets/arcadia.rsi
+  - type: ContainerFill # Aurora's Song - gives the headset Arcadia comms
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyArcadia

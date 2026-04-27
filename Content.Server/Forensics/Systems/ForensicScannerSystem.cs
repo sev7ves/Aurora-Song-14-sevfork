@@ -15,7 +15,7 @@ using Robust.Shared.Audio;
 using Robust.Shared.Timing;
 using Content.Server.Chemistry.Containers.EntitySystems;
 using Robust.Shared.Prototypes;
-using Content.Server._NF.SectorServices; // Frontier
+using Content.Shared._NF.SectorServices; // Frontier
 using Content.Server._NF.Smuggling; // Frontier
 using Content.Server._NF.Smuggling.Components; // Frontier
 using Content.Server.Radio.EntitySystems; // Frontier
@@ -120,7 +120,7 @@ namespace Content.Server.Forensics
                         sectorDD.FUCAccumulator -= payout;
 
                         var stackPrototype = _prototypeManager.Index<StackPrototype>("FrontierUplinkCoin");
-                        _stackSystem.Spawn(payout, stackPrototype, Transform(target).Coordinates);
+                        _stackSystem.SpawnAtPosition(payout, stackPrototype, Transform(target).Coordinates);
                     }
                 }
             }
@@ -262,7 +262,9 @@ namespace Content.Server.Forensics
                 Act = () => StartScan(uid, component, args.User, args.Target),
                 IconEntity = GetNetEntity(uid),
                 Text = Loc.GetString("forensic-scanner-verb-text"),
-                Message = Loc.GetString("forensic-scanner-verb-message")
+                Message = Loc.GetString("forensic-scanner-verb-message"),
+                // This is important because if its true using the scanner will count as touching the object.
+                DoContactInteraction = false
             };
 
             args.Verbs.Add(verb);

@@ -20786,7 +20786,7 @@ entities:
     - type: Transform
       pos: -5.2409515,-3.9028404
       parent: 3
-- proto: EnergyAirConverter
+- proto: EnergyRespironConverter
   entities:
   - uid: 1139
     components:

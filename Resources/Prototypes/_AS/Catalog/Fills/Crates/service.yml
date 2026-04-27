@@ -5,10 +5,12 @@
   suffix: Filled, Water Bottles
   description: Chill to the touch.
   components:
-  - type: StorageFill
-    contents:
-      - id: DrinkWaterBottleFull
-        amount: 6
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: DrinkWaterBottleFull
+          amount: 6
 
 - type: entity
   id: ASCratePlasticBiodegradableSeatingFill
@@ -17,12 +19,14 @@
   suffix: Filled, Seating
   description: Labeled "For all your cookout seating needs!"
   components:
-  - type: StorageFill
-    contents:
-      - id: ChairFoldingSpawnFolded
-        amount: 8
-      - id: TableFoldingSpawnFolded
-        amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: ChairFoldingSpawnFolded
+          amount: 8
+        - id: TableFoldingSpawnFolded
+          amount: 4
 
 - type: entity
   id: ASCratePlasticBiodegradableTowelsFill
@@ -31,45 +35,47 @@
   suffix: Filled, Towels
   description: Labeled "A cloth for every color of the rainbow!"
   components:
-  - type: StorageFill
-    contents:
-    - id: TowelColorWhite
-      amount: 1
-    - id: TowelColorPurple
-      amount: 1
-    - id: TowelColorRed
-      amount: 1
-    - id: TowelColorBlue
-      amount: 1
-    - id: TowelColorDarkBlue
-      amount: 1
-    - id: TowelColorLightBlue
-      amount: 1
-    - id: TowelColorTeal
-      amount: 1
-    - id: TowelColorBrown
-      amount: 1
-    - id: TowelColorLightBrown
-      amount: 1
-    - id: TowelColorGray
-      amount: 1
-    - id: TowelColorGreen
-      amount: 1
-    - id: TowelColorDarkGreen
-      amount: 1
-    - id: TowelColorGold
-      amount: 1
-    - id: TowelColorOrange
-      amount: 1
-    - id: TowelColorBlack
-      amount: 1
-    - id: TowelColorPink
-      amount: 1
-    - id: TowelColorYellow
-      amount: 1
-    - id: TowelColorMaroon
-      amount: 1
-    - id: TowelColorSilver
-      amount: 1
-    - id: TowelColorMime
-      amount: 1
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: TowelColorWhite
+          amount: 1
+        - id: TowelColorPurple
+          amount: 1
+        - id: TowelColorRed
+          amount: 1
+        - id: TowelColorBlue
+          amount: 1
+        - id: TowelColorDarkBlue
+          amount: 1
+        - id: TowelColorLightBlue
+          amount: 1
+        - id: TowelColorTeal
+          amount: 1
+        - id: TowelColorBrown
+          amount: 1
+        - id: TowelColorLightBrown
+          amount: 1
+        - id: TowelColorGray
+          amount: 1
+        - id: TowelColorGreen
+          amount: 1
+        - id: TowelColorDarkGreen
+          amount: 1
+        - id: TowelColorGold
+          amount: 1
+        - id: TowelColorOrange
+          amount: 1
+        - id: TowelColorBlack
+          amount: 1
+        - id: TowelColorPink
+          amount: 1
+        - id: TowelColorYellow
+          amount: 1
+        - id: TowelColorMaroon
+          amount: 1
+        - id: TowelColorSilver
+          amount: 1
+        - id: TowelColorMime
+          amount: 1

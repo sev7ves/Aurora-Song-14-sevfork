@@ -260,11 +260,10 @@
     - type: Loadout
       prototypes:
         - SyndicateNavalSecondOfficerGearA
-    - type: ProjectileBatteryAmmoProvider
+    - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
       proto: NFBulletLaserLow
       fireCost: 100
     - type: BatterySelfRecharger
-      autoRecharge: true
       autoRechargeRate: 50
     - type: Battery
       maxCharge: 600
@@ -307,7 +306,7 @@
     - type: Loadout
       prototypes:
         - SyndicateNavalSecondOfficerGearD
-    - type: ProjectileBatteryAmmoProvider
+    - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
       proto: NFBulletLaserLow
       fireCost: 50
 

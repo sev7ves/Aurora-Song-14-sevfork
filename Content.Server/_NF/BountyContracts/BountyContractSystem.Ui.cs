@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Server._NF.SectorServices;
+using Content.Shared._NF.SectorServices;
 using Content.Server.StationRecords;
 using Content.Shared._NF.BountyContracts;
 using Content.Shared.Access.Components;

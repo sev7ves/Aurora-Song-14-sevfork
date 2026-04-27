@@ -133,7 +133,7 @@ public sealed partial class HandPlaceholderSystem : EntitySystem
     private void TryToPickUpTarget(Entity<HandPlaceholderComponent> ent, EntityUid target, EntityUid user)
     {
         // require items regardless of the whitelist
-        if (!ent.Comp.AllowNonItems && !HasComp<ItemComponent>(target) || _whitelist.IsWhitelistFail(ent.Comp.Whitelist, target) || _whitelist.IsBlacklistPass(ent.Comp.Blacklist, target))
+        if (!ent.Comp.AllowNonItems && !HasComp<ItemComponent>(target) || _whitelist.IsWhitelistFail(ent.Comp.Whitelist, target) || _whitelist.IsWhitelistPass(ent.Comp.Blacklist, target))
             return;
 
         if (!TryComp<HandsComponent>(user, out var hands))

@@ -13,6 +13,8 @@
   - type: Appearance
   - type: Charger
     slotId: charger_slot
+  - type: ApcPowerReceiver
+    powerLoad: 1 # same as draw given in ChargerComponent.PassiveDraw; increased when it is actually charging something
   - type: Anchorable
     delay: 1
   - type: Destructible
@@ -72,6 +74,7 @@
   parent: BaseItemRecharger
   id: PowerCellRecharger
   name: cell recharger
+  description: An older model recharger that can recharge power cells.
   categories: [HideSpawnMenu] # Frontier: use the weapon recharger
   components:
   - type: Sprite
@@ -107,13 +110,15 @@
           - PowerCell
           - PowerCellSmall
           - MantisCaster # TheDen - Necessary so mantis gun magazines can't power flashlights
-
+        blacklist:
+          tags:
+          - PotatoBattery
 
 - type: entity
   parent: [ BaseItemRecharger, ConstructibleMachine ]
   id: PowerCageRecharger
   name: cage recharger
-  description: A specialized machine made for recharging the heavy cage batteries used by ship-mounted weapons. # Wizden#38138
+  description: A specialized machine made for recharging the heavy cage batteries used by ship-mounted weapons.
   components:
   - type: Fixtures
     fixtures:
@@ -154,7 +159,7 @@
   parent: BaseItemRecharger
   id: WeaponCapacitorRecharger
   name: recharger
-  description: A modern recharging station that can fit both power cells and small electronic devices. # Wizden#38138
+  description: A modern recharging station that can fit both power cells and small electronic devices.
   components:
   - type: Sprite
     sprite: Structures/Power/recharger.rsi
@@ -166,16 +171,15 @@
         ejectOnInteract: true
         whitelist:
           components:
-          - HitscanBatteryAmmoProvider
-          - ProjectileBatteryAmmoProvider
+          - BatteryAmmoProvider
           - Stunbaton
           - PowerCell # Frontier
-        blacklist: # Frontier
+        blacklist:
+          tags:
+          - PotatoBattery
           components: # Frontier
           - WizardStaffRechargeable # Frontier
           - BloodCultStaffRechargeable # Frontier
-          tags: # Frontier
-          - PotatoBattery # Frontier
 
 - type: entity
   parent: BaseItemRecharger
@@ -195,8 +199,7 @@
         ejectOnInteract: true
         whitelist:
           components:
-          - HitscanBatteryAmmoProvider
-          - ProjectileBatteryAmmoProvider
+          - BatteryAmmoProvider
           - Stunbaton
           - PowerCell
         blacklist:
@@ -229,16 +232,16 @@
         ejectOnInteract: true
         whitelist:
           components:
-          - HitscanBatteryAmmoProvider
-          - ProjectileBatteryAmmoProvider
+          - BatteryAmmoProvider
           - Stunbaton
           - PowerCell # Frontier
-        blacklist: # Frontier
+        blacklist:
+          tags:
+          - PotatoBattery
           components: # Frontier
           - WizardStaffRechargeable # Frontier
           - BloodCultStaffRechargeable # Frontier
-          tags: # Frontier
-          - PotatoBattery # Frontier
+
   # imp start
   - type: Machine
     board: WeaponCapacitorRechargerCircuitboard
@@ -324,3 +327,12 @@
       entity_storage: !type:Container
       machine_board: !type:Container
       machine_parts: !type:Container
+
+- type: entity
+  parent: BorgCharger
+  id: BorgChargerXenoborg
+  name: xenoborg recharging station
+  description: A stationary charger for xenoborgs. Feels claustrophobic.
+  components:
+  - type: Sprite
+    sprite: Structures/Power/xenoborg_charger.rsi

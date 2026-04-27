@@ -4,25 +4,27 @@
   parent: ClothingBackpackDuffelTrauma
   suffix: Shana Filled
   components:
-  - type: StorageFill
-    contents:
-      - id: JugBruizine
-        amount: 1
-      - id: JugLacerinol
-        amount: 1
-      - id: JugPuncturase
-        amount: 1
-      - id: JugSaline
-        amount: 1
-      - id: JugTranexamicAcid
-        amount: 1
-      - id: JugPyrazine
-        amount: 1
-      - id: JugDexalinPlus
-        amount: 1
-      - id: JugEpinephrine
-        amount: 1
-      - id: ArithrazineChemistryVial
-        amount: 2
-      - id: DiphenhydramineChemistryVial
-        amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: JugBruizine
+          amount: 1
+        - id: JugLacerinol
+          amount: 1
+        - id: JugPuncturase
+          amount: 1
+        - id: JugSaline
+          amount: 1
+        - id: JugTranexamicAcid
+          amount: 1
+        - id: JugPyrazine
+          amount: 1
+        - id: JugDexalinPlus
+          amount: 1
+        - id: JugEpinephrine
+          amount: 1
+        - id: ArithrazineChemistryVial
+          amount: 2
+        - id: DiphenhydramineChemistryVial
+          amount: 2

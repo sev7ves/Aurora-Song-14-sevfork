@@ -285,7 +285,7 @@
 
 - type: latheRecipe
   id: ToyGriffinRecipe
-  result: ToyGriffin
+  result: ToyFigurineGriffin # Aurora Song: ToyGriffin:ToyFigurineGriffin
   parent: BasePrize10Recipe
 
 - type: latheRecipe
@@ -315,7 +315,7 @@
 
 - type: latheRecipe
   id: ToyOwlmanRecipe
-  result: ToyOwlman
+  result: ToyFigurineOwlman #Aurora Song: ToyOwlman : ToyFigurineOwlman
   parent: BasePrize10Recipe
 
 - type: latheRecipe
@@ -350,7 +350,7 @@
 
 - type: latheRecipe
   id: ToySkeletonRecipe
-  result: ToySkeleton
+  result: ToyFigurineSkeleton # Aurora Song: ToySkeleton: ToyFigurineSkeleton
   parent: BasePrize10Recipe
 
 - type: latheRecipe

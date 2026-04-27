@@ -30,7 +30,7 @@
   - type: Appearance
   - type: GenericVisualizer
     visuals:
-      enum.PowerCellSlotVisuals.Enabled:
+      enum.BatteryVisuals.Charging: # Aurora's Song - PowerCellSlotVisuals.Enabled>BatteryVisuals.Charging
         enum.PowerDeviceVisualLayers.Powered:
           True: { visible: true }
           False: { visible: false }
@@ -41,7 +41,7 @@
   components:
   - type: PowerCellDraw
     drawRate: 0
-    useRate: 40
+    useCharge: 40 # Aurora's Song - useRate>UseCharge
   - type: ActivatableUIRequiresPowerCell
 
 - type: entity

@@ -1,135 +1,137 @@
-- type: entity
-  id: BluespaceCacheError
-  parent: BaseStationEventShortDelay
-  components:
-  - type: StationEvent
-    startAnnouncement: station-event-bluespace-cache-start-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
-    warningAnnouncement: station-event-bluespace-cache-warning-announcement
-    endAnnouncement: station-event-bluespace-cache-end-announcement
-    earliestStart: 100
-    weight: 5
-    duration: 1350
-    maxDuration: 1560
-    reoccurrenceDelay: 360 # 6 hours
-    requiredJobs: # Aurora's Song - Switched to Commissioenr
-      Commissioner: 1
-  - type: BluespaceErrorRule
-    groups:
-      grid: !type:GridSpawnGroup
-        nameLoc:
-        - station-event-bluespace-name-SyndicateWeaponsCache
-        minimumDistance: 1500
-        maximumDistance: 2500
-        addComponents:
-        - type: Gravity
-          enabled: true
-          inherent: true
-        - type: IFF
-          color: "#E10F9B"
-        - type: Shuttle
-        - type: LinkedLifecycleGridParent
-        - type: ProtectedGrid
-          preventArtifactTriggers: true
-        - type: PreventPilot
-        - type: ForceAnchor # Added post-FTL, so anchoring is fine.
-        - type: DeletionCensusExempt
-        paths:
-        - /Maps/_NF/Bluespace/cache.yml
-    rewardAccounts:
-      Sle: 0.25 # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
-      Aurora: 0.25 # Aurora Song - Changed from Frontier to Aurora
-      Medical: 0.25
-      Damascus: 0.25 # AS Edison -> Damascus
+# - type: entity # Start Aurora's Song - Commented out, unfun event
+#   id: BluespaceCacheError
+#   parent: BaseStationEventShortDelay
+#   components:
+#   - type: StationEvent
+#     startAnnouncement: station-event-bluespace-cache-start-announcement
+#     startAudio:
+#       path: /Audio/Announcements/attention.ogg
+#     warningAnnouncement: station-event-bluespace-cache-warning-announcement
+#     endAnnouncement: station-event-bluespace-cache-end-announcement
+#     earliestStart: 100
+#     weight: 5
+#     duration: 1350
+#     maxDuration: 1560
+#     reoccurrenceDelay: 360 # 6 hours
+#     requiredJobs: # Aurora's Song - Switched to Commissioenr
+#       Commissioner: 1
+#   - type: BluespaceErrorRule
+#     groups:
+#       grid: !type:GridSpawnGroup
+#         nameLoc:
+#         - station-event-bluespace-name-SyndicateWeaponsCache
+#         minimumDistance: 1500
+#         maximumDistance: 2500
+#         addComponents:
+#         - type: Gravity
+#           enabled: true
+#           inherent: true
+#         - type: IFF
+#           color: "#E10F9B"
+#         - type: Shuttle
+#         - type: LinkedLifecycleGridParent
+#         - type: ProtectedGrid
+#           preventArtifactTriggers: true
+#         - type: PreventPilot
+#         - type: ForceAnchor # Added post-FTL, so anchoring is fine.
+#         - type: DeletionCensusExempt
+#         paths:
+#         - /Maps/_NF/Bluespace/cache.yml
+#     rewardAccounts:
+#       Sle: 0.25 # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
+#       Aurora: 0.25 # Aurora Song - Changed from Frontier to Aurora
+#       Medical: 0.25
+#       Damascus: 0.25 # AS Edison -> Damascus
 
-- type: entity
-  id: BluespaceVaultError
-  parent: BaseStationEventShortDelay
-  components:
-  - type: StationEvent
-    startAnnouncement: station-event-bluespace-vault-start-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
-    warningAnnouncement: station-event-bluespace-vault-warning-announcement
-    endAnnouncement: station-event-bluespace-vault-end-announcement
-    earliestStart: 100
-    weight: 5
-    duration: 1020
-    maxDuration: 1350
-    reoccurrenceDelay: 360 # 6 hours
-    requiredJobs:
-      Commissioner: 1
-  - type: BluespaceErrorRule
-    groups:
-      grid: !type:GridSpawnGroup
-        nameLoc:
-        - station-event-bluespace-name-SecureNTVault
-        minimumDistance: 1500
-        maximumDistance: 2500
-        addComponents:
-        - type: Gravity
-          enabled: true
-          inherent: true
-        - type: IFF
-          color: "#E10F9B"
-        - type: LinkedLifecycleGridParent
-        - type: ProtectedGrid
-          preventArtifactTriggers: true
-        - type: PreventPilot
-        - type: ForceAnchor
-        - type: DeletionCensusExempt
-        paths:
-        - /Maps/_NF/Bluespace/vault.yml
-    rewardAccounts:
-      Sle: 0.25 # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
-      Aurora: 0.25 # Aurora Song - Changed from Frontier to Aurora
-      Medical: 0.25
-      Damascus: 0.25 # AS Edison -> Damascus
-- type: entity
-  id: BluespaceVaultSmallError
-  parent: BaseStationEventShortDelay
-  components:
-  - type: StationEvent
-    startAnnouncement: station-event-bluespace-vault-start-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
-    warningAnnouncement: station-event-bluespace-vault-warning-announcement
-    endAnnouncement: station-event-bluespace-vault-end-announcement
-    earliestStart: 100
-    maximumPlayers: 30
-    weight: 5
-    duration: 590
-    maxDuration: 780
-    reoccurrenceDelay: 360 # 6 hours
-    requiredJobs: # Aurora's Song - Switched Sheriff to Commissioner
-      Commissioner: 1
-  - type: BluespaceErrorRule
-    groups:
-      grid: !type:GridSpawnGroup
-        nameLoc:
-        - station-event-bluespace-name-SecureNTVault
-        minimumDistance: 1500
-        maximumDistance: 2500
-        addComponents:
-        - type: Gravity
-          enabled: true
-          inherent: true
-        - type: IFF
-          color: "#E10F9B"
-        - type: LinkedLifecycleGridParent
-        - type: ProtectedGrid
-          preventArtifactTriggers: true
-        - type: PreventPilot
-        - type: ForceAnchor
-        - type: DeletionCensusExempt
-        paths:
-        - /Maps/_NF/Bluespace/vaultsmall.yml
-    rewardAccounts:
-      Sle: 0.25 # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
-      Aurora: 0.25 # Aurora Song - Changed from Frontier to Aurora
-      Medical: 0.25
-      Damascus: 0.25 # AS Edison -> Damascus
+# - type: entity
+#   id: BluespaceVaultError
+#   parent: BaseStationEventShortDelay
+#   components:
+#   - type: StationEvent
+#     startAnnouncement: station-event-bluespace-vault-start-announcement
+#     startAudio:
+#       path: /Audio/Announcements/attention.ogg
+#     warningAnnouncement: station-event-bluespace-vault-warning-announcement
+#     endAnnouncement: station-event-bluespace-vault-end-announcement
+#     earliestStart: 100
+#     weight: 5
+#     duration: 1020
+#     maxDuration: 1350
+#     reoccurrenceDelay: 360 # 6 hours
+#     requiredJobs:
+#       Commissioner: 1
+#   - type: BluespaceErrorRule
+#     groups:
+#       grid: !type:GridSpawnGroup
+#         nameLoc:
+#         - station-event-bluespace-name-SecureNTVault
+#         minimumDistance: 1500
+#         maximumDistance: 2500
+#         addComponents:
+#         - type: Gravity
+#           enabled: true
+#           inherent: true
+#         - type: IFF
+#           color: "#E10F9B"
+#         - type: LinkedLifecycleGridParent
+#         - type: ProtectedGrid
+#           preventArtifactTriggers: true
+#         - type: PreventPilot
+#         - type: ForceAnchor
+#         - type: DeletionCensusExempt
+#         paths:
+#         - /Maps/_NF/Bluespace/vault.yml
+#     rewardAccounts:
+#       Sle: 0.25 # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
+#       Aurora: 0.25 # Aurora Song - Changed from Frontier to Aurora
+#       Medical: 0.25
+#       Damascus: 0.25 # AS Edison -> Damascus
+
+# - type: entity
+#   id: BluespaceVaultSmallError
+#   parent: BaseStationEventShortDelay
+#   components:
+#   - type: StationEvent
+#     startAnnouncement: station-event-bluespace-vault-start-announcement
+#     startAudio:
+#       path: /Audio/Announcements/attention.ogg
+#     warningAnnouncement: station-event-bluespace-vault-warning-announcement
+#     endAnnouncement: station-event-bluespace-vault-end-announcement
+#     earliestStart: 100
+#     maximumPlayers: 30
+#     weight: 5
+#     duration: 590
+#     maxDuration: 780
+#     reoccurrenceDelay: 360 # 6 hours
+#     requiredJobs: # Aurora's Song - Switched Sheriff to Commissioner
+#       Commissioner: 1
+#   - type: BluespaceErrorRule
+#     groups:
+#       grid: !type:GridSpawnGroup
+#         nameLoc:
+#         - station-event-bluespace-name-SecureNTVault
+#         minimumDistance: 1500
+#         maximumDistance: 2500
+#         addComponents:
+#         - type: Gravity
+#           enabled: true
+#           inherent: true
+#         - type: IFF
+#           color: "#E10F9B"
+#         - type: LinkedLifecycleGridParent
+#         - type: ProtectedGrid
+#           preventArtifactTriggers: true
+#         - type: PreventPilot
+#         - type: ForceAnchor
+#         - type: DeletionCensusExempt
+#         paths:
+#         - /Maps/_NF/Bluespace/vaultsmall.yml
+#     rewardAccounts:
+#       Sle: 0.25 # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
+#       Aurora: 0.25 # Aurora Song - Changed from Frontier to Aurora
+#       Medical: 0.25
+#       Damascus: 0.25 # AS Edison -> Damascus # End Aurora's Song
+
 - type: entity
   id: BluespaceSyndicateFTLInterception
   parent: BaseStationEventShortDelay

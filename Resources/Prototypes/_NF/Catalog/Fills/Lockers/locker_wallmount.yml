@@ -40,176 +40,340 @@
   suffix: Filled, Welding Fuel (x2)
 # endregion Fuel
 
+# Aurora's Song - Converted everything in Materials to `entityTable`s
+
 # region Materials
 - type: entity
-  parent: [ LockerWallColorMaterials, StorageFillMaterialsBasic ]
+  parent: [ LockerWallColorMaterials ]
   id: LockerWallMaterialsBasicFilled
   suffix: Filled, Basic Materials (full)
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillMaterialsBasic
 
 - type: entity
-  parent: [ LockerWallColorMaterials, StorageFillMaterialsBasic10 ]
+  parent: [ LockerWallColorMaterials ]
   id: LockerWallMaterialsBasic10Filled
   suffix: Filled, Basic Materials (10)
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillMaterialsBasic10
 # endregion Materials
+
+# Aurora's Song - Converted everything in Softsuits to `entityTable`s
 
 # region Softsuits
 - type: entity
-  parent: [ LockerWallEVAColorGeneric, StorageFillEVASuitGoblin ]
+  parent: [ LockerWallEVAColorGeneric ]
   id: LockerWallEVAColorGoblinFilled
   name: goblin EVA locker
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitGoblin
 
 - type: entity
-  parent: [ LockerWallEVAColorContractor, StorageFillEVASuitContractor ]
+  parent: [ LockerWallEVAColorContractor ]
   id: LockerWallEVAColorContractorFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitContractor
 
 - type: entity
-  parent: [ LockerWallEVAColorPilot, StorageFillEVASuitPilot ]
+  parent: [ LockerWallEVAColorPilot ]
   id: LockerWallEVAColorPilotFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitPilot
 
 - type: entity
-  parent: [ LockerWallEVAColorSr, StorageFillEVASuitSr ]
+  parent: [ LockerWallEVAColorSr ]
   id: LockerWallEVAColorSrFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitSr
 
 - type: entity
-  parent: [ LockerWallEVAColorStc, StorageFillEVASuitStc ]
+  parent: [ LockerWallEVAColorStc ]
   id: LockerWallEVAColorStcFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitStc
 
 - type: entity
-  parent: [ LockerWallEVAColorCaptain, StorageFillEVASuitCaptain ]
+  parent: [ LockerWallEVAColorCaptain ]
   id: LockerWallEVAColorCaptainFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitCaptain
 
 - type: entity
-  parent: [ LockerWallEVAColorEngineer, StorageFillEVASuitEngineer ]
+  parent: [ LockerWallEVAColorEngineer ]
   id: LockerWallEVAColorEngineerFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitEngineer
 
 - type: entity
-  parent: [ LockerWallEVAColorAtmosTech, StorageFillEVASuitAtmosTech ]
+  parent: [ LockerWallEVAColorAtmosTech ]
   id: LockerWallEVAColorAtmosTechFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitAtmosTech
 
 - type: entity
-  parent: [ LockerWallEVAColorCargo, StorageFillEVASuitCargo ]
+  parent: [ LockerWallEVAColorCargo ]
   id: LockerWallEVAColorCargoFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitCargo
 
 - type: entity
-  parent: [ LockerWallEVAColorSalvage, StorageFillEVASuitSalvage ]
+  parent: [ LockerWallEVAColorSalvage ]
   id: LockerWallEVAColorSalvageFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitSalvage
 
 - type: entity
-  parent: [ LockerWallEVAColorMedical, StorageFillEVASuitMedic ]
+  parent: [ LockerWallEVAColorMedical ]
   id: LockerWallEVAColorMedicalFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitMedic
 
 - type: entity
-  parent: [ LockerWallEVAColorParamedic, StorageFillEVASuitParamedic ]
+  parent: [ LockerWallEVAColorParamedic ]
   id: LockerWallEVAColorParamedicFilled
   name: paramedic voidsuit wall locker
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitParamedic
 
 - type: entity
-  parent: [ LockerWallEVAColorParamedic, StorageFillEVASuitParamedicAlt ]
+  parent: [ LockerWallEVAColorParamedic ]
   id: LockerWallEVAColorParamedicAltFilled
   name: paramedic EVA suit wall locker
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitParamedicAlt
 
 - type: entity
-  parent: [ LockerWallEVAColorScientist, StorageFillEVASuitScientist ]
+  parent: [ LockerWallEVAColorScientist ]
   id: LockerWallEVAColorScientistFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitScientist
 
 - type: entity
-  parent: [ LockerWallEVAColorJanitor, StorageFillEVASuitJanitor ]
+  parent: [ LockerWallEVAColorJanitor ]
   id: LockerWallEVAColorJanitorFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitJanitor
 
 - type: entity
-  parent: [ LockerWallEVAColorServiceWorker, StorageFillEVASuitServiceWorker ]
+  parent: [ LockerWallEVAColorServiceWorker ]
   id: LockerWallEVAColorServiceWorkerFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitServiceWorker
 
 - type: entity
-  parent: [ LockerWallEVAColorChaplain, StorageFillEVASuitChaplain ]
+  parent: [ LockerWallEVAColorChaplain ]
   id: LockerWallEVAColorChaplainFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitChaplain
 
 - type: entity
-  parent: [ LockerWallEVAColorGeneric, StorageFillEVASuitBoxerRed ]
+  parent: [ LockerWallEVAColorGeneric ]
   id: LockerWallEVAColorBoxerRedFilled
   name: boxer EVA locker
   suffix: Filled, Red
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitBoxerRed
 
 - type: entity
-  parent: [ LockerWallEVAColorGeneric, StorageFillEVASuitBoxerGreen ]
+  parent: [ LockerWallEVAColorGeneric ]
   id: LockerWallEVAColorBoxerGreenFilled
   name: boxer EVA locker
   suffix: Filled, Green
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitBoxerGreen
 
 - type: entity
-  parent: [ LockerWallEVAColorGeneric, StorageFillEVASuitBoxerBlue ]
+  parent: [ LockerWallEVAColorGeneric ]
   id: LockerWallEVAColorBoxerBlueFilled
   name: boxer EVA locker
   suffix: Filled, Blue
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitBoxerBlue
 
 - type: entity
-  parent: [ LockerWallEVAColorGeneric, StorageFillEVASuitBoxerYellow ]
+  parent: [ LockerWallEVAColorGeneric ]
   id: LockerWallEVAColorBoxerYellowFilled
   name: boxer EVA locker
   suffix: Filled, Yellow
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitBoxerYellow
 
 - type: entity
-  parent: [ LockerWallEVAColorGeneric, StorageFillEVASuitBoxerRandom ]
+  parent: [ LockerWallEVAColorGeneric ]
   id: LockerWallEVAColorBoxerRandomFilled
   name: boxer EVA locker
   suffix: Filled, Random
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitBoxerRandom
 
 - type: entity
-  parent: [ LockerWallEVAColorHydroponics, StorageFillEVASuitHydro ]
+  parent: [ LockerWallEVAColorHydroponics ]
   id: LockerWallEVAColorHydroponicsFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitHydro
 
 - type: entity
-  parent: [ LockerWallEVAColorMail, StorageFillEVASuitMail ]
+  parent: [ LockerWallEVAColorMail ]
   id: LockerWallEVAColorMailFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitMail
 
 - type: entity
-  parent: [ LockerWallEVAColorMercenary, StorageFillEVASuitMercenary ]
+  parent: [ LockerWallEVAColorMercenary ]
   id: LockerWallEVAColorMercenaryFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitMercenary
 
 - type: entity
-  parent: [ LockerWallEVAColorPrivateSec, StorageFillEVASuitPrivateSec ]
+  parent: [ LockerWallEVAColorPrivateSec ]
   id: LockerWallEVAColorPrivateSecFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitPrivateSec
 
 - type: entity
-  parent: [ LockerWallEVAColorNfsd, StorageFillEVASuitNfsd ]
+  parent: [ LockerWallEVAColorNfsd ]
   id: LockerWallEVAColorNfsdFilled
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitNfsd
 
 - type: entity
-  parent: [ LockerWallEVAColorEmergency, StorageFillEVASuitEmergency ]
+  parent: [ LockerWallEVAColorEmergency ]
   id: LockerWallEVAColorEmergencyFilled
   suffix: Frontier, Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitEmergency
 
 - type: entity
-  parent: [ LockerWallEVAColorLvhi, StorageFillEVASuitLvhi ]
+  parent: [ LockerWallEVAColorLvhi ]
   id: LockerWallEVAColorLvhiFilled
   suffix: Frontier, Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitLvhi
 
 - type: entity
-  parent: [ LockerWallEVAColorFsb, StorageFillEVASuitFsb ]
+  parent: [ LockerWallEVAColorFsb ]
   id: LockerWallEVAColorFsbFilled
   suffix: Frontier, Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitFsb
 
 - type: entity
   parent: [ LockerWallEVAColorFsb ]
@@ -342,18 +506,19 @@
 
 # region Departments
 # Aurora Song - StorageFill template for botanist wall locker
-# Wall lockers use StorageFill (fills "storagebase" container) instead of EntityTableContainerFill (fills "entity_storage" container)
 - type: entity
   abstract: true
   id: StorageFillBotanistWall
   description: Contains standard issue botanist equipment.
   components:
-  - type: StorageFill
-    contents:
-    - id: ClothingBeltPlantFilled
-    - id: PlantBag
-    - id: BoxMouthSwab
-    - id: Dropper
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingBeltPlantFilled
+        - id: PlantBag
+        - id: BoxMouthSwab
+        - id: Dropper
 
 - type: entity
   id: LockerWallColorHydroponicsFilled

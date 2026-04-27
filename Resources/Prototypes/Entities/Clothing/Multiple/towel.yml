@@ -59,8 +59,6 @@
   - type: Spillable
     solution: absorbed
     spillWhenThrown: false
-  - type: DrainableSolution
-    solution: absorbed
   - type: Absorbent
     pickupAmount: 15
   - type: SolutionContainerManager
@@ -496,31 +494,31 @@
     noRot: true
     layers:
     - state: icon
-      color: "#79CC26"
+      color: "#639137"
       map: ["foldedLayer"]
     - state: icon-unfolded
-      color: "#79CC26"
+      color: "#639137"
       map: ["unfoldedLayer"]
       visible: false
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
-        color: "#79CC26"
+        color: "#639137"
       right:
       - state: inhand-right
-        color: "#79CC26"
+        color: "#639137"
   - type: Clothing
     clothingVisuals:
       head:
       - state: equipped-HELMET
-        color: "#79CC26"
+        color: "#639137"
       jumpsuit:
       - state: equipped-INNERCLOTHING
-        color: "#79CC26"
+        color: "#639137"
       belt:
       - state: equipped-BELT
-        color: "#79CC26"
+        color: "#639137"
   - type: Fiber
     fiberColor: fibers-green
 

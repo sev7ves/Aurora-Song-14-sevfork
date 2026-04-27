@@ -464,7 +464,7 @@ public abstract class SharedMaterialStorageSystem : EntitySystem
         Dirty(receiver, insertingComp);
 
         if (!empty)
-            _sharedStackSystem.Use(toInsert, multiplier);
+            _sharedStackSystem.TryUse(toInsert, multiplier);
 
         var ev = new MaterialEntityInsertedEvent(material);
         RaiseLocalEvent(receiver, ref ev);

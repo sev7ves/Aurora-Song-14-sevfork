@@ -9,8 +9,10 @@ species-name-arachnid = Arachnid
 species-name-moth = Moth Person
 species-name-skeleton = Skeleton
 species-name-vox = Vox
-species-name-gingerbread = Gingerbread
 ## Aurora's Song - Changed from Delicious Baked Good to Gingerbread. Lalalala!
+species-name-gingerbread = Gingerbread
+# species-name-vulpkanin = Vulpkanin # Aurora's Song - Disable upstream vulpkanin
+
 ## Misc species things
 
 snail-hurt-by-salt-popup = The salty solution burns like acid!

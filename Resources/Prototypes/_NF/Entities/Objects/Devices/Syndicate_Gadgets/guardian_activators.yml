@@ -27,11 +27,13 @@
   id: BoxHoloparasiteAI
   suffix: Ghost, AI
   components:
-  - type: StorageFill
-    contents:
-      - id: HoloparasiteInjectorAI
-      - id: HoloparasiteInfo
-      - id: ClothingHeadHatBizarreSoft
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: HoloparasiteInjectorAI
+        - id: HoloparasiteInfo
+        - id: ClothingHeadHatBizarreSoft
   - type: Sprite
     layers:
       - state: box
@@ -44,11 +46,13 @@
   id: BoxHoloclownAI
   suffix: Ghost, AI
   components:
-  - type: StorageFill
-    contents:
-      - id: HoloClownInjectorAI
-      - id: ToyFigurineHoloClown
-      - id: ToyHammer
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: HoloClownInjectorAI
+        - id: ToyFigurineHoloClown
+        - id: ToyHammer
   - type: Sprite
     layers:
       - state: box_hug

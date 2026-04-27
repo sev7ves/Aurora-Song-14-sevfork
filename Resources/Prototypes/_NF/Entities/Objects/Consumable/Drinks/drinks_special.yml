@@ -1,5 +1,5 @@
 - type: entity
-  parent: [BaseItem, BartenderMixer]
+  parent: DrinkBase # Aurora's Song - Only drink base
   id: DrinkIceBucketEmpty
   name: ice bucket
   suffix: Empty

@@ -13,7 +13,7 @@
       0: Alive
       100: Dead
   - type: Stamina
-    critThreshold: 120
+    baseCritThreshold: 120 # Aurora's Song - critThreshold>baseCritThreshold
 
 - type: entity
   parent: NFMobOreCrab

@@ -1,13 +1,3 @@
-# - type: cargoProduct # Frontier - Cannot be moved off floors
-  # id: CargoPallet
-  # icon:
-    # sprite: Structures/catwalk.rsi
-    # state: catwalk_preview
-  # product: CargoPallet
-  # cost: 250
-  # category: Cargo
-  # group: market
-
 - type: cargoProduct
   id: CargoOreBox
   icon:
@@ -39,6 +29,7 @@
   cost: 750
   category: cargoproduct-category-name-cargo
   group: market
+
 # frontier: Unused
 # - type: cargoProduct
 #   id: CargoCrusherDagger
@@ -50,3 +41,13 @@
 #   category: cargoproduct-category-name-cargo
 #   group: market
 # End frontier
+
+- type: cargoProduct
+  id: CargoMailCart
+  icon:
+      sprite: Objects/Specific/Cargo/mailcart.rsi
+      state: icon
+  product: MailCart
+  cost: 300
+  category: cargoproduct-category-name-cargo
+  group: market

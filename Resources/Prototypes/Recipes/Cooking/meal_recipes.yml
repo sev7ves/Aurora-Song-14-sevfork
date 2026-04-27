@@ -13,7 +13,7 @@
   name: cotton bun recipe
   result: FoodCottonBun
   time: 5
-  group: Breads
+  group: Moth
   solids:
     FoodDoughCottonSlice: 1
   recipeType: Oven # Frontier
@@ -438,7 +438,7 @@
   name: banana bread recipe
   result: FoodBreadBanana
   time: 15
-  group: LoafCakes
+  group: Breads
   solids:
     FoodDough: 1
     FoodBanana: 1
@@ -1461,86 +1461,85 @@
     FoodCheeseSlice: 1
   recipeType: Oven # Frontier
 
-- type: microwaveMealRecipe
-  id: RecipeFries
-  name: space fries recipe
-  result: FoodMealFries
-  time: 15
-  group: Savory
-  reagents:
-    TableSalt: 5
-  solids:
-    FoodPotato: 1
-  recipeType: Oven # Frontier
+# Begin DV removals for deep fryer
+#- type: microwaveMealRecipe
+#  id: RecipeFries
+#  name: space fries recipe
+#  result: FoodMealFries
+#  time: 15
+#  group: Savory
+#  reagents:
+#    TableSalt: 5
+#  solids:
+#    FoodPotato: 1
+#  recipeType: Oven # Frontier
 
-- type: microwaveMealRecipe
-  id: RecipeCheesyFries
-  name: cheesy fries recipe
-  result: FoodMealFriesCheesy
-  time: 15
-  group: Savory
-  reagents:
-    TableSalt: 5
-  solids:
-    FoodPotato: 1
-    FoodCheeseSlice: 1
-  recipeType: Oven # Frontier
+#- type: microwaveMealRecipe
+#  id: RecipeCheesyFries
+#  name: cheesy fries recipe
+#  result: FoodMealFriesCheesy
+#  time: 15
+#  group: Savory
+#  reagents:
+#    TableSalt: 5
+#  solids:
+#    FoodPotato: 1
+#    FoodCheeseSlice: 1
+#  recipeType: Oven # Frontier
 
-- type: microwaveMealRecipe
-  id: RecipeCarrotFries
-  name: carrot fries recipe
-  result: FoodMealFriesCarrot
-  time: 15
-  group: Savory
-  reagents:
-    TableSalt: 5
-  solids:
-    FoodCarrot: 1
-  recipeType: Oven # Frontier
+#- type: microwaveMealRecipe
+#  id: RecipeCarrotFries
+#  name: carrot fries recipe
+#  result: FoodMealFriesCarrot
+#  time: 15
+#  group: Savory
+#  reagents:
+#    TableSalt: 5
+#  solids:
+#    FoodCarrot: 1
+#  recipeType: Oven # Frontier
 
-- type: microwaveMealRecipe
-  id: RecipeNachos
-  name: nachos recipe
-  result: FoodMealNachos
-  time: 10
-  group: Savory
-  reagents:
-    TableSalt: 1
-  solids:
-    FoodDoughTortillaFlat: 1
-    FoodPlateSmall: 1
-  recipeType: # Frontier
-  - Oven # Frontier
+#- type: microwaveMealRecipe
+#  id: RecipeNachos
+#  name: nachos recipe
+#  result: FoodMealNachos
+#  time: 10
+#  group: Savory
+#  reagents:
+#    TableSalt: 1
+#  solids:
+#    FoodDoughTortillaFlat: 1
+#    FoodPlateSmall: 1
+#  recipeType: Oven # Frontier
 
-- type: microwaveMealRecipe
-  id: RecipeNachosCheesy
-  name: cheesy nachos recipe
-  result: FoodMealNachosCheesy
-  time: 10
-  group: Savory
-  reagents:
-    TableSalt: 1
-  solids:
-    FoodCheeseSlice: 1
-    FoodDoughTortillaFlat: 1
-    FoodPlateSmall: 1
-  recipeType: # Frontier
-  - Oven # Frontier
+#- type: microwaveMealRecipe
+#  id: RecipeNachosCheesy
+#  name: cheesy nachos recipe
+#  result: FoodMealNachosCheesy
+#  time: 10
+#  group: Savory
+#  reagents:
+#    TableSalt: 1
+#  solids:
+#    FoodCheeseSlice: 1
+#    FoodDoughTortillaFlat: 1
+#    FoodPlateSmall: 1
+#  recipeType: Oven # Frontier
 
-- type: microwaveMealRecipe
-  id: RecipeNachosCuban
-  name: cuban nachos recipe
-  result: FoodMealNachosCuban
-  time: 10
-  group: Savory
-  reagents:
-    Ketchup: 5
-  solids:
-    FoodChiliPepper: 1
-    FoodDoughTortillaFlat: 1
-    FoodPlateSmall: 1
-  recipeType: # Frontier
-  - Oven # Frontier
+#- type: microwaveMealRecipe
+#  id: RecipeNachosCuban
+#  name: cuban nachos recipe
+#  result: FoodMealNachosCuban
+#  time: 10
+#  group: Savory
+#  reagents:
+#    Ketchup: 5
+#  solids:
+#    FoodChiliPepper: 1
+#    FoodDoughTortillaFlat: 1
+#    FoodPlateSmall: 1
+#  recipeType: Oven # Frontier
+# End DV Removals
 
 - type: microwaveMealRecipe
   id: RecipePopcorn
@@ -1864,6 +1863,19 @@
     # FoodSnackRaisins: 1 # Frontier
     OrganAnimalHeart: 1
   recipeType: Assembler # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeBerryDelight
+  name: berry delight recipe
+  result: FoodCakeBerryDelight
+  time: 5
+  group: Cake
+  solids:
+    FoodCakeBlueberry: 1
+    FoodBerries: 2
+  reagents:
+    Milk: 10
+  recipeType: Oven # Aurora's Song
 
 - type: microwaveMealRecipe
   id: RecipeBreadDog
@@ -2642,6 +2654,7 @@
   name: grilled cheese sandwich recipe
   result: FoodBakedGrilledCheeseSandwich
   time: 10
+  group: Savory
   solids:
     FoodBreadPlainSlice: 2
     FoodCheeseSlice: 1
@@ -2653,6 +2666,7 @@
   name: cotton grilled cheese sandwich recipe
   result: FoodBakedGrilledCheeseSandwichCotton
   time: 10
+  group: Moth
   solids:
     FoodBreadCottonSlice: 2
     FoodCheeseSlice: 1
@@ -2707,7 +2721,7 @@
   name: cotton cake recipe
   result: FoodCakeCotton
   time: 5
-  group: Cake
+  group: Moth
   reagents:
     Fiber: 10
   solids:

@@ -138,3 +138,14 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsColonialCommand ]
+
+# Service
+
+- type: entity
+  parent: AirlockFreezer
+  id: ASAirlockFreezerServiceLocked
+  suffix: Service, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsService ]

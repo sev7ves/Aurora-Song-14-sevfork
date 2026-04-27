@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseStructureDynamic
+  parent: [ BaseStructureDynamic, BasePaperLabelableVisualized ]
   id: CrateGeneric
   categories: [ HideSpawnMenu ]
   name: crate
@@ -55,40 +55,13 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
-  - type: Appearance
   - type: EntityStorageVisuals
     stateDoorOpen: open
     stateDoorClosed: closed
-  - type: GenericVisualizer
-    visuals:
-      enum.PaperLabelVisuals.HasLabel:
-        enum.PaperLabelVisuals.Layer:
-          True: { visible: true }
-          False: { visible: false }
-      enum.PaperLabelVisuals.LabelType:
-        enum.PaperLabelVisuals.Layer:
-          Paper: { state: paper }
-          Bounty: { state: bounty }
-          CaptainsPaper: { state: captains_paper }
-          Invoice: { state: invoice }
-          MantisPaper: { state: mantis_paper } # TheDen
-  - type: PaperLabel
-    labelSlot:
-      insertVerbText: comp-paper-label-insert
-      ejectVerbText: comp-paper-label-eject
-      whitelist:
-        components:
-        - Paper
-      blacklist:
-        tags:
-        - Book
-        components: # Frontier
-        - Blueprint # Frontier
   - type: ContainerContainer
     containers:
       entity_storage: !type:Container
       paper_label: !type:ContainerSlot
-  - type: ItemSlots
   - type: StaticPrice
     price: 50 # Frontier: 75<50 - TODO: material value rework
   - type: Construction

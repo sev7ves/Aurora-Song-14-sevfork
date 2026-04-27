@@ -3,7 +3,7 @@
     "license": "CC-BY-SA-3.0",
     "copyright": "crypt states modified by Flareguy for Space Station 14",
     "extra_copyright": [
-        "ship_label, crypt_gold created/ edited by Vandanna/ Cygnall (discord/ github) for Aurora's Song"
+        "ship_label, crypt_gold created/ edited by Vandanna/ Cygnall (discord/ github) for Aurora's Song. arcadia_label made by AvianMaiden for Aurora's Song"
     ],
     "size": {
         "x": 32,
@@ -27,6 +27,9 @@
         },
         {
             "name": "as_label"
+        },
+        {
+            "name": "arcadia_label"
         }
     ]
 }

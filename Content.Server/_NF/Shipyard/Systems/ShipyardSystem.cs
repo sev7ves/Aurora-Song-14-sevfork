@@ -17,6 +17,7 @@ using Content.Shared._NF.Shipyard.Events;
 using Content.Shared.Mobs.Components;
 using Robust.Shared.Containers;
 using Content.Server._NF.Station.Components;
+using Content.Shared.Station.Components;
 using Robust.Shared.EntitySerialization.Systems;
 using Robust.Shared.Utility;
 
@@ -133,7 +134,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         }
 
         var price = _pricing.AppraiseGrid(shuttleGrid.Value, null);
-        var targetGrid = _station.GetLargestGrid(stationData);
+        var targetGrid = _station.GetLargestGrid((stationUid, stationData));
 
 
         if (targetGrid == null) //how are we even here with no station grid
@@ -194,7 +195,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             return result;
         }
 
-        var targetGrid = _station.GetLargestGrid(stationGrid);
+        var targetGrid = _station.GetLargestGrid((stationUid, stationGrid));
 
         if (targetGrid == null)
         {

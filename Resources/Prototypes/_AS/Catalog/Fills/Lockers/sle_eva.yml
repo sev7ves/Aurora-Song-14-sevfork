@@ -17,25 +17,29 @@
   id: ASLockerEVASLEFilled
   suffix: Filled
   components:
-  - type: StorageFill
-    contents:
-      - id: ASClothingOuterEVASuitSLE
-        amount: 2
-      - id: ASClothingShoesBootsMagSLEFilled
-        amount: 2
-      - id: ASJetpackSLEFilled
-        amount: 2
-      - id: GasAnalyzer
-      - id: HolofanProjector
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: ASClothingOuterEVASuitSLE
+          amount: 2
+        - id: ASClothingShoesBootsMagSLEFilled
+          amount: 2
+        - id: ASJetpackSLEFilled
+          amount: 2
+        - id: GasAnalyzer
+        - id: HolofanProjector
 
 - type: entity
   parent: ASLockerWallEVAColorSLE
   id: ASLockerWallEVAColorSLEFilled
   suffix: Filled
   components:
-  - type: StorageFill
-    contents:
-    - id: ASClothingOuterEVASuitSLE
-    - id: ASJetpackSLEFilled
-    - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASClothingOuterEVASuitSLE
+        - id: ASJetpackSLEFilled
+        - id: ClothingShoesBootsMag
+        - id: DoubleEmergencyTankO2N2EqualFilled

@@ -81,9 +81,9 @@ public enum LogType
     ChemicalReaction = 17,
 
     /// <summary>
-    /// Reagent effects related interactions.
+    /// EntityEffect related interactions.
     /// </summary>
-    ReagentEffect = 18,
+    EntityEffect = 18,
 
     /// <summary>
     /// Canister valve was opened or closed.
@@ -480,6 +480,11 @@ public enum LogType
     /// </summary>
     Instrument = 103,
 
+    /// <summary>
+    /// Events related to players connecting/disconnecting.
+    /// </summary>
+    Connection = 104,
+
     // Frontier Station Specific
     #region Frontier Values
     ATMUsage = 200,
@@ -528,7 +533,7 @@ public enum LogType
     ObjectiveSummary = 422,
     #endregion DeltaV Values
 
-	#region Aurora
+    #region Aurora
     StationPayDeposit = 14001,
     #endregion
 }

@@ -1,4 +1,7 @@
+// Aurora's Song - Rewrote the whole file to use modern ECS based EntityConditions
+
 using System.Linq;
+using Content.Shared.EntityConditions;
 using Content.Shared.EntityEffects;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
@@ -9,8 +12,19 @@ namespace Content.Shared._NF.EntityEffects.Effect;
 
 /// <summary>
 /// Requires that the metabolizing body is a humanoid, with an optional whitelist/blacklist.
-/// </summary>
-public sealed partial class NFIsHumanoid : EntityEffectCondition
+/// </summary>e
+public sealed class NFIsHumanoidEntityConditionSystem : EntityConditionSystem<HumanoidAppearanceComponent, NFIsHumanoid>
+{
+    protected override void Condition(Entity<HumanoidAppearanceComponent> ent, ref EntityConditionEvent<NFIsHumanoid> args)
+    {
+        if (args.Condition.Whitelist != null && args.Condition.Whitelist.Contains(ent.Comp.Species) != args.Condition.Inverse)
+            return;
+
+        args.Result = true;
+    }
+}
+
+public sealed partial class NFIsHumanoid : EntityConditionBase<NFIsHumanoid>
 {
     /// <summary>
     /// The whitelist (or blacklist if inverse is true) of species to select.
@@ -25,24 +39,7 @@ public sealed partial class NFIsHumanoid : EntityEffectCondition
     [DataField]
     public bool Inverse;
 
-    public override bool Condition(EntityEffectBaseArgs args)
-    {
-        if (args is EntityEffectReagentArgs)
-        {
-            if (!args.EntityManager.TryGetComponent<HumanoidAppearanceComponent>(args.TargetEntity, out var humanoidAppearance))
-                return false;
-
-            if (Whitelist != null && Whitelist.Contains(humanoidAppearance.Species) != Inverse)
-                return false;
-
-            return true;
-        }
-
-        // TODO: Someone needs to figure out how to do this for non-reagent effects.
-        throw new NotImplementedException();
-    }
-
-    public override string GuidebookExplanation(IPrototypeManager prototype)
+    public override string EntityConditionGuidebookText(IPrototypeManager prototype)
     {
         if (Whitelist == null || Whitelist.Count == 0)
         {

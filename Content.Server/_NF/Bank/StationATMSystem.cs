@@ -19,6 +19,7 @@ namespace Content.Server._NF.Bank;
 public sealed partial class BankSystem
 {
     [Dependency] private readonly AccessReaderSystem _access = default!;
+    [Dependency] private readonly SharedStackSystem _stack = default!;
 
     private void InitializeStationATM()
     {
@@ -94,7 +95,7 @@ public sealed partial class BankSystem
         _adminLogger.Add(LogType.ATMUsage, LogImpact.Low, $"{ToPrettyString(player):actor} withdrew {args.Amount} from {component.Account} station bank account. '{args.Reason}': {args.Description}");
         //spawn the cash stack of whatever cash type the ATM is configured to.
         var stackPrototype = _prototypeManager.Index(component.CashType);
-        var stackUid = _stackSystem.Spawn(args.Amount, stackPrototype, args.Actor.ToCoordinates());
+        var stackUid = _stackSystem.SpawnAtPosition(args.Amount, stackPrototype, args.Actor.ToCoordinates());
         if (!_hands.TryPickupAnyHand(args.Actor, stackUid))
             _transform.SetLocalRotation(stackUid, Angle.Zero);
 
@@ -153,8 +154,7 @@ public sealed partial class BankSystem
         }
 
         // validate stack prototypes
-        if (!TryComp<StackComponent>(component.CashSlot.ContainerSlot.ContainedEntity, out var stackComponent) ||
-            stackComponent.StackTypeId == null)
+        if (!TryComp<StackComponent>(component.CashSlot.ContainerSlot.ContainedEntity, out var stackComponent))
         {
             _log.Info($"ATM cash slot contains bad stack prototype");
             ConsolePopup(args.Actor, Loc.GetString("bank-atm-menu-wrong-cash"));
@@ -309,7 +309,7 @@ public sealed partial class BankSystem
         }
 
         int newAmount = cashStack.Count;
-        cashStack.Count = newAmount - amount;
+        _stack.SetCount((cashEntity.Value, cashStack), newAmount - amount); // Aurora's Song - Turn to SetCount rather than setting directly
         leftAmount = cashStack.Count;
 
         if (cashStack.Count <= 0)

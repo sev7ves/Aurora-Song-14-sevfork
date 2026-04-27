@@ -265,14 +265,14 @@ public sealed partial class NFCargoSystem
         price += noMultiplierPrice;
 
         var stackPrototype = _proto.Index(ent.Comp.CashType);
-        var stackUid = _stack.Spawn((int)price, stackPrototype, args.Actor.ToCoordinates());
+        var stackUid = _stack.SpawnAtPosition((int)price, stackPrototype, args.Actor.ToCoordinates());
         if (!_hands.TryPickupAnyHand(args.Actor, stackUid))
             _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
 
         // Iterate through additional currency payouts, putting them in hand if possible
         foreach (var (currencyId, currencyAmount) in additionalCurrency)
         {
-            var currencyUid = _stack.Spawn((int)currencyAmount, currencyId, args.Actor.ToCoordinates());
+            var currencyUid = _stack.SpawnAtPosition((int)currencyAmount, currencyId, args.Actor.ToCoordinates());
             if (!_hands.TryPickupAnyHand(args.Actor, currencyUid))
                 _transform.SetLocalRotation(currencyUid, Angle.Zero);
         }

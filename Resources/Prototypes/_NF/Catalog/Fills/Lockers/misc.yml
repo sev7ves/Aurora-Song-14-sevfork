@@ -1,11 +1,23 @@
+# Aurora's Song - Convert to NestedSelector
+
 # region Materials
 - type: entity
-  parent: [ LockerMaterials, StorageFillMaterialsBasic ]
+  parent: [ LockerMaterials ]
   id: LockerMaterialsBasicFilled
   suffix: Filled, Basic Materials (full)
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillMaterialsBasic
 
 - type: entity
-  parent: [ LockerMaterials, StorageFillMaterialsBasic10 ]
+  parent: [ LockerMaterials ]
   id: LockerMaterialsBasic10Filled
   suffix: Filled, Basic Materials (10)
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillMaterialsBasic10
 # endregion Materials

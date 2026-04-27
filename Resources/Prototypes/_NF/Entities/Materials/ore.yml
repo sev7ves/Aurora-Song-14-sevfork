@@ -300,7 +300,7 @@
       weight: 80
       children:
       - id: SpectralLocatorEmpty
-      - id: HandheldHealthAnalyzerEmpty
+      - id: HandheldHealthAnalyzer # Aurora Song: HandheldHealthAnalyzerEmpty: HandHeldHealthAnalyzer
       - id: MineralScannerEmpty
       - id: GasDepositLocatorEmpty
       - id: HoloGraffitiProjectorEmpty

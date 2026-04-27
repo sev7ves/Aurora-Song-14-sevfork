@@ -4,9 +4,10 @@
   name: thruster crate
   description: Contains a thruster flatpack.
   components:
-  - type: StorageFill
-    contents:
-      - id: ThrusterFlatpack
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage:
+        id: ThrusterFlatpack
 
 - type: entity
   parent: CrateEngineering
@@ -14,9 +15,10 @@
   name: gyroscope crate
   description: Contains a gyroscope flatpack.
   components:
-  - type: StorageFill
-    contents:
-      - id: GyroscopeFlatpack
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage:
+        id: GyroscopeFlatpack
 
 # Aurora: FTL Drives
 - type: entity
@@ -25,9 +27,10 @@
   name: CTLA-25 bluespace drive crate
   description: Contains a CTLA-25 bluespace drive flatpack. Capable of jumping 5km with a small ship.
   components:
-  - type: StorageFill
-    contents:
-      - id: FTLDriveFlatpack
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage:
+        id: FTLDriveFlatpack
 
 - type: entity
   parent: CrateEngineering
@@ -35,9 +38,10 @@
   name: CTLA-50 bluespace drive crate
   description: Contains a CTLA-50 bluespace drive flatpack. Capable of jumping 10km with a medium ship.
   components:
-  - type: StorageFill
-    contents:
-      - id: FTLDrive50Flatpack
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage:
+        id: FTLDrive50Flatpack
 
 - type: entity
   parent: CrateEngineering
@@ -45,9 +49,10 @@
   name: CTLA-25s bluespace drive crate
   description: Contains a CTLA-25s bluespace drive flatpack. Capable of jumping 5km with a small ship, but with upgrades for faster recharge and flight times.
   components:
-  - type: StorageFill
-    contents:
-      - id: FTLDrive25SFlatpack
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage:
+        id: FTLDrive25SFlatpack
 
 - type: entity
   parent: CrateEngineering
@@ -55,8 +60,10 @@
   name: CTLA-160 bluespace drive crate
   description: Contains the flatpacks needed to assemble a CTLA-160 heavy bluespace core. Capable of jumping 25km with a large ship.
   components:
-  - type: StorageFill
-    contents:
-      - id: FTLDrive160Flatpack
-      - id: FTLDrive160ConsoleFlatpack
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: FTLDrive160Flatpack
+        - id: FTLDrive160ConsoleFlatpack
 # End Aurora: FTL Drives

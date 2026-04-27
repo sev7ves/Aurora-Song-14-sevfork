@@ -25,7 +25,8 @@
     maxCharge: 840
     startingCharge: 840
   - type: BatterySelfRecharger # doesn't recharge
-    autoRecharge: false
+#    autoRecharge: false # Aurora's Song - Deprecated
+    autoRechargeRate: 0 # Aurora's Song - Set rate to 0
 
 - type: entity
   categories: [ DoNotMap ]
@@ -43,7 +44,6 @@
     maxCharge: 1560
     startingCharge: 1560
   - type: BatterySelfRecharger # Recharges 1 shot per 2 seconds
-    autoRecharge: true
     autoRechargeRate: 30
   - type: Tag
     tags:
@@ -172,7 +172,7 @@
   # - type: Gun
   #   soundGunshot:
   #     path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFAnomalousParticleDeltaStrong
     fireCost: 100
   - type: BatteryWeaponFireModes
@@ -246,9 +246,8 @@
     maxCharge: 720 # charge adjusted, more flares | Aurora
     startingCharge: 720 # charge adjusted, more flares | Aurora
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 10
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: HoloFlareCyan
     fireCost: 240
   - type: EnergyGun

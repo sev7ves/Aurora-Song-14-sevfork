@@ -3,24 +3,28 @@
   suffix: Filled
   parent: LockerMercenary
   components:
-  - type: StorageFill
-    contents:
-      - id: PinpointerUniversal
-      - id: HandHeldMassScanner
-      - id: WeaponGrapplingGun
-      - id: BoxZiptie
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: PinpointerUniversal
+        - id: HandHeldMassScanner
+        - id: WeaponGrapplingGun
+        - id: BoxZiptie
 
 - type: entity
   id: LockerNfsdSilverDetectiveFilled
   suffix: Detective, Filled
   parent: LockerNfsdSilver
   components:
-  - type: StorageFill
-    contents:
-      - id: BoxForensicPad
-      - id: DrinkDetFlask
-      - id: BoxEvidenceMarkers
-      - id: HandLabeler
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: BoxForensicPad
+        - id: DrinkDetFlask
+        - id: BoxEvidenceMarkers
+        - id: HandLabeler
   - type: AccessReader
     access: [["Detective"]]
 
@@ -28,22 +32,26 @@
   id: NFLockerSecurityFilled
   parent: LockerSecurityFilled
   components:
-  - type: StorageFill
-    contents:
-      - id: ClothingHeadHelmetBasic
-      - id: ClothingOuterArmorBasic
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: ClothingHeadHelmetBasic
+        - id: ClothingOuterArmorBasic
 
 - type: entity
   id: NFClosetBombFilled
   parent: ClosetBombFilled
   components:
-  - type: StorageFill
-    contents:
-      - id: ClothingHeadHelmetBombSuit
-      - id: ClothingOuterSuitBomb
-      - id: Wirecutter
-      - id: Screwdriver
-      - id: Multitool
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: ClothingHeadHelmetBombSuit
+        - id: ClothingOuterSuitBomb
+        - id: Wirecutter
+        - id: Screwdriver
+        - id: Multitool
 
 - type: entity
   parent: GunSafe
@@ -51,14 +59,16 @@
   name: turret safe
   suffix: NFSD, Filled
   components:
-  - type: StorageFill
-    contents:
-    - id: WeaponCaseHeavyCdet
-      amount: 2
-    - id: WeaponCaseHeavySlat
-      amount: 1
-    - id: WeaponCaseHeavyAsmgt
-      amount: 1
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: WeaponCaseHeavyCdet
+          amount: 2
+        - id: WeaponCaseHeavySlat
+          amount: 1
+        - id: WeaponCaseHeavyAsmgt
+          amount: 1
   - type: AccessReader
     access: [["Security"]]
 
@@ -68,9 +78,11 @@
   name: turret safe
   suffix: CDET, Filled
   components:
-  - type: StorageFill
-    contents:
-    - id: WeaponCaseHeavyCdet
-      amount: 1
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: WeaponCaseHeavyCdet
+          amount: 1
   - type: AccessReader
     access: [["Security"]]

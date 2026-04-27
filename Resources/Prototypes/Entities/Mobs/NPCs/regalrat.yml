@@ -61,7 +61,7 @@
         Piercing: 8
   - type: Body
     prototype: Rat
-    requiredLegs: 1 # TODO: More than 1 leg
+    requiredLegs: 0 # TODO: Make more than 1 leg, set to 0 to avoid sprint speed being reset by the body system
   - type: Hunger # probably should be prototyped
     thresholds:
       Overfed: 200
@@ -102,10 +102,10 @@
       - CannotSuicide
       - FootstepSound
   - type: NoSlip
+  - type: Rummager
   - type: RatKing
     hungerPerArmyUse: 25
     hungerPerDomainUse: 50
-  - type: Rummager # DeltaV: Make rummaging a generic component
   - type: MobsterAccent
   - type: Speech
     speechVerb: SmallMob
@@ -245,7 +245,7 @@
       - !type:GibBehavior
         recursive: false
   - type: Stamina
-    critThreshold: 60
+    baseCritThreshold: 60
   - type: MeleeWeapon
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
@@ -257,7 +257,7 @@
         Piercing: 3
   - type: Body
     prototype: Rat
-    requiredLegs: 1 # TODO: More than 1 leg
+    requiredLegs: 0 # TODO: Make more than 1 leg, set to 0 to avoid sprint speed being reset by the body system
   - type: Hunger # probably should be prototyped
     thresholds:
       Overfed: 200
@@ -308,21 +308,24 @@
   #   guides: # Frontier: guidebook removed
   #   - MinorAntagonists # Frontier: guidebook removed
   - type: FelinidFood # Nyanotrasen - Felinid, ability to eat rat, see Content.Server/Nyanotrasen/Abilities/Felinid/FelinidSystem.cs
-  - type: Food # Delta V - Make them edible and pickable.
+  - type: Edible # Delta V - Make them edible and pickable. # Aurora's Song - Food>Edible
   - type: Item # Delta V - Make them edible and pickable.
     size: Tiny # Delta V - Make them edible and pickable.
   - type: FireVisuals
     sprite: Mobs/Effects/onfire.rsi
     normalState: Mouse_burning
 
-
-- type: weightedRandomEntity
+- type: entityTable
   id: RatKingLoot
-  weights: # DeltaV: Rebalanced for Rodentia rummaging because we don't have Rat King
-    RandomSpawner100: 100 #garbage
-#    FoodCheeseSlice: 15 #food
-#    RandomSnacks: 10
-#    RandomFoodSingle: 5
+  table: !type:GroupSelector
+    children:
+    - id: RandomSpawner100
+      weight: 100 # DeltaV: 66>100
+    # DeltaV: Rebalanced for Rodentia rummaging because we don't have Rat King
+#    - id: FoodCheese
+#      weight: 28
+#    - id: IngotGold1
+#      weight: 5
 
 - type: entity
   parent: BaseAction

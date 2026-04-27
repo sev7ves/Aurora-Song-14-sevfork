@@ -6,7 +6,8 @@ examine-headset-default-channel = Use {$prefix} for the default channel ([color=
 
 #Monolith - change Common to Broadband, logged by AS
 chat-radio-common = Broadband
-chat-radio-centcom = CentComm
+#Aurora's Song - change CentComm to Nanotrasen
+chat-radio-centcom = Nanotrasen
 chat-radio-command = Command
 chat-radio-engineering = Engineering
 chat-radio-medical = Medical

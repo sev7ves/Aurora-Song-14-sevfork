@@ -231,9 +231,11 @@
   name: sarcophagus
   description: "An ornate coffin, heavy and gilded, its surface adorned with staring eyes and draped cloths. Used to haul psions away for study, therapy, or questioning. The straps can be stowed away, but it's so heavy you can only wear it over outerwear."
   components:
-  - type: StorageFill
-    contents:
-    - id: MantisCaseRestraints
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MantisCaseRestraints
 
 - type: entity
   parent: ClothingBackpackCoffinMantis

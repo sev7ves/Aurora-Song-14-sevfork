@@ -165,4 +165,10 @@ public sealed partial class StationEventComponent : Component
     /// </summary>
     [DataField]
     public bool ArrivalAnnounced;
+
+    /// <summary>
+    ///     Aurora Song: What category, if any, this event belongs in.
+    /// </summary>
+    [DataField]
+    public string? Category;
 }

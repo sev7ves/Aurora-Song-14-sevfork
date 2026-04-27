@@ -16,7 +16,7 @@
     examineCaliber: gun-examine-hitscan-low
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: NFRedLightLaser
     fireCost: 60
   - type: PlasmaGun
@@ -34,7 +34,6 @@
   - type: PlasmaGun
     GasUsage: 0.18
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 8
   - type: ItemSlots
     slots:

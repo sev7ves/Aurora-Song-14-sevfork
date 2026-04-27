@@ -116,7 +116,7 @@
     - id: ClothingBeltSecurityWebbing
     - id: ClothingBeltMilitaryWebbingMed
     - id: ClothingBeltMilitaryWebbing
-    - id: ClothingBeltAssault
+#    - id: ClothingBeltAssault # Aurora's Song - Removed upstream
     - id: ClothingBeltBandolier
     - id: ClothingBeltSecurity
     - id: ClothingBeltHolster

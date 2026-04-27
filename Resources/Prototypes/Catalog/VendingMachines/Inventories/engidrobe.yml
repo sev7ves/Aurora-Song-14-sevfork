@@ -43,7 +43,7 @@
     ClothingUniformJumpsuitSeniorEngineer: 1
     ClothingUniformJumpskirtSeniorEngineer: 1
 # CE:
-    ClothingUniformJumpsuitChiefEngineerNT: 1
+    #ClothingUniformJumpsuitChiefEngineerNT: 1 #Aurora Song: Removed in Upstream Merge
     ClothingUniformJumpsuitChiefEngineer: 1
     ClothingUniformJumpskirtChiefEngineer: 1
     ClothingUniformJumpsuitChiefEngineerTurtle: 1

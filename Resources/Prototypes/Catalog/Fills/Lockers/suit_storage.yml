@@ -108,8 +108,10 @@
   parent: SuitStorageBase
   suffix: Pirate EVA
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
 #        - id: NitrogenTankFilled
 #        - id: OxygenTankFilled
         - id: NFTankO2N2EqualFilled # Frontier
@@ -308,8 +310,10 @@
   parent: SuitStorageBase
   suffix: Pirate Captain
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
 #        - id: NitrogenTankFilled
 #        - id: OxygenTankFilled
         - id: NFTankO2N2EqualFilled # Frontier
@@ -325,8 +329,10 @@
   parent: SuitStorageBase
   suffix: Wizard
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
 #        - id: OxygenTankFilled
         - id: NFTankO2N2EqualFilled # Frontier
         # TODO: Gone until reworked to have no space protection

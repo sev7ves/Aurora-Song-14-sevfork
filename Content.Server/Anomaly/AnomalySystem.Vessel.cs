@@ -26,21 +26,8 @@ public sealed partial class AnomalySystem
         SubscribeLocalEvent<AnomalyVesselComponent, InteractUsingEvent>(OnVesselInteractUsing);
         SubscribeLocalEvent<AnomalyVesselComponent, ExaminedEvent>(OnExamined);
         SubscribeLocalEvent<AnomalyVesselComponent, ResearchServerGetPointsPerSecondEvent>(OnVesselGetPointsPerSecond);
-        SubscribeLocalEvent<AnomalyShutdownEvent>(OnShutdown);
-        SubscribeLocalEvent<AnomalyStabilityChangedEvent>(OnStabilityChanged);
+        SubscribeLocalEvent<AnomalyShutdownEvent>(OnVesselAnomalyShutdown);
         SubscribeLocalEvent<AnomalyVesselComponent, EntParentChangedMessage>(OnVesselParentChanged); // Frontier
-    }
-
-    private void OnStabilityChanged(ref AnomalyStabilityChangedEvent args)
-    {
-        OnVesselAnomalyStabilityChanged(ref args);
-        OnScannerAnomalyStabilityChanged(ref args);
-    }
-
-    private void OnShutdown(ref AnomalyShutdownEvent args)
-    {
-        OnVesselAnomalyShutdown(ref args);
-        OnScannerAnomalyShutdown(ref args);
     }
 
     private void OnExamined(EntityUid uid, AnomalyVesselComponent component, ExaminedEvent args)
@@ -66,7 +53,7 @@ public sealed partial class AnomalySystem
 
     private void OnVesselMapInit(EntityUid uid, AnomalyVesselComponent component, MapInitEvent args)
     {
-        UpdateVesselAppearance(uid,  component);
+        UpdateVesselAppearance(uid, component);
     }
 
     private void OnUpgradeExamine(EntityUid uid, AnomalyVesselComponent component, UpgradeExamineEvent args)
@@ -99,13 +86,13 @@ public sealed partial class AnomalySystem
         component.Anomaly = scanner.ScannedAnomaly;
         anomalyComponent.ConnectedVessel = uid;
         _radiation.SetSourceEnabled(uid, true);
-        UpdateVesselAppearance(uid,  component);
+        UpdateVesselAppearance(uid, component);
         Popup.PopupEntity(Loc.GetString("anomaly-vessel-component-anomaly-assigned"), uid);
     }
 
     private void OnVesselGetPointsPerSecond(EntityUid uid, AnomalyVesselComponent component, ref ResearchServerGetPointsPerSecondEvent args)
     {
-        if (!this.IsPowered(uid, EntityManager) || component.Anomaly is not {} anomaly)
+        if (!this.IsPowered(uid, EntityManager) || component.Anomaly is not { } anomaly)
             return;
 
         var rawPointValue = GetAnomalyPointValue(anomaly); // Frontier: cache value
@@ -129,7 +116,7 @@ public sealed partial class AnomalySystem
                 continue;
 
             component.Anomaly = null;
-            UpdateVesselAppearance(ent,  component);
+            UpdateVesselAppearance(ent, component);
             _radiation.SetSourceEnabled(ent, false);
 
             if (!args.Supercritical)
@@ -146,7 +133,7 @@ public sealed partial class AnomalySystem
             if (args.Anomaly != component.Anomaly)
                 continue;
 
-            UpdateVesselAppearance(ent,  component);
+            UpdateVesselAppearance(ent, component);
         }
     }
 
@@ -170,21 +157,10 @@ public sealed partial class AnomalySystem
         if (_pointLight.TryGetLight(uid, out var pointLightComponent))
             _pointLight.SetEnabled(uid, on, pointLightComponent);
 
-        // arbitrary value for the generic visualizer to use.
-        // i didn't feel like making an enum for this.
-        var value = 1;
-        if (TryComp<AnomalyComponent>(component.Anomaly, out var anomalyComp))
-        {
-            if (anomalyComp.Stability <= anomalyComp.DecayThreshold)
-            {
-                value = 2;
-            }
-            else if (anomalyComp.Stability >= anomalyComp.GrowthThreshold)
-            {
-                value = 3;
-            }
-        }
-        Appearance.SetData(uid, AnomalyVesselVisuals.AnomalyState, value, appearanceComponent);
+        if (component.Anomaly == null || !TryGetStabilityVisual(component.Anomaly.Value, out var visual))
+            visual = AnomalyStabilityVisuals.Stable;
+
+        Appearance.SetData(uid, AnomalyVesselVisuals.AnomalySeverity, visual, appearanceComponent);
 
         _ambient.SetAmbience(uid, on);
     }

@@ -8,7 +8,7 @@
     layers:
     - state: stick
     - state: nogga # TODO: rename this or migrate & rename if deleted
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
     trash:
     - FoodFrozenPopsicleTrash
   - type: SolutionContainerManager
@@ -34,7 +34,7 @@
     sprite: _NF/Objects/Consumable/Food/frozen.rsi
     layers:
     - state: mochi
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
   - type: SolutionContainerManager
     solutions:
       food:
@@ -60,7 +60,7 @@
     sprite: _NF/Objects/Consumable/Food/frozen.rsi
     layers:
     - state: bungomochi
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
   - type: SolutionContainerManager
     solutions:
       food:
@@ -86,7 +86,7 @@
     sprite: _NF/Objects/Consumable/Food/frozen.rsi
     layers:
     - state: cherrymochi
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
   - type: SolutionContainerManager
     solutions:
       food:
@@ -112,7 +112,7 @@
     sprite: _NF/Objects/Consumable/Food/frozen.rsi
     layers:
     - state: chocomochi
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
   - type: SolutionContainerManager
     solutions:
       food:
@@ -138,7 +138,7 @@
     sprite: _NF/Objects/Consumable/Food/frozen.rsi
     layers:
     - state: fibermochi
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
   - type: SolutionContainerManager
     solutions:
       food:
@@ -167,7 +167,7 @@
     sprite: _NF/Objects/Consumable/Food/frozen.rsi
     layers:
     - state: mothmochi
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
   - type: SolutionContainerManager
     solutions:
       food:
@@ -193,7 +193,7 @@
     sprite: _NF/Objects/Consumable/Food/frozen.rsi
     layers:
     - state: spicemochi
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
   - type: SolutionContainerManager
     solutions:
       food:
@@ -219,7 +219,7 @@
     sprite: _NF/Objects/Consumable/Food/frozen.rsi
     layers:
     - state: teamochi
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
   - type: SolutionContainerManager
     solutions:
       food:
@@ -245,7 +245,7 @@
     sprite: _NF/Objects/Consumable/Food/frozen.rsi
     layers:
     - state: ubemochi
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
   - type: SolutionContainerManager
     solutions:
       food:
@@ -273,7 +273,7 @@
     sprite: _NF/Objects/Consumable/Food/frozen.rsi
     layers:
     - state: pumpkinmochi
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
   - type: SolutionContainerManager
     solutions:
       food:
@@ -305,7 +305,7 @@
     sprite: _NF/Objects/Consumable/Food/frozen.rsi
     layers:
     - state: carvedpumpkinmochi
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
   - type: SolutionContainerManager
     solutions:
       food:

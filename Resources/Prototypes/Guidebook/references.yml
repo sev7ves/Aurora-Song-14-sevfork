@@ -8,6 +8,7 @@
   - Drinks
   - FoodRecipes
   - Writing
+  - Lawsets
   - MedicalRecipes # Frontier
   - ArchetypesRangedWeapons # Frontier
   - ColorCodesAmmo # Frontier
@@ -39,6 +40,7 @@
   - OtherRecipes
   - MedicinalRecipes
   - SecretRecipes
+  - DeepFriedRecipes # DeltaV
 
 - type: guideEntry
   id: PizzaRecipes
@@ -134,3 +136,9 @@
   id: Writing
   name: guide-entry-writing
   text: "/ServerInfo/Guidebook/Writing.xml"
+
+- type: guideEntry
+  id: Lawsets
+  name: guide-entry-lawsets
+  text: "/ServerInfo/Guidebook/ReferenceTables/Lawsets.xml"
+  filterEnabled: True

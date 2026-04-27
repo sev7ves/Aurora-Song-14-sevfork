@@ -2,7 +2,9 @@
   id: CrateNPCSecDog
   parent: CrateLivestock
   components:
-  - type: StorageFill
-    contents:
-      - id: MobSecDog
-        amount: 1
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: MobSecDog
+          amount: 1

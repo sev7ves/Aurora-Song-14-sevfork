@@ -53,12 +53,14 @@
   id: NFBoxDartsTracking
   description: A box of tracking darts and pinpointers.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFDartTracking
-        amount: 3
-      - id: PinpointerUniversal
-        amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFDartTracking
+          amount: 3
+        - id: PinpointerUniversal
+          amount: 3
 
 - type: entity
   name: dartboard

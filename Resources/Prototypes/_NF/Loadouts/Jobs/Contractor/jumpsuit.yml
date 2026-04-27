@@ -1343,7 +1343,7 @@
     proto: ContractorT2
   price: 1000
   equipment:
-    jumpsuit: ClothingUniformJumpsuitChiefEngineerNT
+    jumpsuit: ClothingUniformJumpsuitChiefEngineer #Aurora Song: ClothingUniformJumpsuitChiefEngineerNT: ClothingUniformJumpsuitChiefEngineer
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitChiefEngineer

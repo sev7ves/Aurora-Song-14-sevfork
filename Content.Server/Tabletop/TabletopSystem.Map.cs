@@ -13,15 +13,15 @@ namespace Content.Server.Tabletop
         private const int TabletopSeparation = 100;
 
         /// <summary>
-        ///     Map where all tabletops reside.
-        /// </summary>
-        public MapId TabletopMap { get; private set; } = MapId.Nullspace;
-
-        /// <summary>
         ///     The number of tabletops created in the map.
         ///     Used for calculating the position of the next one.
         /// </summary>
         private int _tabletops = 0;
+
+        /// <summary>
+        ///     Map where all tabletops reside.
+        /// </summary>
+        public MapId TabletopMap { get; private set; } = MapId.Nullspace;
 
         /// <summary>
         ///     Despite the name, this method is only used to subscribe to events.
@@ -37,7 +37,7 @@ namespace Content.Server.Tabletop
         /// <returns></returns>
         private Vector2 GetNextTabletopPosition()
         {
-            return UlamSpiral(_tabletops++) * TabletopSeparation;
+            return UlamSpiral(++_tabletops) * TabletopSeparation;
         }
 
         /// <summary>
@@ -62,11 +62,11 @@ namespace Content.Server.Tabletop
         /// <summary>
         ///     Algorithm for mapping scalars to 2D positions in the same pattern as an Ulam Spiral.
         /// </summary>
-        /// <param name="n">Scalar to map to a 2D position.</param>
+        /// <param name="n">Scalar to map to a 2D position. Must be greater than or equal to 1.</param>
         /// <returns>The mapped 2D position for the scalar.</returns>
         private Vector2i UlamSpiral(int n)
         {
-            var k = (int)MathF.Ceiling(MathF.Sqrt(n) - 1) / 2;
+            var k = (int)MathF.Ceiling((MathF.Sqrt(n) - 1) / 2);
             var t = 2 * k + 1;
             var m = (int)MathF.Pow(t, 2);
             t--;

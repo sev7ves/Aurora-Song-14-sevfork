@@ -14,7 +14,7 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/_AS/Weapons/Guns/Gunshots/LasCrack_Samp4.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: ASLasBoltHeavy
     fireCost: 60
   - type: ItemSlots
@@ -147,7 +147,7 @@
     availableModes:
     - SemiAuto
     - Burst
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: ASLasBoltMedium
     fireCost: 50
   - type: NFWeaponDetails
@@ -183,7 +183,7 @@
 - type: entity
   categories: [ HideSpawnMenu ] # Renamed Xray Cannon for cyborgs.
   name: volatile particle driver
-  parent: [BaseWeaponBattery, BaseC3Contraband] 
+  parent: [BaseWeaponBattery, BaseC3Contraband]
   id: WeaponXrayCannonCyborg
   description: An advanced energy weapon that uses high-energy particles to damage targets.
   components:
@@ -200,8 +200,8 @@
   - type: Gun
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
-  - type: HitscanBatteryAmmoProvider
-    proto: NFXrayLaser 
+  - type: BatteryAmmoProvider
+    proto: NFXrayLaser
     fireCost: 200
   - type: MagazineVisuals
     magState: mag
@@ -212,12 +212,11 @@
     maxCharge: 4000
     startingCharge: 4000
   - type: BatterySelfRecharger # Recharges 1 shot per 5 seconds
-    autoRecharge: true
     autoRechargeRate: 40
 
 - type: entity
   name: disabler SMG
-  parent: [ BaseWeaponBattery, BaseC2ContrabandUnredeemable ] 
+  parent: [ BaseWeaponBattery, BaseC2ContrabandUnredeemable ]
   id: WeaponDisablerSMGCyborg
   description: Advanced weapon that exhausts organic targets, weakening them until they collapse.
   components:
@@ -242,8 +241,8 @@
       - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
-  - type: ProjectileBatteryAmmoProvider
-    proto: NFBulletDisablerSmg 
+  - type: BatteryAmmoProvider
+    proto: NFBulletDisablerSmg
     fireCost: 25
   - type: MagazineVisuals
     magState: mag
@@ -253,7 +252,6 @@
   - type: StaticPrice
     price: 260
   - type: BatterySelfRecharger # Recharges 1 shot per 1 seconds
-    autoRecharge: true
     autoRechargeRate: 25
 
 # endregion - battery rifles | Aurora Song

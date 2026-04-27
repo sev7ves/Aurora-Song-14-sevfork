@@ -1,5 +1,5 @@
 ﻿using Content.Server.Inventory;
-using Content.Server.Radio.Components;
+using Content.Shared.Radio.Components;
 using Content.Shared._Corvax.Silicons.Borgs.Components;
 using Content.Shared.Inventory;
 using Content.Shared.Silicons.Borgs;
@@ -78,7 +78,7 @@ public sealed class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeSystem
         }
 
         // Configure special components
-        if (Prototypes.TryIndex(ent.Comp.SelectedBorgType, out var previousPrototype))
+        if (Prototypes.Resolve(ent.Comp.SelectedBorgType, out var previousPrototype))
         {
             if (previousPrototype.AddComponents is { } removeComponents)
                 EntityManager.RemoveComponents(ent, removeComponents);

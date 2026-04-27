@@ -4,12 +4,14 @@
   name: NFSD SMG crate
   description: Contains two high-powered, semiautomatic rifles with four mags. Requires Armory access to open.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponSubMachineGunWt550
-        amount: 2
-      - id: NFMagazineSubMachineGunTopMounted35
-        amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponSubMachineGunWt550
+          amount: 2
+        - id: NFMagazineSubMachineGunTopMounted35
+          amount: 4
 
 - type: entity
   id: CrateArmoryShotgunNfsd
@@ -17,12 +19,14 @@
   name: NFSD shotgun crate
   description: For when the enemy absolutely needs to be replaced with lead. Contains two Enforcer Combat Shotguns, and some standard shotgun shells. Requires Armory access to open.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponShotgunEnforcer
-        amount: 2
-      - id: NFAmmunitionBoxShellShotgunBuckshot
-        amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponShotgunEnforcer
+          amount: 2
+        - id: NFAmmunitionBoxShellShotgunBuckshot
+          amount: 3
 
 - type: entity
   id: CrateTrackingImplantsNfsd
@@ -30,10 +34,12 @@
   name: NFSD tracking implants
   description: Contains a handful of tracking implanters. Good for prisoners you'd like to release but still keep track of.
   components:
-  - type: StorageFill
-    contents:
-      - id: TrackingImplanter
-        amount: 5
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: TrackingImplanter
+          amount: 5
 
 - type: entity
   parent: CrateNfsdSecure2
@@ -41,10 +47,12 @@
   name: NFSD training bombs
   description: Contains three low-yield training bombs for security to learn defusal and safe ordnance disposal, EOD suit not included. Requires Armory access to open.
   components:
-  - type: StorageFill
-    contents:
-    - id: TrainingBomb
-      amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: TrainingBomb
+          amount: 3
 
 - type: entity
   id: CrateArmoryLaserNfsd
@@ -52,10 +60,12 @@
   name: NFSD lasers crate
   description: Contains three standard-issue laser rifles. Requires Armory access to open.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponEnergyRifleCarbine
-        amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponEnergyRifleCarbine
+          amount: 3
 
 - type: entity
   id: CrateArmoryPistolsNfsd
@@ -63,12 +73,14 @@
   name: NFSD pistols crate
   description: Contains two standard NT pistols with four mags. Requires Armory access to open.
   components:
-  - type: StorageFill
-    contents:
-    - id: NFWeaponPistolMk58
-      amount: 2
-    - id: NFMagazinePistol35
-      amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponPistolMk58
+          amount: 2
+        - id: NFMagazinePistol35
+          amount: 4
 
 - type: entity
   id: CrateArmoryLethalNfsd
@@ -76,22 +88,24 @@
   name: NFSD lethal armory crate
   description: Contains a standard armory stock kit.
   components:
-  - type: StorageFill
-    contents:
-    - id: NFWeaponRifleAssaultLecter
-      amount: 5
-    - id: NFWeaponRifleAssaultVulcan
-      amount: 4
-    - id: NFWeaponSubMachineGunWt550
-      amount: 4
-    - id: NFWeaponShotgunEnforcer
-      amount: 5
-    - id: NFWeaponEnergyRifleCarbine
-      amount: 4
-    - id: NFWeaponEnergySubMachineGunDeltaV
-      amount: 4
-    - id: NFWeaponPistolMk58
-      amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponRifleAssaultLecter
+          amount: 5
+        - id: NFWeaponRifleAssaultVulcan
+          amount: 4
+        - id: NFWeaponSubMachineGunWt550
+          amount: 4
+        - id: NFWeaponShotgunEnforcer
+          amount: 5
+        - id: NFWeaponEnergyRifleCarbine
+          amount: 4
+        - id: NFWeaponEnergySubMachineGunDeltaV
+          amount: 4
+        - id: NFWeaponPistolMk58
+          amount: 4
 
 - type: entity
   id: CrateArmoryNonLethalNfsd
@@ -99,19 +113,21 @@
   name: NFSD non-lethal armory crate
   description: Contains a non-lethal armory stock kit.
   components:
-  - type: StorageFill
-    contents:
-    - id: NFWeaponEnergyPistolDisabler
-      amount: 5
-    - id: NFWeaponPistolUniversalNfsdLessLethal
-      amount: 4
-    - id: NFWeaponEnergySubMachineGunDisabler
-      amount: 5
-    - id: NFWeaponRifleAssaultLecterLessLethal
-      amount: 4
-    - id: NFWeaponRifleAssaultVulcanLessLethal
-      amount: 4
-    - id: NFWeaponShotgunEnforcerLessLethal
-      amount: 4
-    - id: NFWeaponEnergySubMachineGunDeltaV
-      amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponEnergyPistolDisabler
+          amount: 5
+        - id: NFWeaponPistolUniversalNfsdLessLethal
+          amount: 4
+        - id: NFWeaponEnergySubMachineGunDisabler
+          amount: 5
+        - id: NFWeaponRifleAssaultLecterLessLethal
+          amount: 4
+        - id: NFWeaponRifleAssaultVulcanLessLethal
+          amount: 4
+        - id: NFWeaponShotgunEnforcerLessLethal
+          amount: 4
+        - id: NFWeaponEnergySubMachineGunDeltaV
+          amount: 4

@@ -9,7 +9,6 @@
   - type: FlavorProfile
     flavors:
       - sweet
-  - type: Food
   - type: Sprite
     sprite: Objects/Consumable/Food/Baked/cake.rsi
   - type: SolutionContainerManager
@@ -51,7 +50,7 @@
   - type: FlavorProfile
     flavors:
       - sweet
-  - type: Food
+  - type: Edible
   - type: SolutionContainerManager
     solutions:
       food:
@@ -1174,7 +1173,7 @@
           Quantity: 10 # Frontier: 30<10
         - ReagentId: Flavorol # Frontier
           Quantity: 50 # Frontier
-  - type: Food
+  - type: Edible
     transferAmount: 12
   - type: Item
     size: Normal
@@ -1182,7 +1181,7 @@
   - type: PointLight
     color: "#FFFF00"
     radius: 2
-    energy: 1.4
+    energy: 2.5
 
 - type: entity
   name: suppermatter shard
@@ -1203,12 +1202,12 @@
           Quantity: 1.25 # Frontier: 5<1.25
         - ReagentId: Flavorol # Frontier
           Quantity: 6.25 # Frontier
-  - type: Food
+  - type: Edible
     transferAmount: 3
   - type: PointLight
     color: "#FFFF00"
     radius: 1.4
-    energy: 1.4
+    energy: 2.5
   - type: Tag
     tags:
     - Slice
@@ -1275,3 +1274,88 @@
   - type: Item
     heldPrefix: cotton-slice
   - type: MothFood # Frontier
+
+# Motivating
+
+- type: entity
+  name: berry delight
+  parent: FoodCakeBase
+  id: FoodCakeBerryDelight
+  description: This is a cake that is approaching.
+  components:
+  - type: Sprite
+    state: berry_delight
+  - type: FlavorProfile
+    flavors:
+      - sweet
+      - berry
+      - motivating
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 55
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 40
+        - ReagentId: Vitamin
+          Quantity: 10
+        - ReagentId: Milk
+          Quantity: 10
+  - type: SliceableFood
+    slice: FoodCakeBerryDelightSlice
+  - type: Tag
+    tags:
+    - Cake
+    - Fruit
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: plain-inhand-left
+      - state: alpha-filling-inhand-left
+        color: red
+      right:
+      - state: plain-inhand-right
+      - state: alpha-filling-inhand-right
+        color: red
+
+- type: entity
+  name: berry delight slice
+  parent: FoodCakeSliceBase
+  id: FoodCakeBerryDelightSlice
+  description: Put a fork in, your hunger in isolation.
+  components:
+  - type: Sprite
+    state: berry_delight_slice
+  - type: FlavorProfile
+    flavors:
+      - sweet
+      - berry
+      - motivating
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 12
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 8
+        - ReagentId: Vitamin
+          Quantity: 2
+        - ReagentId: Milk
+          Quantity: 2
+  - type: Tag
+    tags:
+    - Cake
+    - Fruit
+    - Slice
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: alpha-slice-inhand-left
+        color: white
+      - state: alpha-slice-filling-inhand-left
+        color: red
+      right:
+      - state: alpha-slice-inhand-right
+        color: white
+      - state: alpha-slice-filling-inhand-right
+        color: red

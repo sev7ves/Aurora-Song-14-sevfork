@@ -47,10 +47,12 @@
   name: quiver (bolts)
   suffix: Filled, Bolts
   components:
-  - type: StorageFill
-    contents:
-    - id: CrossbowBolt
-      amount: 15
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: CrossbowBolt
+          amount: 15
 
 - type: entity
   parent: ClothingBeltQuiverCrossbow
@@ -58,10 +60,12 @@
   name: quiver (bolts, uranium)
   suffix: Filled, Uranium Tip
   components:
-  - type: StorageFill
-    contents:
-    - id: CrossbowBoltUraniumGlassShard
-      amount: 15
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: CrossbowBoltUraniumGlassShard
+          amount: 15
 
 - type: entity
   parent: ClothingBeltQuiverCrossbow
@@ -69,7 +73,9 @@
   name: quiver (bolts, plasma)
   suffix: Filled, Plasma Tip
   components:
-  - type: StorageFill
-    contents:
-    - id: CrossbowBoltPlasmaGlassShard
-      amount: 15
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: CrossbowBoltPlasmaGlassShard
+          amount: 15

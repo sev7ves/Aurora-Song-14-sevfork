@@ -1027,7 +1027,7 @@
     - id: FoodBakedCannoli
       amount: 2
       orGroup: Food
-    - id: FoodDonutJellySlugcat
+    - id: FoodDonutJellyScurret # Aurora Song: FoodDonutJellySlugcat > FoodDonutJellyScurret
       amount: 2
       orGroup: Food
     - id: FoodMealMint # unlucky

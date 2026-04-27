@@ -3,14 +3,16 @@
   id: NFBoxSurvival
   suffix: Oxygen
   components:
-  - type: StorageFill
-    contents:
-      - id: EmergencyOxygenTankFilled
-      - id: SpaceMedipen
-      - id: EmergencyMedipen
-      - id: FoodPSB
-      - id: DrinkWaterBottleFull
-      - id: Flare
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: EmergencyOxygenTankFilled
+        - id: SpaceMedipen
+        - id: EmergencyMedipen
+        - id: FoodPSB
+        - id: DrinkWaterBottleFull
+        - id: Flare
   - type: Sprite
     layers:
       - state: internals
@@ -21,14 +23,16 @@
   id: NFBoxSurvivalNitrogen
   suffix: Nitrogen
   components:
-  - type: StorageFill
-    contents:
-      - id: EmergencyNitrogenTankFilled
-      - id: SpaceMedipen
-      - id: EmergencyMedipen
-      - id: FoodPSB
-      - id: DrinkWaterBottleFull
-      - id: Flare
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: EmergencyNitrogenTankFilled
+        - id: SpaceMedipen
+        - id: EmergencyMedipen
+        - id: FoodPSB
+        - id: DrinkWaterBottleFull
+        - id: Flare
   - type: Sprite
     layers:
       - state: internals
@@ -39,14 +43,16 @@
   id: NFBoxSurvivalExtended
   suffix: Oxygen
   components:
-  - type: StorageFill
-    contents:
-      - id: DoubleEmergencyOxygenTankFilled
-      - id: SpaceMedipen
-      - id: EmergencyMedipen
-      - id: FoodPSB
-      - id: DrinkWaterBottleFull
-      - id: CrowbarPocket
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DoubleEmergencyOxygenTankFilled
+        - id: SpaceMedipen
+        - id: EmergencyMedipen
+        - id: FoodPSB
+        - id: DrinkWaterBottleFull
+        - id: CrowbarPocket
   - type: Sprite
     layers:
       - state: internals
@@ -57,14 +63,16 @@
   id: NFBoxSurvivalExtendedNitrogen
   suffix: Nitrogen
   components:
-  - type: StorageFill
-    contents:
-      - id: DoubleEmergencyNitrogenTankFilled
-      - id: SpaceMedipen
-      - id: EmergencyMedipen
-      - id: FoodPSB
-      - id: DrinkWaterBottleFull
-      - id: CrowbarPocket
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DoubleEmergencyNitrogenTankFilled
+        - id: SpaceMedipen
+        - id: EmergencyMedipen
+        - id: FoodPSB
+        - id: DrinkWaterBottleFull
+        - id: CrowbarPocket
   - type: Sprite
     layers:
       - state: internals
@@ -75,13 +83,15 @@
   id: NFBoxSurvivalSheleg
   suffix: Oxygen
   components:
-  - type: StorageFill
-    contents:
-      - id: EmergencyOxygenTankFilled
-      - id: NFPillSheleg
-      - id: FoodPSB
-      - id: DrinkWaterBottleFull
-      - id: Flare
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: EmergencyOxygenTankFilled
+        - id: NFPillSheleg
+        - id: FoodPSB
+        - id: DrinkWaterBottleFull
+        - id: Flare
   - type: Sprite
     layers:
       - state: internals
@@ -92,13 +102,15 @@
   id: NFBoxSurvivalExtendedSheleg
   suffix: Oxygen
   components:
-  - type: StorageFill
-    contents:
-      - id: DoubleEmergencyOxygenTankFilled
-      - id: NFPillSheleg
-      - id: FoodPSB
-      - id: DrinkWaterBottleFull
-      - id: CrowbarPocket
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DoubleEmergencyOxygenTankFilled
+        - id: NFPillSheleg
+        - id: FoodPSB
+        - id: DrinkWaterBottleFull
+        - id: CrowbarPocket
   - type: Sprite
     layers:
       - state: internals
@@ -111,14 +123,16 @@
   id: ASBoxSurvivalFeroxi
   suffix: Water Vapor
   components:
-  - type: StorageFill
-    contents:
-      - id: EmergencyWaterVaporTankFilled
-      - id: SpaceMedipen
-      - id: EmergencyMedipen
-      - id: FoodPSB
-      - id: DrinkWaterBottleFull
-      - id: Flare
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: EmergencyWaterVaporTankFilled
+        - id: SpaceMedipen
+        - id: EmergencyMedipen
+        - id: FoodPSB
+        - id: DrinkWaterBottleFull
+        - id: Flare
   - type: Sprite
     layers:
       - state: internals
@@ -129,14 +143,16 @@
   id: ASBoxSurvivalExtendedFeroxi
   suffix: Water Vapor
   components:
-  - type: StorageFill
-    contents:
-      - id: DoubleEmergencyWaterVaporTankFilled
-      - id: SpaceMedipen
-      - id: EmergencyMedipen
-      - id: FoodPSB
-      - id: DrinkWaterBottleFull
-      - id: CrowbarPocket
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DoubleEmergencyWaterVaporTankFilled
+        - id: SpaceMedipen
+        - id: EmergencyMedipen
+        - id: FoodPSB
+        - id: DrinkWaterBottleFull
+        - id: CrowbarPocket
   - type: Sprite
     layers:
       - state: internals
@@ -147,14 +163,16 @@
   id: ASBoxSurvivalAvali
   suffix: Ammonia
   components:
-  - type: StorageFill
-    contents:
-      - id: EmergencyOxygenTankFilled
-      - id: SpaceMedipen
-      - id: EmergencyMedipen
-      - id: FoodPSB
-      - id: DrinkAmmoniaBottleFull
-      - id: Flare
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: EmergencyOxygenTankFilled
+        - id: SpaceMedipen
+        - id: EmergencyMedipen
+        - id: FoodPSB
+        - id: DrinkAmmoniaBottleFull
+        - id: Flare
   - type: Sprite
     layers:
       - state: internals
@@ -165,14 +183,16 @@
   id: ASBoxSurvivalExtendedAvali
   suffix: Ammonia
   components:
-  - type: StorageFill
-    contents:
-      - id: DoubleEmergencyOxygenTankFilled
-      - id: SpaceMedipen
-      - id: EmergencyMedipen
-      - id: FoodPSB
-      - id: DrinkAmmoniaBottleFull
-      - id: CrowbarPocket
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DoubleEmergencyOxygenTankFilled
+        - id: SpaceMedipen
+        - id: EmergencyMedipen
+        - id: FoodPSB
+        - id: DrinkAmmoniaBottleFull
+        - id: CrowbarPocket
   - type: Sprite
     layers:
       - state: internals

@@ -214,7 +214,7 @@ marking-VoxTailSplit-voxtailsplit = Twinned
 
 # upstream vox markings dont have localized names. lmfao
 # these are just straight up broken and shouldnt be visible from the markings menu period but ALAS im not skilled enough to remove them so you get this stupid botch job instead
-marking-VoxBeak = Default Beak [DO NOT USE]
+# marking-VoxBeak = Default Beak [DO NOT USE] # Aurora's Song - Duplicate
 marking-VoxLArmScales = Default Arm [DO NOT USE]
 marking-VoxLHandScales = Default Left Hand [DO NOT USE]
 marking-VoxRArmScales = Default Right Arm [DO NOT USE]

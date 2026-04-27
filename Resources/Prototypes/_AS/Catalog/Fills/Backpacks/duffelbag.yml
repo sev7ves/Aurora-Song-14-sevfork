@@ -6,10 +6,12 @@
   name: NGP-40 tracking bundle
   description: "All the equipment needed to track almost anything, careful tracking people."
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponLauncherGrenadeNfsd
-      - id: NFBoxDartsTracking
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFWeaponLauncherGrenadeNfsd
+        - id: NFBoxDartsTracking
 
 - type: entity
   parent: ASClothingBackpackDuffelSLENavy
@@ -17,11 +19,13 @@
   name: NGP-40 EMP bundle
   description: "An NGP-40 grenade launcher bundled with 10 EMP grenades."
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponLauncherGrenadeNfsd
-      - id: NFGrenadeEMP
-        amount: 10
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFWeaponLauncherGrenadeNfsd
+        - id: NFGrenadeEMP
+          amount: 10
 
 - type: entity
   parent: ASClothingBackpackDuffelSLENavy
@@ -29,11 +33,13 @@
   name: NGP-40 frag bundle
   description: "A bundle containing an NGP-40 grenade launcher and 10 fragmentation grenades."
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponLauncherGrenadeNfsd
-      - id: NFGrenadeFrag
-        amount: 10
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFWeaponLauncherGrenadeNfsd
+        - id: NFGrenadeFrag
+          amount: 10
 
 - type: entity
   parent: ASClothingBackpackDuffelSLENavy
@@ -41,11 +47,13 @@
   name: NGP-40 baton bundle
   description: "A bundle containing an NGP-40 grenade launcher and 10 baton grenades."
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponLauncherGrenadeNfsd
-      - id: NFGrenadeBaton
-        amount: 10
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFWeaponLauncherGrenadeNfsd
+        - id: NFGrenadeBaton
+          amount: 10
 
 #region Botany
 - type: entity
@@ -54,8 +62,10 @@
   name: green duffel
   suffix: Filled, Agriculture Bundle
   components:
-  - type: StorageFill
-    contents:
-      - id: BoxAgrichem
-      - id: CannabisSeeds
-      - id: NettleSeeds
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: BoxAgrichem
+        - id: CannabisSeeds
+        - id: NettleSeeds

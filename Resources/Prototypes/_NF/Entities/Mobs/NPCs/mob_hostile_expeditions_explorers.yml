@@ -457,14 +457,16 @@
       Dead:
         Base: hauler-broken
   - type: Bloodstream
-    bloodReagent: WeldingFuel
-    bloodMaxVolume: 100
+    bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+      reagents:
+      - ReagentId: WeldingFuel
+        Quantity: 100
   - type: MobThresholds
     thresholds:
       0: Alive
       180: Dead # Aurora Song 160>180
   - type: Stamina
-    critThreshold: 480
+    baseCritThreshold: 480 # Aurora's Song - critThreshold>baseCritThreshold
   - type: Destructible
     thresholds:
     - trigger:
@@ -479,7 +481,7 @@
           SpawnMobExplorerT2:
             min: 1
             max: 1
-          RipleyChassis:
+          ASSpawnRipleyParts: # Aurora's Song - RipleyChassis>ASSpawnRipleyParts
             min: 1
             max: 1
           RipleyCentralElectronics:
@@ -698,7 +700,7 @@
           SpawnMobExplorerEVAT2:
             min: 1
             max: 1
-          RipleyChassis:
+          ASSpawnRipleyParts: # Aurora's Song - RipleyChassis>ASSpawnRipleyParts
             min: 1
             max: 1
           RipleyCentralElectronics:

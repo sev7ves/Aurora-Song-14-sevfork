@@ -13,3 +13,10 @@
   frequency: 4269
   color: "#1C4D8D"
   longRange: true
+
+- type: radioChannel
+  id: Arcadia
+  name: chat-radio-arcadia
+  keycode: 'a'
+  frequency: 3228
+  color: "#fc9a9a"

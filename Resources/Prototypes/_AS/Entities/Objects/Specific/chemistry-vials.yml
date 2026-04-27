@@ -1,6 +1,6 @@
 - type: entity
   id: ArithrazineChemistryVial
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: arithrazine
   components:
   - type: Label
@@ -15,7 +15,7 @@
 
 - type: entity
   id: DiphenhydramineChemistryVial
-  parent: BaseChemistryEmptyVial
+  parent: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   suffix: diphenhydramine
   components:
   - type: Label

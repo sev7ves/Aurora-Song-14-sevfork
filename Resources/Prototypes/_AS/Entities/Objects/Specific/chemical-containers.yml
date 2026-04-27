@@ -30,51 +30,6 @@
 
 - type: entity
   parent: Jug
-  suffix: puncturase
-  id: JugPuncturase
-#  categories: [ HideSpawnMenu ]
-  components:
-  - type: Label
-    currentLabel: med-desc-puncturase
-  - type: SolutionContainerManager
-    solutions:
-      beaker:
-        reagents:
-        - ReagentId: Puncturase
-          Quantity: 200
-
-- type: entity
-  parent: Jug
-  suffix: saline
-  id: JugSaline
-#  categories: [ HideSpawnMenu ]
-  components:
-  - type: Label
-    currentLabel: med-desc-saline
-  - type: SolutionContainerManager
-    solutions:
-      beaker:
-        reagents:
-        - ReagentId: Saline
-          Quantity: 200
-
-- type: entity
-  parent: Jug
-  suffix: tranexamicacid
-  id: JugTranexamicAcid
-#  categories: [ HideSpawnMenu ]
-  components:
-  - type: Label
-    currentLabel: med-desc-tranexamicacid
-  - type: SolutionContainerManager
-    solutions:
-      beaker:
-        reagents:
-        - ReagentId: TranexamicAcid
-          Quantity: 200
-
-- type: entity
-  parent: Jug
   suffix: pyrazine
   id: JugPyrazine
 #  categories: [ HideSpawnMenu ]
@@ -86,21 +41,6 @@
       beaker:
         reagents:
         - ReagentId: Pyrazine
-          Quantity: 200
-
-- type: entity
-  parent: Jug
-  suffix: dexalinplus
-  id: JugDexalinPlus
-#  categories: [ HideSpawnMenu ]
-  components:
-  - type: Label
-    currentLabel: med-desc-dexalinplus
-  - type: SolutionContainerManager
-    solutions:
-      beaker:
-        reagents:
-        - ReagentId: DexalinPlus
           Quantity: 200
 
 - type: entity
