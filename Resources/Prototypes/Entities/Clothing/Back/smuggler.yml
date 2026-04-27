@@ -77,21 +77,9 @@
   components:
   - type: EntityTableContainerFill
     containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: NFSpeedLoaderCap # Frontier: SpeedLoaderCap<NFSpeedLoaderCap
-          amount: !type:RangeNumberSelector
-            range: 2, 4 # Frontier: 4, 8 < 2, 4
-        - !type:GroupSelector
-          children:
-          - id: NFRevolverCapGun # Frontier: RevolverCapGun<NFRevolverCapGun
-            amount: !type:RangeNumberSelector
-              range: 1, 2 # Frontier: 4, 8 < 1, 2
-            weight: 95
-          - id: NFRevolverCapGunFake # Frontier: RevolverCapGunFake<NFRevolverCapGunFake
-            amount: !type:RangeNumberSelector
-              range: 1, 2 # Frontier: 8<2
-            weight: 5
+      storagebase: !type:NestedSelector
+        tableId: RandomCapGunTable
+        rolls: 4, 7
 
 - type: entity
   parent: ClothingBackpackSatchelSmuggler

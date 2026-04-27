@@ -17,19 +17,21 @@ public sealed class SmartFridgeInteractionTest : InteractionTest
   parent: PillCanister
   id: {SampleDumpableAndInsertableId}
   components:
-  - type: StorageFill
-    contents:
-    - id: PillCopper
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: PillCopper
+        amount: 5
 
 - type: entity
   parent: ChemBag
   id: {SampleDumpableId}
   components:
-  - type: StorageFill
-    contents:
-    - id: PillCopper
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: PillCopper
+        amount: 5
 ";
 
     [Test]
@@ -59,12 +61,16 @@ public sealed class SmartFridgeInteractionTest : InteractionTest
         // dispense an item
         await SendBui(SmartFridgeUiKey.Key, new SmartFridgeDispenseItemMessage(component.Entries[0]));
 
-        // assert that the listing is still there
-        //Assert.That(component.Entries, Is.Not.Empty);
-        // but empty
-        //Assert.That(component.ContainedEntries[component.Entries[0]], Is.Empty);
+        // Aurora's Song - NF SmartFridge behaves differently
+        // // assert that the listing is still there
+        // Assert.That(component.Entries, Is.Not.Empty);
+        // // but empty
+        // Assert.That(component.ContainedEntries[component.Entries[0]], Is.Empty);
 
-        Assert.That(component.Entries, Is.Empty); // Frontier: delete empty listings
+        // Aurora's Song - assert that the listing is no longer there
+        Assert.That(component.Entries, Is.Empty);
+        // Aurora's Song - and that the ContainedEntries was also cleared
+        Assert.That(component.ContainedEntries, Is.Empty);
 
         // and that the thing we dispensed is actually around
         await AssertEntityLookup(

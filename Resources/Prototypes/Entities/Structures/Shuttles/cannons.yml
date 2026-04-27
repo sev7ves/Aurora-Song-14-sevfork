@@ -94,7 +94,7 @@
           tags:
             - PowerCell
             - PowerCellSmall
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: NFRedLightLaser # Frontier: use NF prefix
     fireCost: 50
 
@@ -150,7 +150,7 @@
         whitelist:
           tags:
             - PowerCage
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: NFRedShuttleLaser # Frontier: use NF variant
     fireCost: 150
 

@@ -15,10 +15,6 @@
       "directions": 4
     },
     {
-        "name": "equipped-MASK-vulpkanin",
-        "directions": 4
-    },
-    {
       "name": "equipped-MASK-dog",
       "directions": 4
     },
@@ -67,11 +63,15 @@
       "directions": 4
     },
     {
-      "name": "equipped-MASK-reptilian",
+      "name": "equipped-MASK-vulpkanin",
       "directions": 4
     },
     {
       "name": "up-equipped-MASK-vulpkanin",
+      "directions": 4
+    },
+    {
+      "name": "equipped-MASK-reptilian",
       "directions": 4
     }
   ]

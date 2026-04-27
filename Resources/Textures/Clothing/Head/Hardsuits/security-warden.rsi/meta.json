@@ -1,7 +1,8 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "sprite made by Gtheglorious based on the sprite made by Alekshhh for SS14. Vox states by Flareguy for Space Station 14 | vulpkanin states sprited by LizArmchair",
+  "copyright": "sprite made by Gtheglorious based on the sprite made by Alekshhh for SS14. Vox states by Flareguy for Space Station 14. Vulpkanin and Reptilian states by TiniestShark (Github).",
+  "extra_copyright": ["vulpkanin states sprited by LizArmchair"],
   "size": {
     "x": 32,
     "y": 32
@@ -18,11 +19,11 @@
       "directions": 4
     },
     {
-      "name": "off-equipped-HELMET-vulpkanin",
+      "name": "on-equipped-HELMET",
       "directions": 4
     },
     {
-      "name": "on-equipped-HELMET",
+      "name": "off-equipped-HELMET-vulpkanin",
       "directions": 4
     },
     {
@@ -35,6 +36,14 @@
     },
     {
       "name": "on-equipped-HELMET-vox",
+      "directions": 4
+    },
+    {
+      "name": "off-equipped-HELMET-reptilian",
+      "directions": 4
+    },
+    {
+      "name": "on-equipped-HELMET-reptilian",
       "directions": 4
     }
   ]

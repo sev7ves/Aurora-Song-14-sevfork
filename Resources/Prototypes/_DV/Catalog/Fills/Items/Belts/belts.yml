@@ -3,10 +3,12 @@
   parent: ClothingBeltCorpsmanWebbing
   suffix: Filled
   components:
-  - type: StorageFill
-    contents:
-      - id: MedicatedSuture
-      - id: RegenerativeMesh
-      - id: Bloodpack
-      - id: SyringeEphedrine
-      - id: EmergencyMedipen
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MedicatedSuture
+        - id: RegenerativeMesh
+        - id: Bloodpack
+        - id: SyringeEphedrine
+        - id: EmergencyMedipen

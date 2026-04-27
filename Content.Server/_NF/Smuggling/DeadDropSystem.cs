@@ -1,7 +1,7 @@
 using System.Linq;
 using System.Text;
 using Content.Server._NF.GameTicking.Events;
-using Content.Server._NF.SectorServices;
+using Content.Shared._NF.SectorServices;
 using Content.Server._NF.Smuggling.Components;
 using Content.Server.Administration.Logs;
 using Content.Server.Radio.EntitySystems;
@@ -28,6 +28,7 @@ using Robust.Shared.Timing;
 using Content.Server._NF.Station.Systems;
 using Robust.Shared.EntitySerialization.Systems;
 using Content.Server._NF.GC.Components;
+using Content.Shared.Station.Components;
 
 namespace Content.Server._NF.Smuggling;
 
@@ -548,7 +549,7 @@ public sealed class DeadDropSystem : EntitySystem
             if (!TryComp<StationDataComponent>(reportStation, out var stationData))
                 continue; // Not a station?
 
-            var stationGrid = _station.GetLargestGrid(stationData);
+            var stationGrid = _station.GetLargestGrid((reportStation, stationData));
             if (stationGrid == null)
                 continue; // Nobody to send our message.
 

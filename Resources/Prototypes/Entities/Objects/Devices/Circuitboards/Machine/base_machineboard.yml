@@ -18,5 +18,6 @@
         Glass: 230
       chemicalComposition:
         Silicon: 20
+    - type: Circuitboard
     - type: BindToStation # Frontier
 

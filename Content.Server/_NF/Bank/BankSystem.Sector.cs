@@ -1,5 +1,5 @@
 using System.Runtime.InteropServices;
-using Content.Server._NF.SectorServices;
+using Content.Shared._NF.SectorServices;
 using Content.Shared._NF.Bank.BUI;
 using Content.Shared._NF.Bank;
 using Content.Shared._NF.Bank.Components;

@@ -4,20 +4,22 @@
   name: grave bag
   description: "Smells of calcium."
   components:
-  - type: StorageFill
-    contents:
-      - id: RightHandSkeleton
-      - id: LeftHandSkeleton
-      - id: FoodPoppy
-      - id: ClothingHeadHatStrawHat
-      - id: MaterialBones1
-      - id: LeftArmSkeleton
-      - id: LeftHandSkeleton
-      - id: LeftFootSkeleton
-      - id: LeftLegSkeleton
-      - id: TorsoSkeleton
-      - id: GoldRingGem
-      - id: MaterialBones1
-      - id: RightLegSkeleton
-      - id: RightFootSkeleton
-      - id: GoldRingDiamond
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: RightHandSkeleton
+        - id: LeftHandSkeleton
+        - id: FoodPoppy
+        - id: ClothingHeadHatStrawHat
+        - id: MaterialBones1
+        - id: LeftArmSkeleton
+        - id: LeftHandSkeleton
+        - id: LeftFootSkeleton
+        - id: LeftLegSkeleton
+        - id: TorsoSkeleton
+        - id: GoldRingGem
+        - id: MaterialBones1
+        - id: RightLegSkeleton
+        - id: RightFootSkeleton
+        - id: GoldRingDiamond

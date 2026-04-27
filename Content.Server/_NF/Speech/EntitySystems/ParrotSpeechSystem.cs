@@ -1,7 +1,9 @@
 using System.Linq;
 using Content.Server.Chat.Systems;
 using Content.Server.Speech.Components;
+using Content.Shared.Chat;
 using Content.Shared.Mind.Components;
+using Content.Shared.Speech;
 using Content.Shared.Whitelist;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
@@ -79,7 +81,7 @@ public sealed class ParrotSpeechSystem : EntitySystem
 
     private void CanListen(EntityUid uid, ParrotSpeechComponent component, ref ListenAttemptEvent args)
     {
-        if (_whitelistSystem.IsBlacklistPass(component.Blacklist, args.Source))
+        if (_whitelistSystem.IsWhitelistPass(component.Blacklist, args.Source))
             args.Cancel();
     }
 }

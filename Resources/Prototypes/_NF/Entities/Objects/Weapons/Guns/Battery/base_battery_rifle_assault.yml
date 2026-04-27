@@ -45,7 +45,6 @@
     maxCharge: 2400
     startingCharge: 2400
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 4 # Default recharge rate: 1 shot per 20 seconds with 80 fireCost
   - type: NFWeaponDetails
     class: weapon-details-class-assault-rifle
@@ -90,7 +89,7 @@
     examineCaliber: gun-examine-energybolt-medium
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFBulletLaserMedium
     fireCost: 80
   - type: BatteryWeaponFireModes
@@ -108,6 +107,6 @@
     examineCaliber: gun-examine-pulse-low
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFPulse
     fireCost: 80

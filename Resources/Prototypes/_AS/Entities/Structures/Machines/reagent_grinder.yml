@@ -19,7 +19,7 @@
     efficiency: 0.9
     onlyReclaimDrainable: false
     solutionContainerId: output
-    processMaterials: false # Dix material duplication
+    reclaimMaterials: false # Dix material duplication
   - type: Sprite
     sprite: _AS/Structures/Machines/recycling.rsi
     layers:

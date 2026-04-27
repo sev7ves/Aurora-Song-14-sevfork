@@ -40,7 +40,7 @@ public abstract class SharedGasThermoMachineSystem : EntitySystem
 
     private void OnToggleMessage(EntityUid uid, GasThermoMachineComponent thermoMachine, GasThermomachineToggleMessage args)
     {
-        var powerState = _receiver.TryTogglePower(uid, user: args.Actor); // Frontier: Upstream - #28984
+        var powerState = _receiver.TogglePower(uid, user: args.Actor);
         _adminLogger.Add(LogType.AtmosPowerChanged, $"{ToPrettyString(args.Actor)} turned {(powerState ? "On" : "Off")} {ToPrettyString(uid)}");
         DirtyUI(uid, thermoMachine);
     }

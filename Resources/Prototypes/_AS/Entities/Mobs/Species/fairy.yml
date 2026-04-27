@@ -56,8 +56,10 @@
         Blunt: 10
   - type: Stamina
   - type: Bloodstream
-    bloodReagent: FairyBlood
-    bloodMaxVolume: 50
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: FairyBlood
+        Quantity: 50
   - type: PseudoItem
     shape:
     - 0,1,0,0

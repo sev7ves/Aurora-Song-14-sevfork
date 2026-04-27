@@ -1,4 +1,5 @@
 using Content.Shared.Body.Systems;
+using Content.Shared.Gibbing;
 using Content.Shared.NPC;
 using Content.Shared.NPC.Components;
 using Content.Shared.NPC.Systems;
@@ -14,7 +15,7 @@ namespace Content.Server._NF.NPC.Systems;
 public sealed partial class HostileNPCDeletionSystem : EntitySystem
 {
     [Dependency] private readonly NpcFactionSystem _npcFaction = default!;
-    [Dependency] private readonly SharedBodySystem _sharedBodySystem = default!;
+    [Dependency] private readonly GibbingSystem _gibbingSystem = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
 
@@ -48,7 +49,7 @@ public sealed partial class HostileNPCDeletionSystem : EntitySystem
                 && _npcFaction.IsFactionHostile("NanoTrasen", (uid, npcFactionMember)))
             {
                 _audio.PlayPredicted(protectedGrid.HostileMobKillSound, xform.Coordinates, null);
-                _sharedBodySystem.GibBody(uid);
+                _gibbingSystem.Gib(uid);
                 Spawn("Ash", xform.Coordinates);
                 _popup.PopupCoordinates(Loc.GetString("admin-smite-turned-ash-other", ("name", uid)), xform.Coordinates, PopupType.LargeCaution);
                 QueueDel(uid);

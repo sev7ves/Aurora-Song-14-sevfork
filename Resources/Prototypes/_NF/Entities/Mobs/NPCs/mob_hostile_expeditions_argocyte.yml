@@ -28,8 +28,10 @@
   - type: Sprite
     sprite: Mobs/Aliens/Argocyte/argocyte_common.rsi
   - type: Bloodstream
-    bloodReagent: FluorosulfuricAcid
-    bloodMaxVolume: 75
+    bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+      reagents:
+      - ReagentId: FluorosulfuricAcid
+        Quantity: 75
   - type: Fixtures
     fixtures:
       fix1:

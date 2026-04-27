@@ -4,7 +4,7 @@ using Robust.Shared.Prototypes;
 namespace Content.Server._AS.StationPay;
 
 [Prototype]
-public sealed class StationPayPrototype : IPrototype
+public sealed partial class StationPayPrototype : IPrototype
 {
     /// <inheritdoc/>
     [IdDataField]

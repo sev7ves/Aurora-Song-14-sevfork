@@ -4,10 +4,12 @@
   name: AstroVend restock crate
   description: Contains two restock boxes for the AstroVend vending machine.
   components:
-  - type: StorageFill
-    contents:
-      - id: VendingMachineRestockAstroVend
-        amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: VendingMachineRestockAstroVend
+          amount: 2
 
 - type: entity
   id: CrateVendingMachineRestockAmmoFilled
@@ -15,10 +17,12 @@
   name: Liberation restock crate
   description: Contains two restock boxes for the Liberation vending machine.
   components:
-  - type: StorageFill
-    contents:
-      - id: VendingMachineRestockAmmo
-        amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: VendingMachineRestockAmmo
+          amount: 2
 
 - type: entity
   id: CrateVendingMachineRestockCuddlyCritterVendFilled
@@ -26,10 +30,12 @@
   name: CuddlyCritterVend restock crate
   description: Contains two restock boxes for a CuddlyCritterVend vending machine.
   components:
-  - type: StorageFill
-    contents:
-      - id: VendingMachineRestockCuddlyCritterVend
-        amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: VendingMachineRestockCuddlyCritterVend
+          amount: 2
 
 - type: entity
   id: CrateVendingMachineRestockLessLethalVendFilled
@@ -37,10 +43,12 @@
   name: LessLethalVend restock crate
   description: Contains two restock boxes for the LessLethalVend vending machine.
   components:
-  - type: StorageFill
-    contents:
-      - id: VendingMachineRestockLessLethalVend
-        amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: VendingMachineRestockLessLethalVend
+          amount: 2
 
 - type: entity
   id: CrateVendingMachineRestockNonLethalVendFilled
@@ -48,10 +56,12 @@
   name: NonLethalVend restock crate
   description: Contains two restock boxes for the NonLethalVend vending machine.
   components:
-  - type: StorageFill
-    contents:
-      - id: VendingMachineRestockNonLethalVend
-        amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: VendingMachineRestockNonLethalVend
+          amount: 2
 
 - type: entity
   id: CrateVendingMachineRestockAutoTuneVendFilled
@@ -59,10 +69,12 @@
   name: AutoTuneVend restock crate
   description: Contains two restock boxes for the AutoTuneVend vending machine.
   components:
-  - type: StorageFill
-    contents:
-      - id: VendingMachineRestockAutoTuneVend
-        amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: VendingMachineRestockAutoTuneVend
+          amount: 2
 
 - type: entity
   id: CrateVendingMachineRestockPottedPlantVendFilled
@@ -70,7 +82,9 @@
   name: Plant-O-Matic restock crate
   description: Contains two restock boxes for the Plant-O-Matic vending machine.
   components:
-  - type: StorageFill
-    contents:
-      - id: VendingMachineRestockPottedPlantVend
-        amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: VendingMachineRestockPottedPlantVend
+          amount: 2

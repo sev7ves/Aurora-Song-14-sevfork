@@ -12,7 +12,7 @@
   keycode: 'y'
   frequency: 1337
   color: "#2681a5"
-  longRange: true
+  # longRange: true # Aurora's Song - needs a telecom server just like Arcadia and the Syndicate; CentComm reflavored to be generally NT
 
 - type: radioChannel
   id: Command

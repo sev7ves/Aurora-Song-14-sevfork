@@ -86,7 +86,7 @@
   - type: Sprite
     sprite: _DEN/Objects/Materials/materials.rsi
     state: mnemolithpowder
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
     solution: food
     transferAmount: 15
   - type: BadFood

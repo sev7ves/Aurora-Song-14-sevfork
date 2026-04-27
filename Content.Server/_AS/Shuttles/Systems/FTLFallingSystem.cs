@@ -12,6 +12,7 @@ using Content.Shared.Ghost;
 using Content.Shared.Silicons.StationAi;
 using Content.Server.GameTicking;
 using Content.Server.Pointing.Components;
+using Content.Shared.Damage.Systems;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;

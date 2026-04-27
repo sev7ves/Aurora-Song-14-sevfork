@@ -5,6 +5,7 @@ using Content.Server._EE.Silicon.Charge;
 using Content.Server._EE.Power.Components;
 using Content.Server.Humanoid;
 using Content.Shared.Humanoid;
+using Content.Shared.Power.Components;
 
 namespace Content.Server._EE.Silicon.Death;
 

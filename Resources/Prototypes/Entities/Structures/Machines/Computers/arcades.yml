@@ -10,7 +10,7 @@
   - type: ExtensionCableReceiver
   - type: PointLight
     radius: 1.8
-    energy: 1.6
+    energy: 3.0
     color: "#3db83b"
   - type: LitOnPowered
   - type: Sprite
@@ -75,6 +75,7 @@
     rewardMinAmount: 0
     rewardMaxAmount: 0
     possibleRewards:
+    # Frontier - Comment out everything
     # - Basketball
     # - BalloonNT
     # - BalloonCorgi
@@ -114,6 +115,7 @@
     # - PlushieSnake
     # - PlushieArachind
     # - PlushieMoth
+    # - PlushieVulp
     # - PlushieHampter
     # - PlushiePenguin
     # - PlushieHuman
@@ -128,17 +130,18 @@
     # - PlasticBanana
     # - NFRevolverCapGun # Frontier: RevolverCapGun<NFRevolverCapGun
     # - SnapPopBox
+    # - TennisBall
     # - ToyMouse
     # - ToyAi
     # - ToyNuke
-    # - ToyGriffin
+    # - ToyFigurineGriffin
     # - ToyHonk
     # - ToyIan
     # - ToyMarauder
     # - ToyMauler
     # - ToyGygax
     # - ToyOdysseus
-    # - ToyOwlman
+    # - ToyFigurineOwlman
     # - ToyDeathRipley
     # - ToyPhazon
     # - ToyFireRipley
@@ -146,7 +149,7 @@
     # - ToyRipley
     # - ToySeraph
     # - ToyDurand
-    # - ToySkeleton
+    # - ToyFigurineSkeleton
     # - ToySword
     # - ToyAmongPequeno
     # - ToyRubberDuck

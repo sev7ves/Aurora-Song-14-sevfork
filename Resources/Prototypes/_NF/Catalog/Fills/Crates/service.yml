@@ -4,20 +4,24 @@
   name: janicart crate
   description: The janitor's trusty steed.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFVehicleJanicart
-      - id: VehicleKeyJanicart
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFVehicleJanicart
+        - id: VehicleKeyJanicart
 
 - type: entity
   id: CrateServiceReplacementColoredLights
   name: colored lights crate
   parent: CrateGenericSteel
   components:
-  - type: StorageFill
-    contents:
-      - id: BoxColoredLighttube
-      - id: BoxColoredLightbulb
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: BoxColoredLighttube
+        - id: BoxColoredLightbulb
 
 - type: entity
   id: CrateServiceCoffeeDispenser
@@ -25,14 +29,16 @@
   name: spacepresso refill crate
   description: Contains refills for the spacepresso coffee dispenser.
   components:
-  - type: StorageFill
-    contents:
-      - id: DrinkCoffeeJug
-      - id: DrinkCreamCartonXL
-      - id: DrinkSugarJug
-      - id: DrinkIceJug
-      - id: DrinkMilkCarton
-      - id: DrinkSoyMilkCarton
-      - id: JugCaramexinin
-      - id: JugCocoa
-      - id: JugWater
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: DrinkCoffeeJug
+        - id: DrinkCreamCartonXL
+        - id: DrinkSugarJug
+        - id: DrinkIceJug
+        - id: DrinkMilkCarton
+        - id: DrinkSoyMilkCarton
+        - id: JugCaramexinin
+        - id: JugCocoa
+        - id: JugWater

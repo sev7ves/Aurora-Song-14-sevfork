@@ -8749,7 +8749,7 @@ entities:
       - 1747
     - type: AtmosPipeColor
       color: '#990000FF'
-- proto: GlowstickBase
+- proto: GlowstickGreen
   entities:
   - uid: 1777
     components:

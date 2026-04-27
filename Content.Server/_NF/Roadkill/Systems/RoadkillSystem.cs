@@ -1,6 +1,8 @@
 using Content.Server._NF.Roadkill.Components;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Prototypes;
+using Content.Shared.Damage.Systems;
 using Content.Shared.FixedPoint;
 using Content.Shared.Item;
 using Content.Shared.Mobs;
@@ -71,7 +73,7 @@ public sealed class RoadkillSystem : EntitySystem
             {
                 var damage = new DamageSpecifier();
                 damage.DamageDict[_bluntDamageType] = threshold.Value - damageableComponent.TotalDamage + _extraDamage;
-                _damageable.TryChangeDamage(ent, damage, ignoreResistances: true);
+                _damageable.TryChangeDamage(ent.Owner, damage, ignoreResistances: true);
             }
             _mobState.ChangeMobState(ent, MobState.Dead);
         }

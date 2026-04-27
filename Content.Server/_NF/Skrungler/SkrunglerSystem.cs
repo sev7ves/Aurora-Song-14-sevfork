@@ -20,6 +20,7 @@ using Content.Shared.Power.EntitySystems;
 using Content.Shared.Standing;
 using Content.Shared.Verbs;
 using Content.Server.Construction;
+using Content.Shared.Storage.Components;
 using Robust.Server.Player;
 using Robust.Shared.Containers;
 using Robust.Shared.Enums;
@@ -94,7 +95,7 @@ public sealed class SkrunglerSystem : SharedSkrunglerSystem
             var actualYield = (int)skrungler.CurrentExpectedYield; // can only have integer
             skrungler.CurrentExpectedYield -= actualYield; // store non-integer leftovers
 
-            var fuel = _stack.SpawnMultiple(skrungler.OutputStackType, actualYield, xform.Coordinates);
+            var fuel = _stack.SpawnMultipleAtPosition(skrungler.OutputStackType, actualYield, xform.Coordinates);
             foreach (var fuelEntity in fuel)
             {
                 _containers.Insert(fuelEntity, storage.Contents);
@@ -158,7 +159,7 @@ public sealed class SkrunglerSystem : SharedSkrunglerSystem
         base.StartProcessing(uid, skrungler);
 
         if (TryComp<BloodstreamComponent>(uid, out var stream))
-            skrungler.Comp.BloodReagent = stream.BloodReagent;
+            skrungler.Comp.BloodReagent = stream.BloodSolutionName;
     }
 
     private void OnSuicideByEnvironment(Entity<SkrunglerComponent> ent, ref SuicideByEnvironmentEvent args)

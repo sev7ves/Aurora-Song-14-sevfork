@@ -211,11 +211,13 @@
   description: Yeehaw, partner.
   suffix: Filled
   components:
-  - type: StorageFill
-    contents:
-      - id: FlippoEngravedLighter
-      - id: CigarGold
-        amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: FlippoEngravedLighter
+        - id: CigarGold
+          amount: 3
 
 - type: entity
   parent: ClothingHeadBaseButcherable

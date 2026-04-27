@@ -31,7 +31,9 @@
     solutions:
       drink:
         maxVol: 300
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
+    solution: drink
   - type: DrawableSolution
     solution: drink
   - type: RefillableSolution

@@ -1,0 +1,21 @@
+- type: entity # Identical in function to the base game red phone, but with different localiztion strings
+  parent: BaseHandheldInstrument
+  id: PhoneInstrumentBlue
+  name: blue phone
+  description: Should anything ever go wrong...
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Fun/Instruments/otherinstruments.rsi
+    state: blue_phone
+  - type: EmitSoundOnLand
+    sound:
+       path: /Audio/Items/ring.ogg
+  - type: Instrument
+    program: 124
+  - type: Item
+    size: Small
+  - type: Prayable
+    sentMessage: prayer-popup-notify-colcom-sent
+    notificationPrefix: prayer-chat-notify-colcom
+    verb: prayer-verbs-call
+    verbImage: null

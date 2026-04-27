@@ -18,7 +18,8 @@
     solutions:
       jar:
         maxVol: 120
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
     solution: jar
   - type: Spillable
     solution: jar

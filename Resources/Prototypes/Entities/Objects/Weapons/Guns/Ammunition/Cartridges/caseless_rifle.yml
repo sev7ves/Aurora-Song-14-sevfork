@@ -1,12 +1,11 @@
 - type: entity
-  id: BaseCartridgeCaselessRifle
-  name: cartridge (.25 rifle)
-  parent: [ BaseCartridge, BaseC3SyndicateContrabandNoValue ] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband
   abstract: true
+  parent: [ BaseCartridge, BaseC3SyndicateContrabandNoValue ] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband
+  id: BaseCartridgeCaselessRifle
+  name: cartridge (.25 caseless)
   components:
   - type: Tag
     tags:
-      - Cartridge
       - CartridgeCaselessRifle
   - type: CartridgeAmmo
     deleteOnSpawn: true
@@ -23,9 +22,9 @@
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
+  parent: BaseCartridgeCaselessRifle
   id: CartridgeCaselessRifle
   name: cartridge (.25 caseless)
-  parent: BaseCartridgeCaselessRifle
   description: A small caliber utilizing caseless technology, omitting conventional brass casing in favor of hardened propellant. Standard kinetic ammunition is common and useful in most situations.
   components:
   - type: CartridgeAmmo
@@ -33,10 +32,10 @@
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
+  parent: BaseCartridgeCaselessRifle
   id: CartridgeCaselessRiflePractice
   name: cartridge (.25 caseless practice)
-  parent: BaseCartridgeCaselessRifle
-  description: A small caliber utilizing caseless technology, omitting conventional brass casing in favor of hardened propellant. Chalk ammunition is generally non-harmful, used for practice.
+  description: A small caliber utilizing caseless technology, omitting conventional brass casing in favor of hardened propellant. Practice ammunition fires a chalk projectile that stings a little, but otherwise causes no lasting damage.
   components:
   - type: CartridgeAmmo
     # proto: BulletCaselessRiflePractice # Frontier

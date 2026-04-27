@@ -8,7 +8,7 @@
   whitelist:
     components:
     - Vocal
-    - Slime
+    #- Slime # Aurora Song: Remove Slime Component
   blacklist:
     components:
     - BorgChassis
@@ -30,7 +30,7 @@
   whitelist:
     components:
     - Vocal
-    - Slime
+    #- Slime # Aurora Song: Remove Slime Component
   blacklist:
     components:
     - BorgChassis
@@ -43,26 +43,7 @@
     - popped
     # End Frontier: emote consistency
 
-- type: emote
-  id: ReptilianHiss
-  name: chat-emote-name-reptilian-hiss
-  category: Vocal
-  available: false
-  icon: _Impstation/Interface/Emotes/hiss.png
-  whitelist:
-    components:
-    - Vocal
-  blacklist:
-    components:
-    - BorgChassis
-  chatMessages: ["chat-emote-msg-reptilian-hiss"]
-  chatTriggers:
-    # Frontier: emote consistency
-    - hiss
-    - hisses
-    - hissing
-    - hissed
-    # End Frontier: emote consistency
+# Aurora's Song - Removed ReptilianHiss for Hiss from Nyano
 
 # hand emotes
 - type: emote

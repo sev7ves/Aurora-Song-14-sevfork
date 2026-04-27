@@ -14,7 +14,6 @@ namespace Content.Shared.Clothing;
 public sealed class SharedMagbootsSystem : EntitySystem
 {
     [Dependency] private readonly AlertsSystem _alerts = default!;
-    [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly ItemToggleSystem _toggle = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly SharedGravitySystem _gravity = default!;
@@ -52,7 +51,7 @@ public sealed class SharedMagbootsSystem : EntitySystem
         if (TryComp<MovedByPressureComponent>(user, out var moved))
             moved.Enabled = !state;
 
-    // Aurora Song: Ensure the wearer participates in gravity calculations (fixes lobby preview/equip path)
+        // Aurora Song: Ensure the wearer participates in gravity calculations (fixes lobby preview/equip path)
         EnsureComp<GravityAffectedComponent>(user);
         _gravity.RefreshWeightless(user);
 

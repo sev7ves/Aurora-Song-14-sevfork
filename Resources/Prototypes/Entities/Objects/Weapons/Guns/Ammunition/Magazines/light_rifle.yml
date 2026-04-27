@@ -1,9 +1,9 @@
 # Empty mags
 - type: entity
+  abstract: true
+  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband added RecyclableItemSteelTiny
   id: BaseMagazineLightRifle
   name: "magazine (.30 rifle)"
-  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband added RecyclableItemSteelTiny
-  abstract: true
   components:
   - type: Tag
     tags:
@@ -36,9 +36,9 @@
 # Magazines
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
+  parent: BaseMagazineLightRifle
   id: MagazineLightRifleBox
   name: "L6 SAW magazine box (.30 rifle)"
-  parent: BaseMagazineLightRifle
   description: Box containing a 100-round belt of linked .30 rifle rounds, used by light machine guns such as the L6. Intended to hold general-purpose kinetic ammunition.
   components:
   - type: Tag
@@ -58,9 +58,9 @@
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
+  parent: BaseMagazineLightRifle
   id: MagazineLightRifle
   name: "magazine (.30 rifle)"
-  parent: BaseMagazineLightRifle
   description: Curved 30-round double stack magazine for combat rifles. Intended to hold general-purpose kinetic ammunition.
   components:
   - type: BallisticAmmoProvider
@@ -80,10 +80,10 @@
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
+  parent: MagazineLightRifle
   id: MagazineLightRifleEmpty
   name: "magazine (.30 rifle any)"
   suffix: empty
-  parent: MagazineLightRifle
   description: Curved 30-round double stack magazine for combat rifles.
   components:
   - type: BallisticAmmoProvider
@@ -103,10 +103,10 @@
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
+  parent: BaseMagazineLightRifle
   id: MagazineLightRiflePractice
   name: "magazine (.30 rifle practice)"
-  parent: BaseMagazineLightRifle
-  description: Curved 30-round double stack magazine for combat rifles. Intended to hold non-harmful chalk ammunition.
+  description: Curved 30-round double stack magazine for combat rifles. Intended to hold harmless practice ammunition.
   components:
   - type: BallisticAmmoProvider
     # proto: CartridgeLightRiflePractice # Frontier
@@ -131,9 +131,9 @@
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
+  parent: BaseMagazineLightRifle
   id: MagazineLightRifleUranium
   name: "magazine (.30 rifle uranium)"
-  parent: BaseMagazineLightRifle
   description: Curved 30-round double stack magazine for combat rifles. Intended to hold exotic uranium-core ammunition.
   components:
   - type: BallisticAmmoProvider
@@ -159,9 +159,9 @@
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
+  parent: MagazineLightRifle
   id: MagazineLightRifleIncendiary
   name: "magazine (.30 rifle incendiary)"
-  parent: MagazineLightRifle
   description: Curved 30-round double stack magazine for combat rifles. Intended to hold self-igniting incendiary ammunition.
   components:
   - type: BallisticAmmoProvider

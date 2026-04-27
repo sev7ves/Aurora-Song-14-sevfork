@@ -5,7 +5,8 @@
   name: squeeze bottle
   description: A thin plastic container used to store condiments.
   components:
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
     solution: food
   - type: SolutionContainerManager
     solutions:
@@ -88,7 +89,7 @@
     fillBaseName: squeeze-bottle-clear
 
 - type: entity
-  parent: [DrinkBottleVisualsNoInHand, DrinkBottleVisualsAll, DrinkBottleGlassBaseFull] # TODO: make inhand fill sprites (and I guess inhand sprites)
+  parent: [DrinkBottleVisualsNoInHand, DrinkVisualsFill, DrinkBottleGlassBaseFull] # TODO: make inhand fill sprites (and I guess inhand sprites) # Aurora's Song - DrinkBottleVisualsAll>DrinkVisualsFill
   id: FoodCondimentBottleSoysauce
   name: soy sauce bottle
   description: Used to season dishes to umami perfection. With extra sodium!

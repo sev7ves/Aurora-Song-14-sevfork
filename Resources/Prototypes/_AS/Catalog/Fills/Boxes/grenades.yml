@@ -16,7 +16,9 @@
   id: BoxEMPGrenadesSLE
   description: A box full of EMP grenades.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFGrenadeEMP
-        amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFGrenadeEMP
+          amount: 4

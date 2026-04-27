@@ -4,11 +4,13 @@
   name: China-Lake EMP bundle
   description: "An old China-Lake grenade launcher bundled with 8 rounds of EMP."
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponLauncherChinaLakeEmp
-      - id: NFGrenadeEMP
-        amount: 8
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFWeaponLauncherChinaLakeEmp
+        - id: NFGrenadeEMP
+          amount: 8
 
 - type: entity
   parent: ClothingBackpackDuffelMime
@@ -16,20 +18,22 @@
   name: improvised surgical duffel bag
   description: "This looks like set of improvised surgical tools put together by someone."
   components:
-  - type: StorageFill
-    contents:
-      - id: ScalpelShiv
-      - id: WelderMini
-      - id: SawImprov
-      - id: ClothingHandsGlovesFingerless
-      - id: PillSpaceDrugs
-        amount: 3
-      - id: Plunger
-      - id: Spoon
-      - id: FoodCondimentPacketKetchup
-      - id: PowerCellMedium
-      - id: CableApcStack1
-        amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ScalpelShiv
+        - id: WelderMini
+        - id: SawImprov
+        - id: ClothingHandsGlovesFingerless
+        - id: PillSpaceDrugs
+          amount: 3
+        - id: Plunger
+        - id: Spoon
+        - id: FoodCondimentPacketKetchup
+        - id: PowerCellMedium
+        - id: CableApcStack1
+          amount: 2
 
 - type: entity
   parent: ClothingBackpackDuffelTrauma
@@ -37,15 +41,17 @@
   name: advanced surgical duffel bag
   description: "A large duffel bag for holding extra medical supplies - this one seems to be designed for holding advanced surgical tools."
   components:
-  - type: StorageFill
-    contents:
-      - id: ScalpelAdvanced
-      - id: ScalpelLaser
-      - id: Cautery
-      - id: SawElectric
-      - id: Drill
-      - id: Hemostat
-      - id: Retractor
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ScalpelAdvanced
+        - id: ScalpelLaser
+        - id: Cautery
+        - id: SawElectric
+        - id: Drill
+        - id: Hemostat
+        - id: Retractor
 
 - type: entity
   parent: ClothingBackpackDuffelNfsdBrown
@@ -53,10 +59,12 @@
   name: tracking bundle
   description: "All the equipment needed to track almost anything, careful tracking people"
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponLauncherGrenadeNfsd
-      - id: NFBoxDartsTracking
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFWeaponLauncherGrenadeNfsd
+        - id: NFBoxDartsTracking
 
 - type: entity
   parent: ClothingBackpackDuffelNfsdBrown
@@ -64,11 +72,13 @@
   name: NFSD Lake EMP bundle
   description: "An old repainted China-Lake grenade launcher bundled with 10 rounds of EMP."
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponLauncherGrenadeNfsd
-      - id: NFGrenadeEMP
-        amount: 10
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFWeaponLauncherGrenadeNfsd
+        - id: NFGrenadeEMP
+          amount: 10
 
 # Not a duffelbag, but stored with other uplink-related backpacks
 - type: entity
@@ -76,160 +86,289 @@
   id: ClothingBackpackPirateBundle
   suffix: Filled, Pirate
   components:
-    - type: StorageFill
-      contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
         - id: BoxSurvival
         - id: Cutlass
         - id: NFWeaponRevolverPirate
         - id: ClothingEyesEyepatch
 
+# Aurora's Song - Converted everything in Departmental EVA bundles to `entityTable`s
+
 #Departmental EVA bundles
 - type: entity
-  parent: [ NFClothingDuffel, StorageFillEVASuitContractor ]
+  parent: [ NFClothingDuffel ]
   id: ClothingBackpackDuffelEVABundleContractor
   name: contractor EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitContractor
 
 - type: entity
-  parent: [ ClothingBackpackDuffelPilot, StorageFillEVASuitPilot ]
+  parent: [ ClothingBackpackDuffelPilot ]
   id: ClothingBackpackDuffelEVABundlePilot
   name: pilot EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitPilot
 
 - type: entity
-  parent: [ ClothingBackpackDuffelSr, StorageFillEVASuitSr ]
+  parent: [ ClothingBackpackDuffelSr ]
   id: ClothingBackpackDuffelEVABundleSr
   name: station representative EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitSr
 
 - type: entity
-  parent: [ ClothingBackpackDuffelCaptain, StorageFillEVASuitCaptain ]
+  parent: [ ClothingBackpackDuffelCaptain ]
   id: ClothingBackpackDuffelEVABundleCaptain
   name: captain EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitCaptain
 
 - type: entity
-  parent: [ ClothingBackpackDuffelEngineering, StorageFillEVASuitEngineer ]
+  parent: [ ClothingBackpackDuffelEngineering ]
   id: ClothingBackpackDuffelEVABundleEngineer
   name: engineer EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitEngineer
 
 - type: entity
-  parent: [ ClothingBackpackDuffelAtmospherics, StorageFillEVASuitAtmosTech ]
+  parent: [ ClothingBackpackDuffelAtmospherics ]
   id: ClothingBackpackDuffelEVABundleAtmosTech
   name: atmospheric technician EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitAtmosTech
 
 - type: entity
-  parent: [ ClothingBackpackDuffelCargo, StorageFillEVASuitCargo ]
+  parent: [ ClothingBackpackDuffelCargo ]
   id: ClothingBackpackDuffelEVABundleCargo
   name: cargo technician EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitCargo
 
 - type: entity
-  parent: [ ClothingBackpackDuffelSalvage, StorageFillEVASuitSalvage ]
+  parent: [ ClothingBackpackDuffelSalvage ]
   id: ClothingBackpackDuffelEVABundleSalvage
   name: salvage specialist EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitSalvage
 
 - type: entity
-  parent: [ ClothingBackpackDuffelMedical, StorageFillEVASuitMedic ]
+  parent: [ ClothingBackpackDuffelMedical ]
   id: ClothingBackpackDuffelEVABundleMedical
   name: medical specialist EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitMedic
 
 - type: entity
-  parent: [ ClothingBackpackDuffelTrauma, StorageFillEVASuitParamedicAlt ]
+  parent: [ ClothingBackpackDuffelTrauma ]
   id: ClothingBackpackDuffelEVABundleParamedicAlt
   name: paramedic EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitParamedicAlt
 
 - type: entity
-  parent: [ ClothingBackpackDuffelScience, StorageFillEVASuitScientist ]
+  parent: [ ClothingBackpackDuffelScience ]
   id: ClothingBackpackDuffelEVABundleScientist
   name: scientist EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitScientist
 
 - type: entity
-  parent: [ NFClothingBackpackDuffelJanitor, StorageFillEVASuitJanitor ]
+  parent: [ NFClothingBackpackDuffelJanitor ]
   id: ClothingBackpackDuffelEVABundleJanitor
   name: janitor EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitJanitor
 
 - type: entity
-  parent: [ NFClothingDuffel, StorageFillEVASuitServiceWorker ]
+  parent: [ NFClothingDuffel ]
   id: ClothingBackpackDuffelEVABundleServiceWorker
   name: service worker EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitServiceWorker
 
 - type: entity
-  parent: [ NFClothingBackpackDuffelChaplain, StorageFillEVASuitChaplain ]
+  parent: [ NFClothingBackpackDuffelChaplain ]
   id: ClothingBackpackDuffelEVABundleChaplain
   name: chaplain EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitChaplain
 
 - type: entity
-  parent: [ NFClothingDuffel, StorageFillEVASuitBoxerRed ]
+  parent: [ NFClothingDuffel ]
   id: ClothingBackpackDuffelEVABundleBoxerRed
   name: boxer EVA bundle
   suffix: Filled, Red
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitBoxerRed
 
 - type: entity
-  parent: [ NFClothingDuffel, StorageFillEVASuitBoxerGreen ]
+  parent: [ NFClothingDuffel ]
   id: ClothingBackpackDuffelEVABundleBoxerGreen
   name: boxer EVA bundle
   suffix: Filled, Green
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitBoxerGreen
 
 - type: entity
-  parent: [ NFClothingDuffel, StorageFillEVASuitBoxerBlue ]
+  parent: [ NFClothingDuffel ]
   id: ClothingBackpackDuffelEVABundleBoxerBlue
   name: boxer EVA bundle
   suffix: Filled, Blue
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitBoxerBlue
 
 - type: entity
-  parent: [ NFClothingDuffel, StorageFillEVASuitBoxerYellow ]
+  parent: [ NFClothingDuffel ]
   id: ClothingBackpackDuffelEVABundleBoxerYellow
   name: boxer EVA bundle
   suffix: Filled, Yellow
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitBoxerYellow
 
 - type: entity
-  parent: [ NFClothingDuffel, StorageFillEVASuitBoxerRandom ]
+  parent: [ NFClothingDuffel ]
   id: ClothingBackpackDuffelEVABundleBoxerRandom
   name: boxer EVA bundle
   suffix: Filled, Random
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitBoxerRandom
 
 - type: entity
-  parent: [ ClothingBackpackDuffelHydroponics, StorageFillEVASuitHydro ]
+  parent: [ ClothingBackpackDuffelHydroponics ]
   id: ClothingBackpackDuffelEVABundleHydro
   name: botanist EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitHydro
 
 - type: entity
-  parent: [ NFClothingBackpackDuffelMailCarrier, StorageFillEVASuitMail ]
+  parent: [ NFClothingBackpackDuffelMailCarrier ]
   id: ClothingBackpackDuffelEVABundleMail
   name: mail carrier EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitMail
 
 - type: entity
-  parent: [ ClothingBackpackDuffelMercenary, StorageFillEVASuitMercenary ]
+  parent: [ ClothingBackpackDuffelMercenary ]
   id: ClothingBackpackDuffelEVABundleMercenary
   name: mercenary EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitMercenary
 
 - type: entity
-  parent: [ ClothingBackpackDuffelPrivateSecurity, StorageFillEVASuitPrivateSec ]
+  parent: [ ClothingBackpackDuffelPrivateSecurity ]
   id: ClothingBackpackDuffelEVABundlePrivateSec
   name: private security EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitPrivateSec
 
 - type: entity
-  parent: [ ClothingBackpackDuffelNfsdBrown, StorageFillEVASuitNfsd ]
+  parent: [ ClothingBackpackDuffelNfsdBrown ]
   id: ClothingBackpackDuffelEVABundleNfsd
   name: NFSD EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitNfsd
 
 - type: entity
-  parent: [ NFClothingBackpackDuffelColorRed, StorageFillEVASuitStc ]
+  parent: [ NFClothingBackpackDuffelColorRed ]
   id: ClothingBackpackDuffelEVABundleStc
   name: STC EVA bundle
   suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitStc

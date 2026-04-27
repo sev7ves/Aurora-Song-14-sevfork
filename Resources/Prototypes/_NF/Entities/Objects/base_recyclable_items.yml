@@ -94,6 +94,7 @@
 
 ## Medium
 - type: entity # Spray bottles, glue/lube tubes, plungers etc
+  parents: [DrinkBaseMaterialPlastic] # Aurora's Song - Make this inherit damagable
   id: RecyclableItemPlasticMedium
   abstract: true
   components:

@@ -3,13 +3,15 @@
   parent: Dresser
   suffix: Filled, Station Representative
   components:
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckMantleSr
-      - id: ClothingHeadHatSrCap
-      - id: ClothingOuterJacketSr
-      - id: ClothingUniformJumpsuitSr
-      - id: ClothingUniformJumpskirtSr
-      - id: ClothingUniformJumpsuitSecGuard
-      - id: ClothingUniformJumpskirtSecGuard
-      - id: ClothingShoesLeather
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingOuterJacketSr
+        - id: ClothingUniformJumpsuitSr
+        - id: ClothingUniformJumpskirtSr
+        - id: ClothingUniformJumpsuitSecGuard
+        - id: ClothingUniformJumpskirtSecGuard
+        - id: ClothingShoesLeather
+        - id: ClothingNeckMantleSr # Aurora's Song - Move to bottom for spawn order
+        - id: ClothingHeadHatSrCap # Aurora's Song - Move to bottom for spawn order

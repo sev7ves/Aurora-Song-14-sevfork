@@ -13,17 +13,19 @@
       - state: coffeemachine
       - state: unshaded
         shader: unshaded
-  - type: StorageFill
-    contents:
-    - id: DrinkCoffeeJug
-    - id: DrinkCreamCartonXL
-    - id: DrinkSugarJug
-    - id: DrinkIceJug
-    - id: DrinkMilkCarton
-    - id: DrinkSoyMilkCarton
-    - id: JugCaramexinin
-    - id: JugCocoa
-    - id: JugWater
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DrinkCoffeeJug
+        - id: DrinkCreamCartonXL
+        - id: DrinkSugarJug
+        - id: DrinkIceJug
+        - id: DrinkMilkCarton
+        - id: DrinkSoyMilkCarton
+        - id: JugCaramexinin
+        - id: JugCocoa
+        - id: JugWater
   - type: Transform
     noRot: false
   - type: Machine

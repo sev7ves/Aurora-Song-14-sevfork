@@ -72,7 +72,7 @@
 
 - type: marking # Aurora's Song - Moved slime markings to overlay to allow for animal heads
   bodyPart: Eyes
-  markingCategory: Head
+  markingCategory: [Head]
   id: TattooEyeRight
   speciesRestriction: [Human, Dwarf, Reptilian, Oni, Goblin, Felinid, Vulpkanin, Tajaran, Feroxi, Sheleg, Fairy, Rodentia, Harpy]
   sprites:
@@ -121,6 +121,34 @@
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_eye_moth_l
+
+- type: marking
+  id: TattooEyeVulpkaninRight
+  bodyPart: Eyes
+  markingCategory: [Head]
+  speciesRestriction: [Vulpkanin]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+          negative: true
+  sprites:
+  - sprite: Mobs/Customization/tattoos.rsi
+    state: tattoo_eye_vulpkanin_r
+
+- type: marking
+  id: TattooEyeVulpkaninLeft
+  bodyPart: Eyes
+  markingCategory: Head
+  speciesRestriction: [Vulpkanin]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+          negative: true
+  sprites:
+  - sprite: Mobs/Customization/tattoos.rsi
+    state: tattoo_eye_vulpkanin_l
 
 - type: marking
   id: TattooEyeshadowUpper

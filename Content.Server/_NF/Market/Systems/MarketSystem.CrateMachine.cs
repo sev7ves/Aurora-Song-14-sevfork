@@ -93,7 +93,7 @@ public sealed partial class MarketSystem
         {
             if (data.StackPrototype != null && _prototypeManager.TryIndex(data.StackPrototype, out var stackPrototype))
             {
-                var entityList = _stackSystem.SpawnMultiple(stackPrototype.Spawn, data.Quantity, coordinates);
+                var entityList = _stackSystem.SpawnMultipleAtPosition( stackPrototype.Spawn, data.Quantity, coordinates);
                 foreach (var entity in entityList)
                 {
                     _crateMachine.InsertIntoCrate(entity, targetCrate);

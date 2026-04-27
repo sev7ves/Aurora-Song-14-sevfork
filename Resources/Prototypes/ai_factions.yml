@@ -48,6 +48,8 @@
 
 - type: npcFaction
   id: PetsNT
+  friendly:
+  - NanoTrasen
   hostile:
   - Mouse
   # - SimpleHostile # Frontier
@@ -55,6 +57,7 @@
   # - Xeno # Frontier
   # - AllHostile # Frontier
   # - Wizard # Frontier
+  # - Dragon # Aurora's Song
 
 - type: npcFaction
   id: SimpleHostile

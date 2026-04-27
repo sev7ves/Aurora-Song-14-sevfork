@@ -2,7 +2,7 @@
   id: NFMedicalStatic
   recipes:
   - ClothingOuterEVASuitMedic
-  - BaseChemistryEmptyVial
+  - ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
   - BlankMediPen
   - MedicalAppraisalTool
   - HandheldCrewMonitor
@@ -22,7 +22,7 @@
 
 - type: latheRecipePack
   id: NFMedicalClothingStatic
-  recipes: 
+  recipes:
   - UniformScrubsColorBlue
   - UniformScrubsColorGreen
   - UniformScrubsColorPurple
@@ -34,14 +34,14 @@
 
 - type: latheRecipePack
   id: NFChemistryBasicStatic
-  recipes: 
+  recipes:
   - Jug
   - ChemistryEmptyBottle01
   - ClothingEyesGlassesChemical
   - LargeBeaker
   - Syringe
   - PillCanister
-  - BaseChemistryEmptyVial
+  - ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
 
 - type: latheRecipePack
   id: NFMedicalMobilityStatic

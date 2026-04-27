@@ -1,8 +1,8 @@
 - type: entity
-  id: BulletMagnum
-  name: bullet (.45 magnum)
   parent: BaseBullet
+  id: BulletMagnum
   categories: [ HideSpawnMenu ]
+  name: bullet (.45 magnum)
   components:
   - type: Projectile
     damage:
@@ -10,10 +10,10 @@
         Piercing: 35
 
 - type: entity
-  id: BulletMagnumPractice
-  name: bullet (.45 magnum practice)
   parent: BaseBulletPractice
+  id: BulletMagnumPractice
   categories: [ HideSpawnMenu ]
+  name: bullet (.45 magnum practice)
   components:
   - type: Projectile
     damage:
@@ -34,22 +34,23 @@
     damage: 35 # 3 hits to stun cuz revolver
 
 - type: entity
-  id: BulletMagnumIncendiary
   parent: BaseBulletIncendiary
-  name: bullet (.45 magnum incendiary)
+  id: BulletMagnumIncendiary
   categories: [ HideSpawnMenu ]
+  name: bullet (.45 magnum incendiary)
   components:
   - type: Projectile
     damage:
       types:
-        Blunt: 3
-        Heat: 32
-        
+#        Piercing: 26 # Aurora's Song - Disable to maintain NF values
+        Blunt: 3 # Aurora's Song - Add 3 blunt fron NF
+        Heat: 32 # Aurora's Song - 9>32 because NF
+
 - type: entity
-  id: BulletMagnumAP
-  name: bullet (.45 magnum armor-piercing)
   parent: BaseBulletAP
+  id: BulletMagnumAP
   categories: [ HideSpawnMenu ]
+  name: bullet (.45 magnum armor-piercing)
   components:
   - type: Projectile
     damage:
@@ -58,10 +59,10 @@
     ignoreResistances: true
 
 - type: entity
-  id: BulletMagnumUranium
-  name: bullet (.45 magnum uranium)
   parent: BaseBulletUranium
+  id: BulletMagnumUranium
   categories: [ HideSpawnMenu ]
+  name: bullet (.45 magnum uranium)
   components:
   - type: Projectile
     damage:

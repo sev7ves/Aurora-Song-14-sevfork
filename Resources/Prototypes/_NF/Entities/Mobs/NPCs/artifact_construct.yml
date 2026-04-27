@@ -127,12 +127,11 @@
       rootTask:
         task: SimpleRangedHostileCompound
     - type: Stamina
-      critThreshold: 300
-    - type: HitscanBatteryAmmoProvider
+      baseCritThreshold: 300 # Aurora's Song - critThreshold>baseCritThreshold
+    - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
       proto: NFRedLightLaser
       fireCost: 50
     - type: BatterySelfRecharger
-      autoRecharge: true
       autoRechargeRate: 40
     - type: Battery
       maxCharge: 55

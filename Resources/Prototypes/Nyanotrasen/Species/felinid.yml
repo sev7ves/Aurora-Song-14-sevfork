@@ -6,7 +6,7 @@
   sprites: MobHumanSprites
   markingLimits: MobFelinidMarkingLimits
   dollPrototype: MobFelinidDummy
-  skinColoration: Hues #FloofStation copied from DeltaV
+  skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
   # Had to comment these out for now, will work on implementing them for all species later
 #  minHeight: 0.65
 #  defaultHeight: 0.8

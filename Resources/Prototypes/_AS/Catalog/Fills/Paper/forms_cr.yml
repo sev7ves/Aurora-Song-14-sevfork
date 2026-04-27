@@ -16,21 +16,23 @@
     - state: folder-colormap
       color: "#0F2854ff"
     - state: folder-base
-  - type: StorageFill
-    contents:
-    - id: ASPaperWrittenAuroraEmployment
-    - id: ASPaperWrittenAuroraEmployeePayHistory
-    - id: ASPaperWrittenAuroraFundRequisition
-    - id: ASPaperWrittenAuroraShuttleTitleChange
-    - id: ASPaperWrittenAuroraAuthorization
-    - id: ASPaperWrittenAuroraShuttleDerelict
-    - id: ASPaperWrittenAuroraContrabandAmnesty
-    - id: ASPaperWrittenAuroraContrabandTurnover
-    - id: ASPaperWrittenAuroraContrabandPermit
-    - id: Paper
-      prob: 0.5
-    - id: Paper
-      prob: 0.5
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASPaperWrittenAuroraEmployment
+        - id: ASPaperWrittenAuroraEmployeePayHistory
+        - id: ASPaperWrittenAuroraFundRequisition
+        - id: ASPaperWrittenAuroraShuttleTitleChange
+        - id: ASPaperWrittenAuroraAuthorization
+        - id: ASPaperWrittenAuroraShuttleDerelict
+        - id: ASPaperWrittenAuroraContrabandAmnesty
+        - id: ASPaperWrittenAuroraContrabandTurnover
+        - id: ASPaperWrittenAuroraContrabandPermit
+        - id: Paper
+          prob: 0.5
+        - id: Paper
+          prob: 0.5
 
 # Forms
 - type: entity # Based on form made by Willzile1 (Jon-Gah)

@@ -12,7 +12,7 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:Temperature
+        - !type:TemperatureCondition # Aurora's Song - Temperature>TemperatureCondition
           max: 213.0
         damage:
           types:
@@ -34,7 +34,7 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:Temperature
+        - !type:TemperatureCondition # Aurora's Song - Temperature>TemperatureCondition
           max: 213.0
         damage:
           types:

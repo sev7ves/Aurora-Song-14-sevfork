@@ -49,15 +49,17 @@
         factor: -0.2
       - !type:SatiateHunger
         factor: -0.2
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier # Aurora's Song - MovespeedModifier>MovementSpeedModifier
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+          reagent: NFZombieBiteToxin
           min: 1.75
         walkSpeedModifier: 0.85
         sprintSpeedModifier: 0.85
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+          reagent: NFZombieBiteToxin
           min: 4
         damage:
           types:

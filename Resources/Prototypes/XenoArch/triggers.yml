@@ -242,8 +242,8 @@
     - Slime
     - AmmoniaBlood
     - ZombieBlood
+    - Sap
     - GoblinBlood # Frontier
-    - Sap # Frontier
 
 - type: xenoArchTrigger
   id: TriggerThrow

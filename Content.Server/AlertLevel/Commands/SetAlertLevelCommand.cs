@@ -1,7 +1,7 @@
 ﻿using System.Linq;
-using Content.Server._NF.SectorServices;
 using Content.Server.Administration;
 using Content.Server.Station.Systems;
+using Content.Shared._NF.SectorServices; // Frontier
 using Content.Shared.Administration;
 using Robust.Shared.Console;
 

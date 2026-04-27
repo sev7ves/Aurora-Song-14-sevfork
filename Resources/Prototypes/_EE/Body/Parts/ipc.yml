@@ -1,6 +1,6 @@
 - type: entity
   id: PartIPC
-  parent: BaseItem
+  parent: [BaseItem, BasePart] # Aurora's Song - Refactor IPCs to inherit from base parts
   name: "ipc body part"
   abstract: true
   components:
@@ -17,7 +17,7 @@
 - type: entity
   id: TorsoIPC
   name: "ipc torso"
-  parent: PartIPC
+  parent: [PartIPC, BaseTorso] # Aurora's Song
   components:
   - type: Sprite
     netsync: false
@@ -26,16 +26,11 @@
   - type: Icon
     sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: "torso_m"
-  - type: BodyPart
-    partType: Torso
-  - type: ContainerContainer
-    containers:
-      torso_slot: !type:ContainerSlot {}
 
 - type: entity
   id: HeadIPC
   name: "ipc head"
-  parent: PartIPC
+  parent: [PartIPC, BaseHead] # Aurora's Song
   components:
   - type: Sprite
     netsync: false
@@ -44,24 +39,11 @@
   - type: Icon
     sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: "head_m"
-  - type: BodyPart
-    partType: Head
-    vital: true
-  - type: Input
-    context: "ghost"
-  - type: MovementSpeedModifier
-    baseWalkSpeed: 0
-    baseSprintSpeed: 0
-  - type: InputMover
-  - type: GhostOnMove
-  - type: Tag
-    tags:
-      - Head
 
 - type: entity
   id: LeftArmIPC
   name: "left ipc arm"
-  parent: PartIPC
+  parent: [PartIPC, BaseLeftArm] # Aurora's Song
   components:
   - type: Sprite
     netsync: false
@@ -77,7 +59,7 @@
 - type: entity
   id: RightArmIPC
   name: "right ipc arm"
-  parent: PartIPC
+  parent: [PartIPC, BaseRightArm] # Aurora's Song
   components:
   - type: Sprite
     netsync: false
@@ -86,14 +68,11 @@
   - type: Icon
     sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: "r_arm"
-  - type: BodyPart
-    partType: Arm
-    symmetry: Right
 
 - type: entity
   id: LeftHandIPC
   name: "left ipc hand"
-  parent: PartIPC
+  parent: [PartIPC, BaseLeftArm] # Aurora's Song
   components:
   - type: Sprite
     netsync: false
@@ -109,7 +88,7 @@
 - type: entity
   id: RightHandIPC
   name: "right ipc hand"
-  parent: PartIPC
+  parent: [PartIPC, BaseRightHand] # Aurora's Song
   components:
   - type: Sprite
     netsync: false
@@ -125,7 +104,7 @@
 - type: entity
   id: LeftLegIPC
   name: "left ipc leg"
-  parent: PartIPC
+  parent: [PartIPC, BaseLeftLeg] # Aurora's Song
   components:
   - type: Sprite
     netsync: false
@@ -142,7 +121,7 @@
 - type: entity
   id: RightLegIPC
   name: "right ipc leg"
-  parent: PartIPC
+  parent: [PartIPC, BaseRightLeg] # Aurora's Song
   components:
   - type: Sprite
     netsync: false
@@ -151,15 +130,11 @@
   - type: Icon
     sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: "r_leg"
-  - type: BodyPart
-    partType: Leg
-    symmetry: Right
-  - type: MovementBodyPart
 
 - type: entity
   id: LeftFootIPC
   name: "left ipc foot"
-  parent: PartIPC
+  parent: [PartIPC, BaseLeftFoot] # Aurora's Song
   components:
   - type: Sprite
     netsync: false
@@ -168,14 +143,11 @@
   - type: Icon
     sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: "l_foot"
-  - type: BodyPart
-    partType: Foot
-    symmetry: Left
 
 - type: entity
   id: RightFootIPC
   name: "right ipc foot"
-  parent: PartIPC
+  parent: [PartIPC, BaseRightFoot] # Aurora's Song
   components:
   - type: Sprite
     netsync: false
@@ -184,6 +156,3 @@
   - type: Icon
     sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: "r_foot"
-  - type: BodyPart
-    partType: Foot
-    symmetry: Right

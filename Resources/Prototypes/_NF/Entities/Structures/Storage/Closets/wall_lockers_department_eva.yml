@@ -67,7 +67,7 @@
 - type: entity
   categories: [ HideSpawnMenu ] # debloat spawn menu
   id: LockerWallEVAColorStc
-  parent: LockerWallColorBase
+  parent: NFBaseLockerGridInvWallColor # Aurora's Song - Replaced it with NF grid because this was the only one that didn't
   name: station traffic Controller EVA wall locker
   components:
   - type: Sprite

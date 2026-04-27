@@ -3,10 +3,12 @@
   suffix: Filled
   parent: LockerPilot
   components:
-  - type: StorageFill
-    contents:
-      - id: ClothingBeltPilotFilled
-      - id: ClothingHeadsetAltPilot
-      - id: ClothingEyesGlassesPilot
-      - id: ClothingNeckScarfPilot
-      - id: ClothingMaskPilot
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: ClothingBeltPilotFilled
+        - id: ClothingHeadsetAltPilot
+        - id: ClothingEyesGlassesPilot
+        - id: ClothingNeckScarfPilot
+        - id: ClothingMaskPilot

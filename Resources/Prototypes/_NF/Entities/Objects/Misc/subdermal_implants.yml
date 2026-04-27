@@ -23,7 +23,7 @@
       mobState:
       - Critical
       - Dead
-    - type: Rattle
+    - type: RattleOnTrigger
       radioChannel: "Medical"
 
 - type: entity
@@ -49,7 +49,7 @@
       mobState:
       - Critical
       - Dead
-    - type: Rattle
+    - type: RattleOnTrigger
       radioChannel: "Freelance"
 
 - type: entity
@@ -158,7 +158,7 @@
   - type: SubdermalImplant
     implantAction: ActionActivateDissonantWhispersImplant
     permanent: true
-  - type: TriggerImplantAction
+  - type: TriggerOnActivateImplant # Aurora's Song - TriggerImplantAction>TriggerOnActivateImplant
   - type: EmitSoundOnTrigger
     sound:
       path: /Audio/_NF/Effects/bloodcult/whispers.ogg

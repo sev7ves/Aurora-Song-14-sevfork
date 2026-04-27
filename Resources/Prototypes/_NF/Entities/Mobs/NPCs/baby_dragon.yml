@@ -48,7 +48,10 @@
       - Drowsiness
       - Adrenaline
   - type: Bloodstream
-    bloodMaxVolume: 650
+    bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+      reagents:
+      - ReagentId: Blood
+        Quantity: 650
   - type: FloatingVisuals
   - type: NpcFactionMember
     factions:

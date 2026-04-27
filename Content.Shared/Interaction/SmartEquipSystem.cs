@@ -37,9 +37,9 @@ public sealed class SmartEquipSystem : EntitySystem
             .Bind(ContentKeyFunctions.SmartEquipBackpack, InputCmdHandler.FromDelegate(HandleSmartEquipBackpack, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.SmartEquipBelt, InputCmdHandler.FromDelegate(HandleSmartEquipBelt, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.SmartEquipWallet, InputCmdHandler.FromDelegate(HandleSmartEquipWallet, handle: false, outsidePrediction: false)) // Frontier
-            .Bind(ContentKeyFunctions.SmartEquipSuitStorage, InputCmdHandler.FromDelegate(HandleSmartEquipSuitStorage, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.SmartEquipPocket1, InputCmdHandler.FromDelegate(HandleSmartEquipPocket1, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.SmartEquipPocket2, InputCmdHandler.FromDelegate(HandleSmartEquipPocket2, handle: false, outsidePrediction: false))
+            .Bind(ContentKeyFunctions.SmartEquipSuitStorage, InputCmdHandler.FromDelegate(HandleSmartEquipSuitStorage, handle: false, outsidePrediction: false))
             .Register<SmartEquipSystem>();
     }
 
@@ -65,10 +65,6 @@ public sealed class SmartEquipSystem : EntitySystem
         HandleSmartEquip(session, "wallet");
     }
     // End Frontier: smart-equip to wallet
-    private void HandleSmartEquipSuitStorage(ICommonSession? session)
-    {
-        HandleSmartEquip(session, "suitstorage");
-    }
 
     private void HandleSmartEquipPocket1(ICommonSession? session)
     {
@@ -80,19 +76,9 @@ public sealed class SmartEquipSystem : EntitySystem
         HandleSmartEquip(session, "pocket2");
     }
 
-    private void SaveLocation(StorageComponent storage, EntityUid itemUid)
+    private void HandleSmartEquipSuitStorage(ICommonSession? session)
     {
-        var id = IoCManager.Resolve<IEntityManager>().GetNetEntity(itemUid).ToString();
-        storage.StoredItems.TryGetValue(itemUid, out var location);
-
-        if (!storage.SavedLocations.TryGetValue(id, out var locations))
-            locations = new();
-
-        if (locations.Contains(location))
-            return;
-
-        locations.Add(location);
-        storage.SavedLocations[id] = locations;
+        HandleSmartEquip(session, "suitstorage");
     }
 
     private void HandleSmartEquip(ICommonSession? session, string equipmentSlot)
@@ -190,7 +176,7 @@ public sealed class SmartEquipSystem : EntitySystem
             }
 
             _hands.TryDrop((uid, hands), hands.ActiveHandId!);
-            _storage.Insert(slotItem, handItem.Value, out var stacked, out _);
+            _storage.Insert(slotItem, handItem.Value, out var stacked, out _, user: uid);
 
             // if the hand item stacked with the things in inventory, but there's no more space left for the rest
             // of the stack, place the stack back in hand rather than dropping it on the floor

@@ -11,13 +11,15 @@
   - type: Storage
     grid:
     - 0,0,7,1 # Explicit just in case the parent changes
-  - type: StorageFill
-    contents:
-    - id: ClothingNeckMedalNfsdStarGold
-    - id: ClothingNeckMedalNfsdShieldGold
-    - id: ClothingNeckMedalNfsdShieldSilver
-    - id: ClothingNeckMedalNfsdShieldBronze
-    - id: ClothingNeckMedalNfsdBloodDrop
-    - id: ClothingNeckMedalNfsdBloodDrop # intentional duplicate
-    - id: ClothingNeckMedalNfsdCivStarSilver
-    - id: ClothingNeckMedalNfsdCivShieldGold
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingNeckMedalNfsdStarGold
+        - id: ClothingNeckMedalNfsdShieldGold
+        - id: ClothingNeckMedalNfsdShieldSilver
+        - id: ClothingNeckMedalNfsdShieldBronze
+        - id: ClothingNeckMedalNfsdBloodDrop
+        - id: ClothingNeckMedalNfsdBloodDrop # intentional duplicate
+        - id: ClothingNeckMedalNfsdCivStarSilver
+        - id: ClothingNeckMedalNfsdCivShieldGold

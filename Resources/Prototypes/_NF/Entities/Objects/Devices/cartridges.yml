@@ -6,6 +6,8 @@
   - type: Cartridge
     disposable: true
     autoInstall: true
+  - type: Sprite # Aurora's Song - unbreak's upstream carts
+    sprite: Objects/Devices/cartridge.rsi
 
 - type: entity
   parent: NFBasePDACartridge

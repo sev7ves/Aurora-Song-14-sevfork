@@ -4,7 +4,6 @@ using Content.Server._NF.Salvage; // Aurora's Song
 using Content.Server.Salvage.Expeditions;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
-using Content.Server.Station.Components;
 using Content.Shared.Chat;
 using Content.Shared.Humanoid;
 using Content.Shared.Mobs.Components;
@@ -26,7 +25,9 @@ using Content.Server._NF.Salvage.Expeditions;
 using Content.Shared.Salvage; // Aurora's Song
 using Content.Shared.Buckle; // Aurora's Song
 using Content.Shared.Buckle.Components; // Aurora's Song
+using Content.Shared.Damage.Systems; // Aurora's Song
 using Content.Shared.Implants; // Aurora's Song
+using Content.Shared.Station.Components; // Aurora's Song
 using Robust.Server.Player; // Coyote
 using Robust.Shared.Enums; // Frontier
 

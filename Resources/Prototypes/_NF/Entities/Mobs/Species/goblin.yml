@@ -83,7 +83,10 @@
       Burn:
         sprite: Mobs/Effects/burn_damage.rsi
   - type: Bloodstream
-    bloodReagent: GoblinBlood
+    bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+      reagents:
+      - ReagentId: GoblinBlood
+        Quantity: 300
   - type: Butcherable
     spawned:
     - id: FoodMeatGoblin
@@ -103,7 +106,7 @@
     - reagents: [ Water, SpaceCleaner, SoapReagent ]
       methods: [ Touch ]
       effects:
-      - !type:WashCreamPieReaction
+      - !type:WashCreamPie # Aurora's Song - WashCreamPieReaction>WashCreamPie
     - reagents: [ Water, SpaceCleaner, SoapReagent ]
       methods: [ Touch ]
       effects:

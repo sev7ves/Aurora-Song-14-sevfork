@@ -1,5 +1,5 @@
 - type: gas
-  id: 9
+  id: Respiron # Aurora's Song 9>Respiron
   name: gases-respiron
   specificHeat: 25
   heatCapacityRatio: 1.4
@@ -9,7 +9,7 @@
   pricePerMole: 0.2
 
 - type: gas
-  id: 10
+  id: Helium # Aurora's Song 10>Helium
   name: gases-helium
   specificHeat: 10
   heatCapacityRatio: 1.3

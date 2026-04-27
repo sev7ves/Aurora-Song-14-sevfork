@@ -1,0 +1,3 @@
+prayer-chat-notify-colcom = COLCOMM
+
+prayer-popup-notify-colcom-sent = You left a voicemail message for Colonial Command...

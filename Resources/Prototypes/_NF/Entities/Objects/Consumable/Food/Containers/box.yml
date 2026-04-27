@@ -10,17 +10,16 @@
   - type: Item
     sprite: _NF/Objects/Storage/Happyhonk/mccargo.rsi
     heldPrefix: box
-  - type: StorageFill
-    contents:
-    - id: MysteryFigureBox
-      orGroup: GiftPool
-      prob: 0.80
-    - id: ClothingHeadHatMcCrown
-      orGroup: GiftPool
-      prob: 0.15
-    - id: SpaceBladeMc
-      orGroup: GiftPool
-      prob: 0.05
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:GroupSelector
+        children:
+        - id: MysteryFigureBox
+          prob: 0.80
+        - id: ClothingHeadHatMcCrown
+          prob: 0.15
+        - id: SpaceBladeMc
+          prob: 0.05
   - type: StaticPrice
     price: 1
     vendPrice: 200 # Need this to not bug out the cardbox worth...
@@ -30,189 +29,154 @@
   parent: HappyHonkMcCargo
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-    # Burger
-    - id: FoodBurgerPlain
-      orGroup: BurgerPool
-      prob: 0.40
-    - id: FoodBurgerMcrib
-      orGroup: BurgerPool
-      prob: 0.10
-    - id: FoodBurgerBacon
-      orGroup: BurgerPool
-      prob: 0.10
-    - id: FoodBurgerCheese
-      orGroup: BurgerPool
-      prob: 0.10
-    - id: FoodBurgerMcguffin
-      orGroup: BurgerPool
-      prob: 0.10
-    - id: FoodBurgerDuck
-      orGroup: BurgerPool
-      prob: 0.10
-    - id: FoodBurgerChicken
-      orGroup: BurgerPool
-      prob: 0.10
-    # Fries
-    - id: FoodMealFries
-      orGroup: FriesPool
-      prob: 0.60
-    - id: FoodMealFriesCheesy
-      orGroup: FriesPool
-      prob: 0.20
-    - id: FoodMealFriesCarrot
-      orGroup: FriesPool
-      prob: 0.15
-    - id: FoodOnionRings
-      orGroup: FriesPool
-      prob: 0.05
-      amount: 2
-    # Drinks
-    - id: DrinkColaCan
-      orGroup: DrinkPool
-      prob: 0.10
-    - id: DrinkGrapeCan
-      orGroup: DrinkPool
-      prob: 0.10
-    - id: DrinkPwrGameCan
-      orGroup: DrinkPool
-      prob: 0.10
-    - id: DrinkEnergyDrinkCan
-      orGroup: DrinkPool
-      prob: 0.10
-    - id: DrinkSpaceMountainWindCan
-      orGroup: DrinkPool
-      prob: 0.10
-    - id: DrinkStarkistCan
-      orGroup: DrinkPool
-      prob: 0.10
-    - id: DrinkSpaceUpCan
-      orGroup: DrinkPool
-      prob: 0.10
-    - id: DrinkLemonLimeCan
-      orGroup: DrinkPool
-      prob: 0.10
-    - id: DrinkDrGibbCan
-      orGroup: DrinkPool
-      prob: 0.10
-    - id: DrinkSolDryCan
-      orGroup: DrinkPool
-      prob: 0.10
-    # Cake
-    - id: FoodCakeLemonSlice
-      orGroup: CakePool
-      prob: 0.10
-    - id: FoodCakeLimeSlice
-      orGroup: CakePool
-      prob: 0.10
-    - id: FoodCakeChocolateSlice
-      orGroup: CakePool
-      prob: 0.10
-    - id: FoodCakeCheeseSlice
-      orGroup: CakePool
-      prob: 0.10
-    - id: FoodCakeOrangeSlice
-      orGroup: CakePool
-      prob: 0.10
-    - id: FoodCakeLemoonSlice
-      orGroup: CakePool
-      prob: 0.10
-    - id: FoodCakeBlueberrySlice
-      orGroup: CakePool
-      prob: 0.10
-    - id: FoodCakeCarrotSlice
-      orGroup: CakePool
-      prob: 0.10
-    - id: FoodCakeBirthdaySlice
-      orGroup: CakePool
-      prob: 0.10
-    - id: FoodCakeAppleSlice
-      orGroup: CakePool
-      prob: 0.10
-    # Frozen
-    - id: FoodFrozenPopsicleOrange
-      orGroup: FrozenPool
-      prob: 0.2
-    - id: FoodFrozenPopsicleJumbo
-      orGroup: FrozenPool
-      prob: 0.2
-    - id: FoodFrozenPopsicleBerry
-      orGroup: FrozenPool
-      prob: 0.2
-    - id: FoodFrozenSandwichStrawberry
-      orGroup: FrozenPool
-      prob: 0.2
-    - id: FoodFrozenSandwich
-      orGroup: FrozenPool
-      prob: 0.2
-    # Gifts
-    - id: MysteryFigureBox
-      orGroup: GiftPool
-      prob: 0.80
-    - id: ClothingHeadHatMcCrown
-      orGroup: GiftPool
-      prob: 0.15
-    - id: SpaceBladeMc
-      orGroup: GiftPool
-      prob: 0.05
-    # Smokes
-    - id: CigPackRed
-      orGroup: SmokesPool
-      prob: 0.20
-    - id: CigPackBlue
-      orGroup: SmokesPool
-      prob: 0.20
-    - id: CigPackBlack
-      orGroup: SmokesPool
-      prob: 0.20
-    - id: CigPackGreen
-      orGroup: SmokesPool
-      prob: 0.20
-    - id: Cigar
-      orGroup: SmokesPool
-      prob: 0.10
-      amount: 2
-    - id: CigarGold
-      orGroup: SmokesPool
-      prob: 0.05
-      amount: 2
-    - id: CigarPlatinum
-      orGroup: SmokesPool
-      prob: 0.03
-      amount: 2
-    - id: CigPackSyndicate
-      orGroup: SmokesPool
-      prob: 0.02
-    # Lighter
-    - id: CheapLighter
-      orGroup: LighterPool
-      prob: 0.40
-    - id: Lighter
-      orGroup: LighterPool
-      prob: 0.30
-    - id: FlippoLighter
-      orGroup: LighterPool
-      prob: 0.20
-    - id: FlippoEngravedLighter
-      orGroup: LighterPool
-      prob: 0.10
-    # Condiment
-    - id: FoodCondimentPacketBbq
-      orGroup: CondimentPool
-      prob: 0.25
-    - id: FoodCondimentPacketMustard
-      orGroup: CondimentPool
-      prob: 0.25
-    - id: FoodCondimentPacketHotsauce
-      orGroup: CondimentPool
-      prob: 0.25
-    - id: FoodCondimentPacketKetchup
-      orGroup: CondimentPool
-      prob: 0.25
-    # Extra
-#    - id: FoodCondimentPacketPepper
-    - id: FoodCondimentPacketSalt
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        # Burger
+        - !type:GroupSelector
+          children:
+          - id: FoodBurgerPlain
+            prob: 0.40
+          - id: FoodBurgerMcrib
+            prob: 0.10
+          - id: FoodBurgerBacon
+            prob: 0.10
+          - id: FoodBurgerCheese
+            prob: 0.10
+          - id: FoodBurgerMcguffin
+            prob: 0.10
+          - id: FoodBurgerDuck
+            prob: 0.10
+          - id: FoodBurgerChicken
+            prob: 0.10
+        # Fries
+        - !type:GroupSelector
+          children:
+          - id: FoodMealFries
+            prob: 0.60
+          - id: FoodMealFriesCheesy
+            prob: 0.20
+          - id: FoodMealFriesCarrot
+            prob: 0.15
+          - id: FoodOnionRings
+            prob: 0.05
+            amount: 2
+        # Drinks
+        - !type:GroupSelector
+          children:
+          - id: DrinkColaCan
+            prob: 0.10
+          - id: DrinkGrapeCan
+            prob: 0.10
+          - id: DrinkPwrGameCan
+            prob: 0.10
+          - id: DrinkEnergyDrinkCan
+            prob: 0.10
+          - id: DrinkSpaceMountainWindCan
+            prob: 0.10
+          - id: DrinkStarkistCan
+            prob: 0.10
+          - id: DrinkSpaceUpCan
+            prob: 0.10
+          - id: DrinkLemonLimeCan
+            prob: 0.10
+          - id: DrinkDrGibbCan
+            prob: 0.10
+          - id: DrinkSolDryCan
+            prob: 0.10
+        # Cake
+        - !type:GroupSelector
+          children:
+          - id: FoodCakeLemonSlice
+            prob: 0.10
+          - id: FoodCakeLimeSlice
+            prob: 0.10
+          - id: FoodCakeChocolateSlice
+            prob: 0.10
+          - id: FoodCakeCheeseSlice
+            prob: 0.10
+          - id: FoodCakeOrangeSlice
+            prob: 0.10
+          - id: FoodCakeLemoonSlice
+            prob: 0.10
+          - id: FoodCakeBlueberrySlice
+            prob: 0.10
+          - id: FoodCakeCarrotSlice
+            prob: 0.10
+          - id: FoodCakeBirthdaySlice
+            prob: 0.10
+          - id: FoodCakeAppleSlice
+            prob: 0.10
+        # Frozen
+        - !type:GroupSelector
+          children:
+          - id: FoodFrozenPopsicleOrange
+            prob: 0.2
+          - id: FoodFrozenPopsicleJumbo
+            prob: 0.2
+          - id: FoodFrozenPopsicleBerry
+            prob: 0.2
+          - id: FoodFrozenSandwichStrawberry
+            prob: 0.2
+          - id: FoodFrozenSandwich
+            prob: 0.2
+        # Gifts
+        - !type:GroupSelector
+          children:
+          - id: MysteryFigureBox
+            prob: 0.80
+          - id: ClothingHeadHatMcCrown
+            prob: 0.15
+          - id: SpaceBladeMc
+            prob: 0.05
+        # Smokes
+        - !type:GroupSelector
+          children:
+          - id: CigPackRed
+            prob: 0.20
+          - id: CigPackBlue
+            prob: 0.20
+          - id: CigPackBlack
+            prob: 0.20
+          - id: CigPackGreen
+            prob: 0.20
+          - id: Cigar
+            prob: 0.10
+            amount: 2
+          - id: CigarGold
+            prob: 0.05
+            amount: 2
+          - id: CigarPlatinum
+            prob: 0.03
+            amount: 2
+          - id: CigPackSyndicate
+            prob: 0.02
+        # Lighter
+        - !type:GroupSelector
+          children:
+          - id: CheapLighter
+            prob: 0.40
+          - id: Lighter
+            prob: 0.30
+          - id: FlippoLighter
+            prob: 0.20
+          - id: FlippoEngravedLighter
+            prob: 0.10
+        # Condiment
+        - !type:GroupSelector
+          children:
+          - id: FoodCondimentPacketBbq
+            prob: 0.25
+          - id: FoodCondimentPacketMustard
+            prob: 0.25
+          - id: FoodCondimentPacketHotsauce
+            prob: 0.25
+          - id: FoodCondimentPacketKetchup
+            prob: 0.25
+        # Extra
+#        - id: FoodCondimentPacketPepper
+        - id: FoodCondimentPacketSalt
 
 - type: entity
   parent: [BaseStorageItem, BaseBagOpenClose]
@@ -308,38 +272,40 @@
     - state: label
       map: ["closeLayer"]
       visible: false
-  - type: StorageFill
-    contents:
-    # Slice1
-    - id: FoodMealGasSafeSushiSlice
-      orGroup: Slice1
-    - id: FoodMealGasBadSushiSlice
-      orGroup: Slice1
-    # Slice2
-    - id: FoodMealGasSafeSushiSlice
-      orGroup: Slice2
-    - id: FoodMealGasBadSushiSlice
-      orGroup: Slice2
-    # Slice3
-    - id: FoodMealGasSafeSushiSlice
-      orGroup: Slice3
-    - id: FoodMealGasBadSushiSlice
-      orGroup: Slice3
-    # Slice4
-    - id: FoodMealGasSafeSushiSlice
-      orGroup: Slice4
-    - id: FoodMealGasBadSushiSlice
-      orGroup: Slice4
-    # Slice5
-    - id: FoodMealGasSafeSushiSlice
-      orGroup: Slice5
-    - id: FoodMealGasBadSushiSlice
-      orGroup: Slice5
-    # Slice6
-    - id: FoodMealGasSafeSushiSlice
-      orGroup: Slice6
-    - id: FoodMealGasBadSushiSlice
-      orGroup: Slice6
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        # Slice1
+        - !type:GroupSelector
+          children:
+          - id: FoodMealGasSafeSushiSlice
+          - id: FoodMealGasBadSushiSlice
+        # Slice2
+        - !type:GroupSelector
+          children:
+          - id: FoodMealGasSafeSushiSlice
+          - id: FoodMealGasBadSushiSlice
+        # Slice3
+        - !type:GroupSelector
+          children:
+          - id: FoodMealGasSafeSushiSlice
+          - id: FoodMealGasBadSushiSlice
+        # Slice4
+        - !type:GroupSelector
+          children:
+          - id: FoodMealGasSafeSushiSlice
+          - id: FoodMealGasBadSushiSlice
+        # Slice5
+        - !type:GroupSelector
+          children:
+          - id: FoodMealGasSafeSushiSlice
+          - id: FoodMealGasBadSushiSlice
+        # Slice6
+        - !type:GroupSelector
+          children:
+          - id: FoodMealGasSafeSushiSlice
+          - id: FoodMealGasBadSushiSlice
 
 - type: entity
   parent: BoxCardboard
@@ -356,10 +322,12 @@
     maxItemSize: Normal
   - type: Item
     size: Normal
-  - type: StorageFill
-    contents:
-    - id: FoodBakedWaffleCone
-      amount: 5
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: FoodBakedWaffleCone
+          amount: 5
 
 # region Empty
 - type: entity
@@ -367,68 +335,86 @@
   parent: BoxMRE
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents: []
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children: []
 
 - type: entity
   id: HappyHonkEmpty
   parent: HappyHonk
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents: []
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children: []
 
 - type: entity
   id: HappyHonkMimeEmpty
   parent: HappyHonkMime
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents: []
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children: []
 
 - type: entity
   id: HappyHonkNukieEmpty
   parent: HappyHonkNukie
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents: []
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children: []
 
 - type: entity
   id: HappyHonkCluwneEmpty
   parent: HappyHonkCluwne
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents: []
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children: []
 
 - type: entity
   id: HappyHonkMcCargoEmpty
   parent: HappyHonkMcCargo
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents: []
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children: []
 
 - type: entity
   id: FoodBoxNuggetEmpty
   parent: FoodBoxNugget
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents: []
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children: []
 
 - type: entity
   id: FoodContainerEggEmpty
   parent: FoodContainerEgg
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents: []
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children: []
 
 - type: entity
   id: FoodBoxDonutEmpty
   parent: FoodBoxDonut
   components:
-  - type: StorageFill
-    contents: []
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children: []

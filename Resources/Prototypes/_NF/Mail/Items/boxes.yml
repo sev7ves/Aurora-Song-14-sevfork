@@ -5,14 +5,16 @@
   id: BoxT2ComponentsAssorted
   description: A box of various advanced components.
   components:
-  - type: StorageFill
-    contents:
-      - id: AdvancedCapacitorStockPart
-        amount: 4
-      - id: NanoManipulatorStockPart
-        amount: 2
-      - id: AdvancedMatterBinStockPart
-        amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: AdvancedCapacitorStockPart
+          amount: 4
+        - id: NanoManipulatorStockPart
+          amount: 2
+        - id: AdvancedMatterBinStockPart
+          amount: 2
   - type: Storage
     maxItemSize: Normal
     grid:
@@ -30,14 +32,16 @@
   id: BoxT3ComponentsAssorted
   description: A box of various super components.
   components:
-  - type: StorageFill
-    contents:
-      - id: SuperCapacitorStockPart
-        amount: 4
-      - id: PicoManipulatorStockPart
-        amount: 2
-      - id: SuperMatterBinStockPart
-        amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: SuperCapacitorStockPart
+          amount: 4
+        - id: PicoManipulatorStockPart
+          amount: 2
+        - id: SuperMatterBinStockPart
+          amount: 2
   - type: Storage
     maxItemSize: Normal
     grid:
@@ -55,14 +59,16 @@
   id: BoxT4ComponentsAssorted
   description: A box of various bluespace components. Where'd you find this?
   components:
-  - type: StorageFill
-    contents:
-      - id: QuadraticCapacitorStockPart
-        amount: 4
-      - id: FemtoManipulatorStockPart
-        amount: 2
-      - id: BluespaceMatterBinStockPart
-        amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: QuadraticCapacitorStockPart
+          amount: 4
+        - id: FemtoManipulatorStockPart
+          amount: 2
+        - id: BluespaceMatterBinStockPart
+          amount: 2
   - type: Storage
     maxItemSize: Normal
     grid:
@@ -80,16 +86,18 @@
   id: BoxSoapsAssorted
   description: A box of various scented soaps. Ooh, lavender.
   components:
-  - type: StorageFill
-    contents:
-      - id: SoapNT
-        amount: 1
-      - id: Soap
-        amount: 1
-      - id: SoapHomemade
-        amount: 1
-      - id: SoapDeluxe
-        amount: 1
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: SoapNT
+          amount: 1
+        - id: Soap
+          amount: 1
+        - id: SoapHomemade
+          amount: 1
+        - id: SoapDeluxe
+          amount: 1
   - type: Storage
     maxItemSize: Normal
     grid:
@@ -107,16 +115,18 @@
   id: BoxSoapsAssortedOmega
   description: A box of various scented soaps. Ooh, bluespace.
   components:
-  - type: StorageFill
-    contents:
-      - id: SoapNT
-        amount: 1
-      - id: Soap
-        amount: 1
-      - id: SoapOmega
-        amount: 1
-      - id: SoapDeluxe
-        amount: 1
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: SoapNT
+          amount: 1
+        - id: Soap
+          amount: 1
+        - id: SoapOmega
+          amount: 1
+        - id: SoapDeluxe
+          amount: 1
   - type: Storage
     maxItemSize: Normal
     grid:
@@ -135,28 +145,30 @@
   id: BoxBuildABuddyHuman
   description: "\"Henry the Human\" Build-a-Buddy kit. Some assembly required."
   components:
-  - type: StorageFill
-    contents:
-      - id: HeadHuman
-        amount: 1
-      - id: TorsoHuman
-        amount: 1
-      - id: LeftArmHuman
-        amount: 1
-      - id: RightArmHuman
-        amount: 1
-      - id: LeftHandHuman
-        amount: 1
-      - id: RightHandHuman
-        amount: 1
-      - id: LeftLegHuman
-        amount: 1
-      - id: RightLegHuman
-        amount: 1
-      - id: LeftFootHuman
-        amount: 1
-      - id: RightFootHuman
-        amount: 1
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: HeadHuman
+          amount: 1
+        - id: TorsoHuman
+          amount: 1
+        - id: LeftArmHuman
+          amount: 1
+        - id: RightArmHuman
+          amount: 1
+        - id: LeftHandHuman
+          amount: 1
+        - id: RightHandHuman
+          amount: 1
+        - id: LeftLegHuman
+          amount: 1
+        - id: RightLegHuman
+          amount: 1
+        - id: LeftFootHuman
+          amount: 1
+        - id: RightFootHuman
+          amount: 1
   - type: Storage
     grid:
     - 0,0,4,3
@@ -171,28 +183,30 @@
   id: BoxBuildABuddyGoblin
   description: "\"Greta the Goblin\" Build-a-Buddy kit. Some assembly required."
   components:
-  - type: StorageFill
-    contents:
-      - id: HeadGoblin
-        amount: 1
-      - id: TorsoGoblin
-        amount: 1
-      - id: LeftArmGoblin
-        amount: 1
-      - id: RightArmGoblin
-        amount: 1
-      - id: LeftHandGoblin
-        amount: 1
-      - id: RightHandGoblin
-        amount: 1
-      - id: LeftLegGoblin
-        amount: 1
-      - id: RightLegGoblin
-        amount: 1
-      - id: LeftFootGoblin
-        amount: 1
-      - id: RightFootGoblin
-        amount: 1
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: HeadGoblin
+          amount: 1
+        - id: TorsoGoblin
+          amount: 1
+        - id: LeftArmGoblin
+          amount: 1
+        - id: RightArmGoblin
+          amount: 1
+        - id: LeftHandGoblin
+          amount: 1
+        - id: RightHandGoblin
+          amount: 1
+        - id: LeftLegGoblin
+          amount: 1
+        - id: RightLegGoblin
+          amount: 1
+        - id: LeftFootGoblin
+          amount: 1
+        - id: RightFootGoblin
+          amount: 1
 
 - type: entity
   name: Build-a-Buddy kit
@@ -201,28 +215,30 @@
   id: BoxBuildABuddyReptilian
   description: "\"Randy the Reptilian\" Build-a-Buddy kit. Some assembly required."
   components:
-  - type: StorageFill
-    contents:
-      - id: HeadReptilian
-        amount: 1
-      - id: TorsoReptilian
-        amount: 1
-      - id: LeftArmReptilian
-        amount: 1
-      - id: RightArmReptilian
-        amount: 1
-      - id: LeftHandReptilian
-        amount: 1
-      - id: RightHandReptilian
-        amount: 1
-      - id: LeftLegReptilian
-        amount: 1
-      - id: RightLegReptilian
-        amount: 1
-      - id: LeftFootReptilian
-        amount: 1
-      - id: RightFootReptilian
-        amount: 1
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: HeadReptilian
+          amount: 1
+        - id: TorsoReptilian
+          amount: 1
+        - id: LeftArmReptilian
+          amount: 1
+        - id: RightArmReptilian
+          amount: 1
+        - id: LeftHandReptilian
+          amount: 1
+        - id: RightHandReptilian
+          amount: 1
+        - id: LeftLegReptilian
+          amount: 1
+        - id: RightLegReptilian
+          amount: 1
+        - id: LeftFootReptilian
+          amount: 1
+        - id: RightFootReptilian
+          amount: 1
 
 - type: entity
   name: Build-a-Buddy kit
@@ -231,28 +247,30 @@
   id: BoxBuildABuddySlime
   description: "\"Steven the Slime\" Build-a-Buddy kit. Some assembly required."
   components:
-  - type: StorageFill
-    contents:
-      - id: HeadSlime
-        amount: 1
-      - id: TorsoSlime
-        amount: 1
-      - id: LeftArmSlime
-        amount: 1
-      - id: RightArmSlime
-        amount: 1
-      - id: LeftHandSlime
-        amount: 1
-      - id: RightHandSlime
-        amount: 1
-      - id: LeftLegSlime
-        amount: 1
-      - id: RightLegSlime
-        amount: 1
-      - id: LeftFootSlime
-        amount: 1
-      - id: RightFootSlime
-        amount: 1
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: HeadSlime
+          amount: 1
+        - id: TorsoSlime
+          amount: 1
+        - id: LeftArmSlime
+          amount: 1
+        - id: RightArmSlime
+          amount: 1
+        - id: LeftHandSlime
+          amount: 1
+        - id: RightHandSlime
+          amount: 1
+        - id: LeftLegSlime
+          amount: 1
+        - id: RightLegSlime
+          amount: 1
+        - id: LeftFootSlime
+          amount: 1
+        - id: RightFootSlime
+          amount: 1
 
 - type: entity
   name: Build-a-Buddy kit
@@ -261,25 +279,27 @@
   id: BoxBuildABuddyVulpkanin
   description: "\"Valerie the Vulpkanin\" Build-a-Buddy kit. Some assembly required."
   components:
-  - type: StorageFill
-    contents:
-      - id: HeadVulpkanin
-        amount: 1
-      - id: TorsoVulpkanin
-        amount: 1
-      - id: LeftArmVulpkanin
-        amount: 1
-      - id: RightArmVulpkanin
-        amount: 1
-      - id: LeftHandVulpkanin
-        amount: 1
-      - id: RightHandVulpkanin
-        amount: 1
-      - id: LeftLegVulpkanin
-        amount: 1
-      - id: RightLegVulpkanin
-        amount: 1
-      - id: LeftFootVulpkanin
-        amount: 1
-      - id: RightFootVulpkanin
-        amount: 1
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: HeadVulpkanin
+          amount: 1
+        - id: TorsoVulpkanin
+          amount: 1
+        - id: LeftArmVulpkanin
+          amount: 1
+        - id: RightArmVulpkanin
+          amount: 1
+        - id: LeftHandVulpkanin
+          amount: 1
+        - id: RightHandVulpkanin
+          amount: 1
+        - id: LeftLegVulpkanin
+          amount: 1
+        - id: RightLegVulpkanin
+          amount: 1
+        - id: LeftFootVulpkanin
+          amount: 1
+        - id: RightFootVulpkanin
+          amount: 1

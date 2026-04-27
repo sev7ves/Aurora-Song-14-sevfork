@@ -102,7 +102,7 @@
       Female: FemaleVulpkanin
       Unsexed: MaleVulpkanin
   - type: DogVision
-  - type: Temperature
+  - type: TemperatureDamage # Aurora's Song - Temperature>TemperatureDamage
     heatDamageThreshold: 320 # 5 lower than base # Frontier: 315<320
     coldDamageThreshold: 220 # 40 lower than base, very insulating fur
   # Frontier: interaction & tall/short traits

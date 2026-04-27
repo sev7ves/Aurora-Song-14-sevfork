@@ -52,7 +52,7 @@
         0: Alive
         25: Dead
     - type: Stamina
-      critThreshold: 25
+      baseCritThreshold: 25 # Aurora's Song - critThreshold>baseCritThreshold
     - type: MovementAlwaysTouching
     - type: DamageStateVisuals
       states:
@@ -72,7 +72,10 @@
     - type: Damageable
       damageContainer: Inorganic
     - type: Bloodstream
-      bloodReagent: Oil
+      bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+        reagents:
+        - ReagentId: Oil
+          Quantity: 300
       bloodlossDamage:
         types:
           Bloodloss:
@@ -81,7 +84,7 @@
 - type: entity
   name: Hijacked Hologuardian
   id: MobArcIndHoloparasiteGuardian
-  parent: 
+  parent:
   - SimpleSpaceMobBase
   #- MobArcIndTimedDespawn
   description: A syndicate hologuardian that seems to have been modified by unknown means.
@@ -110,7 +113,7 @@
         0: Alive
         120: Dead
     - type: Stamina
-      critThreshold: 100
+      baseCritThreshold: 100 # Aurora's Song - critThreshold>baseCritThreshold
     - type: SlowOnDamage
       speedModifierThresholds:
         50: 0.8
@@ -129,7 +132,10 @@
     - type: Damageable
       damageContainer: Inorganic
     - type: Bloodstream
-      bloodReagent: Oil
+      bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+        reagents:
+        - ReagentId: Oil
+          Quantity: 300
       bloodlossDamage:
         types:
           Bloodloss:
@@ -137,7 +143,7 @@
 
 - type: entity
   name: Mobile Blaster Unit
-  parent: 
+  parent:
   - SimpleSpaceMobBase
   #- MobArcIndTimedDespawn
   id: MobArcIndBlaster
@@ -182,11 +188,10 @@
     - type: Tag
       tags:
         - FootstepSound
-    - type: HitscanBatteryAmmoProvider
+    - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
       proto: NFRedLightLaser
       fireCost: 50
     - type: BatterySelfRecharger
-      autoRecharge: true
       autoRechargeRate: 50
     - type: Battery
       maxCharge: 1000
@@ -202,7 +207,10 @@
     - type: Damageable
       damageContainer: Inorganic
     - type: Bloodstream
-      bloodReagent: Oil
+      bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+        reagents:
+        - ReagentId: Oil
+          Quantity: 300
       bloodlossDamage:
         types:
           Bloodloss:

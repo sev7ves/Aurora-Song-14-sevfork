@@ -1,7 +1,8 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Made by 𝘽𝙚𝙡𝙖𝙮#7441. Vox states by Flareguy for SS14 | vulpkanin state sprited by Ci1rus",
+  "copyright": "Made by EmoGarbage404. Vox states by Flareguy for SS14. Reptilian states by TiniestShark (Github)",
+  "extra_copyright": ["vulpkanin state sprited by Ci1rus"],
   "size": {
     "x": 32,
     "y": 32
@@ -33,6 +34,14 @@
     },
     {
       "name": "equipped-head-unshaded-vox",
+      "directions": 4
+    },
+    {
+      "name": "equipped-head-reptilian",
+      "directions": 4
+    },
+    {
+      "name": "equipped-head-unshaded-reptilian",
       "directions": 4
     },
 	{

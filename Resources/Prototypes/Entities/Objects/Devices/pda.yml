@@ -28,7 +28,7 @@
     state: pda
   - type: Pda
     paiSlot:
-      priority: -4
+      priority: -4 # Aurora's Song
       whitelist:
         components:
         - PAI
@@ -86,7 +86,8 @@
   - type: UnpoweredFlashlight
   - type: PointLight
     enabled: false
-    radius: 1.5
+    radius: 1.7
+    falloff: 3
     softness: 5
     autoRot: true
   - type: Ringer
@@ -138,6 +139,7 @@
     - WhitelistChameleonPDA
   - type: Input
     context: "human"
+  # Aurora's Song
   #- type: SentienceTarget # sentient PDA = pAI lite
   #  flavorKind: station-event-random-sentience-flavor-mechanical
   #  weight: 0.001 # 1,000 PDAs = as likely to be picked as 1 regular animal
@@ -1160,6 +1162,65 @@
       - NanoChatCartridge # Auroras Song
 
 - type: entity
+  parent: [ SyndiPDA, BaseC3SyndicateContraband] # Aurora's Song - BaseSyndicateContraband<BaseC3SyndicateContraband
+  id: SyndiOperativePDA
+  name: syndicate operative PDA
+  description: Death to NT!
+  components:
+  - type: Sprite
+    sprite: &upstream-pda-sprite Objects/Devices/pda.rsi # Aurora's Song - Use default
+  - type: Pda
+    id: SyndiOperativeIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-syndi-operative
+  - type: Icon
+    sprite: &upstream-pda-icons Objects/Devices/pda.rsi # Aurora's Song
+    state: pda-syndi-operative
+
+- type: entity
+  parent: [ SyndiOperativePDA, BaseC3SyndicateContraband] # Aurora's Song - BaseSyndicateContraband<BaseC3SyndicateContraband
+  id: SyndiCorpsmanPDA
+  name: syndicate corpsman PDA
+  description: Commander... I need to cook!
+  components:
+  - type: Pda
+    id: SyndiCorpsmanIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-syndi-corpsman
+  - type: Icon
+    sprite: *upstream-pda-icons # Aurora's Song
+    state: pda-syndi-corpsman
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+      - NotekeeperCartridge
+      - NanoTaskCartridge
+      - MedTekCartridge
+
+- type: entity
+  parent: [ SyndiOperativePDA, BaseC3SyndicateContraband] # Aurora's Song - BaseSyndicateContraband<BaseC3SyndicateContraband
+  id: SyndiCommanderPDA
+  name: syndicate commander PDA
+  description: So what are we, some kind of Nukie squad?
+  components:
+  - type: Pda
+    id: SyndiCommanderIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-syndi-commander
+  - type: Icon
+    sprite: *upstream-pda-icons # Aurora's Song
+    state: pda-syndi-commander
+
+- type: entity
   parent: BaseSecurityPDA
   id: ERTLeaderPDA
   name: ERT Leader PDA
@@ -1178,6 +1239,7 @@
     accentHColor: "#447987"
     accentVColor: "#447987"
   - type: Icon
+    sprite: *upstream-pda-icons # Aurora's Song
     state: pda-ert
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
@@ -1497,11 +1559,51 @@
     state: pda-seniorofficer
 
 - type: entity
+  parent: BasePDA
+  id: SeniorCourierPDA
+  name: senior courier PDA
+  description: Smells like postage stamps and shuttle fuel.
+  components:
+  - type: Sprite
+    sprite: *upstream-pda-sprite # Aurora's Song - Use default
+  - type: Pda
+    id: CargoIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-seniorcourier
+  - type: PdaBorderColor
+    borderColor: "#e39751"
+    accentVColor: "#DFDFDF"
+  - type: Icon
+    sprite: *upstream-pda-icons # Aurora's Song
+    state: pda-seniorcourier
+
+- type: entity
+  parent: [ BaseC3PirateContrabandNoValue, BasePDA ] # Frontier: BaseMajorContraband<BaseC3PirateContrabandNoValue
+  id: NinjaPDA
+  name: ninja PDA
+  description: You stealthy bastard, you!
+  components:
+  - type: Sprite
+    sprite: *upstream-pda-sprite # Aurora's Song - Use default
+  - type: Pda
+    id: NinjaIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-ninja
+  - type: Icon
+    sprite: *upstream-pda-icons # Aurora's Song
+    state: pda-ninja
+
+- type: entity
   parent: [ BaseC3PirateContrabandNoValue, SyndiPDA ] # Frontier: BaseMajorContraband<BaseC3PirateContrabandNoValue
   id: PiratePDA
   name: pirate PDA
   description: Yargh!
-  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Pda
     id: PirateIDCard
@@ -1514,31 +1616,7 @@
     state: pda-pirate
 
 - type: entity
-  parent: [ BaseMedicalPDA, BaseC3SyndicateContrabandNoValue ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
-  id: SyndiAgentPDA
-  name: syndicate corpsman PDA
-  description: For those days when healing normal syndicates aren't enough, try healing nuclear operatives instead!
-  components:
-  - type: Pda
-    id: SyndicateIDCard
-  - type: Appearance
-    appearanceDataInit:
-     enum.PdaVisuals.PdaType:
-       !type:String
-       pda-syndi-agent
-  - type: PdaBorderColor
-    borderColor: "#891417"
-  - type: Icon
-    state: pda-syndi-agent
-  - type: CartridgeLoader
-    uiKey: enum.PdaUiKey.Key
-    preinstalled:
-      - NotekeeperCartridge
-      - NanoTaskCartridge
-      - MedTekCartridge
-
-- type: entity
-  parent: BasePDA
+  parent: [BasePDA, SelectableLock]
   id: ChameleonPDA
   name: contractor PDA # Frontier passenger<contractor
   description: Why isn't it gray?

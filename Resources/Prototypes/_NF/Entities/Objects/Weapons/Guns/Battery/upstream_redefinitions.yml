@@ -3,6 +3,6 @@
   parent: WeaponBehonkerLaser
   id: NFWeaponBehonkerLaser
   components:
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFRedMediumLaser
 

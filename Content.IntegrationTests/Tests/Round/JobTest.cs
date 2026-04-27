@@ -19,8 +19,8 @@ namespace Content.IntegrationTests.Tests.Round;
 public sealed class JobTest
 {
     private static readonly ProtoId<JobPrototype> Passenger = "Contractor"; // Frontier: use job prototypes that exist
-    private static readonly ProtoId<JobPrototype> Engineer = "Prisoner"; // Frontier
-    private static readonly ProtoId<JobPrototype> Captain = "ColonialRepresentative"; // Aurora's Song
+    private static readonly ProtoId<JobPrototype> Engineer = "ServiceWorker"; // Aurora's Song - Replace with something without forced spawn point
+    private static readonly ProtoId<JobPrototype> Captain = "Pilot"; // Aurora's Song - Replace with something without forced spawn point
 
     private static string _map = "JobTestMap";
 

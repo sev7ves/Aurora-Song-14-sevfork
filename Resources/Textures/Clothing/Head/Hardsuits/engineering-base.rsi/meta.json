@@ -52,6 +52,10 @@
       "directions": 4
     },
     {
+      "name": "equipped-head-light-vulpkanin",
+      "directions": 4
+    },
+    {
       "name": "equipped-head-harpy",
       "directions": 4
     }

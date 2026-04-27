@@ -20,7 +20,8 @@
         reagents:
         - ReagentId: TableSalt
           Quantity: 50
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
     solution: food
     useSound:
       path: /Audio/Items/eating_1.ogg
@@ -84,7 +85,7 @@
   - type: FlavorProfile
     flavors:
       - bitter
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
   - type: SolutionContainerManager
     solutions:
       food:
@@ -122,7 +123,7 @@
   - type: FlavorProfile
     flavors:
       - bitter
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
   - type: SolutionContainerManager
     solutions:
       food:
@@ -197,7 +198,8 @@
         reagents:
         - ReagentId: Honey
           Quantity: 30
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
     solution: food
     useSound:
       path: /Audio/Items/eating_1.ogg
