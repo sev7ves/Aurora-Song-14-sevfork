@@ -21,6 +21,8 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
     [Dependency] private readonly IConfigurationManager _cfg = default!;
 
     public readonly TimeSpan OneSecAgo = TimeSpan.FromSeconds(-1);
+
+    private bool _isUpdateQueued = false;
     public int MaxMidiEventsPerBatch { get; private set; }
     public int MaxMidiEventsPerSecond { get; private set; }
 
@@ -43,8 +45,6 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
         SubscribeLocalEvent<InstrumentComponent, ComponentHandleState>(OnHandleState);
         SubscribeLocalEvent<ActiveInstrumentComponent, AfterAutoHandleStateEvent>(OnActiveInstrumentAfterHandleState);
     }
-
-    private bool _isUpdateQueued = false;
 
     private void OnActiveInstrumentAfterHandleState(Entity<ActiveInstrumentComponent> ent, ref AfterAutoHandleStateEvent args)
     {
@@ -294,7 +294,8 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
         SetMaster(uid, null);
         TrySetChannels(uid, data);
 
-        instrument.MidiEventBuffer.Clear();
+        TrySetChannels(uid, data);
+
         instrument.Renderer.OnMidiEvent += instrument.MidiEventBuffer.Add;
         return true;
     }

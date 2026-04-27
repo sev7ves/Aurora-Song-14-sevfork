@@ -92,13 +92,13 @@
       - Paper
       components:
       - Anchorable # No structures, they won't fit in crates
-      - Food
+      - Edible # Aurora's Song - Food>Edible
       - Currency # No selling money.
       - SpaceGarbage
       - Contraband
       - Gun
       - Ammo
-      - Drink
+#      - Drink # Aurora's Song - Deprecated
       - GasTank # Default containers won't be empty
       - Explosive
       - Actor

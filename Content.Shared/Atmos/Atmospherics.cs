@@ -226,12 +226,12 @@ namespace Content.Shared.Atmos
         public const float FirePlasmaEnergyReleased = 160e3f; // methane is 16 kJ/mol, plus plasma's spark of magic
         public const float FireGrowthRate = 40000f;
 
-        public const float SuperSaturationThreshold = 30f; // Frontier: 96f<30
-        public const float SuperSaturationEnds = 10f; // Frontier: SuperSaturationThreshold / 3 < 10
+        public const float SuperSaturationThreshold = 96f;
+        public const float SuperSaturationEnds = SuperSaturationThreshold / 3;
 
         public const float OxygenBurnRateBase = 1.4f;
         public const float PlasmaMinimumBurnTemperature = (100f+T0C);
-        public const float PlasmaUpperTemperature = 700; // Frontier: (1370f+T0C)<700
+        public const float PlasmaUpperTemperature = (1370f+T0C);
         public const float PlasmaOxygenFullburn = 10f;
         public const float PlasmaBurnRateDelta = 9f;
 
@@ -242,6 +242,7 @@ namespace Content.Shared.Atmos
 
         public const float TritiumBurnOxyFactor = 100f;
         public const float TritiumBurnTritFactor = 10f;
+        public const float TritiumBurnFuelRatio = 2f;
 
         public const float FrezonCoolLowerTemperature = 23.15f;
 
@@ -269,7 +270,7 @@ namespace Content.Shared.Atmos
         /// <summary>
         ///     1 mol of Tritium is required per X mol of oxygen.
         /// </summary>
-        public const float FrezonProductionTritRatio = 8.0f;
+        public const float FrezonProductionTritRatio = 50.0f;
 
         /// <summary>
         ///     1 / X of the tritium is converted into Frezon each tick

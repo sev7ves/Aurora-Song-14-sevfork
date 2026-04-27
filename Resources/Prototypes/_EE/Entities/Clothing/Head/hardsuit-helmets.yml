@@ -22,12 +22,13 @@
       - state: equipped-head
       - state: equipped-head-unshaded
         shader: unshaded
-  - type: ToggleableLightVisuals
-    spriteLayer: light
-    clothingVisuals:
-      head:
-      - state: equipped-head-light
-        shader: unshaded
+  # Aurora's Song - Deprecated at some point
+#  - type: ToggleableLightVisuals
+#    spriteLayer: light
+#    clothingVisuals:
+#      head:
+#      - state: equipped-head-light
+#        shader: unshaded
 
 - type: entity
   parent: ClothingHeadHelmetHardsuitSyndie
@@ -52,12 +53,13 @@
       - state: equipped-head
       - state: equipped-head-unshaded
         shader: unshaded
-  - type: ToggleableLightVisuals
-    spriteLayer: light
-    clothingVisuals:
-      head:
-      - state: equipped-head-light
-        shader: unshaded
+  # Aurora's Song - Deprecated at some point
+#  - type: ToggleableLightVisuals
+#    spriteLayer: light
+#    clothingVisuals:
+#      head:
+#      - state: equipped-head-light
+#        shader: unshaded
 
 - type: entity
   parent: ClothingHeadHelmetHardsuitSyndieElite
@@ -82,9 +84,10 @@
       - state: equipped-head
       - state: equipped-head-unshaded
         shader: unshaded
-  - type: ToggleableLightVisuals
-    spriteLayer: light
-    clothingVisuals:
-      head:
-      - state: equipped-head-light
-        shader: unshaded
+  # Aurora's Song - Deprecated at some point
+#  - type: ToggleableLightVisuals
+#    spriteLayer: light
+#    clothingVisuals:
+#      head:
+#      - state: equipped-head-light
+#        shader: unshaded

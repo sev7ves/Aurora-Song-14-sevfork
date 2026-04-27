@@ -25,10 +25,11 @@
     - gc
     - gc_mode
     - cvar
+    #    - fuckrules # Frontier
     - midipanic
-#    - replay_recording_start # Frontier
-#    - replay_recording_stop # Frontier
-#    - replay_recording_stats # Frontier
+    #    - replay_recording_start # Frontier
+    #    - replay_recording_stop # Frontier
+    #    - replay_recording_stats # Frontier
     - replay_play
     - replay_pause
     - replay_toggle
@@ -72,14 +73,20 @@
     - localdelete
     - fullstatereset
     - dumpentities
+    - showwallmounts
     - fuckrules # Frontier
     - showaccessreaders
+    - quickinspect
 
 - Flags: MAPPING
   Commands:
     - mapping
+    - mappingclientsidesetup
+    - showsubfloor
+    - showsubfloorforever
     - toggleautosave
     - toggledecals
+    - showwallmounts
     - showaccessreaders
 
 - Flags: QUERY

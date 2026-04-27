@@ -6,6 +6,7 @@ using Robust.Client.Player;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using System.Numerics;
+using Content.Client.Stylesheets;
 using Content.Shared._EstacaoPirata.Cards.Card;
 using Content.Shared._EstacaoPirata.Cards.Stack;
 
@@ -78,7 +79,7 @@ public sealed partial class CardHandMenu : RadialMenu
     }
 }
 
-public sealed class CardMenuButton : RadialMenuTextureButton
+public sealed class CardMenuButton : RadialMenuButton
 {
     public CardMenuButton()
     {

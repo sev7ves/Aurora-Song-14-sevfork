@@ -3,42 +3,50 @@
   abstract: true
   id: StorageFillL1FireSuit
   components:
-  - type: StorageFill
-    contents:
-    - id: ClothingOuterSuitFire
-    - id: ClothingHeadHelmetFire
-    - id: FireExtinguisher
-    - id: ClothingMaskGas
-    - id: CrowbarRed
-    - id: DoubleEmergencyTankO2N2EqualFilled
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingOuterSuitFire
+        - id: ClothingHeadHelmetFire
+        - id: FireExtinguisher
+        - id: ClothingMaskGas
+        - id: CrowbarRed
+        - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
   id: StorageFillL2RadiationSuit
   components:
-  - type: StorageFill
-    contents:
-    - id: ClothingOuterSuitRad
-    - id: GeigerCounter
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingOuterSuitRad
+        - id: GeigerCounter
 
 - type: entity
   abstract: true
   id: StorageFillL3BiohazardSuit
   components:
-  - type: StorageFill
-    contents:
-    - id: ClothingOuterBioGeneral
-    - id: ClothingHeadHatHoodBioGeneral
-    - id: DoubleEmergencyTankO2N2EqualFilled
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingOuterBioGeneral
+        - id: ClothingHeadHatHoodBioGeneral
+        - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
   id: StorageFillL4BombSuit
   components:
-  - type: StorageFill
-    contents:
-    - id: ClothingOuterSuitBomb
-    - id: ClothingHeadHelmetBombSuit
-    - id: Multitool
-    - id: Screwdriver
-    - id: Wirecutter
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingOuterSuitBomb
+        - id: ClothingHeadHelmetBombSuit
+        - id: Multitool
+        - id: Screwdriver
+        - id: Wirecutter

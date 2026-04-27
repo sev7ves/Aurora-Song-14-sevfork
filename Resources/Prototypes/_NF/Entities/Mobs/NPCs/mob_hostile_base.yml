@@ -3,13 +3,14 @@
   abstract: true
   components:
   - type: Temperature
+    currentTemperature: 310.15
+    specificHeat: 42
+  - type: TemperatureDamage
     heatDamageThreshold: 2000 # Should prevent mobs from taking damage on planets with extreme heat
     coldDamageThreshold: -250 # Should make mobs immune to cold planets
-    currentTemperature: 310.15
     coldDamage: #per second, scales with temperature & other constants
       types:
         Cold: 0.1
-    specificHeat: 42
     heatDamage: #per second, scales with temperature & other constants
       types:
         Heat: 1.5
@@ -309,7 +310,7 @@
   components:
   - type: MobThrowableOnHit
   - type: Stamina
-    critThreshold: 100 # Aurora's Song - new stamina threshold
+    baseCritThreshold: 100 # Aurora's Song - new stamina threshold
 
 - type: entity
   id: MobStaminaSpecial
@@ -317,14 +318,14 @@
   components:
   - type: MobThrowableOnHit
   - type: Stamina
-    critThreshold: 200
+    baseCritThreshold: 200 # Aurora's Song - critThreshold>baseCritThreshold
 
 - type: entity
   id: MobStaminaBoss
   abstract: true
   components:
   - type: Stamina
-    critThreshold: 500
+    baseCritThreshold: 500 # Aurora's Song - critThreshold>baseCritThreshold
 #endregion
 
 #region Dungeon boss
@@ -342,7 +343,7 @@
   - type: Hands
   - type: Puller
   - type: Stamina
-    critThreshold: 999
+    baseCritThreshold: 999 # Aurora's Song - critThreshold>baseCritThreshold
   - type: Tag
     tags:
     - CanPilot
@@ -454,7 +455,7 @@
       100: Critical # Aurora Song 80>100
       140: Dead # Aurora Song 120>140
   - type: Stamina
-    critThreshold: 100
+    baseCritThreshold: 100 # Aurora's Song - critThreshold>baseCritThreshold
   - type: SlowOnDamage
     speedModifierThresholds:
       40: 0.7
@@ -545,7 +546,7 @@
       80: Critical # Aurora Song 65>80
       120: Dead # Aurora Song 100>120
   - type: Stamina
-    critThreshold: 100
+    baseCritThreshold: 100 # Aurora's Song - critThreshold>baseCritThreshold
   - type: NpcFactionMember
     factions:
     - SimpleHostile

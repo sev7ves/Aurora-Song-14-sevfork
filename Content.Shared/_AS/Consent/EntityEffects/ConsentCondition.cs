@@ -1,35 +1,38 @@
 using Content.Shared._Floof.Consent;
-using Content.Shared.EntityEffects;
+using Content.Shared.EntityConditions;
 using Content.Shared.Mind;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared._AS.Consent.EntityEffects;
 
-public sealed partial class Consent : EntityEffectCondition
+public sealed class ConsentEntityConditionSystem : EntityConditionSystem<MindComponent, Consent>
+{
+    [Dependency] private static readonly SharedConsentSystem _consent = default!;
+
+    protected override void Condition(Entity<MindComponent> ent, ref EntityConditionEvent<Consent> args)
+    {
+        if (ent.Comp.Session is not { } session)
+            return;
+
+        if (_consent.TryGetConsent(session.UserId, out var settings))
+            return;
+
+        foreach (var effect in args.Condition.EffectTypes)
+        {
+            if (settings is not null && _consent.HasConsent(settings, effect))
+            {
+                args.Result = true;
+            }
+        }
+    }
+}
+
+public sealed partial class Consent : EntityConditionBase<Consent>
 {
     [DataField(required: true)]
-    public List<ProtoId<ConsentTogglePrototype>> EffectTypes = default!;
+    public List<ProtoId<ConsentTogglePrototype>> EffectTypes;
 
-    public override bool Condition(EntityEffectBaseArgs args)
-    {
-        if (!args.EntityManager.System<SharedMindSystem>().TryGetMind(args.TargetEntity, out _, out var mind))
-            return false;
-
-        if (mind.Session is not { } session)
-            return false;
-
-        if (!args.EntityManager.System<SharedConsentSystem>().TryGetConsent(session.UserId, out var settings))
-            return false;
-
-        foreach (var effect in EffectTypes)
-        {
-            if (settings is not null && args.EntityManager.System<SharedConsentSystem>().HasConsent(settings, effect))
-                return true;
-        }
-        return false;
-    }
-
-    public override string GuidebookExplanation(IPrototypeManager prototype)
+    public override string EntityConditionGuidebookText(IPrototypeManager prototype)
     {
         return string.Empty;
     }

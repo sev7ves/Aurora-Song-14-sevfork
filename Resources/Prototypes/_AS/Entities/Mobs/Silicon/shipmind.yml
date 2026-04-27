@@ -17,7 +17,7 @@
     - state: ai_empty
       shader: unshaded
     - state: ai
-      map: ["enum.StationAiVisualState.Key"]
+      map: ["enum.StationAiVisualLayers.Icon"]
       shader: unshaded
       visible: false
   - type: Anchorable
@@ -290,3 +290,22 @@
     - type: NpcFactionMember # Turns out not having a faction means you are friendly to everything
       factions:
       - NanoTrasen
+
+- type: entity
+  id: PlayerBorgRemote
+  parent: BorgChassisSelectable
+  suffix: Remote
+  components:
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - AiRemoteBrain
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+  - type: StartingMindRole
+    mindRole: "MindRoleSiliconBrain"
+    silent: true
+  - type: AiRemoteController

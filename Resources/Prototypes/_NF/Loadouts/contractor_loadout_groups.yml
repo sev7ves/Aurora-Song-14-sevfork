@@ -144,7 +144,7 @@
   - ContractorClothingUniformJumpskirtResearchDirector
   - ContractorClothingUniformJumpsuitSeniorEngineer
   - ContractorClothingUniformJumpskirtSeniorEngineer
-  - ContractorClothingUniformJumpsuitChiefEngineerNT
+  #- ContractorClothingUniformJumpsuitChiefEngineerNT Aurora Song: Removed in upstream
   - ContractorClothingUniformJumpsuitChiefEngineer
   - ContractorClothingUniformJumpskirtChiefEngineer
   - ContractorClothingUniformJumpsuitChiefEngineerTurtle

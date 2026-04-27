@@ -391,7 +391,8 @@
     tags:
       - Wringer
       - DoorBumpOpener
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
     solution: bucket
   - type: ContainerContainer
     containers:

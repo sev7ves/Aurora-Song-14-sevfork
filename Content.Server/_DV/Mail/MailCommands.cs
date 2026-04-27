@@ -6,7 +6,7 @@ using Content.Shared.Administration;
 using Content.Server.Administration;
 using Content.Server._DV.Mail.Components;
 using Content.Server._DV.Mail.EntitySystems;
-using Content.Server._NF.SectorServices;
+using Content.Shared._NF.SectorServices;
 using Content.Server._DV.Cargo.Components;
 using Content.Server._NF.Mail.Components;
 

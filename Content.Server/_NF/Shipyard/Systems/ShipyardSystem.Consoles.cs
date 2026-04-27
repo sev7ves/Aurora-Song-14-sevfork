@@ -47,7 +47,8 @@ using Robust.Server.Player;
 using Robust.Shared.Timing;
 using Content.Server._NF.GC.Components;
 using Content.Server._Mono.Shipyard;
-using Content.Shared._AS.Traits; // AS
+using Content.Shared._AS.Traits;
+using Content.Shared.Maps; // AS
 
 namespace Content.Server._NF.Shipyard.Systems;
 

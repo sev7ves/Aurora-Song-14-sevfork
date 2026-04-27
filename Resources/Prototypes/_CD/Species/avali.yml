@@ -7,7 +7,7 @@
   defaultSkinTone: "#D2B48C"
   markingLimits: MobAvaliMarkingLimits
   dollPrototype: MobAvaliDummy
-  skinColoration: Hues
+  skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
   maleFirstNames: NamesAvali
   femaleFirstNames: NamesAvali
   naming: First

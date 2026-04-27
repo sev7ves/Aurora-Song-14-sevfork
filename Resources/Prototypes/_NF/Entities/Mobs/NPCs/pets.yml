@@ -1,4 +1,5 @@
 - type: entity
+  parent: SimpleMobBase # Aurora's Song
   id: NFMobPet
   abstract: true
   components:

@@ -2,24 +2,16 @@
   id: LockerFillQuarterMaster
   table: !type:AllSelector
     children:
-    # - id: BoxEncryptionKeyCargo # Frontier
-    # - id: BoxFolderQmClipboard # Frontier
-    # - id: CargoBountyComputerCircuitboard # Frontier
-    # - id: CargoRequestComputerCircuitboard # Frontier
-    # - id: CargoSaleComputerCircuitboard # Frontier
-    # - id: CargoShuttleConsoleCircuitboard # Frontier
-    # - id: SalvageMagnetMachineCircuitboard # Frontier
-    # - id: SalvageJobBoardComputerCircuitboard # Frontier
-    # - id: CigPackGreen # Frontier
-    #   prob: 0.50 # Frontier
+#    - id: BoxEncryptionKeyCargo # Frontier
+#    - id: BoxFolderQmClipboard # Frontier
+#    - id: BoxQMCircuitboards
+    - id: BoxQMStamps
+#    - id: CigPackGreen # Frontier
+#      prob: 0.50 # Frontier
     - id: ClothingHeadsetAltCargo
 #    - id: DoorRemoteCargo # Frontier
-    - id: RubberStampApproved
-    - id: RubberStampDenied
-    - id: RubberStampQm
-    # - id: AstroNavCartridge # Frontier
-    # - id: ClothingHandsKnuckleDustersQM # Frontier
-    # - id: MailTeleporterMachineCircuitboard # Frontier
+#    - id: AstroNavCartridge # Frontier
+#    - id: ClothingHandsKnuckleDustersQM # Frontier
     - id: ClothingBeltUtilityEngineering # Frontier
 
 - type: entity
@@ -43,7 +35,7 @@
 #    - id: ClothingBeltSheathFilled # Frontier
 #    - id: ClothingHeadsetAltCommand # Frontier
     - id: ClothingOuterArmorCaptainCarapace
-#    - id: CommsComputerCircuitboard # Frontier
+#    - id: BoxCaptainCircuitboards # Frontier
 #    - id: DoorRemoteCustom # Frontier
 #    - id: MedalCase # Frontier
 #    - id: NukeDisk # Frontier
@@ -125,6 +117,8 @@
 #    - id: BoxEncryptionKeyPassenger # Frontier
 #    - id: BoxEncryptionKeyService # Frontier
 #    - id: BoxHeadset # Frontier
+#    - id: BoxHoPCircuitboards # Frontier
+    - id: BoxHoPStamps
 #    - id: BoxID # Frontier
 #    - id: BoxPDA # Frontier
 #    - id: CigarGoldCase # Frontier
@@ -137,12 +131,6 @@
     # - id: ClothingNeckGoldmedal # Frontier
     # - id: DoorRemoteService # Frontier
     # - id: HoPIDCard # Frontier
-    # - id: IDComputerCircuitboard # Frontier
-    # - id: FundingAllocationComputerCircuitboard # Frontier
-    # - id: CargoRequestServiceComputerCircuitboard # Frontier
-    - id: RubberStampApproved
-    - id: RubberStampDenied
-#    - id: RubberStampHop # Frontier
 #    - id: WeaponDisabler # Frontier
 #    - id: ClothingEyesHudCommand # Frontier
 
@@ -170,7 +158,7 @@
     - id: ClothingHandsGlovesColorYellow
     - id: ClothingHeadsetAltEngineering
     # - id: DoorRemoteEngineering # Frontier
-    # - id: CargoRequestEngineeringComputerCircuitboard # Frontier
+    # - id: BoxCECircuitboards # Frontier
     # - id: RCD # Frontier
     # - id: RCDAmmo # Frontier
     - id: RubberStampCE
@@ -226,18 +214,15 @@
     children:
 #    - id: BoxEncryptionKeyMedical # Frontier - bloat
 #    - id: ClothingBackpackDuffelSurgeryFilled # Frontier - bloat
-#    - id: ClothingCloakCmo # Frontier - bloat
     - id: ClothingEyesHudMedical
 #    - id: ClothingHandsGlovesNitrile # Frontier - bloat
-#    - id: ClothingHeadHatBeretCmo # Frontier - bloat
     - id: ClothingHeadsetAltMedical
 #    - id: ClothingMaskSterile # Frontier - bloat
 #    - id: DoorRemoteMedical # Frontier - bloat
     - id: HandheldCrewMonitor
     # - id: Hypospray # Frontier - balance
     - id: HypoMini # Frontier
-    # - id: MedicalTechFabCircuitboard # Frontier - bloat
-    # - id: CargoRequestMedicalComputerCircuitboard # Frontier - bloat
+    # - id: BoxCMOCircuitboards # Frontier - bloat
     # - id: MedkitFilled # Frontier - bloat
     # - id: RubberStampCMO # Frontier - MOM stamp
     - id: MedTekCartridge
@@ -288,14 +273,11 @@
     children:
 #    - id: Intellicard # Frontier
 #    - id: BoxEncryptionKeyScience # Frontier
-#    - id: CircuitImprinterMachineCircuitboard # Frontier
+#    - id: BoxRDCircuitboards # Frontier
     - id: ClothingBeltUtilityEngineering # Frontier: ClothingBeltUtilityFilled<ClothingBeltUtilityEngineering
     - id: ClothingHeadsetAltScience
     # - id: DoorRemoteResearch # Frontier
     # - id: HandTeleporter # Frontier
-    # - id: ProtolatheMachineCircuitboard # Frontier
-    # - id: ResearchComputerCircuitboard # Frontier
-    # - id: CargoRequestScienceComputerCircuitboard # Frontier
     - id: RubberStampRd
 
 # Hardsuit table, used for suit storage as well
@@ -340,7 +322,7 @@
   id: LockerFillHeadOfSecurityNoHardsuit
   table: !type:AllSelector
     children:
-#    - id: WeaponEnergyShotgun # Frontier
+#    - id: WeaponEnergyMagnum # Frontier
     - id: ASHyperlinkBookSpaceLaw # Aurora's Song: BookSpaceLaw<ASHyperlinkBookSpaceLaw
 #    - id: BoxEncryptionKeySecurity # Frontier
 #    - id: CigarGoldCase # Frontier
@@ -348,15 +330,16 @@
 #    - id: ClothingBeltSecurityFilled # Frontier
 #    - id: ClothingEyesGlassesSecurity # Frontier
 #    - id: ClothingHeadsetAltSecurity # Frontier
-    - id: ClothingMaskNeckGaiter
+    - id: ClothingMaskNeckGaiter # Aurora's Song - Consistency with old fills
     # - id: ClothingOuterCoatHoSTrench # Frontier
     # - id: ClothingShoesBootsJack # Frontier
+    # - id: FlashlightSeclite # Frontier
     # - id: DoorRemoteSecurity # Frontier
     # - id: HoloprojectorSecurity # Frontier
     # - id: RubberStampHos # Frontier
-    # - id: SecurityTechFabCircuitboard # Frontier
-    # - id: CargoRequestSecurityComputerCircuitboard # Frontier
+    # - id: BoxHoSCircuitboards # Frontier
     # - id: WeaponDisabler # Frontier
+    # - id: WeaponTaser # Frontier
     # - id: WantedListCartridge # Frontier
     - id: DrinkHosFlask
     - id: ClothingUniformJumpskirtHoSAlt # Frontier: consistency with old fill
@@ -406,18 +389,25 @@
         - !type:NestedSelector
           tableId: FillHeadOfSecurityHardsuit
 
-- type: entity
-  id: LockerFreezerVaultFilled
-  suffix: Vault, Locked
-  parent: LockerFreezerBase
-  categories: [ HideSpawnMenu ] # Frontier
-  components:
-  - type: AccessReader
-    access: [ [ "Command" ] ]
-  - type: StorageFill
-    contents:
+- type: entityTable
+  id: LockerFillVault
+  table: !type:AllSelector
+    children:
     - id: NFWeaponRevolverDeckard # Frontier: WeaponRevolverDeckard<NFWeaponRevolverDeckard
     - id: JetpackBlue
     - id: SpaceCash1000
     - id: BeachBall
     - id: BikeHorn
+
+- type: entity
+  id: LockerFreezerVaultFilled
+  suffix: Vault, Filled
+  parent: LockerFreezerBase
+  categories: [ HideSpawnMenu ] # Frontier
+  components:
+  - type: AccessReader
+    access: [ [ "Command" ] ]
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: LockerFillVault

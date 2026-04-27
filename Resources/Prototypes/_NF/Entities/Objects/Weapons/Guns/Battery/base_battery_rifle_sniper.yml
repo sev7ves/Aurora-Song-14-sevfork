@@ -39,7 +39,6 @@
     maxCharge: 2400
     startingCharge: 2400
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 6 # 1 shot per 20 seconds
   - type: MagazineVisuals
     magState: mag
@@ -73,7 +72,7 @@
     examineCaliber: gun-examine-hitscan-high-p
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFRedSpecialLaser
     fireCost: 120
 
@@ -85,6 +84,6 @@
     examineCaliber: gun-examine-hitscan-xray
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFXrayLaser
     fireCost: 120

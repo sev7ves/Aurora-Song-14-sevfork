@@ -4,10 +4,12 @@
   id: BoxWetFloorSign
   description: A box of wet floor signs. Happy janitor noises.
   components:
-  - type: StorageFill
-    contents:
-      - id: WetFloorSign
-        amount: 6
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: WetFloorSign
+          amount: 6
   - type: Storage
     maxItemSize: Normal
     grid:
@@ -26,10 +28,12 @@
   id: BoxPaper
   description: A box full of papers.
   components:
-  - type: StorageFill
-    contents:
-      - id: Paper
-        amount: 10
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: Paper
+          amount: 10
   - type: Storage
     maxItemSize: Small
     grid:
@@ -50,10 +54,12 @@
   id: BoxPaperOffice
   description: A box full of papers.
   components:
-  - type: StorageFill
-    contents:
-      - id: PaperOffice
-        amount: 10
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PaperOffice
+          amount: 10
 
 - type: entity
   name: Captains thoughts paper box
@@ -61,10 +67,12 @@
   id: BoxPaperCaptainsThoughts
   description: A box full of papers.
   components:
-  - type: StorageFill
-    contents:
-      - id: PaperCaptainsThoughts
-        amount: 10
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PaperCaptainsThoughts
+          amount: 10
 
 - type: entity
   name: mystery spacemen minifigure bulk box
@@ -72,10 +80,12 @@
   id: MysteryFigureBoxBulk
   description: A box containing six mystery minifigure boxes.
   components:
-  - type: StorageFill
-    contents:
-      - id: MysteryFigureBox
-        amount: 6
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MysteryFigureBox
+          amount: 6
   - type: Storage
     maxItemSize: Small
     grid:
@@ -95,10 +105,12 @@
   id: BoxT3SuperCapacitor
   description: A box of super capacitors.
   components:
-  - type: StorageFill
-    contents:
-      - id: SuperCapacitorStockPart
-        amount: 12
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: SuperCapacitorStockPart
+          amount: 12
   - type: Storage
     maxItemSize: Normal
     grid:
@@ -113,10 +125,12 @@
   parent: BoxEncryptionKeySecurity
   id: BoxEncryptionKeyNfsd
   components:
-  - type: StorageFill
-    contents:
-      - id: EncryptionKeyNfsd
-        amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: EncryptionKeyNfsd
+          amount: 4
 
 - type: entity
   name: exterior lighttube box
@@ -124,10 +138,12 @@
   id: BoxExteriorLightTube
   description: This box is shaped on the inside so that only light tubes and bulbs fit.
   components:
-  - type: StorageFill
-    contents:
-      - id: ExteriorLightTube
-        amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ExteriorLightTube
+          amount: 4
   - type: Sprite
     layers:
       - state: box
@@ -146,24 +162,26 @@
   id: BoxColoredLighttube
   description: This box is shaped on the inside so that only light tubes and bulbs fit.
   components:
-  - type: StorageFill
-    contents:
-      - id: LightTubeCrystalCyan
-        amount: 2
-      - id: LightTubeCrystalBlue
-        amount: 2
-      - id: LightTubeCrystalPink
-        amount: 2
-      - id: LightTubeCrystalOrange
-        amount: 2
-      - id: LightTubeCrystalRed
-        amount: 2
-      - id: LightTubeCrystalGreen
-        amount: 2
-      - id: LightTubeCrystalYellow
-        amount: 2
-      - id: LightTubeCrystalBlack
-        amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: LightTubeCrystalCyan
+          amount: 2
+        - id: LightTubeCrystalBlue
+          amount: 2
+        - id: LightTubeCrystalPink
+          amount: 2
+        - id: LightTubeCrystalOrange
+          amount: 2
+        - id: LightTubeCrystalRed
+          amount: 2
+        - id: LightTubeCrystalGreen
+          amount: 2
+        - id: LightTubeCrystalYellow
+          amount: 2
+        - id: LightTubeCrystalBlack
+          amount: 2
   - type: Sprite
     layers:
       - state: box
@@ -182,24 +200,26 @@
   id: BoxColoredLightbulb
   description: This box is shaped on the inside so that only light tubes and bulbs fit. It's full of neat colored light bulbs!
   components:
-  - type: StorageFill
-    contents:
-      - id: LightBulbCrystalCyan
-        amount: 2
-      - id: LightBulbCrystalBlue
-        amount: 2
-      - id: LightBulbCrystalPink
-        amount: 2
-      - id: LightBulbCrystalOrange
-        amount: 2
-      - id: LightBulbCrystalRed
-        amount: 2
-      - id: LightBulbCrystalGreen
-        amount: 2
-      - id: LightBulbCrystalYellow
-        amount: 2
-      - id: LightBulbCrystalBlack
-        amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: LightBulbCrystalCyan
+          amount: 2
+        - id: LightBulbCrystalBlue
+          amount: 2
+        - id: LightBulbCrystalPink
+          amount: 2
+        - id: LightBulbCrystalOrange
+          amount: 2
+        - id: LightBulbCrystalRed
+          amount: 2
+        - id: LightBulbCrystalGreen
+          amount: 2
+        - id: LightBulbCrystalYellow
+          amount: 2
+        - id: LightBulbCrystalBlack
+          amount: 2
   - type: Sprite
     layers:
       - state: box
@@ -219,12 +239,14 @@
   id: BoxColoredNavigationLighttube
   description: This box is shaped on the inside so that only light tubes and bulbs fit. It is full of red and green lights. Festive!
   components:
-  - type: StorageFill
-    contents:
-      - id: LightTubeCrystalRed
-        amount: 6
-      - id: LightTubeCrystalGreen
-        amount: 6
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: LightTubeCrystalRed
+          amount: 6
+        - id: LightTubeCrystalGreen
+          amount: 6
   - type: Sprite
     layers:
       - state: box

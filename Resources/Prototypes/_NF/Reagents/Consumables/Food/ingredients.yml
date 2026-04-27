@@ -31,7 +31,7 @@
       effects:
       - !type:SatiateHunger
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           reagent: Nutriment
           min: 0.1
         factor: 1

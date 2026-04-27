@@ -42,8 +42,8 @@
       path: /Audio/Items/newton_cradle.ogg
   - type: ExplodeOnTrigger
   - type: DeleteOnTrigger
-  - type: OnUseTimerTrigger
-    useVerbInstead: true
+  - type: TimerTrigger # Aurora's Song - OnUseTimerTrigger>TimerTrigger
+#    useVerbInstead: true # Aurora's Song - Deprecated
     beepInterval: .25
     beepSound:
       path: /Audio/Effects/beep_landmine.ogg

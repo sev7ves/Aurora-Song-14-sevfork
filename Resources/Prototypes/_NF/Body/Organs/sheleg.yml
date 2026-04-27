@@ -1,6 +1,6 @@
 - type: entity
-  id: BaseShelegOrganUnGibbable
-  parent: BaseHumanOrganUnGibbable
+  id: BaseShelegOrgan
+  parent: BaseHumanOrgan
   abstract: true
   components:
   - type: Sprite
@@ -26,10 +26,11 @@
 #    tags:
 #      - Meat
 
-- type: entity
-  id: BaseShelegOrgan
-  parent: [BaseShelegOrganUnGibbable, BaseHumanOrganUnGibbable]
-  abstract: true
+# Aurora's Song - Remove duplicate
+# - type: entity
+#   id: BaseShelegOrgan
+#   parent: [BaseShelegOrgan, BaseHumanOrgan]
+#   abstract: true
 
 - type: entity
   id: OrganShelegBrain

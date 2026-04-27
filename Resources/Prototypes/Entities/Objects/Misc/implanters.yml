@@ -13,7 +13,7 @@
     - type: Implanter
       whitelist:
         components:
-        - Body # no chair microbomb
+        - MobState # no chair microbomb
       blacklist:
         components:
         - Guardian # no holoparasite macrobomb wombo combo
@@ -46,8 +46,9 @@
       - MindShieldImplant
       - FakeMindShieldImplant
       - RadioImplant
-      - RadioImplantFreelance # Frontier
       - ChameleonControllerImplant
+      - VoiceMaskImplant
+      - RadioImplantFreelance # Frontier
       deimplantFailureDamage:
         types:
           Cellular: 50
@@ -88,15 +89,16 @@
 - type: entity
   id: Implanter
   parent: BaseImplanter
-  description: A disposable syringe exclusively designed for the injection and extraction of subdermal implants.
+  name: implant extractor
+  description: "A dual-purpose syringe designed for the removal of specific subdermal implants. Once an implant is extracted, it is stored within and can be re-administered.\nWARNING: Operator error, such as selecting a non-present implant type, causes severe genetic trauma to the operator."
   components:
-    - type: Tag
-      tags:
-        - Trash
+  - type: Tag
+    tags:
+    - Trash
 
 - type: entity
-  parent: Implanter
   id: ImplanterAdmeme
+  parent: Implanter
   suffix: Admeme
   components:
   - type: Implanter
@@ -130,7 +132,7 @@
   id: BaseImplantOnlyImplanterSyndi
   parent: [BaseImplantOnlyImplanter, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   name: syndicate implanter
-  description: A compact disposable syringe exclusively designed for the injection of subdermal implants. Make sure to scrub it with soap or a rag to remove residual DNA after use!
+  description: A compact disposable syringe exclusively designed for the injection of subdermal implants. Make sure to scrub it with soap to remove residual DNA after use!
   abstract: true
   components:
     - type: GoblinPreciousTrash # Frontier
@@ -166,24 +168,24 @@
   name: sad trombone implanter
   parent: BaseImplantOnlyImplanter
   components:
-    - type: Implanter
-      implant: SadTromboneImplant
+  - type: Implanter
+    implant: SadTromboneImplant
 
 - type: entity
   id: LightImplanter
   name: light implanter
   parent: BaseImplantOnlyImplanter
   components:
-    - type: Implanter
-      implant: LightImplant
+  - type: Implanter
+    implant: LightImplant
 
 - type: entity
   id: BikeHornImplanter
   name: bike horn implanter
   parent: BaseImplantOnlyImplanter
   components:
-    - type: Implanter
-      implant: BikeHornImplant
+  - type: Implanter
+    implant: BikeHornImplant
 
 #Security implanters
 
@@ -192,8 +194,8 @@
   name: tracking implanter
   parent: [ BaseC2ContrabandUnredeemable, BaseImplantOnlyImplanter ] # Frontier: add BaseC2ContrabandUnredeemable
   components:
-    - type: Implanter
-      implant: TrackingImplant
+  - type: Implanter
+    implant: TrackingImplant
 
 #Traitor implanters
 
@@ -202,16 +204,16 @@
   name: storage implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
-    - type: Implanter
-      implant: StorageImplant
+  - type: Implanter
+    implant: StorageImplant
 
 - type: entity
   id: FreedomImplanter
   name: freedom implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
-    - type: Implanter
-      implant: FreedomImplant
+  - type: Implanter
+    implant: FreedomImplant
 
 - type: entity
   id: RadioImplanter
@@ -234,24 +236,24 @@
   name: EMP implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
-    - type: Implanter
-      implant: EmpImplant
+  - type: Implanter
+    implant: EmpImplant
 
 - type: entity
   id: ScramImplanter
   name: scram implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
-    - type: Implanter
-      implant: ScramImplant
+  - type: Implanter
+    implant: ScramImplant
 
 - type: entity
   id: DnaScramblerImplanter
   name: DNA scrambler implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
-    - type: Implanter
-      implant: DnaScramblerImplant
+  - type: Implanter
+    implant: DnaScramblerImplant
 
 - type: entity
   id: ChameleonControllerImplanter
@@ -261,6 +263,14 @@
   - type: Implanter
     implant: ChameleonControllerImplant
 
+- type: entity
+  id: VoiceMaskImplanter
+  name: voice mask implanter
+  parent: BaseImplantOnlyImplanterSyndi
+  components:
+  - type: Implanter
+    implant: VoiceMaskImplant
+
 #Nuclear Operative/Special implanters
 
 - type: entity
@@ -268,24 +278,24 @@
   name: micro-bomb implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
-    - type: Implanter
-      implant: MicroBombImplant
+  - type: Implanter
+    implant: MicroBombImplant
 
 - type: entity
   id: MacroBombImplanter
   name: macro-bomb implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
-    - type: Implanter
-      implant: MacroBombImplant
+  - type: Implanter
+    implant: MacroBombImplant
 
 - type: entity
   id: DeathRattleImplanter
   name: death rattle implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
-    - type: Implanter
-      implant: DeathRattleImplant
+  - type: Implanter
+    implant: DeathRattleImplant
 
 - type: entity
   id: DeathAcidifierImplanter
@@ -311,8 +321,8 @@
   parent: [ BaseC2ContrabandUnredeemable, BaseImplantOnlyImplanter ] # Frontier: add BaseC2ContrabandUnredeemable
   suffix: mindshield
   components:
-    - type: Implanter
-      implant: MindShieldImplant
+  - type: Implanter
+    implant: MindShieldImplant
 
 # Centcomm implanters
 

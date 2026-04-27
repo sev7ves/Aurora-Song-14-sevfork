@@ -5,7 +5,7 @@ using Content.Server._NF.GameTicking.Events;
 using Content.Server._NF.GC.Components;
 using Content.Server._NF.PublicTransit.Components;
 using Content.Server._NF.PublicTransit.Prototypes;
-using Content.Server._NF.SectorServices;
+using Content.Shared._NF.SectorServices;
 using Content.Server._NF.Station.Systems;
 using Content.Server.Chat.Systems;
 using Content.Server.DeviceNetwork.Systems;
@@ -20,11 +20,14 @@ using Content.Server.Station.Systems;
 using Content.Shared._NF.CCVar;
 using Content.Shared._NF.PublicTransit;
 using Content.Shared._NF.PublicTransit.Components;
+using Content.Shared.Chat;
 using Content.Shared.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Components;
 using Content.Shared.Examine;
+using Content.Shared.Maps;
 using Content.Shared.Random.Helpers;
 using Content.Shared.Shuttles.Components;
+using Content.Shared.Station.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Configuration;
 using Robust.Shared.EntitySerialization.Systems;
@@ -553,7 +556,7 @@ public sealed class PublicTransitSystem : EntitySystem
                 continue;
 
             // Assuming the largest grid is the depot.
-            var depotGrid = _station.GetLargestGrid(stationData);
+            var depotGrid = _station.GetLargestGrid((depotStation, stationData));
             if (depotGrid == null)
                 continue;
 

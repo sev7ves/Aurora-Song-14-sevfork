@@ -1,4 +1,4 @@
-using Content.Server.Radio.Components;
+using Content.Shared.Radio.Components;
 using Content.Shared.NameModifier.Components;
 using Content.Server.Silicons.Laws;
 using Content.Server.Chat.Managers;

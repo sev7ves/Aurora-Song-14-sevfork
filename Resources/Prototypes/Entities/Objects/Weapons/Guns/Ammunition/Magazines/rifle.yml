@@ -1,8 +1,8 @@
 - type: entity
+  abstract: true
+  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
   id: BaseMagazineRifle
   name: "magazine (.20 rifle)"
-  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
-  abstract: true
   components:
   - type: Tag
     tags:
@@ -33,9 +33,10 @@
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
+  parent: BaseMagazineRifle
   id: MagazineRifle
   name: "magazine (.20 rifle)"
-  parent: BaseMagazineRifle
+  description: 25-round double stack magazine for combat rifles. Intended to hold general-purpose kinetic ammunition.
   components:
   - type: BallisticAmmoProvider
     # proto: CartridgeRifle # Frontier
@@ -54,10 +55,11 @@
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
+  parent: MagazineRifle
   id: MagazineRifleEmpty
   name: "magazine (.20 rifle any)"
   suffix: empty
-  parent: MagazineRifle
+  description: 25-round double stack magazine for combat rifles.
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -76,9 +78,10 @@
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
+  parent: MagazineRifle
   id: MagazineRifleIncendiary
   name: "magazine (.20 rifle incendiary)"
-  parent: MagazineRifle
+  description: 25-round double stack magazine for combat rifles. Intended to hold self-igniting incendiary ammunition.
   components:
   - type: BallisticAmmoProvider
     # proto: CartridgeRifleIncendiary # Frontier
@@ -103,9 +106,10 @@
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
+  parent: BaseMagazineRifle
   id: MagazineRiflePractice
   name: "magazine (.20 rifle practice)"
-  parent: BaseMagazineRifle
+  description: 25-round double stack magazine for combat rifles. Intended to hold harmless practice ammunition.
   components:
   - type: BallisticAmmoProvider
     # proto: CartridgeRiflePractice # Frontier
@@ -130,9 +134,10 @@
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
+  parent: BaseMagazineRifle
   id: MagazineRifleUranium
   name: "magazine (.20 rifle uranium)"
-  parent: BaseMagazineRifle
+  description: 25-round double stack magazine for combat rifles. Intended to hold exotic uranium-core ammunition.
   components:
   - type: BallisticAmmoProvider
     # proto: CartridgeRifleUranium # Frontier

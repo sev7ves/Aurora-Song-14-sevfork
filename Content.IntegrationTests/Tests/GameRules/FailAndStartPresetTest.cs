@@ -72,6 +72,8 @@ public sealed class FailAndStartPresetTest
         var ticker = server.System<GameTicker>();
         server.System<TestRuleSystem>().Run = true;
 
+        server.CfgMan.SetCVar(CCVars.GameLobbyDefaultPreset, "secret"); // Aurora's Song - NF Moment
+
         Assert.That(server.CfgMan.GetCVar(CCVars.GridFill), Is.False);
         Assert.That(server.CfgMan.GetCVar(CCVars.GameLobbyFallbackEnabled), Is.True);
         Assert.That(server.CfgMan.GetCVar(CCVars.GameLobbyDefaultPreset), Is.EqualTo("secret"));

@@ -66,12 +66,14 @@ public sealed partial class CrewMonitoringNavMapControl : NavMapControl
                 continue;
 
             if (!LocalizedNames.TryGetValue(netEntity, out var name))
-                name = "Unknown";
+                name = Loc.GetString("navmap-unknown-entity");
 
             // Text location of the blip will display GPS coordinates for the purpose of being able to find a person via GPS
             // Previously it displayed coordinates relative to the center of the station, which had no use.
             var mapCoords = _transform.ToMapCoordinates(blip.Coordinates); // Frontier
-            var message = name + "\nLocation: [x = " + MathF.Round(mapCoords.X) + ", y = " + MathF.Round(mapCoords.Y) + "]"; // Frontier: use map coords
+            var message = name + "\n" + Loc.GetString("navmap-location",
+                ("x", MathF.Round(mapCoords.X)),
+                ("y", MathF.Round(mapCoords.Y))); // Frontier: use map coords
 
             _trackedEntityLabel.Text = message;
             _trackedEntityPanel.Visible = true;

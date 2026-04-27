@@ -40,6 +40,9 @@ public sealed class WiresSystem : SharedWiresSystem
 
     private float _toolTime = 0f;
 
+    private Dictionary<EntityUid, List<ActiveWireAction>> _activeWires = new();
+    private List<(EntityUid, ActiveWireAction)> _finishedWires = new();
+
     #region Initialization
     public override void Initialize()
     {
@@ -73,7 +76,7 @@ public sealed class WiresSystem : SharedWiresSystem
         List<IWireAction> wireActions = new();
         var dummyWires = 0;
 
-        if (!_protoMan.TryIndex(wires.LayoutId, out WireLayoutPrototype? layoutPrototype))
+        if (!_protoMan.Resolve(wires.LayoutId, out WireLayoutPrototype? layoutPrototype))
         {
             return;
         }
@@ -294,9 +297,6 @@ public sealed class WiresSystem : SharedWiresSystem
             onFinish
         ));
     }
-
-    private Dictionary<EntityUid, List<ActiveWireAction>> _activeWires = new();
-    private List<(EntityUid, ActiveWireAction)> _finishedWires = new();
 
     public override void Update(float frameTime)
     {

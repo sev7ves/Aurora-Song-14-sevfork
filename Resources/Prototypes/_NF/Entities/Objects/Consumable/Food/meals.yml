@@ -1,110 +1,112 @@
-- type: entity
-  name: crispy
-  id: MobCatCrispy
-  parent: EdibleBase
-  description: Mistakes were made.
-  components:
-  - type: FlavorProfile
-    flavors:
-    - potatoes
-    - salty
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 45 # Using the sausage bread values, fries get eaten too quickly.
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 10
-        - ReagentId: Vitamin
-          Quantity: 5
-        - ReagentId: Protein
-          Quantity: 5
-        - ReagentId: Flavorol
-          Quantity: 5
-  - type: Sprite
-    noRot: true
-    drawdepth: Mobs
-    sprite: Mobs/Pets/cat.rsi
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: cat
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.35
-        density: 50
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-  - type: RotationVisuals
-    defaultRotation: 0
-    horizontalRotation: 0
-  - type: Item
-    size: Ginormous
-    heldPrefix: cat
-  # - type: Clothing
-    # quickEquip: false
-    # sprite: Mobs/Pets/cat.rsi
-    # equippedPrefix: cat
-    # slots:
-    # - HEAD
-  - type: GhostRole
-    prob: 1
-    name: ghost-role-information-crispy-name
-    allowMovement: true
-    description: ghost-role-information-crispy-description
-    rules: ghost-role-information-nonantagonist-rules
-  - type: GhostTakeoverAvailable
-  - type: OwOAccent
-  - type: Speech
-    speechSounds: Cat
-    speechVerb: SmallMob
-  - type: MovementSpeedModifier
-    baseWalkSpeed : 3
-    baseSprintSpeed : 5
-  - type: Tag
-    tags:
-    - VimPilot
-    - DoorBumpOpener
-  - type: CanEscapeInventory
-    baseResistTime: 2
-  - type: Puller
-    needsHands: false
-  - type: Examiner
-  - type: CombatMode
-  - type: MeleeWeapon
-    soundHit:
-      path: /Audio/Animals/cat_hiss.ogg
-    hidden: true
-    damage:
-      groups:
-        Brute: 1
-  - type: Appearance
-  - type: DeepFried
-    crispinessLevelSet: Crispy
-    originalName: crispy
-  - type: FriedTrait
-    crispinessLevelSet: Crispy
+# Aurora's Song - Disable crispy cat for now
+# - type: entity
+#   name: crispy
+#   id: MobCatCrispy
+#   parent: EdibleBase
+#   description: Mistakes were made.
+#   components:
+#   - type: FlavorProfile
+#     flavors:
+#     - potatoes
+#     - salty
+#   - type: SolutionContainerManager
+#     solutions:
+#       food:
+#         maxVol: 45 # Using the sausage bread values, fries get eaten too quickly.
+#         reagents:
+#         - ReagentId: Nutriment
+#           Quantity: 10
+#         - ReagentId: Vitamin
+#           Quantity: 5
+#         - ReagentId: Protein
+#           Quantity: 5
+#         - ReagentId: Flavorol
+#           Quantity: 5
+#   - type: Sprite
+#     noRot: true
+#     drawdepth: Mobs
+#     sprite: Mobs/Pets/cat.rsi
+#     layers:
+#     - map: ["enum.DamageStateVisualLayers.Base"]
+#       state: cat
+#   - type: Fixtures
+#     fixtures:
+#       fix1:
+#         shape:
+#           !type:PhysShapeCircle
+#           radius: 0.35
+#         density: 50
+#         mask:
+#         - MobMask
+#         layer:
+#         - MobLayer
+#   - type: RotationVisuals
+#     defaultRotation: 0
+#     horizontalRotation: 0
+#   - type: Item
+#     size: Ginormous
+#     heldPrefix: cat
+#   # - type: Clothing
+#     # quickEquip: false
+#     # sprite: Mobs/Pets/cat.rsi
+#     # equippedPrefix: cat
+#     # slots:
+#     # - HEAD
+#   - type: GhostRole
+#     prob: 1
+#     name: ghost-role-information-crispy-name
+#     allowMovement: true
+#     description: ghost-role-information-crispy-description
+#     rules: ghost-role-information-nonantagonist-rules
+#   - type: GhostTakeoverAvailable
+#   - type: OwOAccent
+#   - type: Speech
+#     speechSounds: Cat
+#     speechVerb: SmallMob
+#   - type: MovementSpeedModifier
+#     baseWalkSpeed : 3
+#     baseSprintSpeed : 5
+#   - type: Tag
+#     tags:
+#     - VimPilot
+#     - DoorBumpOpener
+#   - type: CanEscapeInventory
+#     baseResistTime: 2
+#   - type: Puller
+#     needsHands: false
+#   - type: Examiner
+#   - type: CombatMode
+#   - type: MeleeWeapon
+#     soundHit:
+#       path: /Audio/Animals/cat_hiss.ogg
+#     hidden: true
+#     damage:
+#       groups:
+#         Brute: 1
+#   - type: Appearance
+#   - type: DeepFried
+#     crispinessLevelSet: Crispy
+#     originalName: crispy
+#   - type: FriedTrait
+#     crispinessLevelSet: Crispy
 
-- type: entity
-  name: spooky
-  id: MobCatSpooky
-  parent: MobCatCrispy
-  description: A grave mistake.
-  suffix: Admeme # only way to get it at the moment
-  components:
-  - type: FlavorProfile
-    flavors:
-      - spooky
-  - type: DeepFried
-    crispinessLevelSet: Spectral
-    originalName: spooky
-  - type: FriedTrait
-    crispinessLevelSet: Spectral
-  - type: Spectral
+# Aurora's Song - Disable crispy cat for now
+# - type: entity
+#   name: spooky
+#   id: MobCatSpooky
+#   parent: MobCatCrispy
+#   description: A grave mistake.
+#   suffix: Admeme # only way to get it at the moment
+#   components:
+#   - type: FlavorProfile
+#     flavors:
+#       - spooky
+#   - type: DeepFried
+#     crispinessLevelSet: Spectral
+#     originalName: spooky
+#   - type: FriedTrait
+#     crispinessLevelSet: Spectral
+#   - type: Spectral
 
 - type: entity
   name: dragon omelette

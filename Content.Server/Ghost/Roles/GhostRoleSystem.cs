@@ -1,6 +1,8 @@
 using System.Linq;
 using Content.Server.Administration.Logs;
+using Content.Server.Administration.Managers;
 using Content.Server.EUI;
+using Content.Server.GameTicking.Events;
 using Content.Server.Ghost.Roles.Components;
 using Content.Server.Ghost.Roles.Events;
 using Content.Shared.Ghost.Roles.Raffles;
@@ -32,9 +34,8 @@ using Content.Server.Popups;
 using Content.Shared.Verbs;
 using Robust.Shared.Collections;
 using Content.Shared.Ghost.Roles.Components;
-using Content.Shared.Roles.Jobs;
+using Content.Shared.Roles.Components;
 using Content.Shared.Silicons.StationAi; // AS
-using Content.Server._NF.Players.GhostRole.Events; // Frontier
 using Content.Shared._Impstation.NotifierExamine;//imp
 
 namespace Content.Server.Ghost.Roles;
@@ -42,7 +43,9 @@ namespace Content.Server.Ghost.Roles;
 [UsedImplicitly]
 public sealed class GhostRoleSystem : EntitySystem
 {
+    [Dependency] private readonly IBanManager _ban = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
+    [Dependency] private readonly IEntityManager _ent = default!;
     [Dependency] private readonly EuiManager _euiManager = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
@@ -390,18 +393,6 @@ public sealed class GhostRoleSystem : EntitySystem
         if (!_ghostRoles.TryGetValue(identifier, out var roleEnt))
             return;
 
-        // Frontier: check for ghost role whitelist if we don't have one.
-        if (TryComp<GhostRoleComponent>(roleEnt, out var ghostRoleComponent) &&
-            _prototype.TryIndex(ghostRoleComponent.Prototype, out var ghostRolePrototype) &&
-            ghostRolePrototype.Whitelisted)
-        {
-            var ev = new IsGhostRoleAllowedEvent(player, ghostRolePrototype);
-            RaiseLocalEvent(ref ev);
-            if (ev.Cancelled)
-                return;
-        }
-        // End Frontier
-
         // get raffle or create a new one if it doesn't exist
         var raffle = _ghostRoleRaffles.TryGetValue(identifier, out var raffleEnt)
             ? raffleEnt.Comp
@@ -475,6 +466,23 @@ public sealed class GhostRoleSystem : EntitySystem
         if (!_ghostRoles.TryGetValue(identifier, out var roleEnt))
             return;
 
+        TryPrototypes(roleEnt, out var antags, out var jobs);
+
+        // Check role bans
+        if (_ban.IsRoleBanned(player, antags) || _ban.IsRoleBanned(player, jobs))
+        {
+            Log.Warning($"Server rejected ghost role request '{roleEnt.Comp.RoleName}' for '{player.Name}' - client missed ban?");
+            return;
+        }
+
+        // Check role requirements
+        if (!IsRoleAllowed(player, jobs, antags))
+        {
+            Log.Warning($"Server rejected ghost role request '{roleEnt.Comp.RoleName}' for '{player.Name}' - client missed requirement check?");
+            return;
+        }
+
+        // Decide to do a raffle or not
         if (roleEnt.Comp.RaffleConfig is not null)
         {
             JoinRaffle(player, identifier);
@@ -486,6 +494,78 @@ public sealed class GhostRoleSystem : EntitySystem
     }
 
     /// <summary>
+    /// Collect all role prototypes on the Ghostrole.
+    /// </summary>
+    /// <returns>
+    /// Returns true if at least on role prototype could be found.
+    /// </returns>
+    private bool TryPrototypes(
+        Entity<GhostRoleComponent> roleEnt,
+        out List<ProtoId<AntagPrototype>> antags,
+        out List<ProtoId<JobPrototype>> jobs)
+    {
+        antags = [];
+        jobs = [];
+
+        // If there is a mind already, check its mind roles.
+        // Not sure if this can ever actually happen.
+        if (TryComp<MindContainerComponent>(roleEnt, out var mindCont)
+            && TryComp<MindComponent>(mindCont.Mind, out var mind))
+        {
+            foreach (var role in mind.MindRoleContainer.ContainedEntities)
+            {
+                if(!TryComp<MindRoleComponent>(role, out var comp))
+                    continue;
+
+                if (comp.JobPrototype is not null)
+                    jobs.Add(comp.JobPrototype.Value);
+
+                else if (comp.AntagPrototype is not null)
+                    antags.Add(comp.AntagPrototype.Value);
+            }
+
+            return antags.Count > 0 || jobs.Count > 0;
+        }
+
+        if (roleEnt.Comp.JobProto is not null)
+            jobs.Add(roleEnt.Comp.JobProto.Value);
+
+
+        // If there is no mind, check the mindRole prototypes
+        foreach (var proto in roleEnt.Comp.MindRoles)
+        {
+            if (!_prototype.TryIndex(proto, out var indexed)
+                || !indexed.TryGetComponent<MindRoleComponent>(out var comp, _ent.ComponentFactory))
+                continue;
+            var roleComp = (MindRoleComponent)comp;
+
+            if (roleComp.JobPrototype is not null)
+                jobs.Add(roleComp.JobPrototype.Value);
+            else if (roleComp.AntagPrototype is not null)
+                antags.Add(roleComp.AntagPrototype.Value);
+            else
+                Log.Debug($"Mind role '{proto}' of '{roleEnt.Comp.RoleName}' has neither a job or antag prototype specified");
+        }
+
+        return antags.Count > 0 || jobs.Count > 0;
+    }
+
+    /// <summary>
+    /// Checks if the player passes the requirements for the supplied roles.
+    /// Returns false if any role fails the check.
+    /// </summary>
+    private bool IsRoleAllowed(
+        ICommonSession player,
+        List<ProtoId<JobPrototype>>? jobIds,
+        List<ProtoId<AntagPrototype>>? antagIds)
+    {
+        var ev = new IsRoleAllowedEvent(player, jobIds, antagIds);
+        RaiseLocalEvent(ref ev);
+
+        return !ev.Cancelled;
+    }
+
+    /// <summary>
     /// Attempts having the player take over the ghost role with the corresponding ID. Does not start a raffle.
     /// </summary>
     /// <returns>True if takeover was successful, otherwise false.</returns>
@@ -493,18 +573,6 @@ public sealed class GhostRoleSystem : EntitySystem
     {
         if (!_ghostRoles.TryGetValue(identifier, out var role))
             return false;
-
-        // Frontier: check for ghost role whitelist if we don't have one.
-        if (TryComp<GhostRoleComponent>(role, out var ghostRoleComponent) &&
-            _prototype.TryIndex(ghostRoleComponent.Prototype, out var ghostRolePrototype) &&
-            ghostRolePrototype.Whitelisted)
-        {
-            var allowEv = new IsGhostRoleAllowedEvent(player, ghostRolePrototype);
-            RaiseLocalEvent(ref allowEv);
-            if (allowEv.Cancelled)
-                return false;
-        }
-        // End Frontier
 
         var ev = new TakeGhostRoleEvent(player);
         RaiseLocalEvent(role, ref ev);
@@ -550,9 +618,6 @@ public sealed class GhostRoleSystem : EntitySystem
         _mindSystem.TransferTo(newMind, mob);
 
         _roleSystem.MindAddRoles(newMind.Owner, role.MindRoles, newMind.Comp);
-
-        if (_roleSystem.MindHasRole<GhostRoleMarkerRoleComponent>(newMind!, out var markerRole))
-            markerRole.Value.Comp2.Name = role.RoleName;
     }
 
     /// <summary>
@@ -603,15 +668,16 @@ public sealed class GhostRoleSystem : EntitySystem
                 ? _timing.CurTime.Add(raffle.Countdown)
                 : TimeSpan.MinValue;
 
+            TryPrototypes((uid, role), out var antags, out var jobs);
+
             roles.Add(new GhostRoleInfo
             {
                 Identifier = id,
                 Name = role.RoleName,
                 Description = role.RoleDescription,
                 Rules = role.RoleRules,
-                Requirements = role.Requirements,
+                RolePrototypes = (jobs, antags),
                 Kind = kind,
-                Prototype = role.Prototype, // Frontier
                 RafflePlayerCount = rafflePlayerCount,
                 RaffleEndTime = raffleEndTime
             });
@@ -844,7 +910,7 @@ public sealed class GhostRoleSystem : EntitySystem
 
     public void OnGhostRoleRadioMessage(Entity<GhostRoleMobSpawnerComponent> entity, ref GhostRoleRadioMessage args)
     {
-        if (!_prototype.TryIndex(args.ProtoId, out var ghostRoleProto))
+        if (!_prototype.Resolve(args.ProtoId, out var ghostRoleProto))
             return;
 
         // if the prototype chosen isn't actually part of the selectable options, ignore it

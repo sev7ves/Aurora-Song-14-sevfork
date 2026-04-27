@@ -8,7 +8,8 @@ materials-raw-scrap-tech = tech scrap
 
 # Other
 materials-anomalite = anomalite
-materials-reinforced-uranium-glass = reinforced uranium glass
-materials-uranium-glass = uranium glass
+# Aurora's Song - Disable duplicates
+# materials-reinforced-uranium-glass = reinforced uranium glass
+# materials-uranium-glass = uranium glass
 materials-clockwork-glass = clockwork glass
 materials-brass = brass

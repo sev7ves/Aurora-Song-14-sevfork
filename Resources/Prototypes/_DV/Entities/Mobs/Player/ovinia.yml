@@ -5,7 +5,7 @@
   components:
   - type: CombatMode
   - type: MindContainer
-    showExamineInfo: true
+#    showExamineInfo: true # Aurora's Song - Deprecated
   - type: Input
     context: "human"
   - type: MobMover

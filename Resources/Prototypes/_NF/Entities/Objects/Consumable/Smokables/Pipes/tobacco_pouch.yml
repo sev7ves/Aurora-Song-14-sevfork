@@ -7,10 +7,12 @@
   description: A fiery collection of exotic tobaccos, each leaf coated with preserving agent. Should you wash it off before smoking?
   suffix: Filled
   components:
-  - type: StorageFill
-    contents:
-    - id: NFGroundTobacco5
-      amount: 2 # 2 stacks of 5, leaves 2 slots for pipe and lighter
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFGroundTobacco5
+          amount: 2 # 2 stacks of 5, leaves 2 slots for pipe and lighter
 
 - type: entity
   id: TobaccoPouchBlueFilled
@@ -60,10 +62,12 @@
       belt:
       - state: equipped-BELT
         color: "#00d7ff"
-  - type: StorageFill
-    contents:
-    - id: GroundTobaccoStonecut5
-      amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: GroundTobaccoStonecut5
+          amount: 2
 
 - type: entity
   id: TobaccoPouchRedFilled
@@ -113,10 +117,12 @@
       belt:
       - state: equipped-BELT
         color: "#07ff00"
-  - type: StorageFill
-    contents:
-    - id: GroundTobaccoShrooms5
-      amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: GroundTobaccoShrooms5
+          amount: 2
 
 - type: entity
   id: TobaccoPouchPurpleFilled
@@ -166,7 +172,9 @@
       belt:
       - state: equipped-BELT
         color: "#bd66bd"
-  - type: StorageFill
-    contents:
-    - id: GroundTobaccoDrowsy5
-      amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: GroundTobaccoDrowsy5
+          amount: 2

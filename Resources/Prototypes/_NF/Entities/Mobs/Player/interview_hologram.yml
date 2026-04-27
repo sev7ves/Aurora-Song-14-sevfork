@@ -28,7 +28,7 @@
   - type: AnimationPlayer
   - type: SSDIndicator
   - type: MindContainer
-    showExamineInfo: true
+#    showExamineInfo: true # Aurora's Song - Deprecated
   - type: Speech
     speechVerb: Robotic
     speechSounds: Borg

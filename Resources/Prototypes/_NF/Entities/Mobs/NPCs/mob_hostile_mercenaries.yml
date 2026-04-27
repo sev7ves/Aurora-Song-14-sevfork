@@ -387,11 +387,10 @@
       state: equipped-NECK-on
       color: "#a9b6bd"
       shader: unshaded
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFBulletLaserLow
     fireCost: 100
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 50
   - type: Battery
     maxCharge: 600

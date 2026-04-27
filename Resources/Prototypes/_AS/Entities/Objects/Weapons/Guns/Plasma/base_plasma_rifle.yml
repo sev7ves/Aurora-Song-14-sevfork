@@ -33,7 +33,6 @@
     maxCharge: 2400
     startingCharge: 2400
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 4 # Default recharge rate: 1 shot per 20 seconds with 80 fireCost
   - type: StaticPrice
     price: 400
@@ -74,7 +73,7 @@
     examineCaliber: gun-examine-energybolt-high
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: ASPlasmaBlastTest
     fireCost: 60
 
@@ -86,6 +85,6 @@
     examineCaliber: gun-examine-energybolt-high
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: ASPlasmaBlastTest
     fireCost: 40

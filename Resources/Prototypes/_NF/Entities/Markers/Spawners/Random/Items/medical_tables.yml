@@ -292,7 +292,7 @@
     # Vials
     - !type:GroupSelector
       children:
-      - id: BaseChemistryEmptyVial
+      - id: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
         weight: 0.9
       - id: VialBluespace
         weight: 0.1
@@ -775,7 +775,7 @@
       children:
       - id: ClothingUniformJumpsuitMedicalDoctor
       - id: ClothingUniformJumpsuitMilitaryMedicalDoctor
-      - id: ClothingUniformJumpsuitParamedicNT
+      #- id: ClothingUniformJumpsuitParamedicNT #Aurora Song: Removed in upstream
       - id: ClothingUniformJumpsuitParamedic
       - id: ClothingUniformJumpsuitMilitaryParamedic
       - id: ClothingUniformJumpsuitChemistry

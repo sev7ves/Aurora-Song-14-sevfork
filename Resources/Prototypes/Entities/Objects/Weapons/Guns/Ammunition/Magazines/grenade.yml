@@ -1,8 +1,8 @@
 - type: entity
+  abstract: true
+  parent: [ BaseCartridge, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: BaseMagazineGrenade
   name: grenade cartridge
-  parent: [ BaseCartridge, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
-  abstract: true
   components:
   - type: Tag
     tags:
@@ -40,48 +40,48 @@
   - type: Appearance
 
 - type: entity
+  parent: BaseMagazineGrenade
   id: MagazineGrenadeEmpty
   name: grenade cartridge
-  parent: BaseMagazineGrenade
   components:
   - type: BallisticAmmoProvider
 
 - type: entity
+  parent: BaseMagazineGrenade
   id: MagazineGrenadeFrag
   name: frag grenade cartridge
-  parent: BaseMagazineGrenade
   components:
   - type: BallisticAmmoProvider
     # proto: GrenadeFrag # Frontier
 
 - type: entity
+  parent: BaseMagazineGrenade
   id: MagazineGrenadeEMP
   name: EMP grenade cartridge
-  parent: BaseMagazineGrenade
   components:
   - type: BallisticAmmoProvider
     # proto: GrenadeEMP # Frontier
 
 - type: entity
+  parent: BaseMagazineGrenade
   id: MagazineGrenadeFlash
   name: flash grenade cartridge
-  parent: BaseMagazineGrenade
   components:
   - type: BallisticAmmoProvider
     # proto: GrenadeFlash # Frontier
 
 - type: entity
+  parent: BaseMagazineGrenade
   id: MagazineGrenadeBlast
   name: blast grenade cartridge
-  parent: BaseMagazineGrenade
   components:
   - type: BallisticAmmoProvider
     # proto: GrenadeBlast # Frontier
 
 - type: entity
+  parent: BaseMagazineGrenade
   id: MagazineGrenadeBaton
   name: baton grenade cartridge
-  parent: BaseMagazineGrenade
   components:
   - type: BallisticAmmoProvider
     # proto: GrenadeBaton # Frontier

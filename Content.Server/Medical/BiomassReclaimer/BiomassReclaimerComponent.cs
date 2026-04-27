@@ -1,8 +1,7 @@
-using System.Threading;
+using Content.Shared.Chemistry.Components;
 using Content.Shared.Construction.Prototypes;
 using Content.Shared.Storage;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Server.Medical.BiomassReclaimer
 {
@@ -38,10 +37,10 @@ namespace Content.Server.Medical.BiomassReclaimer
         public float CurrentExpectedYield = 0f;
 
         /// <summary>
-        /// The reagent that will be spilled while processing a mob.
+        /// The reagents that will be spilled while processing a mob.
         /// </summary>
         [ViewVariables]
-        public string? BloodReagent;
+        public Solution? BloodReagents = null;
 
         /// <summary>
         /// Entities that can be randomly spawned while processing a mob.
@@ -51,21 +50,24 @@ namespace Content.Server.Medical.BiomassReclaimer
         /// <summary>
         /// How many units of biomass it produces for each unit of mass.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public float YieldPerUnitMass = default;
+        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        public float YieldPerUnitMass = 0.4f;
 
+        // Frontier
         /// <summary>
         /// The base yield per mass unit when no components are upgraded.
         /// </summary>
         [DataField("baseYieldPerUnitMass")]
         public float BaseYieldPerUnitMass = 0.4f;
 
+        // Froniter
         /// <summary>
         /// Machine part whose rating modifies the yield per mass.
         /// </summary>
-        [DataField("machinePartYieldAmount", customTypeSerializer: typeof(PrototypeIdSerializer<MachinePartPrototype>))]
-        public string MachinePartYieldAmount = "MatterBin";
+        [DataField("machinePartYieldAmount")]
+        public ProtoId<MachinePartPrototype> MachinePartYieldAmount = "MatterBin";
 
+        // Froniter
         /// <summary>
         /// How much the machine part quality affects the yield.
         /// Going up a tier will multiply the yield by this amount.
@@ -88,9 +90,10 @@ namespace Content.Server.Medical.BiomassReclaimer
         /// <summary>
         /// The time it takes to process a mob, per mass.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public float ProcessingTimePerUnitMass = default;
+        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        public float ProcessingTimePerUnitMass = 0.5f;
 
+        // Frontier
         /// <summary>
         /// The base time per mass unit that it takes to process a mob
         /// when no components are upgraded.
@@ -98,18 +101,21 @@ namespace Content.Server.Medical.BiomassReclaimer
         [DataField("baseProcessingTimePerUnitMass")]
         public float BaseProcessingTimePerUnitMass = 0.5f;
 
+        // Frontier
         /// <summary>
         /// The machine part that increses the processing speed.
         /// </summary>
-        [DataField("machinePartProcessSpeed", customTypeSerializer: typeof(PrototypeIdSerializer<MachinePartPrototype>))]
-        public string MachinePartProcessingSpeed = "Manipulator";
+        [DataField("machinePartProcessSpeed")]
+        public ProtoId<MachinePartPrototype> MachinePartProcessingSpeed = "Manipulator";
 
+        // Frontier
         /// <summary>
         /// How much the machine part quality affects the yield.
         /// Going up a tier will multiply the speed by this amount.
         /// </summary>
         [DataField("partRatingSpeedMultiplier")]
         public float PartRatingSpeedMultiplier = 1.35f;
+
 
         /// <summary>
         /// Will this refuse to gib a living mob?

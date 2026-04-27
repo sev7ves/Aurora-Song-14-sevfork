@@ -1,0 +1,4 @@
+﻿- type: skinColoration
+  id: HumanAnimal
+  strategy: !type:ClampedHsvColoration {}
+  altStrategy: !type:HumanTonedSkinColoration {}

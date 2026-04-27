@@ -4,12 +4,14 @@
   id: PoultryCubeBox
   description: "A box of poultry cubes: chickens and ducks! Just add water!"
   components:
-  - type: StorageFill
-    contents:
-    - id: ChickenCubeWrapped
-      amount: 6
-    - id: DuckCubeWrapped
-      amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ChickenCubeWrapped
+          amount: 6
+        - id: DuckCubeWrapped
+          amount: 2
   - type: Sprite
     sprite: _NF/Objects/Misc/monkeycube.rsi
     state: box_poultry
@@ -23,14 +25,16 @@
   id: RuminantCubeBox
   description: "A box of ruminant cubes: a cow, a pig and goats! Just add water!"
   components:
-  - type: StorageFill
-    contents:
-    - id: GoatCubeWrapped
-      amount: 4
-    - id: PigCubeWrapped
-      amount: 1
-    - id: CowCubeWrapped
-      amount: 1
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: GoatCubeWrapped
+          amount: 4
+        - id: PigCubeWrapped
+          amount: 1
+        - id: CowCubeWrapped
+          amount: 1
   - type: Sprite
     sprite: _NF/Objects/Misc/monkeycube.rsi
     state: box_ruminant
@@ -44,18 +48,20 @@
   id: FarmCubeBox
   description: "A pack of livestock cubes: chicken, cows, pigs, goats, ducks! Just add water!"
   components:
-  - type: StorageFill
-    contents:
-    - id: ChickenCubeWrapped
-      amount: 2
-    - id: DuckCubeWrapped
-      amount: 2
-    - id: GoatCubeWrapped
-      amount: 2
-    - id: PigCubeWrapped
-      amount: 2
-    - id: CowCubeWrapped
-      amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ChickenCubeWrapped
+          amount: 2
+        - id: DuckCubeWrapped
+          amount: 2
+        - id: GoatCubeWrapped
+          amount: 2
+        - id: PigCubeWrapped
+          amount: 2
+        - id: CowCubeWrapped
+          amount: 2
   - type: Sprite
     sprite: _NF/Objects/Misc/monkeycube.rsi
     state: box_farm

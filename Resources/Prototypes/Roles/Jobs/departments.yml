@@ -3,8 +3,12 @@
   name: department-Cargo
   description: department-Cargo-description
   color: "#A46106"
-  weight: -90
-  primary: false
+#  roles: # Frontier
+#  - CargoTechnician # Frontier
+#  - Quartermaster # Frontier
+#  - SalvageSpecialist # Frontier
+  weight: -90 # Frontier
+  primary: false # Frontier
   editorHidden: true # Frontier
 
 - type: department
@@ -16,11 +20,11 @@
   roles:
   # - Bartender # Frontier
   # - Botanist # Frontier
-  # - Boxer # Frontier
   # - Chaplain # Frontier
   # - Chef # Frontier
   # - Clown # Frontier
   # - HeadOfPersonnel # Frontier
+  # - Janitor # Frontier
   # - Lawyer # Frontier
   # - Librarian # Frontier
   # - Mime # Frontier
@@ -28,7 +32,6 @@
   # - Passenger # Frontier
   # - Reporter # Frontier
   # - Visitor # Frontier
-  # - Zookeeper # Frontier
   # - ServiceWorker # Frontier
   - Contractor # Frontier
   - Mercenary # Frontier
@@ -157,6 +160,9 @@
   name: department-Specific
   description: department-Specific-description
   color: "#9FED58"
-  weight: -91
+  weight: -91 # Frontier: 10>-91
+#  roles: # Frontier
+#  - Reporter # Frontier
+#  - Psychologist # Frontier
   primary: false
   editorHidden: true # Frontier

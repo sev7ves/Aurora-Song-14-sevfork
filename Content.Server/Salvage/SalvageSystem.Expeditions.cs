@@ -1,10 +1,8 @@
 using System.Linq;
 using System.Threading;
 using Content.Server.Salvage.Expeditions;
-using Content.Server.Salvage.Expeditions.Structure;
 using Content.Shared.CCVar;
 using Content.Shared.Examine;
-using Content.Shared.Random.Helpers;
 using Content.Shared.Salvage.Expeditions;
 using Content.Shared.Shuttles.Components;
 using Robust.Shared.Audio;
@@ -13,7 +11,7 @@ using Robust.Shared.CPUJob.JobQueues.Queues;
 using Robust.Shared.GameStates;
 using Robust.Shared.Map;
 using Content.Server._NF.Salvage.Expeditions; // Frontier
-using Content.Server.Station.Components; // Frontier
+using Content.Shared.Station.Components; // Frontier
 using Content.Shared.Procedural; // Frontier
 using Content.Shared.Salvage; // Frontier
 using Robust.Shared.Prototypes; // Frontier
@@ -57,8 +55,6 @@ public sealed partial class SalvageSystem
         SubscribeLocalEvent<SalvageExpeditionComponent, ComponentShutdown>(OnExpeditionShutdown);
         SubscribeLocalEvent<SalvageExpeditionComponent, ComponentGetState>(OnExpeditionGetState);
         SubscribeLocalEvent<SalvageExpeditionComponent, EntityTerminatingEvent>(OnMapTerminating); // Frontier
-
-        SubscribeLocalEvent<SalvageStructureComponent, ExaminedEvent>(OnStructureExamine);
 
         _cooldown = _cfgManager.GetCVar(CCVars.SalvageExpeditionCooldown);
         Subs.CVar(_cfgManager, CCVars.SalvageExpeditionCooldown, SetCooldownChange);
@@ -173,7 +169,7 @@ public sealed partial class SalvageSystem
 
             // Frontier: disable cooldown when still in FTL
             if (!TryComp<StationDataComponent>(uid, out var stationData)
-                || !HasComp<FTLComponent>(_station.GetLargestGrid(stationData)))
+                || !HasComp<FTLComponent>(_station.GetLargestGrid((uid, stationData))))
             {
                 comp.Cooldown = false;
             }
@@ -280,11 +276,6 @@ public sealed partial class SalvageSystem
         _salvageQueue.EnqueueJob(job);
     }
 
-    private void OnStructureExamine(EntityUid uid, SalvageStructureComponent component, ExaminedEvent args)
-    {
-        args.PushMarkup(Loc.GetString("salvage-expedition-structure-examine"));
-    }
-
     // Frontier: exped job handling, ghost reparenting
     // Handle exped spawn job failures gracefully - reset the console
     private void OnExpeditionSpawnComplete(EntityUid uid, SalvageExpeditionDataComponent component, ExpeditionSpawnCompleteEvent ev)
@@ -300,6 +291,22 @@ public sealed partial class SalvageSystem
     // Send all ghosts (relevant for admins) back to the default map so they don't lose their stuff.
     private void OnMapTerminating(EntityUid uid, SalvageExpeditionComponent component, EntityTerminatingEvent ev)
     {
+        FindPlayers(uid, null, out var players); // Begin Aurora's Song | If there is somehow still players on the map when its being deleted throw them into space.
+        if (players.Count > 0)
+        {
+            foreach (var entity in players)
+            {
+                Log.Debug($"Trying to warp {entity}");
+                if (!_mapSystem.TryGetMap(_gameTicker.DefaultMap, out var mapUid))
+                {
+                    Log.Error($"Could not get DefaultMap EntityUID, entity {entity} may be deleted.");
+                    break;
+                }
+                var fallback = new EntityCoordinates(mapUid.Value, _random.NextVector2(2000f, 2000f));
+                SafetyWarp(entity, fallback);
+            }
+        } // End Aurora's Song
+
         var ghosts = EntityQueryEnumerator<GhostComponent, TransformComponent>();
         var newCoords = new MapCoordinates(Vector2.Zero, _gameTicker.DefaultMap);
         while (ghosts.MoveNext(out var ghostUid, out _, out var xform))

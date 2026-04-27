@@ -5,10 +5,12 @@
   id: NFBoxMagazineRifle20Rubber
   description: A box full of .20 rifle (rubber) magazines.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFMagazineRifle20Rubber
-        amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFMagazineRifle20Rubber
+          amount: 4
 
 - type: entity
   name: box of .20 rifle (overpressure) magazines
@@ -16,10 +18,12 @@
   id: NFBoxMagazineRifle20Overpressure
   description: A box full of .20 rifle (overpressure) magazines.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFMagazineRifle20Overpressure
-        amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFMagazineRifle20Overpressure
+          amount: 4
 
 #region .30 rifle
 - type: entity
@@ -28,10 +32,12 @@
   id: NFBoxMagazineRifle30Rubber
   description: A box full of .30 rifle (rubber) magazines.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFMagazineRifle30Rubber
-        amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFMagazineRifle30Rubber
+          amount: 4
 
 - type: entity
   name: box of .30 rifle (overpressure) magazines
@@ -39,10 +45,12 @@
   id: NFBoxMagazineRifle30Overpressure
   description: A box full of .30 rifle (overpressure) magazines.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFMagazineRifle30Overpressure
-        amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFMagazineRifle30Overpressure
+          amount: 4
 
 #region .35 pistol
 - type: entity
@@ -51,10 +59,12 @@
   id: NFBoxMagazinePistol35Rubber
   description: A box full of pistol (.35 pistol, rubber) magazines.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFMagazineHighCapacityPistol35Rubber
-        amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFMagazineHighCapacityPistol35Rubber
+          amount: 4
 
 - type: entity
   name: box of pistol (.35 pistol, practice) magazines
@@ -62,10 +72,12 @@
   id: NFBoxMagazinePistol35Practice
   description: A box full of pistol (.35 pistol, practice) magazines.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFMagazineHighCapacityPistol35Practice
-        amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFMagazineHighCapacityPistol35Practice
+          amount: 4
 
 - type: entity
   name: box of SMG (.35 pistol, rubber) magazines
@@ -73,10 +85,12 @@
   id: NFBoxMagazinePistolSubMachineGun35Rubber
   description: A box full of SMG (.35 pistol, rubber) magazines.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFMagazineSubMachineGun35Rubber
-        amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFMagazineSubMachineGun35Rubber
+          amount: 3
 
 - type: entity
   name: box of pistol (.35 pistol, overpressure) magazines
@@ -84,10 +98,12 @@
   id: NFBoxMagazineHighCapacityPistol35Overpressure
   description: A box full of pistol (.35 pistol, overpressure) magazines.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFMagazineHighCapacityPistol35Overpressure
-        amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFMagazineHighCapacityPistol35Overpressure
+          amount: 4
 
 - type: entity # Aurora's Song - added for uplink
   name: box of top-mounted smg (.35 pistol, rubber) magazines
@@ -95,10 +111,12 @@
   id: NFBoxMagazineSubMachineGunTopMounted35Rubber
   description: A box full of top-mounted smg (.35 pistol, rubber) magazines.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFMagazineSubMachineGunTopMounted35Rubber
-        amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFMagazineSubMachineGunTopMounted35Rubber
+          amount: 4
 
 - type: entity # Aurora's Song - added for uplink
   name: box of top-mounted smg (.35 pistol, overpressure) magazines
@@ -106,7 +124,9 @@
   id: NFBoxMagazineSubMachineGunTopMounted35Overpressure
   description: A box full of top-mounted smg (.35 pistol, overpressure) magazines.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFMagazineSubMachineGunTopMounted35Overpressure
-        amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFMagazineSubMachineGunTopMounted35Overpressure
+          amount: 4

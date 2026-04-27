@@ -6,7 +6,7 @@
   sprites: MobTajaranSprites
   markingLimits: MobTajaranMarkingLimits
   dollPrototype: MobTajaranDummy
-  skinColoration: Hues # Aurora Song AnimalFur>Hues
+  skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
   # minHeight: 0.65 Aurora's Song
   # defaultHeight: 0.8
   # maxHeight: 1.1

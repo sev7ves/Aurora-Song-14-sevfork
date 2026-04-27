@@ -178,8 +178,8 @@
   parent: NFBaseGlowstickRecipe
 
 - type: latheRecipe
-  id: GlowstickBase
-  result: GlowstickBase
+  id: GlowstickGreen # Aurora's Song
+  result: GlowstickGreen # Aurora's Song
   parent: NFBaseGlowstickRecipe
 
 - type: latheRecipe

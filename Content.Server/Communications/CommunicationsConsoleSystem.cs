@@ -19,7 +19,7 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Popups;
 using Robust.Server.GameObjects;
 using Robust.Shared.Configuration;
-using Content.Server._NF.SectorServices; // Frontier
+using Content.Shared._NF.SectorServices; // Frontier
 
 namespace Content.Server.Communications
 {

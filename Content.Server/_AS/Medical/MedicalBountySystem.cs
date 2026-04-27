@@ -18,7 +18,9 @@ using Content.Shared.Body.Components;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Prototypes;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Database;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
@@ -142,7 +144,7 @@ public sealed partial class ASMedicalBountySystem : EntitySystem
             bountyValueAccum += randomDamage * damageValue.ValuePerPoint;
             damageToApply += new DamageSpecifier(damageProto, randomDamage);
         }
-        _damageable.TryChangeDamage(entity, damageToApply, true, damageable: damageable);
+        _damageable.TryChangeDamage((entity, damageable), damageToApply, true);
 
         // Inject reagents into chemical solution, if any
         foreach (var (reagentType, reagentValue) in component.Bounty.Reagents)
@@ -153,7 +155,7 @@ public sealed partial class ASMedicalBountySystem : EntitySystem
             Solution soln = new Solution();
             var reagentQuantity = _random.Next(reagentValue.MinQuantity, reagentValue.MaxQuantity + 1);
             soln.AddReagent(reagentType, reagentQuantity);
-            if (_bloodstream.TryAddToChemicals(entity, soln))
+            if (_bloodstream.TryAddToBloodstream(entity, soln))
                 bountyValueAccum += reagentQuantity * reagentValue.ValuePerPoint;
         }
 
@@ -221,7 +223,7 @@ public sealed partial class ASMedicalBountySystem : EntitySystem
         }
         else if (bountyPayout > 0)
         {
-            var stackUid = _stack.Spawn(bountyPayout, "Credit", Transform(uid).Coordinates);
+            var stackUid = _stack.SpawnAtPosition(bountyPayout, "Credit", Transform(uid).Coordinates);
             if (!_hands.TryPickupAnyHand(ev.Actor, stackUid))
                 _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
 

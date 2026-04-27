@@ -24,7 +24,7 @@
   - type: Sprite
     sprite: Structures/Storage/Crates/engicrate_secure.rsi
   - type: EntityStorage
-    canRemove: false
+#    canRemove: false # Aurora's Song - Deprecated at some point
   - type: Lock
     locked: true
   - type: AccessReader

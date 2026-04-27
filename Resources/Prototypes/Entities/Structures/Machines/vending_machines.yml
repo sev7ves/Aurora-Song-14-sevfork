@@ -1,4 +1,4 @@
-# base
+﻿# base
 
 - type: entity
   id: VendingMachine
@@ -129,6 +129,8 @@
     containers:
       cash_slot: !type:ContainerSlot
   # End Frontier
+
+# Vending machines
 
 - type: entity
   id: VendingMachineWallmount
@@ -353,7 +355,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1
-    energy: 1.3
+    energy: 2.0
     color: "#ffb0b0"
   - type: AccessReader
     access: [["HeadOfPersonnel"]]
@@ -386,7 +388,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#4b93ad"
   - type: MarketModifier # Frontier
     mod: 5 # Frontier
@@ -449,7 +451,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.8
-    energy: 1.6
+    energy: 3.0
     color: "#3db83b"
 
 - type: entity
@@ -480,7 +482,7 @@
       map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
   - type: PointLight
     radius: 1.8
-    energy: 1.6
+    energy: 3.0
     color: "#3db83b"
 
 - type: entity
@@ -521,7 +523,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.3
+    energy: 2.0
     color: "#ad7c4b"
 
 - type: entity
@@ -557,7 +559,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#3c5eb5"
 
 - type: entity
@@ -577,7 +579,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#423438"
 
 - type: entity
@@ -598,7 +600,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#A50824"
 
 - type: entity
@@ -621,7 +623,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#44964A"
 
 - type: entity
@@ -643,7 +645,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#CBC6BE"
 
 - type: entity
@@ -666,7 +668,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#D3A44D"
 
 - type: entity
@@ -700,7 +702,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#66538F"
 
 - type: entity
@@ -736,7 +738,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#6927C5"
 
 - type: entity
@@ -772,7 +774,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#D82929"
 
 - type: entity
@@ -808,7 +810,7 @@
     pack: SmiteGoodbyes
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#00E645"
 
 - type: entity
@@ -841,7 +843,7 @@
   #   access: [["Kitchen"]] # Frontier
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#4b93ad"
   - type: MarketModifier # Frontier
     mod: 5 # Frontier
@@ -873,7 +875,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#9a18d6"
 
 - type: entity
@@ -906,7 +908,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#6148c7"
 
 - type: entity
@@ -934,20 +936,20 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#b89e2a"
 
 - type: entity
   parent: VendingMachine
-  id: VendingMachineMedical
-  name: NanoMed Plus
+  id: VendingMachineMedicalBase
+  name: NanoMed Civilian
   description: It's a medical drug dispenser. Natural chemicals only!
   components:
   - type: VendingMachine
-    pack: NanoMedPlusInventory
+    pack: NanoMedCivilianInventory
     taxAccounts: # Frontier
       Medical: 0.4 # Frontier
-    offState: off
+    offState: off-civilian
     brokenState: broken
     normalState: normal-unshaded
     ejectState: eject-unshaded
@@ -960,9 +962,9 @@
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/medical.rsi
     layers:
-    - state: "off"
+    - state: "off-civilian"
       map: ["enum.VendingMachineVisualLayers.Base"]
-    - state: "off"
+    - state: "off-civilian"
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
     - state: panel
@@ -971,11 +973,33 @@
     mod: 5 # Frontier
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#9dc5c9"
   - type: GuideHelp
     guides:
     - MedicalDoctor
+
+- type: entity
+  parent: VendingMachineMedicalBase
+  id: VendingMachineMedical
+  name: NanoMed Plus
+  components:
+  - type: VendingMachine
+    pack: NanoMedPlusInventory
+    taxAccounts: # Frontier
+      Medical: 0.4 # Frontier
+    offState: off
+  - type: Sprite
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["Medical"]]
 
 - type: entity
   parent: VendingMachine
@@ -1008,7 +1032,7 @@
     mod: 5 # Frontier
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#326e3f"
 
 - type: entity
@@ -1044,7 +1068,7 @@
     mod: 5 # Frontier
   - type: PointLight
     radius: 1
-    energy: 1.2
+    energy: 2.0
     color: "#78645c"
   - type: GuideHelp
     guides:
@@ -1081,7 +1105,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#326e3f"
   - type: MarketModifier # Frontier
     mod: 5 # Frontier
@@ -1126,7 +1150,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#c73434"
 
 - type: entity
@@ -1156,7 +1180,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#737785"
 
 - type: entity
@@ -1176,7 +1200,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#3c5eb5"
 
 - type: entity
@@ -1196,7 +1220,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#CE3401"
 
 - type: entity
@@ -1216,7 +1240,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#5F6A1C"
 
 - type: entity
@@ -1236,14 +1260,15 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#207E79"
 
 - type: entity
   parent: VendingMachine
   id: VendingMachineSovietSoda
-  name: BODA
+  name: ВОДА
   description: An old vending machine containing sweet water.
+  suffix: VODA
   components:
   - type: VendingMachine
     pack: BodaInventory
@@ -1271,7 +1296,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#389690"
   - type: RussianAccent
 
@@ -1308,7 +1333,7 @@
       shader: unshaded
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#c73434"
 
 - type: entity
@@ -1340,7 +1365,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#9dc5c9"
 
 - type: entity
@@ -1374,7 +1399,7 @@
     mod: 5 # Frontier
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#B0ADA9"
   - type: GuideHelp
     guides:
@@ -1405,7 +1430,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#d4ab33"
 
 - type: entity
@@ -1437,7 +1462,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#326e3f"
 
 - type: entity
@@ -1470,7 +1495,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#ffe599"
 
 - type: entity
@@ -1497,7 +1522,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#b89f25"
   # - type: AccessReader # Frontier
   #   access: [["Salvage"]] # Frontier
@@ -1537,7 +1562,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#d4ab33"
   - type: MarketModifier # Frontier
     mod: 5 # Frontier
@@ -1571,7 +1596,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#326e3f"
   # - type: AccessReader # Frontier
   #   access: [["Hydroponics"]] # Frontier
@@ -1629,7 +1654,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#d82929"
   - type: AccessReader
     access: [["Security"]]
@@ -1683,7 +1708,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#CCCCCC" #The holy C
 
 - type: entity
@@ -1713,7 +1738,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#b89e2a"
   # - type: AccessReader # Frontier
   #   access: [["Cargo"]] # Frontier
@@ -1827,7 +1852,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#b89e2a"
   # - type: AccessReader # Frontier
   #   access: [["Engineering"]] # Frontier
@@ -1859,7 +1884,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#b89e2a"
   # - type: AccessReader # Frontier
   #   access: [["Engineering"]] # Frontier
@@ -1943,7 +1968,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#6927C5"
   # - type: AccessReader # Frontier
   #   access: [["Janitor"]] # Frontier
@@ -2001,7 +2026,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#d82929"
   - type: AccessReader
     access: [["NuclearOperative"], ["SyndicateAgent"]]
@@ -2107,7 +2132,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#48CF48"
   - type: AccessReader
     access: [["CentralCommand"]]
@@ -2141,7 +2166,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.6
+    energy: 3.0
     color: "#3c5eb5"
   - type: DatasetVocalizer
     dataset: HappyHonkAds
@@ -2172,7 +2197,7 @@
   - type: Speech
   - type: PointLight
     radius: 1.5
-    energy: 1.3 # reduced energy since the color is pure white
+    energy: 2.0 # reduced energy since the color is pure white
     color: "#FFFFFF"
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/pride.rsi
@@ -2265,20 +2290,49 @@
 # wallmount
 - type: entity
   parent: VendingMachineWallmount
+  id: VendingMachineWallMedicalCivilian
+  name: NanoMed band-aid
+  description: It's a wall-mounted medical equipment dispenser. Natural chemicals only!
+  components:
+  - type: VendingMachine
+    pack: NanoMedCivilianWallInventory
+    taxAccounts: # Frontier
+      Medical: 0.4 # Frontier
+    offState: off-civilian
+    brokenState: broken
+    normalState: normal-unshaded
+    denyState: deny-unshaded
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/wallmed.rsi
+    layers:
+    - state: "off-civilian"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off-civilian"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - texture: Structures/Machines/VendingMachines/maintenance_panel.png
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.3
+    energy: 3.0
+    color: "#43ccb5"
+  - type: GuideHelp
+    guides:
+    - Medical
+  - type: MarketModifier # Frontier
+    mod: 5 # Frontier
+
+- type: entity
+  parent: VendingMachineWallMedicalCivilian
   id: VendingMachineWallMedical
   name: NanoMed
-  description: "It's a wall-mounted medical equipment dispenser. Natural chemicals only!"
   components:
   - type: VendingMachine
     pack: NanoMedInventory
     taxAccounts: # Frontier
       Medical: 0.4 # Frontier
     offState: off
-    brokenState: broken
-    normalState: normal-unshaded
-    denyState: deny-unshaded
   - type: Sprite
-    sprite: Structures/Machines/VendingMachines/wallmed.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -2287,14 +2341,5 @@
       shader: unshaded
     - texture: Structures/Machines/VendingMachines/maintenance_panel.png
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: PointLight
-    radius: 1.3
-    energy: 1.6
-    color: "#43ccb5"
- # - type: AccessReader # Frontier
- #   access: [["Medical"]] # Frontier
-  - type: GuideHelp
-    guides:
-    - Medical
-  - type: MarketModifier # Frontier
-    mod: 5 # Frontier
+  # - type: AccessReader # Frontier
+  #   access: [["Medical"]] # Frontier

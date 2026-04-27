@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using Content.Server.Atmos.Reactions;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Reactions;
+using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using DependencyAttribute = Robust.Shared.IoC.DependencyAttribute;
 
@@ -12,33 +13,21 @@ namespace Content.Server.Atmos.EntitySystems
     {
         [Dependency] private readonly IPrototypeManager _protoMan = default!;
 
-        private GasReactionPrototype[] _gasReactions = Array.Empty<GasReactionPrototype>();
-        private float[] _gasSpecificHeats = new float[Atmospherics.TotalNumberOfGases];
+        private GasReactionPrototype[] _gasReactions = [];
+
+        public string?[] GasReagents = new string[Atmospherics.TotalNumberOfGases];
 
         /// <summary>
         ///     List of gas reactions ordered by priority.
         /// </summary>
         public IEnumerable<GasReactionPrototype> GasReactions => _gasReactions;
 
-        /// <summary>
-        ///     Cached array of gas specific heats.
-        /// </summary>
-        public float[] GasSpecificHeats => _gasSpecificHeats;
-
-        public string?[] GasReagents = new string[Atmospherics.TotalNumberOfGases];
-
-        private void InitializeGases()
+        public override void InitializeGases()
         {
+            base.InitializeGases();
+
             _gasReactions = _protoMan.EnumeratePrototypes<GasReactionPrototype>().ToArray();
             Array.Sort(_gasReactions, (a, b) => b.Priority.CompareTo(a.Priority));
-
-            Array.Resize(ref _gasSpecificHeats, MathHelper.NextMultipleOf(Atmospherics.TotalNumberOfGases, 4));
-
-            for (var i = 0; i < GasPrototypes.Length; i++)
-            {
-                _gasSpecificHeats[i] = GasPrototypes[i].SpecificHeat / HeatScale;
-                GasReagents[i] = GasPrototypes[i].Reagent;
-            }
         }
 
         // BEGIN IMP ADD
@@ -79,7 +68,7 @@ namespace Content.Server.Atmos.EntitySystems
 
             //Multiply fractional moles with specific heats and return the sum. This is the specific heat of the mixture.
             //Here temp contains the partial specific heat of each gas in the mixture.
-            NumericsHelpers.Multiply(temp, _gasSpecificHeats, temp);
+            NumericsHelpers.Multiply(temp, GasSpecificHeats, temp);
             return NumericsHelpers.HorizontalAdd(temp) * HeatScale;
         }
         // END IMP ADD
@@ -104,7 +93,7 @@ namespace Content.Server.Atmos.EntitySystems
             =>  GetHeatCapacityCalculation(mixture.Moles, mixture.Immutable);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private float GetHeatCapacityCalculation(float[] moles, bool space)
+        protected override float GetHeatCapacityCalculation(float[] moles, bool space)
         {
             // Little hack to make space gas mixtures have heat capacity, therefore allowing them to cool down rooms.
             if (space && MathHelper.CloseTo(NumericsHelpers.HorizontalAdd(moles), 0f))
@@ -501,11 +490,8 @@ namespace Content.Server.Atmos.EntitySystems
                     continue;
 
                 var doReaction = true;
-                for (var i = 0; i < prototype.MinimumRequirements.Length; i++)
+                for (var i = 0; i < Atmospherics.TotalNumberOfGases; i++)
                 {
-                    if(i >= Atmospherics.TotalNumberOfGases)
-                        throw new IndexOutOfRangeException("Reaction Gas Minimum Requirements Array Prototype exceeds total number of gases!");
-
                     var req = prototype.MinimumRequirements[i];
 
                     if (!(mixture.GetMoles(i) < req))
@@ -524,6 +510,26 @@ namespace Content.Server.Atmos.EntitySystems
             }
 
             return reaction;
+        }
+
+        /// <summary>
+        /// Adds an array of moles to a <see cref="GasMixture"/>.
+        /// Guards against negative moles by clamping to zero.
+        /// </summary>
+        /// <param name="mixture">The <see cref="GasMixture"/> to add moles to.</param>
+        /// <param name="molsToAdd">The <see cref="ReadOnlySpan{T}"/> of moles to add.</param>
+        /// <exception cref="ArgumentOutOfRangeException">Thrown when the length of the <see cref="ReadOnlySpan{T}"/>
+        /// is not the same as the length of the <see cref="GasMixture"/> gas array.</exception>
+        [PublicAPI]
+        public static void AddMolsToMixture(GasMixture mixture, ReadOnlySpan<float> molsToAdd)
+        {
+            // Span length should be as long as the length of the gas array.
+            // Technically this is a redundant check because NumericsHelpers will do the same thing,
+            // but eh.
+            ArgumentOutOfRangeException.ThrowIfNotEqual(mixture.Moles.Length, molsToAdd.Length, nameof(mixture.Moles.Length));
+
+            NumericsHelpers.Add(mixture.Moles, molsToAdd);
+            NumericsHelpers.Max(mixture.Moles, 0f);
         }
 
         public enum GasCompareResult

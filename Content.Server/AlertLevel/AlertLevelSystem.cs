@@ -8,7 +8,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Content.Server.GameTicking; // Frontier
 using Robust.Shared.Player; // Frontier
-using Content.Server._NF.SectorServices; // Frontier
+using Content.Shared._NF.SectorServices; // Frontier
 
 namespace Content.Server.AlertLevel;
 

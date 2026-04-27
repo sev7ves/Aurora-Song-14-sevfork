@@ -14,6 +14,7 @@
 
   defaultModules:
   - BorgModuleTool
+  - BorgModuleInflatable
   - BorgModuleArtifact
   - BorgModuleAnomaly
   - BorgModuleJetpack # Frontier
@@ -123,7 +124,6 @@
     - BorgModuleJanitor
 
   defaultModules:
-  - BorgModuleTool
   - BorgModuleCleaning
   - BorgModuleCustodial
   - BorgModuleJetpack # Frontier
@@ -160,7 +160,6 @@
     - BorgModuleMedical
 
   defaultModules:
-  - BorgModuleTool
   - BorgModuleChemical
   - BorgModuleTopicals
   - BorgModuleRescue
@@ -213,7 +212,6 @@
     - BorgModuleService
 
   defaultModules:
-  - BorgModuleTool
   - BorgModuleMusique
   # - BorgModuleService # Frontier: deprecated, use NF variant
   - BorgModuleClowning

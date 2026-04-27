@@ -87,7 +87,7 @@ public sealed partial class BankSystem
 
         //spawn the cash stack of whatever cash type the ATM is configured to.
         var stackPrototype = _prototypeManager.Index<StackPrototype>(component.CashType);
-        var cashStack = _stackSystem.Spawn(args.Amount, stackPrototype, player.ToCoordinates());
+        var cashStack = _stackSystem.SpawnAtPosition(args.Amount, stackPrototype, player.ToCoordinates());
         if (!_hands.TryPickupAnyHand(player, cashStack))
             _transform.SetLocalRotation(cashStack, Angle.Zero); // Orient these to grid north instead of map north
 
@@ -127,8 +127,7 @@ public sealed partial class BankSystem
         }
 
         // validate stack prototypes
-        if (!TryComp<StackComponent>(component.CashSlot.ContainerSlot.ContainedEntity, out var stackComponent) ||
-            stackComponent.StackTypeId == null)
+        if (!TryComp<StackComponent>(component.CashSlot.ContainerSlot.ContainedEntity, out var stackComponent))
         {
             _log.Info($"ATM cash slot contains bad stack prototype");
             ConsolePopup(args.Actor, Loc.GetString("bank-atm-menu-wrong-cash"));

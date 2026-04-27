@@ -1066,6 +1066,8 @@ entities:
       supplyRampTolerance: 100000
       maxSupply: 1000000
       maxChargeRate: 500000
+    - type: Apc
+      disableTripping: true
   - uid: 1015
     components:
     - type: Transform

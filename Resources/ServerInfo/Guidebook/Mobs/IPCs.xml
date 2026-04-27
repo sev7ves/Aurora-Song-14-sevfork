@@ -31,29 +31,34 @@
   You can find new keys around the station or remove one from a sector radio using a [color=yellow]screwdriver[/color].
 
   ## Repairing
-  <Box HorizontalAlignment="Stretch">
+<!-- Aurora Edit Start -->
+  <Box>
     <GuideEntityEmbed Entity="WelderIndustrialAdvanced" Caption="Welder"/>
-    Welders can be used to repair [color=yellow]Brute[/color] damage.
   </Box>
-  <Box HorizontalAlignment="Stretch">
-    <GuideEntityEmbed Entity="CableApcStack" Caption="Cables (any type)"/>
-    Cables can be used to repair [color=yellow]Burns[/color], except for caustic.
+  Welders can be used to repair [color=yellow]Brute[/color] damage.
 
-    <GuideEntityEmbed Entity="SheetSteel" Caption="Steel Sheets"/>
-    Steel can be used to repair [color=yellow]Caustic[/color] damage.
+  <Box>
+    <GuideEntityEmbed Entity="CableApcStack" Caption="Cables (any type)"/> <GuideEntityEmbed Entity="SheetSteel" Caption="Steel Sheets"/>
   </Box>
-  <Box HorizontalAlignment="Stretch">
+  Cables can be used to repair [color=yellow]Burns[/color], except for caustic.
+
+  Steel can be used to repair [color=yellow]Caustic[/color] damage.
+
+  <Box>
     <GuideEntityEmbed Entity="SheetGlass" Caption="Glass Sheets (any type)"/>
-    Glass Sheets can be used to repair [color=yellow]Blindness[/color].
   </Box>
-  <Box HorizontalAlignment="Stretch">
+  Glass Sheets can be used to repair [color=yellow]Blindness[/color].
+
+  <Box>
     <GuideEntityEmbed Entity="SheetPlasma" Caption="Plasma Sheets"/>
-    Plasma Sheets can be used to repair [color=green]Radiation[/color] damage.
   </Box>
-  <Box HorizontalAlignment="Stretch">
-    In the event an IPC dies, after being fully repaired, it should be restarted using the [color=yellow]"Restart"[/color] button (located by right-clicking).
+  Plasma Sheets can be used to repair [color=green]Radiation[/color] damage.
 
-    [color=red]NEVER ELECTROCUTE AN IPC with a defibrillator or in any other way while it is dead, as this will cause the battery to discharge energy rays outward![/color]
+  <Box>
+    <GuideEntityEmbed Entity="SignalButton" Caption="Restart Button"/>
   </Box>
+  In the event an IPC dies, after being fully repaired, it should be restarted using the [color=yellow]"Restart"[/color] button (located by right-clicking).
 
+  [color=red]NEVER ELECTROCUTE AN IPC with a defibrillator or in any other way while it is dead, as this will cause the battery to discharge energy rays outward![/color]
+<!-- Aurora Edit End -->
 </Document>

@@ -1,0 +1,3 @@
+﻿#2026 - 04 - 24 | Fix serialisation of office chairs on maps due to ActiveInputMoverController component
+ChairOfficeLight: ASChairOfficeLightSpawner
+ChairOfficeDark: ASChairOfficeDarkSpawner

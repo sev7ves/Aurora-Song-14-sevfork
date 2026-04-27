@@ -276,7 +276,7 @@ public sealed class GasDepositSystem : SharedGasDepositSystem
             amount *= priceMod.Mod;
 
         var stackPrototype = _prototype.Index(ent.Comp.CashType);
-        var stackUid = _stack.Spawn((int)amount, stackPrototype, args.Actor.ToCoordinates());
+        var stackUid = _stack.SpawnAtPosition((int)amount, stackPrototype, args.Actor.ToCoordinates());
         if (!_hands.TryPickupAnyHand(args.Actor, stackUid))
             _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
         _audio.PlayPvs(ent.Comp.ApproveSound, ent);

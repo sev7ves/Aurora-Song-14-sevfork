@@ -141,7 +141,7 @@
         - id: AltarTechnology
           prob: 0.03
         # "Medical"
-        - id: RipleyChassis # Build it yourself
+        - id: ASSpawnRipleyParts # Build it yourself # Aurora's Song - RipleyChassis>ASSpawnRipleyParts
           prob: 0.03
         # "Mobs"
         - id: PlayerBorgDerelictGhostRole

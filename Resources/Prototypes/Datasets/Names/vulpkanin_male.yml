@@ -1,0 +1,6 @@
+# Aurora's Song - Disable upstream vulpkanin
+# - type: localizedDataset
+#   id: names_vulpkanin_male
+#   values:
+#     prefix: names-vulpkanin-male-dataset-
+#     count: 80

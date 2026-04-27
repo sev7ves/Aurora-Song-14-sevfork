@@ -68,14 +68,16 @@
   id: ClothingBeltMantisAiryLoot
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-    - id: MantisMeleeSickle
-    #- id: BoxFolderMantis # Aurora: We don't have this
-    - id: CigPackMnemolith
-    - id: FlippoLighterMantis
-    - id: SomberChairLeatherMantisWheelchairFolded
-    - id: ClothingNeckMantisPendulum
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MantisMeleeSickle
+        #- id: BoxFolderMantis # Aurora: We don't have this
+        - id: CigPackMnemolith
+        - id: FlippoLighterMantis
+        - id: SomberChairLeatherMantisWheelchairFolded
+        - id: ClothingNeckMantisPendulum
   #- type: Foldable #AS:  Causes build errors
   #  folded: true
   #- type: Clothing
@@ -86,26 +88,30 @@
   id: ClothingBeltMantisDarkLoot
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-    - id: MantisMeleeKnife
-    - id: ClothingUniformJumpsuitMantisLoincloth
-    - id: ClothingNeckMantisShackles
-    #- id: LeashMantis
-    - id: FlippoLighterMantis
-    - id: CandleSomberMantisCluster
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MantisMeleeKnife
+        - id: ClothingUniformJumpsuitMantisLoincloth
+        - id: ClothingNeckMantisShackles
+        #- id: LeashMantis
+        - id: FlippoLighterMantis
+        - id: CandleSomberMantisCluster
 
 - type: entity
   parent: ClothingBeltMantisOrnate
   id: ClothingBeltMantisOrnateLoot
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-    - id: MantisMeleeCane
-    #- id: PillCanisterMnemolithMantis
-    #- id: PillCanisterSpaceDrugsMantis
-    #- id: PlushieDollMantis
-    - id: PersonalAISomber
-    - id: MantisTailorsKnife
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MantisMeleeCane
+        #- id: PillCanisterMnemolithMantis
+        #- id: PillCanisterSpaceDrugsMantis
+        #- id: PlushieDollMantis
+        - id: PersonalAISomber
+        - id: MantisTailorsKnife
 # Mantis belts end

@@ -3,10 +3,12 @@
   parent: CrateFreezerMcCargo
   suffix: Filled
   components:
-  - type: StorageFill
-    contents:
-    - id: HappyHonkMcCargoFood
-    - id: HappyHonkMcCargoFood
-      prob: 0.5
-    - id: HappyHonkMcCargoFood
-      prob: 0.5
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: HappyHonkMcCargoFood
+        - id: HappyHonkMcCargoFood
+          prob: 0.5
+        - id: HappyHonkMcCargoFood
+          prob: 0.5

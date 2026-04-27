@@ -5,7 +5,6 @@ using Content.Shared.Eui;
 using Content.Shared.Ghost.Roles;
 using JetBrains.Annotations;
 using Robust.Client.GameObjects;
-using Robust.Shared.Prototypes; // Frontier
 
 namespace Content.Client.UserInterface.Systems.Ghost.Controls.Roles
 {
@@ -90,35 +89,26 @@ namespace Content.Client.UserInterface.Systems.Ghost.Controls.Roles
             var sysManager = entityManager.EntitySysManager;
             var spriteSystem = sysManager.GetEntitySystem<SpriteSystem>();
             var requirementsManager = IoCManager.Resolve<JobRequirementsManager>();
-            var prototypeManager = IoCManager.Resolve<IPrototypeManager>(); // Frontier
 
-            // TODO: role.Requirements value doesn't work at all as an equality key, this must be fixed
             // Grouping roles
             var groupedRoles = ghostState.GhostRoles.GroupBy(
-                role => (role.Name, role.Description, role.Requirements, role.Prototype)); // Frontier: add Prototype
+                role => (
+                    role.Name,
+                    role.Description,
+                    //  Check the prototypes for role requirements and bans
+                    requirementsManager.IsAllowed(role.RolePrototypes.Item1, role.RolePrototypes.Item2, null, out var reason),
+                    reason));
 
             // Add a new entry for each role group
             foreach (var group in groupedRoles)
             {
+                var reason = group.Key.reason;
                 var name = group.Key.Name;
                 var description = group.Key.Description;
-
-                var hasAccess = requirementsManager.CheckRoleRequirements(
-                    group.Key.Requirements,
-                    null,
-                    out var reason);
-                // Frontier: check ghost role whitelist
-                // To be blocked, we need both a prototype (for an ID to whitelist against) and a missing whitelist entry
-                if (hasAccess
-                    && prototypeManager.TryIndex(group.Key.Prototype, out var ghostRolePrototype)
-                    && !requirementsManager.IsAllowed(ghostRolePrototype, out reason))
-                {
-                    hasAccess = false;
-                }
-                // End Frontier
+                var prototypesAllowed = group.Key.Item3;
 
                 // Adding a new role
-                _window.AddEntry(name, description, hasAccess, reason, group, spriteSystem);
+                _window.AddEntry(name, description, prototypesAllowed, reason, group, spriteSystem);
             }
 
             // Restore the Collapsible box state if it is saved

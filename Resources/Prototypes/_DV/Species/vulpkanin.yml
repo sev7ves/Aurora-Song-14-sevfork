@@ -7,7 +7,7 @@
   defaultSkinTone: "#985629"
   markingLimits: MobVulpkaninMarkingLimits
   dollPrototype: MobVulpkaninDummy
-  skinColoration: Hues
+  skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
   maleFirstNames: NamesVulpkaninMale
   femaleFirstNames: NamesVulpkaninFemale
   lastNames: NamesVulpkaninLast

@@ -96,7 +96,7 @@
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
     Laugh:
       path: /Audio/Animals/lizard_happy.ogg
-    ReptilianHiss: # Imp
+    Hiss: # Imp # Aurora's Song - Use default hiss emote
       collection: ReptilianHiss # Imp
     MonkeyScreeches: # Frontier
       collection: MonkeyScreeches # Frontier
@@ -126,7 +126,7 @@
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
     Laugh:
       path: /Audio/Animals/lizard_happy.ogg
-    ReptilianHiss: # Imp
+    Hiss: # Imp
       collection: ReptilianHiss # Imp
     MonkeyScreeches: # Frontier
       collection: MonkeyScreeches # Frontier
@@ -257,19 +257,33 @@
       path: /Audio/Voice/Vox/shriek1.ogg
     Laugh:
       path: /Audio/Voice/Vox/vox_laugh.ogg
+    Cough:
+      path: /Audio/Voice/Vox/vox_cough.ogg
+    Sigh:
+      path: /Audio/Voice/Vox/vox_sigh.ogg
+    Click:
+      path: /Audio/Voice/Vox/vox_click.ogg
+    Chitter:
+      path: /Audio/Voice/Vox/vox_chitter.ogg
     MonkeyScreeches: # Frontier
       collection: MonkeyScreeches # Frontier
     Honk:
       collection: BikeHorn
+    Crying:
+      path: /Audio/Voice/Vox/vox_cry.ogg
     Weh:
       collection: Weh
     Hew:
       collection: Hew
+    Gasp:
+      path: /Audio/Effects/Gasp/vox_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/Effects/Gasp/vox_DeathGasp.ogg
     Belch: # Frontier
       collection: Belch # Frontier
   params:
     variation: 0.125
-    # We need vox sounds for the other emotes
+    # TODO: We need vox sounds for the other emotes
 
 - type: emoteSounds
   id: UnisexDiona
@@ -465,7 +479,7 @@
     Ping:
       path: /Audio/Effects/Cargo/ping.ogg
     Boop: # DeltaV (EE)
-      path: /Audio/_EE/Voice/IPC/beep_500.ogg      
+      path: /Audio/_EE/Voice/IPC/beep_500.ogg
     Whirr: # DeltaV (EE)
       collection: IPCWhirrs
       params:
@@ -493,7 +507,7 @@
     Ping:
       path: /Audio/Effects/Cargo/ping.ogg
     Boop: # DeltaV (EE)
-      path: /Audio/_EE/Voice/IPC/beep_500.ogg      
+      path: /Audio/_EE/Voice/IPC/beep_500.ogg
     Whirr: # DeltaV (EE)
       collection: IPCWhirrs
       params:
@@ -504,6 +518,8 @@
   params:
     variation: 0.05
   sounds:
+    Scream:
+      collection: XenoborgScream
     Laugh:
       collection: XenoborgLaugh
     Beep:
@@ -519,11 +535,93 @@
     Ping:
       collection: XenoborgPing
     Boop: # DeltaV (EE)
-      path: /Audio/_EE/Voice/IPC/beep_500.ogg      
+      path: /Audio/_EE/Voice/IPC/beep_500.ogg
     Whirr: # DeltaV (EE)
       collection: IPCWhirrs
       params:
         variation: 0
+
+# Vulp Sounds
+# Aurora's Song - Disable upstream vulpkanin
+# - type: emoteSounds
+#   id: MaleVulpkanin
+#   params:
+#     variation: 0.125
+#   sounds:
+#     Laugh:
+#       collection: MaleLaugh
+#     Sneeze:
+#       collection: MaleSneezes
+#     Cough:
+#       collection: MaleCoughs
+#     Whistle:
+#       collection: Whistles
+#     Sigh:
+#       collection: MaleSigh
+#     Scream:
+#       collection: VulpkaninScreams
+#     Growl:
+#       collection: VulpkaninGrowls
+#     Snarl:
+#       collection: VulpkaninSnarls
+#     Bark:
+#       collection: VulpkaninBarks
+#     Whine:
+#       collection: VulpkaninWhines
+#     Crying:
+#       collection: VulpkaninWhines
+#     Howl:
+#       collection: VulpkaninHowls
+#     Weh:
+#       collection: Weh
+#     Hew:
+#       collection: Hew
+#     Honk:
+#       collection: BikeHorn
+#     Gasp:
+#       collection: MaleGasp
+#     DefaultDeathgasp:
+#       collection: MaleDeathGasp
+#
+# - type: emoteSounds
+#   id: FemaleVulpkanin
+#   params:
+#     variation: 0.125
+#   sounds:
+#     Laugh:
+#       collection: FemaleLaugh
+#     Sneeze:
+#       collection: FemaleSneezes
+#     Cough:
+#       collection: FemaleCoughs
+#     Whistle:
+#       collection: Whistles
+#     Sigh:
+#       collection: FemaleSigh
+#     Scream:
+#       collection: VulpkaninScreams
+#     Growl:
+#       collection: VulpkaninGrowls
+#     Snarl:
+#       collection: VulpkaninSnarls
+#     Bark:
+#       collection: VulpkaninBarks
+#     Whine:
+#       collection: VulpkaninWhines
+#     Crying:
+#       collection: VulpkaninWhines
+#     Howl:
+#       collection: VulpkaninHowls
+#     Weh:
+#       collection: Weh
+#     Hew:
+#       collection: Hew
+#     Honk:
+#       collection: BikeHorn
+#     Gasp:
+#       collection: FemaleGasp
+#     DefaultDeathgasp:
+#       collection: FemaleDeathGasp
 
 # body emotes
 - type: emoteSounds

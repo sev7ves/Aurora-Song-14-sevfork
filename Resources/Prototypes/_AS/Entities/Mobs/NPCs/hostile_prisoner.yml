@@ -24,7 +24,7 @@
     - Pacified
     - Flashed
   - type: Stamina
-    critThreshold: 100
+    baseCritThreshold: 100 # Aurora's Song - critThreshold>baseCritThreshold
   - type: RandomHumanoidAppearance
     randomizeName: false
   - type: NpcFactionMember
@@ -79,7 +79,7 @@
     - Pacified
     - Flashed
   - type: Stamina
-    critThreshold: 100
+    baseCritThreshold: 100 # Aurora's Song - critThreshold>baseCritThreshold
   - type: RandomHumanoidAppearance
     randomizeName: false
   - type: NpcFactionMember
@@ -136,7 +136,7 @@
     - Pacified
     - Flashed
   - type: Stamina
-    critThreshold: 100
+    baseCritThreshold: 100 # Aurora's Song - critThreshold>baseCritThreshold
   - type: RandomHumanoidAppearance
     randomizeName: false
   - type: NpcFactionMember

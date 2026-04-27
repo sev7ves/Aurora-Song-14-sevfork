@@ -1,7 +1,7 @@
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Tag;
 using Robust.Shared.Audio;
-using Content.Shared.Fluids;
+using Content.Shared.Fluids.EntitySystems;
 
 namespace Content.Shared._NF.Fluids.Components;
 
@@ -13,7 +13,7 @@ namespace Content.Shared._NF.Fluids.Components;
 /// When the drain is full, it can be unclogged using a plunger (i.e. an entity with a Plunger tag attached).
 /// Later this can be refactored into a proper Plunger component if needed.
 /// </summary>
-[RegisterComponent, Access(typeof(SharedDrainSystem))]
+[RegisterComponent, Access(typeof(DrainSystem))] // Aurora's Song - SharedDrainSystem>DrainSystem
 public sealed partial class AdvDrainComponent : Component
 {
     public const string SolutionName = "drainBuffer";

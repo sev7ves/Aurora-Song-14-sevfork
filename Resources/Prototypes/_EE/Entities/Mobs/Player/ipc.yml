@@ -129,3 +129,8 @@
     species: IPC
   - type: Inventory
     templateId: ipc
+  - type: EncryptionKeyHolder
+    keySlots: 20 # Aurora's Song - 4>20 because we have a lot more encryption key
+    examineWhileLocked: false
+    keysExtractionMethod: Cutting
+    keysUnlocked: false

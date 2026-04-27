@@ -66,11 +66,75 @@
 #region Port Boreal
 - type: entity
   parent: NFHolopadPoiBase
+  id: ASHolopadPortBorealCR
+  suffix: Port Boreal CR, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-port-boreal-cr
+
+- type: entity
+  parent: NFHolopadPoiBase
   id: ASHolopadPortBorealSTC
   suffix: Port Boreal STC, POI
   components:
   - type: Label
     currentLabel: as-holopad-general-port-boreal-stc
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadPortBorealCafe
+  suffix: Port Boreal Cafe, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-port-boreal-cafe
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadPortBorealHydro
+  suffix: Port Boreal Hydro, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-port-boreal-hydro
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadPortBorealDoC
+  suffix: Port Boreal DoC, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-port-boreal-doc
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadPortBorealMedbay
+  suffix: Port Boreal Medbay, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-port-boreal-medbay
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadPortBorealMedStaff
+  suffix: Port Boreal Med Staff, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-port-boreal-med-staff
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadPortBorealCargo
+  suffix: Port Boreal Cargo, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-port-boreal-cargo
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadPortBorealPlaza
+  suffix: Port Boreal Plaza, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-port-boreal-plaza
 
 #region SLEO
 - type: entity

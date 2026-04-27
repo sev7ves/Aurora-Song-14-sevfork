@@ -171,7 +171,7 @@ public sealed partial class ShuttleRecordsWindow : FancyWindow
             if (ButtonResetOn is null)
             {
                 ButtonResetOn = _gameTiming.CurTime.Add(TimeSpan.FromSeconds(3));
-                control.CopyDeedButton.AddStyleClass(StyleBase.ButtonCaution);
+                control.CopyDeedButton.AddStyleClass(StyleNano.ButtonCaution); // Aurora's Song - TODO: find the non deprecated version
                 control.CopyDeedButtonLabel.Text = Loc.GetString("shuttle-records-transaction-confirm");
                 return;
             }

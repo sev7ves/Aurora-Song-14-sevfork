@@ -158,12 +158,11 @@
     prototypes:
     - NpcGearWizardAdeptPurple
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 50
   - type: Battery
     maxCharge: 800
     startingCharge: 800
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: CausticBeam
     fireCost: 100
   - type: Gun
@@ -206,12 +205,11 @@
     prototypes:
     - NpcGearWizardMasterBlue
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 50
   - type: Battery
     maxCharge: 800
     startingCharge: 800
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: WizardHitscanLightning
     fireCost: 100
 
@@ -290,8 +288,11 @@
       0: Alive
       150: Dead
   - type: Bloodstream
-    bloodReagent: BlueCuracao
-    chemicalMaxVolume: 100
+    bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+      reagents:
+      - ReagentId: BlueCuracao
+        Quantity: 100
+#    chemicalMaxVolume: 100 # Aurora's Song - Deprecated
   - type: MeleeWeapon
     soundHit:
       collection: AlienClaw

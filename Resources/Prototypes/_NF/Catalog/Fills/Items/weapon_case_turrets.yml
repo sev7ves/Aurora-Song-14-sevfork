@@ -5,10 +5,12 @@
   suffix: packed CDET
   #categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-    - id: WeaponTurretContrabandDenyingPacked
-      amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: WeaponTurretContrabandDenyingPacked
+          amount: 2
 
 - type: entity
   parent: WeaponCaseHeavy
@@ -16,10 +18,12 @@
   suffix: packed SLAT
   #categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-    - id: WeaponTurretLaserNanoTrasenPacked
-      amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: WeaponTurretLaserNanoTrasenPacked
+          amount: 2
 
 - type: entity
   parent: WeaponCaseHeavy
@@ -27,9 +31,11 @@
   suffix: packed ASMGT
   #categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-    - id: WeaponTurretAsmgtNtPacked
-      amount: 1
-    - id: MagazineAsmgtUniversalPistol
-      amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: WeaponTurretAsmgtNtPacked
+          amount: 1
+        - id: MagazineAsmgtUniversalPistol
+          amount: 4

@@ -527,8 +527,7 @@
   - type: Sprite
     drawdepth: SmallObjects
     sprite: Structures/Wallmounts/switch_frame.rsi
-    state: janitor
-  # Frontier: constructible button frames
+    state: janitor  # Frontier: constructible button frames
   - type: Construction
     graph: ButtonFrameGraph
     node: ButtonFrameJanitorNode

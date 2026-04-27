@@ -3,8 +3,10 @@
   suffix: Filled
   parent: NFLockerScientist
   components:
-  - type: StorageFill
-    contents:
-      - id: AnomalyScanner
-      - id: NodeScanner
-      - id: AnomalyLocator
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: AnomalyScanner
+        - id: NodeScanner
+        - id: AnomalyLocator

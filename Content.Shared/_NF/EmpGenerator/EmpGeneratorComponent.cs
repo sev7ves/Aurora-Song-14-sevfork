@@ -21,7 +21,7 @@ public sealed partial class EmpGeneratorComponent : Component
     /// How long it disables targets in seconds
     /// </summary>
     [DataField]
-    public float DisableDuration = 60f;
+    public TimeSpan DisableDuration = new TimeSpan(0, 0, 60);
 
     [DataField(serverOnly: true)]
     public float LightRadiusMin { get; set; }

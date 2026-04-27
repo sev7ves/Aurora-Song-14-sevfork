@@ -3,37 +3,45 @@
   suffix: Pierce Kit
   parent: MedkitCombat
   components:
-  - type: StorageFill
-    contents:
-    - id: PunctAutoInjector
-      amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PunctAutoInjector
+          amount: 3
 
 - type: entity
   id: MedkitCombatCrisis
   suffix: Crisis Kit
   parent: MedkitCombat
   components:
-  - type: StorageFill
-    contents:
-    - id: CrisisAutoInjector
-      amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: CrisisAutoInjector
+          amount: 4
 
 - type: entity
   id: MedkitCombatBruiz
   suffix: Bruiz Kit
   parent: MedkitCombat
   components:
-  - type: StorageFill
-    contents:
-    - id: BruizAutoInjector
-      amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: BruizAutoInjector
+          amount: 3
 
 - type: entity
   id: MedkitCombatBurn
   suffix: Burn Kit
   parent: MedkitCombat
   components:
-  - type: StorageFill
-    contents:
-    - id: BurnAutoInjector
-      amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: BurnAutoInjector
+          amount: 3

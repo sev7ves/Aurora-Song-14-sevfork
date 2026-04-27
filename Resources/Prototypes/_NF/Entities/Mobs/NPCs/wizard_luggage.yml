@@ -24,9 +24,9 @@
 #region the mob
 - type: entity
   parent:
+  - BaseMob # Aurora's Song - Prioritize this for its physics component
   - BaseC3WizardContraband
   - NFInflatableCrate
-  - BaseMob
   - MobStaminaFodder
   - MobDamageable
   - MobCombat
@@ -128,6 +128,8 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
+#  - type: Physics # Aurora's Song - Apparently not inherited from BaseMob for some reason
+#    bodyType: KinematicController
 
 #region spawner
 - type: entity

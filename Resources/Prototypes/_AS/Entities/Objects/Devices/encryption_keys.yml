@@ -57,3 +57,38 @@
     layers:
     - state: crypt_silver
     - state: site_manager_label
+
+- type: entity
+  parent: [EncryptionKey, BaseC3Contraband]
+  id: EncryptionKeyArcadia
+  name: arcadian encryption key
+  categories: [ DoNotMap ]
+  description: An encryption key used by Arcadian agents.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Arcadia
+    defaultChannel: Arcadia
+  - type: Item
+    sprite: _AS/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _AS/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_silver
+    - state: arcadia_label
+
+- type: entity
+  parent: [EncryptionKey, BaseC3Contraband]
+  id: EncryptionKeyNanotrasen
+  name: nanotrasen encryption key
+  categories: [ DoNotMap ]
+  description: An encryption key used by members of the corporation, Nanotrasen.
+  components:
+  - type: EncryptionKey
+    channels:
+    - CentCom
+    defaultChannel: CentCom
+  - type: Sprite
+    layers:
+    - state: crypt_silver
+    - state: nano_label

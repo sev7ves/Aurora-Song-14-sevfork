@@ -4,41 +4,57 @@
   name: metal rods crate
   description: 90 metal rods, packed with reckless abandon.
   components:
-  - type: StorageFill
-    contents:
-    - id: PartRodMetal
-      amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: PartRodMetal
+          amount: 3
 
 - type: entity
   id: CrateMaterialBiomass50
   parent: CrateMaterialBiomass
   suffix: 50 biomass
   components:
-  - type: StorageFill
-    contents:
-    - id: MaterialBiomass50
-      amount: 1
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: MaterialBiomass50
+          amount: 1
 
 - type: entity
   id: CrateMaterialBiomass
   parent: CrateFreezer
   suffix: 300 biomass
   components:
-  - type: StorageFill
-    contents:
-    - id: MaterialBiomass
-      amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: MaterialBiomass
+          amount: 3
 
 # region Materials
 - type: entity
-  parent: [ CrateGenericSteel, StorageFillMaterialsBasic ]
+  parent: [ CrateGenericSteel ]
   id: CrateMaterialsBasicFilled
   suffix: Filled, Basic Materials (full)
   name: materials crate
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillMaterialsBasic
 
 - type: entity
-  parent: [ CrateGenericSteel, StorageFillMaterialsBasic10 ]
+  parent: [ CrateGenericSteel ]
   id: CrateMaterialsBasic10Filled
   suffix: Filled, Basic Materials (10)
   name: materials crate
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillMaterialsBasic10
 # endregion Materials

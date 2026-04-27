@@ -55,7 +55,10 @@
         sprite: Mobs/Effects/brute_damage.rsi
         color: "#7a8bf2"
   - type: Bloodstream
-    bloodReagent: AmmoniaBlood
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: AmmoniaBlood
+        Quantity: 300
   - type: MeleeWeapon
     soundHit:
       path: /Audio/Weapons/pierce.ogg
@@ -64,17 +67,15 @@
     damage:
       types:
         Slash: 5
-  - type: Temperature
+  - type: TemperatureDamage
     heatDamageThreshold: 310
     coldDamageThreshold: 223
-    currentTemperature: 296.15
-    specificHeat: 48
     coldDamage: # same damage as moths
       types:
-        Cold : 0.05 #per second, scales with temperature & other constants
+        Cold: 0.05 #per second, scales with temperature & other constants
     heatDamage:
       types:
-        Heat : 3 #per second, scales with temperature & other constants
+        Heat: 3 #per second, scales with temperature & other constants
   - type: TemperatureSpeed
     thresholds: # all temps are 10K colder then moths, adjusted for current temp.
       265: 0.8

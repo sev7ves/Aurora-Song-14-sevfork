@@ -9,7 +9,9 @@
     state: icon
   - type: Item
     sprite: _NF/Objects/Consumable/Smokeables/Cigarettes/Cartons/mccargo.rsi
-  - type: StorageFill
-    contents:
-      - id: CigPackMcCargo
-        amount: 5
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: CigPackMcCargo
+          amount: 5

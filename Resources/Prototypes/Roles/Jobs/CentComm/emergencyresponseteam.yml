@@ -6,7 +6,7 @@
   playTimeTracker: JobERTLeader
   setPreference: false
   startingGear: ERTLeaderGearEVA
-  icon: "JobIconNanotrasen"
+  icon: "JobIconERTLeader"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
@@ -19,78 +19,76 @@
   whitelisted: true # Frontier
 
 - type: startingGear
+  parent: ERTLeaderGearEVA
   id: ERTLeaderGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitERTLeader
-    back: ClothingBackpackERTLeader
-    shoes: ClothingShoesBootsCombatFilled
+    shoes: ClothingShoesBootsJackFilled
     head: ClothingHeadHelmetERTLeader
-    eyes: ClothingEyesGlassesSecurity
-    gloves: ClothingHandsGlovesCombat
-    outerClothing: ClothingOuterArmorBasicSlim
-    id: ERTLeaderPDA
-    ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltSecurityFilled
-    pocket1: NFWeaponPistolN1984 # Frontier
+    outerClothing: ClothingOuterArmorBasic
     pocket2: FlashlightSeclite
-  storage:
-    back:
-    - NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
-    - MedicatedSuture
-    - RegenerativeMesh
-    - BoxZiptie
-    - CrowbarRed
-    - NFMagazinePistol45 # Frontier: MagazineMagnum<NFMagazinePistol45
 
 - type: startingGear
   id: ERTLeaderGearEVA
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTLeader
     back: ClothingBackpackERTLeader
-    shoes: ClothingShoesBootsMagAdv
+    shoes: ClothingShoesBootsMagERT
     mask: ClothingMaskGasERT
-    eyes: ClothingEyesGlassesSecurity
+    eyes: ClothingEyesHudMedSec
+    neck: Whistle
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTLeader
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltSecurityFilled
-    pocket1: NFWeaponPistolN1984 # Frontier
-    pocket2: FlashlightSeclite
+    belt: ClothingBeltMilitaryWebbingERT
+    pocket2: CombatKnife
+    suitstorage: NFWeaponEnergySubMachineGunDisabler # Aurora's Song - WeaponDisablerSMG>NFWeaponEnergySubMachineGunDisabler
   storage:
     back:
-    - NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
-    - MedicatedSuture
-    - RegenerativeMesh
-    - BoxZiptie
+    - Binoculars
+    - HoloprojectorField
+    - PhoneInstrument
+    - PinpointerNuclear
+    - PowerCellHigh
+    - PowerCellHigh
+    - MedkitCombatFilled # End of first line
+    - MedkitCombatFilled
+    - TelescopicShield
+    belt:
+    - Stunbaton
+    - Handcuffs
+    - Handcuffs
     - CrowbarRed
+    - NFWeaponPistolN1984 # Frontier
     - NFMagazinePistol45 # Frontier: MagazineMagnum<NFMagazinePistol45
+    - EmergencyMedipen
 
 - type: startingGear
-  id: ERTLeaderGearEVALecter
+  parent: ERTLeaderGearEVA
+  id: ERTLeaderGearArmed
   equipment:
-    jumpsuit: ClothingUniformJumpsuitERTLeader
-    back: ClothingBackpackERTLeader
-    shoes: ClothingShoesBootsMagAdv
-    mask: ClothingMaskGasERT
-    eyes: ClothingEyesGlassesSecurity
-    gloves: ClothingHandsGlovesCombat
-    outerClothing: ClothingOuterHardsuitERTLeader
-    id: ERTLeaderPDA
-    ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltSecurityFilled
-    pocket1: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
-    pocket2: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
-  inhand:
-  - NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
+    pocket2: NFWeaponEnergyPistolDisabler # Aurora's Song - WeaponDisabler>NFWeaponEnergyPistolDisabler
+    suitstorage: NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
   storage:
     back:
-    - NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
-    - MedicatedSuture
-    - RegenerativeMesh
-    - BoxZiptie
+    - HoloprojectorField
+    - PhoneInstrument
+    - PinpointerNuclear
+    - NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
+    - NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
+    - NFMagazineRifle20Incendiary # Aurora's Song - MagazineRifleIncendiary>NFMagazineRifle20Incendiary
+    - NFMagazineRifle20Uranium # Aurora's Song - MagazineRifleUranium>NFMagazineRifle20Uranium
+    - MedkitCombatFilled # End of first line
+    - GrenadeShrapnel
+    - EmpGrenade
+    belt:
+    - Truncheon
+    - Handcuffs
+    - Handcuffs
     - CrowbarRed
+    - NFWeaponPistolN1984 # Frontier
     - NFMagazinePistol45 # Frontier: MagazineMagnum<NFMagazinePistol45
+    - EmergencyMedipen
 
 - type: chameleonOutfit
   id: ERTLeaderChameleonOutfit
@@ -108,7 +106,7 @@
   playTimeTracker: JobERTChaplain
   setPreference: false
   startingGear: ERTChaplainGear
-  icon: "JobIconNanotrasen"
+  icon: "JobIconERTChaplain"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
@@ -121,69 +119,51 @@
     - type: BibleUser #Lets them heal with bibles
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
-  whitelisted: true # Frontier
 
 - type: startingGear
+  parent: ERTChaplainGearEVA
   id: ERTChaplainGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitERTChaplain
-    back: ClothingBackpackERTChaplain
-    shoes: ClothingShoesLeather
+    shoes: ClothingShoesBootsJackFilled
     head: ClothingHeadHatFez
-    eyes: ClothingEyesGlasses
     neck: ClothingNeckStoleChaplain
-    gloves: ClothingHandsGlovesCombat
-    outerClothing: ClothingOuterArmorBasicSlim
-    id: ERTChaplainPDA
-    ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltStorageWaistbag
-    pocket1: Flare
-    pocket2: DrinkWaterBottleFull
-  storage:
-    back:
-    - BoxCandle
-    - BoxBodyBag
-    - DrinkWaterMelonJuiceJug
-    - Lantern
-    - Lantern
-    - Bible
-    - CrowbarRed
-    - FoodBakedBunHotX
-    - FoodBakedBunHotX
-    - FoodBakedBunHotX
-    - FoodBakedBunHotX
-    - Lighter
+    outerClothing: ClothingOuterArmorBasic
+    pocket2: FlashlightSeclite
 
 - type: startingGear
   id: ERTChaplainGearEVA
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTChaplain
     back: ClothingBackpackERTChaplain
-    shoes: ClothingShoesBootsMagAdv
+    shoes: ClothingShoesBootsMagERT
     mask: ClothingMaskGasERT
-    eyes: ClothingEyesGlasses
-    neck: ClothingNeckStoleChaplain
+    eyes: ClothingEyesHudMedical
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTChaplain
     id: ERTChaplainPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltStorageWaistbag
-    pocket1: Flare
-    pocket2: DrinkWaterBottleFull
+    belt: ClothingBeltMilitaryWebbingERT
+    pocket2: CombatKnife
   storage:
     back:
     - BoxCandle
-    - BoxBodyBag
-    - DrinkWaterMelonJuiceJug
-    - Lantern
-    - Lantern
+    - BodyBagFolded
+    - BodyBagFolded
+    - JugWater
+    - JugBlood # End of first row
+    - FoodBakedBunHotX
+    - FoodBakedBunHotX
+    - FoodBakedBunHotX
+    - FoodBakedBunHotX
+    belt:
     - Bible
+    - Lantern
+    - Lantern
+    - Lantern
     - CrowbarRed
-    - FoodBakedBunHotX
-    - FoodBakedBunHotX
-    - FoodBakedBunHotX
-    - FoodBakedBunHotX
-    - Lighter
+    - NFWeaponPistolMk58 # Frontier
+    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - FlippoEngravedLighter
 
 - type: chameleonOutfit
   id: ERTChaplainChameleonOutfit
@@ -203,7 +183,7 @@
   playTimeTracker: JobERTEngineer
   setPreference: false
   startingGear: ERTEngineerGearEVA
-  icon: "JobIconNanotrasen"
+  icon: "JobIconERTEngineer"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
@@ -213,63 +193,73 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
-  whitelisted: true # Frontier
 
 - type: startingGear
+  parent: ERTEngineerGearEVA
   id: ERTEngineerGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitERTEngineer
-    back: ClothingBackpackERTEngineer
-    shoes: ClothingShoesBootsWork
+    shoes: ClothingShoesBootsJackFilled
     head: ClothingHeadHelmetERTEngineer
-    eyes: ClothingEyesGlassesMeson
-    gloves: ClothingHandsGlovesCombat
-    outerClothing: ClothingOuterArmorBasicSlim
-    id: ERTEngineerPDA
-    ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltChiefEngineerFilled
-    pocket1: Flare
-    pocket2: GasAnalyzer
-  storage:
-    back:
-    - trayScanner
-    - RCD
-    - RCDAmmo
-    - RCDAmmo
-    - CableMVStack
-    - CableHVStack
-    - CableApcStack
-    - SheetPlasteel
-    - SheetSteel
-    - SheetGlass
+    outerClothing: ClothingOuterArmorBasic
+    pocket2: FlashlightSeclite
 
 - type: startingGear
   id: ERTEngineerGearEVA
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTEngineer
     back: ClothingBackpackERTEngineer
-    shoes: ClothingShoesBootsMagAdv
+    shoes: ClothingShoesBootsMagERT
     mask: ClothingMaskGasERT
-    eyes: ClothingEyesGlassesMeson
+    eyes: ClothingEyesHudDiagnostic
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTEngineer
     id: ERTEngineerPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltChiefEngineerFilled
-    pocket1: Flare
-    pocket2: GasAnalyzer
+    belt: ClothingBeltMilitaryWebbingERT
+    pocket2: CombatKnife
   storage:
     back:
-    - trayScanner
     - RCD
+    - GasAnalyzer
+    - trayScanner
+    - HolofanProjector
+    - PartRodMetal
+    - SheetPlasteel # End of first line
+    - MiningDrillDiamond
     - RCDAmmo
     - RCDAmmo
-    - CableMVStack
-    - CableHVStack
-    - CableApcStack
-    - SheetPlasteel
-    - SheetSteel
-    - SheetGlass
+    - RCDAmmo
+    - RCDAmmo
+    - MetalFoamGrenade
+    - AirGrenade
+    belt:
+    - JawsOfLife
+    - PowerDrill
+    - WelderIndustrialAdvanced
+    - Multitool
+    - NFWeaponPistolMk58 # Frontier
+    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - EmergencyMedipen
+
+- type: startingGear
+  parent: ERTEngineerGearEVA
+  id: ERTEngineerGearArmed
+  equipment:
+    suitstorage: NFWeaponShotgunEnforcer # Aurora's Song - WeaponShotgunEnforcer>NFWeaponShotgunEnforcer
+  storage:
+    back:
+    - RCD
+    - GasAnalyzer
+    - HolofanProjector
+    - MiningDrillDiamond
+    - NFAmmunitionBoxShellShotgunBuckshot # Aurora's Song - BoxLethalshot>NFAmmunitionBoxShellShotgunBuckshot
+    - NFAmmunitionBoxShellShotgunSlug # End of first line # Aurora's Song - BoxShotgunSlug?NFAmmunitionBoxShellShotgunSlug
+    - RCDAmmo
+    - RCDAmmo
+    - RCDAmmo
+    - RCDAmmo
+    - CableDetStack
+    - BoxDetonator
 
 - type: chameleonOutfit
   id: ERTEngineerChameleonOutfit
@@ -287,7 +277,7 @@
   playTimeTracker: JobERTSecurity
   setPreference: false
   startingGear: ERTSecurityGearEVA
-  icon: "JobIconNanotrasen"
+  icon: "JobIconERTSecurity"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
@@ -297,81 +287,166 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
-  whitelisted: true # Frontier
 
 - type: startingGear
+  parent: ERTSecurityGearEVA
   id: ERTSecurityGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitERTSecurity
-    back: ClothingBackpackERTSecurity
-    shoes: ClothingShoesBootsCombatFilled
+    shoes: ClothingShoesBootsJackFilled
     head: ClothingHeadHelmetERTSecurity
-    eyes: ClothingEyesGlassesSecurity
-    gloves: ClothingHandsGlovesCombat
-    outerClothing: ClothingOuterArmorBasicSlim
-    id: ERTSecurityPDA
-    ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltSecurityFilled
-    pocket1: NFWeaponPistolMk58 # Frontier
+    outerClothing: ClothingOuterArmorBasic
     pocket2: FlashlightSeclite
-  storage:
-    back:
-    - NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
-    - MedicatedSuture
-    - RegenerativeMesh
-    - BoxZiptie
-    - CrowbarRed
-    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
 
 - type: startingGear
   id: ERTSecurityGearEVA
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTSecurity
     back: ClothingBackpackERTSecurity
-    shoes: ClothingShoesBootsMag
+    shoes: ClothingShoesBootsMagERT
     mask: ClothingMaskGasERT
-    eyes: ClothingEyesGlassesSecurity
+    eyes: ClothingEyesHudSecurity
     gloves: ClothingHandsGlovesCombat
+    neck: SecurityWhistle
     outerClothing: ClothingOuterHardsuitERTSecurity
     id: ERTSecurityPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltSecurityFilled
-    pocket1: NFWeaponPistolMk58 # Frontier: use NF variant
-    pocket2: FlashlightSeclite
+    belt: ClothingBeltMilitaryWebbingERT
+    pocket2: CombatKnife
+    suitstorage: NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
   storage:
     back:
-    - NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
-    - MedicatedSuture
-    - RegenerativeMesh
     - BoxZiptie
+    - Flash
+    - GrenadeFlashBang
+    - TearGasGrenade
+    - GrenadeStinger
+    - MedkitCombatFilled # End of first line
+    - TelescopicShield
+    - HoloprojectorSecurity
+    - PowerCellHigh
+    belt:
+    - Stunbaton
+    - Handcuffs
+    - Handcuffs
     - CrowbarRed
+    - NFWeaponPistolMk58 # Frontier: WeaponPistolMk58<NFWeaponPistolMk58
     - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - EmergencyMedipen
 
 - type: startingGear
-  id: ERTSecurityGearEVALecter
+  id: ERTSecurityGearArmedRifle
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTSecurity
-    back: ClothingBackpackERTSecurity
-    shoes: ClothingShoesBootsMag
+    shoes: ClothingShoesBootsMagERT
     mask: ClothingMaskGasERT
-    eyes: ClothingEyesGlassesSecurity
+    eyes: ClothingEyesHudSecurity
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTSecurity
     id: ERTSecurityPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltSecurityFilled
-    pocket1: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
-    pocket2: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
+    belt: ClothingBeltMilitaryWebbingERT
+    pocket2: CombatKnife
+    suitstorage: NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
   inhand:
-    - NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
+    - NFWeaponEnergyRifleSniperCannon # Aurora's Song - WeaponLaserCannon>NFWeaponEnergyRifleSniperCannon
+    - PortableRecharger
+  storage:
+    belt:
+    - CrowbarRed
+    - Zipties
+    - MedkitCombatFilled
+    - NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
+    - NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
+    - NFMagazineRifle20Incendiary # Aurora's Song - MagazineRifleIncendiary>NFMagazineRifle20Incendiary
+    - NFMagazineRifle20Uranium # Aurora's Song - MagazineRifleUranium>NFMagazineRifle20Uranium
+    - Zipties
+
+- type: startingGear
+  parent: ERTSecurityGearEVA
+  id: ERTSecurityGearArmedGrenade
+  equipment:
+    pocket2: NFWeaponEnergyPistolDisabler # Aurora's Song - WeaponDisabler>NFWeaponEnergyPistolDisabler
+#    suitstorage: WeaponLauncherHydraLethal # Aurora's Song - Currently abstract
   storage:
     back:
-    - NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
-    - MedicatedSuture
-    - RegenerativeMesh
-    - BoxZiptie
-    - CrowbarRed
+    - NFGrenadeBlast # Aurora's Song - GrenadeBlast>NFGrenadeBlast
+    - NFGrenadeBlast # Aurora's Song - GrenadeBlast>NFGrenadeBlast
+    - NFGrenadeBlast # Aurora's Song - GrenadeBlast>NFGrenadeBlast
+    - NFGrenadeBlast # Aurora's Song - GrenadeBlast>NFGrenadeBlast
+    - NFGrenadeBlast # Aurora's Song - GrenadeBlast>NFGrenadeBlast
+    - NFGrenadeBlast # Aurora's Song - GrenadeBlast>NFGrenadeBlast
     - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - MedkitCombatFilled # End of first line
+    - NFGrenadeEMP # Aurora's Song - GrenadeEMP>NFGrenadeEMP
+    - NFGrenadeEMP # Aurora's Song - GrenadeEMP>NFGrenadeEMP
+    - NFGrenadeEMP # Aurora's Song - GrenadeEMP>NFGrenadeEMP
+    - NFGrenadeFlash # Aurora's Song - GrenadeFlash>NFGrenadeFlash
+    - NFGrenadeFlash # Aurora's Song - GrenadeFlash>NFGrenadeFlash
+    - NFGrenadeFlash # Aurora's Song - GrenadeFlash>NFGrenadeFlash
+    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    belt:
+    - Truncheon
+    - Handcuffs
+    - Handcuffs
+    - CrowbarRed
+    - NFWeaponPistolMk58 # Frontier
+    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - EmergencyMedipen
+
+- type: startingGear
+  parent: ERTSecurityGearEVA
+  id: ERTSecurityGearArmedVanguard
+  equipment:
+    pocket2: NFWeaponEnergyPistolDisabler # Aurora's Song - WeaponDisabler>NFWeaponEnergyPistolDisabler
+    suitstorage: NFWeaponSubMachineGunWt550 # Frontier: WeaponSubMachineGunWt550<NFWeaponSubMachineGunWt550
+  storage:
+    back:
+    - ExGrenade
+    - SmokeGrenade
+    - NFGrenadeEMP # Aurora's Song - GrenadeEMP>NFGrenadeEMP
+    - HoloprojectorSecurity
+    - TelescopicShield
+    - TelescopicShield
+    - TelescopicShield
+    - MedkitCombatFilled # End of first line
+    - NFMagazineSubMachineGunTopMounted35 # Frontier: MagazinePistolSubMachineGunTopMounted<NFMagazineSubMachineGunTopMounted35
+    - NFMagazineSubMachineGunTopMounted35 # Frontier: MagazinePistolSubMachineGunTopMounted<NFMagazineSubMachineGunTopMounted35
+    - NFMagazineSubMachineGunTopMounted35 # Frontier: MagazinePistolSubMachineGunTopMounted<NFMagazineSubMachineGunTopMounted35
+    - NFMagazineSubMachineGunTopMounted35 # Frontier: MagazinePistolSubMachineGunTopMounted<NFMagazineSubMachineGunTopMounted35
+    belt:
+    - Truncheon
+    - Handcuffs
+    - Handcuffs
+    - CrowbarRed
+    - NFWeaponPistolMk58 # Frontier
+    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - EmergencyMedipen
+
+- type: startingGear
+  parent: ERTSecurityGearEVA
+  id: ERTSecurityGearArmedShotgun
+  equipment:
+    pocket2: NFWeaponEnergyPistolDisabler # Aurora's Song - WeaponDisabler>NFWeaponEnergyPistolDisabler
+    suitstorage: NFWeaponShotgunEnforcer # Aurora's Song - WeaponShotgunEnforcer>NFWeaponShotgunEnforcer
+  storage:
+    back:
+    - SmokeGrenade
+    - NFAmmunitionBoxShellShotgunBuckshot # Aurora's Song - BoxLethalshot>NFAmmunitionBoxShellShotgunBuckshot
+    - NFAmmunitionBoxShellShotgunSlug # Aurora's Song - BoxShotgunSlug>NFAmmunitionBoxShellShotgunSlug
+    - NFAmmunitionBoxShellShotgunIncendiary # Aurora's Song - BoxShotgunIncendiary>NFAmmunitionBoxShellShotgunIncendiary
+    - MedkitCombatFilled # End of first line
+    - SmokeGrenade
+    - ExGrenade
+    - CableDetStack
+    - BoxDetonator
+    belt:
+    - Truncheon
+    - Handcuffs
+    - Handcuffs
+    - CrowbarRed
+    - NFWeaponPistolMk58 # Frontier
+    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - EmergencyMedipen
 
 - type: chameleonOutfit
   id: ERTSecurityChameleonOutfit
@@ -389,7 +464,7 @@
   playTimeTracker: JobERTMedical
   setPreference: false
   startingGear: ERTMedicalGearEVA
-  icon: "JobIconNanotrasen"
+  icon: "JobIconERTMedic"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
@@ -399,55 +474,79 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
-  whitelisted: true # Frontier
 
 - type: startingGear
+  parent: ERTMedicalGearEVA
   id: ERTMedicalGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitERTMedic
-    back: ClothingBackpackERTMedical
-    shoes: ClothingShoesBootsCombatFilled
+    shoes: ClothingShoesBootsJackFilled
     head: ClothingHeadHelmetERTMedic
-    eyes: ClothingEyesHudMedical
-    gloves: ClothingHandsGlovesNitrile
-    outerClothing: ClothingOuterArmorBasicSlim
-    id: ERTMedicPDA
-    ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltMedicalFilled
-    pocket1: Flare
-  storage:
-    back:
-    - Hypospray
-    - MedkitCombatFilled
-    - MedkitCombatFilled
-    - CrowbarRed
-    - ChemistryBottleOmnizine
-    - ChemistryBottleEpinephrine
-    - ChemistryBottleEpinephrine
+    outerClothing: ClothingOuterArmorBasic
+    pocket2: FlashlightSeclite
 
 - type: startingGear
   id: ERTMedicalGearEVA
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTMedic
     back: ClothingBackpackERTMedical
-    shoes: ClothingShoesBootsMag
+    shoes: ClothingShoesBootsMagERT
     mask: ClothingMaskGasERT
     eyes: ClothingEyesHudMedical
-    gloves: ClothingHandsGlovesNitrile
+    gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTMedical
     id: ERTMedicPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltMedicalFilled
-    pocket1: Flare
+    belt: ClothingBeltMilitaryWebbingERT
+    pocket2: CombatKnife
   storage:
     back:
     - Hypospray
-    - MedkitCombatFilled
+    - BeakerSmallBruiz
+    - BeakerSmallLace
+    - JugPunctTranex
+    - JugPyraDerma
+    - JugDexPlusSaline # End of first line
+    - JugTrico
+    - BeakerSmallArith
+    - BeakerSmallDiph
+    - BeakerSmallSigy
+    - ClothingEyesGlassesChemical
+    - ChemistryBottleOmnizine
+    belt:
+    - DefibrillatorCompact
     - MedkitCombatFilled
     - CrowbarRed
+    - NFWeaponPistolMk58 # Frontier
+    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - EmergencyMedipen
+
+- type: startingGear
+  parent: ERTMedicalGearEVA
+  id: ERTMedicalGearArmed
+  equipment:
+    suitstorage: NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
+    pocket2: NFWeaponEnergyPistolDisabler # Aurora's Song - WeaponDisabler>NFWeaponEnergyPistolDisabler
+  storage:
+    back:
+    - Hypospray
+    - JugPunctTranex
+    - JugPyraDerma
+    - JugDexPlusSaline
+    - JugTrico # End of first line
+    - BeakerSmallArith
+    - DefibrillatorCompact
+    - MedkitCombatFilled
+    - ClothingEyesGlassesChemical
     - ChemistryBottleOmnizine
-    - ChemistryBottleEpinephrine
-    - ChemistryBottleEpinephrine
+    belt:
+    - Truncheon
+    - Zipties
+    - CrowbarRed
+    - NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
+    - NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
+    - NFMagazineRifle20Incendiary # Aurora's Song - MagazineRifleIncendiary>NFMagazineRifle20Incendiary
+    - NFMagazineRifle20Uranium # end of first line # Aurora's Song - MagazineRifleUranium>NFMagazineRifle20Uranium
+    - Zipties
 
 - type: chameleonOutfit
   id: ERTMedicalChameleonOutfit
@@ -465,7 +564,7 @@
   playTimeTracker: JobERTJanitor
   setPreference: false
   startingGear: ERTJanitorGearEVA
-  icon: "JobIconNanotrasen"
+  icon: "JobIconERTJanitor"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
@@ -475,51 +574,53 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
-  whitelisted: true # Frontier
 
 - type: startingGear
+  parent: ERTJanitorGearEVA
   id: ERTJanitorGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitERTJanitor
-    back: ClothingBackpackERTJanitor
     shoes: ClothingShoesGaloshes
     head: ClothingHeadHelmetERTJanitor
-    gloves: ClothingHandsGlovesColorPurple
-    outerClothing: ClothingOuterArmorBasicSlim
-    id: ERTJanitorPDA
-    ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltJanitorFilled
-    pocket1: Flare
-  storage:
-    back:
-    - LightReplacer
-    - BoxLightMixed
-    - BoxLightMixed
-    - Soap
-    - CrowbarRed
-    - AdvMopItem
+    outerClothing: ClothingOuterArmorBasic
+    pocket2: FlashlightSeclite
 
 - type: startingGear
   id: ERTJanitorGearEVA
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTJanitor
     back: ClothingBackpackERTJanitor
-    shoes: ClothingShoesBootsMagGaloshes # Frontier
+    shoes: ClothingShoesBootsMagERT
     mask: ClothingMaskGasERT
-    gloves: ClothingHandsGlovesColorPurple
+    eyes: ClothingEyesGlassesChemical
+    gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTJanitor
     id: ERTJanitorPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltJanitorFilled
-    pocket1: Flare
+    belt: ClothingBeltMilitaryWebbingERT
+    pocket2: CombatKnife
+#    suitstorage: WeaponLauncherHydra # Aurora's Song - Currently abstract
   storage:
     back:
+    - TrashBag
+    - SoapNT
+    - Plunger
+    - Screwdriver
+    - AdvMopItem # End of first line
+    - NFGrenadeCleanade # Aurora's Song - GrenadeCleanade>NFGrenadeCleanade
+    - NFGrenadeCleanade # Aurora's Song - GrenadeCleanade>NFGrenadeCleanade
+    - NFGrenadeCleanade # Aurora's Song - GrenadeCleanade>NFGrenadeCleanade
+    - NFGrenadeCleanade # Aurora's Song - GrenadeCleanade>NFGrenadeCleanade
+    - NFGrenadeCleanade # Aurora's Song - GrenadeCleanade>NFGrenadeCleanade
+    - NFGrenadeCleanade # Aurora's Song - GrenadeCleanade>NFGrenadeCleanade
+    belt:
+    - MegaSprayBottleSpaceCleaner
+    - Holoprojector
     - LightReplacer
-    - BoxLightMixed
-    - BoxLightMixed
-    - Soap
+    - WireBrush
     - CrowbarRed
-    - AdvMopItem
+    - NFWeaponPistolMk58 # Frontier
+    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - EmergencyMedipen
 
 - type: chameleonOutfit
   id: ERTJanitorChameleonOutfit

@@ -125,7 +125,7 @@
   - type: Tag
     tags:
     - Diagonal
-    - Window # AS: Brought in line with standard window
+    - Window
   - type: IconSmooth
     mode: Diagonal
     base: state

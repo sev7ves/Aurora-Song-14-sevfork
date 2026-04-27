@@ -1,6 +1,6 @@
 using Content.Server.CartridgeLoader;
 using Content.Shared.CartridgeLoader;
-using Content.Server._NF.SectorServices;
+using Content.Shared._NF.SectorServices;
 using Content.Shared._NF.Bank.BUI;
 using System.Diagnostics.CodeAnalysis;
 using Content.Server._NF.Bank;

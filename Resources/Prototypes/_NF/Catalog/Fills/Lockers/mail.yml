@@ -3,11 +3,13 @@
   suffix: Filled
   parent: LockerMailCarrier
   components:
-  - type: StorageFill
-    contents:
-      - id: ClothingOuterWinterCoatMail
-      - id: ClothingEyesHudMail
-      - id: MailMetricsCartridge
-      - id: NFWeaponLauncherMail
-      - id: BoxMailCapsulePrimed
-        amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: ClothingOuterWinterCoatMail
+        - id: ClothingEyesHudMail
+        - id: MailMetricsCartridge
+        - id: NFWeaponLauncherMail
+        - id: BoxMailCapsulePrimed
+          amount: 2

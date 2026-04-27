@@ -5,12 +5,14 @@
   name: gestio rifle crate
   description: Contains two old prototype, burst-fire rifles with six low capacity mags. Requires Armory access to open.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponRifleAssaultGestio
-        amount: 2
-      - id: NFMagazineLowCapacityRifle30
-        amount: 6
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponRifleAssaultGestio
+          amount: 2
+        - id: NFMagazineLowCapacityRifle30
+          amount: 6
 
 # Contraband (unregistered) weaponry crates for expeditions
 - type: entity
@@ -22,12 +24,14 @@
   description: Contains two high-powered, SMGs with four mags. Requires Armory access to open. Unregistered.
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponSubMachineGunWt550Expedition
-        amount: 2
-      - id: NFMagazineSubMachineGunTopMounted35
-        amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponSubMachineGunWt550Expedition
+          amount: 2
+        - id: NFMagazineSubMachineGunTopMounted35
+          amount: 4
 
 - type: entity
   id: CrateArmoryShotgunExpedition
@@ -38,12 +42,14 @@
   description: For when the enemy absolutely needs to be replaced with lead. Contains two Enforcer Combat Shotguns, and some standard shotgun shells. Requires Armory access to open. Unregistered.
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponShotgunKammererExpedition
-        amount: 2
-      - id: NFAmmunitionBoxShellShotgunBuckshot
-        amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponShotgunKammererExpedition
+          amount: 2
+        - id: NFAmmunitionBoxShellShotgunBuckshot
+          amount: 3
 
 - type: entity
   id: CrateArmoryLaserExpedition
@@ -54,10 +60,12 @@
   description: Contains three standard-issue laser carbines. Requires Armory access to open. Unregistered.
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponEnergyRifleCarbineExpedition
-        amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponEnergyRifleCarbineExpedition
+          amount: 3
 
 - type: entity
   id: CrateArmoryEnergyGunExpedition
@@ -68,10 +76,12 @@
   description: Contains three energy guns. Requires Armory access to open. Unregistered.
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponEnergySubMachineGunDeltaVExpedition
-        amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponEnergySubMachineGunDeltaVExpedition
+          amount: 3
 
 - type: entity
   id: CrateArmoryPistolsExpedition
@@ -82,12 +92,14 @@
   description: Contains two standard NT pistols with four mags. Requires Armory access to open. Unregistered.
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-    - id: NFWeaponPistolMk58Expedition
-      amount: 2
-    - id: NFMagazinePistol35
-      amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponPistolMk58Expedition
+          amount: 2
+        - id: NFMagazinePistol35
+          amount: 4
 
 - type: entity
   id: CrateArmoryRifleGestioExpedition
@@ -98,12 +110,14 @@
   description: Contains two old prototype, burst-fire rifles with six low capacity mags. Requires Armory access to open. Unregistered.
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponRifleAssaultGestioExpedition
-        amount: 2
-      - id: NFMagazineLowCapacityRifle30
-        amount: 6
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponRifleAssaultGestioExpedition
+          amount: 2
+        - id: NFMagazineLowCapacityRifle30
+          amount: 6
 
 - type: entity
   id: CrateArmoryRifleNovaliteC1Expedition
@@ -114,268 +128,415 @@
   description: Contains two civilian grade rifles with six low capacity clips. Requires Armory access to open. Unregistered.
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponRifleAssaultNovaliteC1Expedition
-        amount: 2
-      - id: NFMagazineClipRifle20
-        amount: 6
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponRifleAssaultNovaliteC1Expedition
+          amount: 2
+        - id: NFMagazineClipRifle20
+          amount: 6
 
 # Ammo crates
 ## .20 rifle
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxLethal20
   id: CrateAmmoBoxLethal20
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxLethal20
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxBigLethal20
   id: CrateAmmoBoxBigLethal20
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxBigLethal20
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxRubber20
+
   id: CrateAmmoBoxRubber20
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxRubber20
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxBigRubber20
   id: CrateAmmoBoxBigRubber20
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxBigRubber20
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxPractice20
   id: CrateAmmoBoxPractice20
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxPractice20
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxIncendiary20
   id: CrateAmmoBoxIncendiary20
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxIncendiary20
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxUranium20
   id: CrateAmmoBoxUranium20
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxUranium20
 
 ## .30 rifle
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxLethal30
   id: CrateAmmoBoxLethal30
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxLethal30
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxBigLethal30
   id: CrateAmmoBoxBigLethal30
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxBigLethal30
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxRubber30
   id: CrateAmmoBoxRubber30
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxRubber30
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxPractice30
   id: CrateAmmoBoxPractice30
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxPractice30
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxIncendiary30
   id: CrateAmmoBoxIncendiary30
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxIncendiary30
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxUranium30
   id: CrateAmmoBoxUranium30
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxUranium30
 
 ## .35 pistol
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxLethal35
   id: CrateAmmoBoxLethal35
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxLethal35
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxRubber35
   id: CrateAmmoBoxRubber35
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxRubber35
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxPractice35
   id: CrateAmmoBoxPractice35
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxPractice35
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxIncendiary35
   id: CrateAmmoBoxIncendiary35
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxIncendiary35
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxUranium35
   id: CrateAmmoBoxUranium35
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxUranium35
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxEmp35
   id: CrateAmmoBoxEmp35
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxEmp35
 
 ## .25 caseless
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxLethal25
   id: CrateAmmoBoxLethal25
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxLethal25
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxBigLethal25
   id: CrateAmmoBoxBigLethal25
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxBigLethal25
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxRubber25
   id: CrateAmmoBoxRubber25
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxRubber25
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxBigRubber25
   id: CrateAmmoBoxBigRubber25
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxBigRubber25
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxPractice25
   id: CrateAmmoBoxPractice25
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxPractice25
 
 ## Shotgun
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxLethalShotgun
   id: CrateAmmoBoxLethalShotgun
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxLethalShotgun
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxRubberShotgun
   id: CrateAmmoBoxRubberShotgun
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxRubberShotgun
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxPracticeShotgun
   id: CrateAmmoBoxPracticeShotgun
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxPracticeShotgun
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxIncendiaryShotgun
   id: CrateAmmoBoxIncendiaryShotgun
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxIncendiaryShotgun
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxUraniumShotgun
   id: CrateAmmoBoxUraniumShotgun
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxUraniumShotgun
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxSlugShotgun
   id: CrateAmmoBoxSlugShotgun
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxSlugShotgun
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxFlareShotgun
   id: CrateAmmoBoxFlareShotgun
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxFlareShotgun
 
 ## .45 ammo
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxLethal45
   id: CrateAmmoBoxLethal45
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxLethal45
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxRubber45
   id: CrateAmmoBoxRubber45
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxRubber45
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxPractice45
   id: CrateAmmoBoxPractice45
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxPractice45
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxIncendiary45
   id: CrateAmmoBoxIncendiary45
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxIncendiary45
 
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoBoxUranium45
   id: CrateAmmoBoxUranium45
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillAmmoBoxUranium45

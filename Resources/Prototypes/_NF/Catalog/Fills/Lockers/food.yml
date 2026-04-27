@@ -3,7 +3,9 @@
   parent: LockerFreezerBase
   suffix: Filled, Sushi
   components:
-  - type: StorageFill
-    contents:
-    - id: FoodBoxSushiBad
-      amount: 2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: FoodBoxSushiBad
+          amount: 2

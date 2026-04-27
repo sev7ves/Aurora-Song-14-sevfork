@@ -26,5 +26,6 @@
       path: /Audio/Machines/windoor_open.ogg
     openSound:
       path: /Audio/Machines/windoor_open.ogg
-    denySound:
-      path: /Audio/Machines/airlock_deny.ogg
+    # Aurora's Song - Removed a while ago?
+#    denySound:
+#      path: /Audio/Machines/airlock_deny.ogg

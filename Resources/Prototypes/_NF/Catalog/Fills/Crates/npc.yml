@@ -4,79 +4,62 @@
   name: emotional support pet crate
   description: A crate containing a single emotional support pet.
   components:
-  - type: StorageFill
-    contents:
-      - id: MobCatGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobCatCalicoGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobCatCaracalGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobBingusGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobCatSpaceGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobCorgiGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobCorgiPuppyGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobPugGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobChickenGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobFoxGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobPibbleGhost
-        prob: 0.25
-        orGroup: MobGhost
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:GroupSelector
+        children:
+        - id: MobCatGhost
+          prob: 1
+        - id: MobCatCalicoGhost
+          prob: 1
+        - id: MobCatCaracalGhost
+          prob: 1
+        - id: MobBingusGhost
+          prob: 1
+        - id: MobCatSpaceGhost
+          prob: 1
+        - id: MobCorgiGhost
+          prob: 1
+        - id: MobCorgiPuppyGhost
+          prob: 1
+        - id: MobPugGhost
+          prob: 1
+        - id: MobChickenGhost
+          prob: 1
+        - id: MobFoxGhost
+          prob: 1
+        - id: MobPibbleGhost
+          prob: 0.25
 
 - type: entity
   id: FillNPCEmotionalSupportSafe # No pitbull
   suffix: Safe
   abstract: true
   components:
-  - type: StorageFill
-    contents:
-      - id: MobCatGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobCatCalicoGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobCatCaracalGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobBingusGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobCatSpaceGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobCorgiGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobCorgiPuppyGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobPugGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobChickenGhost
-        prob: 1
-        orGroup: MobGhost
-      - id: MobFoxGhost
-        prob: 1
-        orGroup: MobGhost
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:GroupSelector
+        children:
+        - id: MobCatGhost
+          prob: 1
+        - id: MobCatCalicoGhost
+          prob: 1
+        - id: MobCatCaracalGhost
+          prob: 1
+        - id: MobBingusGhost
+          prob: 1
+        - id: MobCatSpaceGhost
+          prob: 1
+        - id: MobCorgiGhost
+          prob: 1
+        - id: MobCorgiPuppyGhost
+          prob: 1
+        - id: MobPugGhost
+          prob: 1
+        - id: MobChickenGhost
+          prob: 1
+        - id: MobFoxGhost
+          prob: 1
 
 - type: entity
   id: CrateNPCEmotionalSupportSafe
@@ -91,9 +74,11 @@
   parent: CrateWoodCage
   suffix: Filled, Clugg
   components:
-  - type: StorageFill
-    contents:
-      - id: MobCatClugg
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: MobCatClugg
 
 - type: entity
   id: CrateNPCPoultryCube
@@ -101,6 +86,8 @@
   name: poultry cube crate
   description: A crate containing single box of poultry cubes.
   components:
-  - type: StorageFill
-    contents:
-      - id: PoultryCubeBox
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: PoultryCubeBox

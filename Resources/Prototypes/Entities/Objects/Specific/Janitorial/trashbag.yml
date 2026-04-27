@@ -20,7 +20,6 @@
       collection: trashBagRustle
     whitelist:
       tags:
-        - Cartridge
         - Trash
       components: # Frontier: added GoblinMade
         - GoblinMade # Frontier: added GoblinMade

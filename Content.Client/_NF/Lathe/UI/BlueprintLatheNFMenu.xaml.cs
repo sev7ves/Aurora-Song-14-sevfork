@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Text;
+using Content.Client.Lathe.UI;
 using Content.Client.Materials;
 using Content.Shared._NF.Lathe;
 using Content.Shared._NF.Research.Prototypes;

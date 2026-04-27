@@ -163,7 +163,7 @@
     proto: ContractorT1
   price: 350
   inhand:
-    - HandheldHealthAnalyzerUnpowered
+    - HandheldHealthAnalyzer # AuroraSong: HandheldHealthAnalyzerUnpowered: HandheldHealthAnalyzer
 
 - type: loadout
   id: ContractorAnomalyScanner

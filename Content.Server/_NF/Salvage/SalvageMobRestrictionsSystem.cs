@@ -6,6 +6,7 @@ using Content.Server.Administration.Logs;
 using Content.Server.Chat.Managers;
 using Content.Server.Popups;
 using Content.Shared.Database;
+using Content.Shared.Gibbing;
 using Content.Shared.Popups;
 using Robust.Shared.Player;
 
@@ -13,7 +14,7 @@ namespace Content.Server._NF.Salvage;
 
 public sealed class SalvageMobRestrictionsSystem : EntitySystem
 {
-    [Dependency] private readonly BodySystem _body = default!;
+    [Dependency] private readonly GibbingSystem _gibbing = default!;
     [Dependency] private readonly ExplosionSystem _explosion = default!;
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
     [Dependency] private readonly PopupSystem _popupSystem = default!;
@@ -66,7 +67,7 @@ public sealed class SalvageMobRestrictionsSystem : EntitySystem
             if (TryComp(target, out BodyComponent? body))
             {
                 // Creates a pool of blood on death, but remove the organs.
-                var gibs = _body.GibBody(target, body: body, gibOrgans: true);
+                var gibs = _gibbing.Gib(target, true);
                 foreach (var gib in gibs)
                     Del(gib);
             }

@@ -31,7 +31,12 @@
       - id: FoodCakeBirthdaySlice # Aurora's Song - added cake into the butchery
         amount: 3
   - type: Bloodstream
-    bloodReagent: Sugar
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 100
+      - ReagentId: Butter
+        Quantity: 200
   # - type: Fixtures Aurora's Song - Standardize density by removing it here
     # fixtures:
       # fix1:

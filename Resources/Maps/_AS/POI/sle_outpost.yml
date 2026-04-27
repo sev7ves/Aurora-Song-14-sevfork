@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 04/16/2026 09:31:02
-  entityCount: 6243
+  time: 04/23/2026 08:04:37
+  entityCount: 6244
 maps: []
 grids:
 - 1
@@ -4054,12 +4054,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 35.5,19.5
       parent: 1
-  - uid: 6255
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 36.5,20.5
-      parent: 1
   - uid: 4972
     components:
     - type: Transform
@@ -4134,6 +4128,12 @@ entities:
     components:
     - type: Transform
       pos: -45.5,-0.5
+      parent: 1
+  - uid: 6255
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 36.5,20.5
       parent: 1
 - proto: ASAirlockGlassShuttleSLELocked
   entities:
@@ -4572,7 +4572,7 @@ entities:
       pos: 17.5,-5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -60066.93
+      secondsUntilStateChange: -60104.406
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -4630,7 +4630,7 @@ entities:
       pos: -2.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -75413.25
+      secondsUntilStateChange: -75450.73
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -4641,7 +4641,7 @@ entities:
       pos: -1.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -33261.39
+      secondsUntilStateChange: -33298.867
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -4672,7 +4672,7 @@ entities:
       pos: -11.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -75416.78
+      secondsUntilStateChange: -75454.26
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -4688,7 +4688,7 @@ entities:
       pos: -11.5,-0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -76198.305
+      secondsUntilStateChange: -76235.78
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -4724,7 +4724,7 @@ entities:
       pos: -17.5,-2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -77526.34
+      secondsUntilStateChange: -77563.82
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -4828,7 +4828,7 @@ entities:
       pos: 5.5,9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -59200.3
+      secondsUntilStateChange: -59237.777
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -5027,6 +5027,13 @@ entities:
     components:
     - type: Transform
       pos: -7.5,3.5
+      parent: 1
+- proto: ASHolopadSLEOutpostReception
+  entities:
+  - uid: 5084
+    components:
+    - type: Transform
+      pos: 0.5,-17.5
       parent: 1
 - proto: ASLockerSLECommissionerFilled
   entities:
@@ -29795,7 +29802,7 @@ entities:
       pos: -1.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -84511.414
+      secondsUntilStateChange: -84548.89
       state: Opening
   - uid: 3347
     components:
@@ -29803,7 +29810,7 @@ entities:
       pos: 0.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -84509.78
+      secondsUntilStateChange: -84547.26
       state: Opening
   - uid: 3348
     components:
@@ -29811,7 +29818,7 @@ entities:
       pos: 2.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -84508.414
+      secondsUntilStateChange: -84545.89
       state: Opening
 - proto: HospitalCurtainsOpen
   entities:
@@ -30323,13 +30330,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -12.309061,16.586674
       parent: 1
-- proto: ASHolopadSLEOutpostReception
-  entities:
-  - uid: 5084
-    components:
-    - type: Transform
-      pos: 0.5,-17.5
-      parent: 1
 - proto: NFPosterLegitBahamaMama
   entities:
   - uid: 429
@@ -30509,12 +30509,12 @@ entities:
     - type: Transform
       pos: -17.71225,11.272481
       parent: 1
-- proto: PhoneInstrument
+- proto: PhoneInstrumentBlue
   entities:
   - uid: 1479
     components:
     - type: Transform
-      pos: 9.635128,-23.7212
+      pos: -6.538952,5.1818438
       parent: 1
 - proto: PlasmaReinforcedWindowDirectional
   entities:
@@ -40357,7 +40357,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -83547.086
+      secondsUntilStateChange: -83584.56
       state: Opening
     - type: Airlock
       autoClose: False

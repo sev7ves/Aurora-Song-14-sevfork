@@ -490,7 +490,7 @@ public sealed partial class NFCargoSystem
 
         if (amount > 0)
         {
-            var stackUid = _stack.Spawn(amount, "Doubloon", Transform(args.Actor).Coordinates);
+            var stackUid = _stack.SpawnAtPosition(amount, "Doubloon", Transform(args.Actor).Coordinates);
             if (!_hands.TryPickupAnyHand(args.Actor, stackUid))
                 _transform.SetLocalRotation(stackUid, Angle.Zero);
             _audio.PlayPvs(component.AcceptSound, uid);

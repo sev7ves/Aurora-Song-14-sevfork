@@ -51,12 +51,14 @@ namespace Content.Server.Atmos.Reactions
                 if (plasmaBurnRate > Atmospherics.MinimumHeatCapacity)
                 {
                     plasmaBurnRate = MathF.Min(plasmaBurnRate, MathF.Min(initialPlasmaMoles, initialOxygenMoles / oxygenBurnRate));
-                    mixture.SetMoles(Gas.Plasma, initialPlasmaMoles - plasmaBurnRate);
-                    mixture.SetMoles(Gas.Oxygen, initialOxygenMoles - plasmaBurnRate * oxygenBurnRate);
+                    mixture.AdjustMoles(Gas.Plasma, -plasmaBurnRate); // Aurora's Song | AdjustedMoles instead of SetMoles to better respect the context of the operation
+                    mixture.AdjustMoles(Gas.Oxygen, -(plasmaBurnRate * oxygenBurnRate)); // Aurora's Song | As above, AdjustMoles instead of SetMoles
 
+                    var totalInput = plasmaBurnRate + (plasmaBurnRate * oxygenBurnRate); //Aurora's Song | total reactant moles used per second, used to calculate final output
                     // supersaturation adjusts the ratio of produced tritium to unwanted CO2
-                    mixture.AdjustMoles(Gas.Tritium, plasmaBurnRate * supersaturation);
-                    mixture.AdjustMoles(Gas.CarbonDioxide, plasmaBurnRate * (1.0f - supersaturation));
+                    mixture.AdjustMoles(Gas.Tritium, totalInput * supersaturation); // Aurora's Song | total moles instead of plasmaBurnRate in order to ensure mass conservation
+                    mixture.AdjustMoles(Gas.CarbonDioxide, totalInput * (1.0f - supersaturation)); // Aurora's Song | total moles instead of plasmaBurnRate in order to ensure
+                                                                                // mass conservation, outputting more CO2 in order to respect Oxygen as a reactant and not just fuel
 
                     energyReleased += Atmospherics.FirePlasmaEnergyReleased * plasmaBurnRate;
                     energyReleased /= heatScale; // adjust energy to make sure speedup doesn't cause mega temperature rise

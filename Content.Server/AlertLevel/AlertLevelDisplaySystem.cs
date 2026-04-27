@@ -2,7 +2,7 @@ using Content.Server.Power.Components;
 using Content.Server.Station.Systems;
 using Content.Shared.AlertLevel;
 using Content.Shared.Power;
-using Content.Server._NF.SectorServices; // Frontier
+using Content.Shared._NF.SectorServices; // Frontier
 
 namespace Content.Server.AlertLevel;
 

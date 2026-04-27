@@ -10,18 +10,20 @@
     layers:
     - state: folder-pal-orange
     - state: folder-base
-  - type: StorageFill
-    contents:
-      - id: Paper
-        prob: 0.5
-      - id: PaperOffice
-        prob: 0.4
-      - id: Paper
-        prob: 0.3
-      - id: PaperOffice
-        prob: 0.2
-      - id: Paper
-        prob: 0.2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: Paper
+          prob: 0.5
+        - id: PaperOffice
+          prob: 0.4
+        - id: Paper
+          prob: 0.3
+        - id: PaperOffice
+          prob: 0.2
+        - id: Paper
+          prob: 0.2
 
 - type: entity
   id: BoxFolderPalNavy
@@ -35,15 +37,17 @@
     layers:
     - state: folder-pal-navy
     - state: folder-base
-  - type: StorageFill
-    contents:
-      - id: Paper
-        prob: 0.5
-      - id: PaperOffice
-        prob: 0.4
-      - id: Paper
-        prob: 0.3
-      - id: PaperOffice
-        prob: 0.2
-      - id: Paper
-        prob: 0.2
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: Paper
+          prob: 0.5
+        - id: PaperOffice
+          prob: 0.4
+        - id: Paper
+          prob: 0.3
+        - id: PaperOffice
+          prob: 0.2
+        - id: Paper
+          prob: 0.2

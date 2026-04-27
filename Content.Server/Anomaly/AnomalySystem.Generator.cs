@@ -1,6 +1,5 @@
 using Content.Server.Anomaly.Components;
 using Content.Server.Power.EntitySystems;
-using Content.Server.Station.Components;
 using Content.Shared.Anomaly;
 using Content.Shared.CCVar;
 using Content.Shared.Materials;
@@ -12,6 +11,7 @@ using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Content.Shared.Power;
 using Content.Server.Chat.Systems; // Frontier
+using Content.Shared.Chat; // Frontier
 
 namespace Content.Server.Anomaly;
 
@@ -97,14 +97,14 @@ public sealed partial class AnomalySystem
 
         for (var i = 0; i < 20; i++) // Frontier: 25<20
         {
-            var randomX = Random.Next((int) gridBounds.Left, (int) gridBounds.Right);
-            var randomY = Random.Next((int) gridBounds.Bottom, (int) gridBounds.Top);
+            var randomX = Random.Next((int)gridBounds.Left, (int)gridBounds.Right);
+            var randomY = Random.Next((int)gridBounds.Bottom, (int)gridBounds.Top);
 
             var tile = new Vector2i(randomX, randomY);
 
             // no air-blocked areas.
             if (_atmosphere.IsTileSpace(grid, xform.MapUid, tile) ||
-                _atmosphere.IsTileAirBlocked(grid, tile, mapGridComp: gridComp))
+                _atmosphere.IsTileAirBlockedCached(grid, tile))
             {
                 continue;
             }
@@ -120,7 +120,7 @@ public sealed partial class AnomalySystem
                     continue;
                 if (body.BodyType != BodyType.Static ||
                     !body.Hard ||
-                    (body.CollisionLayer & (int) CollisionGroup.Impassable) == 0)
+                    (body.CollisionLayer & (int)CollisionGroup.Impassable) == 0)
                     continue;
 
                 valid = false;
@@ -173,7 +173,7 @@ public sealed partial class AnomalySystem
                     if (generator is { } genEnt
                         && TryComp(genEnt, out TransformComponent? generatorXform))
                     {
-                        _stack.Spawn(genEnt.Comp.RefundAmount, genEnt.Comp.RefundStackType, generatorXform.Coordinates);
+                        _stack.SpawnAtPosition(genEnt.Comp.RefundAmount, genEnt.Comp.RefundStackType, generatorXform.Coordinates);
                         genEnt.Comp.CooldownEndTime = TimeSpan.Zero;
                         UpdateGeneratorUi(genEnt, genEnt.Comp);
                         _chat.TrySendInGameICMessage(genEnt, Loc.GetString("anomaly-generator-refund-message"), InGameICChatType.Speak, hideChat: true);

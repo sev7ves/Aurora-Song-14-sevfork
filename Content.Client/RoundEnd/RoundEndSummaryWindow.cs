@@ -35,7 +35,7 @@ namespace Content.Client.RoundEnd
             roundEndTabs.AddChild(MakeCustomObjectiveTab(customObjective)); // Frontier
             roundEndTabs.AddChild(MakePlayerManifestTab(info));
 
-            Contents.AddChild(roundEndTabs);
+            ContentsContainer.AddChild(roundEndTabs);
 
             OpenCenteredRight();
             MoveToFront();

@@ -1,4 +1,4 @@
-﻿{
+{
     "version": 1,
     "license": "CC0-1.0",
     "copyright": "Created by TiniestShark (github)",
@@ -7,6 +7,15 @@
         "y": 32
     },
     "states": [
+        {
+            "name": "transform"
+        },
+        {
+            "name": "devour"
+        },
+        {
+            "name": "devour_on"
+        },
         {
             "name": "armblade"
         }

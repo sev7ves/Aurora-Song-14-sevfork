@@ -25,7 +25,7 @@ using Robust.Shared.Utility;
 using Content.Shared._NF.Bank.Components; // Frontier
 using Content.Shared._NF.Shipyard.Components; // Frontier
 using Content.Server._NF.Shipyard.Systems; // Frontier
-using Content.Server._NF.SectorServices; // Frontier
+using Content.Shared._NF.SectorServices; // Frontier
 using Content.Server.RoundEnd; // Frontier
 
 namespace Content.Server.PDA

@@ -22,11 +22,11 @@
     startingCharge: 360 # Not intended to be a particularly useful power source if so
   - type: PowerCell
   - type: Appearance
-  - type: PowerCellVisuals
+#  - type: PowerCellVisuals # Aurora's Song - Deprecated
   - type: BatterySelfRecharger
-    autoRecharge: true # Takes 30 seconds to charge itself back to full, comparable to WeaponAdvancedLaser (but with special ammo that doesn't hurt player characters)
+     # Takes 30 seconds to charge itself back to full, comparable to WeaponAdvancedLaser (but with special ammo that doesn't hurt player characters)
     autoRechargeRate: 12 # If this needs balanced, consider adding autoRechargePause and autoRechargePauseTime instead of just lowering it (whatever works though)
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisCapgun # Inherited by BaseMantisCasterCapgun
     fireCost: 72 # Can fire 5 times, takes 12 seconds to recharge 1 shot (just as an example)
   - type: Tag
@@ -44,7 +44,7 @@
     maxCharge: 1080 # On par with WeaponLaserCarbine's battery for a 54-second recharge in a cell recharger, per direction
     startingCharge: 1080 # The guns still fire as many times as usual, because lethal casters also cost more to fire
   - type: BatterySelfRecharger # 1080 instead of 1000 so the numbers divide evenly by the number of shots
-    autoRecharge: false
+#    autoRecharge: false # Aurora's Song - Deprecated
     autoRechargeRate: 0 # You gotta go plug it in, buddy
 
 - type: entity
@@ -76,7 +76,7 @@
       map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       shader: unshaded
   - type: PowerCell
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisCapgun
     fireCost: 30 # Can fire 12 times, takes 2.5 seconds to recharge 1 shot
   - type: Tag
@@ -98,7 +98,7 @@
       map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       shader: unshaded
   - type: PowerCell
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisCapgun
     fireCost: 60 # Can fire 6 times, takes 5 seconds to recharge 1 shot
   - type: Item
@@ -123,7 +123,7 @@
       shader: unshaded
   - type: PowerCell
    # levels: 5 # Aurora: Comment out, fix when casters are ported
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisCapgun
     fireCost: 72 # Can fire 5 times, takes 6 seconds to recharge 1 shot
   - type: Item
@@ -148,7 +148,7 @@
       shader: unshaded
   - type: PowerCell
     #levels: 8 # Aurora: Comment out, fix when casters are ported
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisCapgun
     fireCost: 15 # Can fire 24 times, takes 1.25 seconds to recharge 1 shot
   - type: Tag
@@ -166,7 +166,7 @@
   components:
   - type: Sprite
     sprite: _DEN/Objects/Weapons/Guns/Ammunition/Magazine/Battery/Mantis/mantis-pistol-cryptobiolin.rsi
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisCrypto
 
 - type: entity
@@ -177,7 +177,7 @@
   components:
   - type: Sprite
     sprite: _DEN/Objects/Weapons/Guns/Ammunition/Magazine/Battery/Mantis/mantis-revolver-cryptobiolin.rsi
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisCryptoRevolver
 
 - type: entity
@@ -188,7 +188,7 @@
   components:
   - type: Sprite
     sprite: _DEN/Objects/Weapons/Guns/Ammunition/Magazine/Battery/Mantis/mantis-shotgun-cryptobiolin.rsi
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisCryptoSpread
 
 - type: entity
@@ -199,7 +199,7 @@
   components:
   - type: Sprite
     sprite: _DEN/Objects/Weapons/Guns/Ammunition/Magazine/Battery/Mantis/mantis-submachinegun-cryptobiolin.rsi
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisCryptoSubMachineGun
 
 # Holy casters
@@ -211,7 +211,7 @@
   components:
   - type: Sprite
     sprite: _DEN/Objects/Weapons/Guns/Ammunition/Magazine/Battery/Mantis/mantis-pistol-holy.rsi
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisHoly
 
 - type: entity
@@ -222,7 +222,7 @@
   components:
   - type: Sprite
     sprite: _DEN/Objects/Weapons/Guns/Ammunition/Magazine/Battery/Mantis/mantis-revolver-holy.rsi
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisHolyRevolver
 
 - type: entity
@@ -233,7 +233,7 @@
   components:
   - type: Sprite
     sprite: _DEN/Objects/Weapons/Guns/Ammunition/Magazine/Battery/Mantis/mantis-shotgun-holy.rsi
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisHolySpread
 
 - type: entity
@@ -244,7 +244,7 @@
   components:
   - type: Sprite
     sprite: _DEN/Objects/Weapons/Guns/Ammunition/Magazine/Battery/Mantis/mantis-submachinegun-holy.rsi
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisHolySubMachineGun
 
 # Lethal casters (traitor items)
@@ -263,7 +263,7 @@
       shader: unshaded
   - type: PowerCell
     #levels: 7 # Aurora: Comment out, fix when casters are ported
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisLethal
     fireCost: 90 # Can fire 12 times, takes 4.5 seconds in a cell recharger to recharge 1 shot
   - type: Tag
@@ -287,7 +287,7 @@
       shader: unshaded
   - type: PowerCell
     #levels: 6 # Aurora: Comment out, fix when casters are ported
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisLethalRevolver
     fireCost: 180 # Can fire 6 times, takes 9 seconds in a cell recharger to recharge 1 shot
   - type: Item
@@ -313,7 +313,7 @@
       shader: unshaded
   - type: PowerCell
     #levels: 5 # Aurora: Comment out, fix when casters are ported
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisLethalSpread
     fireCost: 216 # Can fire 5 times, takes 10.8 seconds in a cell recharger to recharge 1 shot
   - type: Item
@@ -339,7 +339,7 @@
       shader: unshaded
   - type: PowerCell
     # levels: 8 # Aurora: Comment out, fix when casters are ported
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisLethalSubMachineGun
     fireCost: 42.5 # Can fire 24 times, takes 2.125 seconds in a cell recharger to recharge 1 shot
   - type: Tag
@@ -364,7 +364,7 @@
       shader: shaded
   - type: PowerCell
     # levels: 7 # Aurora: Comment out, fix when casters are ported
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     fireCost: 30 # Can fire 12 times
   - type: Tag
     tags:
@@ -387,7 +387,7 @@
       shader: shaded
   - type: PowerCell
     # levels: 6 # Aurora: Comment out, fix when casters are ported
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     fireCost: 60 # Can fire 6 times
   - type: Item
     storedRotation: 90
@@ -412,7 +412,7 @@
       shader: shaded
   - type: PowerCell
    # levels: 5 # Aurora: Comment out, fix when casters are ported
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: BulletMantisCapgunSpread
     fireCost: 72 # Can fire 5 times
   - type: Item
@@ -438,7 +438,7 @@
       shader: shaded
   - type: PowerCell
     #levels: 8 # Aurora: Comment out, fix when casters are ported
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     fireCost: 15 # Can fire 24 times
   - type: Tag
     tags:

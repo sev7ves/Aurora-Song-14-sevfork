@@ -9,11 +9,10 @@
     - state: icon-paramedic
       sprite: _NF/Objects/Specific/Robotics/borgmodule.rsi
   - type: ItemBorgModule
-    moduleId: NFAdvancedParamedic
-    items:
-    - HandheldHealthAnalyzerUnpowered
-    - BorgHypoTricordrazine
-    - BorgHypoInaprovaline
+    hands: # Aurora's Song - Replace with upstream hands
+    - item: HandheldHealthAnalyzer # Aurora's Song: HandheldHealthAnalyzerUnpowered: HandheldHealthAnalyzer
+    - item: BorgHypoTricordrazine
+    - item: BorgHypoInaprovaline
   - type: BorgModuleIcon
     icon: { sprite: _NF/Interface/Actions/actions_borg.rsi, state: adv-paramed-module }
 
@@ -28,29 +27,28 @@
     - state: icon-jetpack
       sprite: _NF/Objects/Specific/Robotics/borgmodule.rsi
   - type: ItemBorgModule
-    moduleId: NFJetpack
-    items:
-    - BorgHandheldGPSBasic
-    - HandHeldMassScannerBorg
-    - BorgClock
-  - type: DroppableBorgModule
-    moduleId: NFJetpack
-    items:
-    - id: JetpackMiniFilled
-      whitelist:
-        components:
-        - Jetpack
-      displayName: borg-placeholder-display-name-jetpack
-    placeholders:
-    - id: SpaceCash1000
-      whitelist:
-        components:
-        - Cash
-    - id: FuelPlasma
-      whitelist:
-        components:
-        - NFFuel
-      displayName: borg-placeholder-display-name-fuel
+    hands: # Aurora's Song - Replace with upstream hands
+    - item: BorgHandheldGPSBasic
+    - item: HandHeldMassScannerBorg
+    - item: BorgClock
+    - item: JetpackMiniFilled
+      hand:
+        emptyLabel: borg-placeholder-display-name-jetpack
+        emptyRepresentative: JetpackMiniFilled
+        whitelist:
+          components:
+          - Jetpack
+    - hand:
+        emptyRepresentative: SpaceCash1000
+        whitelist:
+          components:
+          - Cash
+    - hand:
+        emptyRepresentative: FuelPlasma
+        emptyLabel: borg-placeholder-display-name-fuel
+        whitelist:
+          components:
+          - NFFuel
   - type: BorgModuleIcon
     icon: { sprite: _NF/Interface/Actions/actions_borg.rsi, state: jetpack-module }
 
@@ -65,25 +63,23 @@
     - state: icon-rcd-shipyard
       sprite: _NF/Objects/Specific/Robotics/borgmodule.rsi
   - type: ItemBorgModule
-    moduleId: ShipyardRCD
-    items:
-    - GasAnalyzer
-    - HolofanProjectorBorg
-    - GeigerCounter
-  - type: DroppableBorgModule
-    moduleId: ShipyardRCD
-    items:
-    - id: ShipyardRCD
-      whitelist:
-        components:
-        - RCD
-      displayName: borg-placeholder-display-name-rcd
-    placeholders:
-    - id: ShipyardRCDAmmo
-      whitelist:
-        components:
-        - RCDAmmo
-      displayName: borg-placeholder-display-name-compressed-matter
+    hands: # Aurora's Song - Replace with upstream hands
+    - item: GasAnalyzer
+    - item: HolofanProjectorBorg
+    - item: GeigerCounter
+    - item: ShipyardRCD
+      hand:
+        emptyLabel: borg-placeholder-display-name-rcd
+        emptyRepresentative: ShipyardRCD
+        whitelist:
+          components:
+          - RCD
+    - hand:
+        emptyLabel: borg-placeholder-display-name-compressed-matter
+        emptyRepresentative: ShipyardRCDAmmo
+        whitelist:
+          components:
+          - RCDAmmo
   - type: BorgModuleIcon
     icon: { sprite: _NF/Interface/Actions/actions_borg.rsi, state: shipyard-rcd-module }
 
@@ -99,40 +95,41 @@
     - state: icon-martini
       sprite: _NF/Objects/Specific/Robotics/borgmodule.rsi
   - type: ItemBorgModule
-    moduleId: NFService
-    items:
-    - BarSpoon
-  - type: DroppableBorgModule
-    moduleId: NFService
-    items:
-    - id: DrinkShaker
-      whitelist:
-        components:
-        - NFShaker
-    - id: Lighter
-      whitelist:
-        components:
-        - NFLighter
-      displayName: borg-placeholder-display-name-lighter
-    placeholders:
-    - id: CigPackRed
-      whitelist:
-        components:
-        - NFSmokeableContainer
-        tags:
-        - Cigar
-        - Cigarette
-      displayName: borg-placeholder-display-name-smokes
-    - id: DrinkGlass
-      whitelist:
-        tags:
-        - DrinkGlass
-      displayName: borg-placeholder-display-name-glassware
-    - id: DrinkGlass
-      whitelist:
-        tags:
-        - DrinkGlass
-      displayName: borg-placeholder-display-name-glassware
+    hands:  # Aurora's Song - Replace with upstream hands
+    - item: BarSpoon
+    - item: DrinkShaker
+      hand:
+        whitelist:
+          components:
+          - NFShaker
+    - item: Lighter
+      hand:
+        emptyLabel: borg-placeholder-display-name-lighter
+        emptyRepresentative: Lighter
+        whitelist:
+          components:
+          - NFLighter
+    - hand:
+        emptyLabel: borg-placeholder-display-name-smokes
+        emptyRepresentative: CigPackRed
+        whitelist:
+          components:
+          - NFSmokeableContainer
+          tags:
+          - Cigar
+          - Cigarette
+    - hand:
+        emptyLabel: borg-placeholder-display-name-glassware
+        emptyRepresentative: DrinkGlass
+        whitelist:
+          tags:
+          - DrinkGlass
+    - hand:
+        emptyLabel: borg-placeholder-display-name-glassware
+        emptyRepresentative: DrinkGlass
+        whitelist:
+          tags:
+          - DrinkGlass
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: service-module }
 
@@ -146,33 +143,34 @@
     - state: service
     - state: icon-pen
   - type: ItemBorgModule
-    moduleId: Bureaucracy
-    items:
-    - HandLabeler
-  - type: DroppableBorgModule
-    moduleId: Bureaucracy
-    items:
-    - id: BooksBag
-      whitelist:
-        components:
-        - NFBookBag
-    - id: Pen
-      whitelist:
-        tags:
-        - Write
-      blacklist:
-        components:
-        - EnergyWeapon
-    placeholders:
-    - id: Paper
-      whitelist:
-        components:
-        - Paper
-    - id: RubberStampApproved
-      whitelist:
-        components:
-        - Stamp
-      displayName: borg-placeholder-display-name-rubber-stamp
+    hands: # Aurora's Song - Replace with upstream hands
+    - item: HandLabeler
+    - item: BooksBag
+      hand:
+        emptyRepresentative: BooksBag
+        whitelist:
+          components:
+          - NFBookBag
+    - item: Pen
+      hand:
+        emptyRepresentative: Pen
+        whitelist:
+          tags:
+          - Write
+        blacklist:
+          components:
+          - EnergySword # Aurora's Song - EnergyWeapon>EnergySword
+    - hand:
+        emptyRepresentative: Paper
+        whitelist:
+          components:
+          - Paper
+    - hand:
+        emptyLabel: borg-placeholder-display-name-rubber-stamp
+        emptyRepresentative: RubberStampApproved
+        whitelist:
+          components:
+          - Stamp
   - type: BorgModuleIcon
     icon: { sprite: _NF/Interface/Actions/actions_borg.rsi, state: bureaucracy-module }
 
@@ -187,49 +185,49 @@
     - state: icon-burger
       sprite: _NF/Objects/Specific/Robotics/borgmodule.rsi
   - type: ItemBorgModule
-    moduleId: Chef
-    items:
-    - RollingPin
-    - KitchenKnife
-  - type: DroppableBorgModule
-    moduleId: Chef
-    items:
-    - id: LargeBeaker
-      whitelist:
-        tags:
-        - GlassBeaker
-        - DrinkGlass
-        components:
-        - Utensil
-        - NFCookware
-      displayName: borg-placeholder-display-name-cookware
-    - id: FoodPlateTin
-      whitelist:
-        tags:
-        - GlassBeaker
-        - DrinkGlass
-        components:
-        - Utensil
-        - NFCookware
-      displayName: borg-placeholder-display-name-cookware
-    placeholders:
-    - id: ReagentContainerFlour
-      whitelist:
-        components:
-        - Food
-        - Produce
-        - NFIngredient
-        tags:
-        - Ingredient
-      displayName: borg-placeholder-display-name-food-or-ingredients
-    - id: FoodApple
-      whitelist:
-        components:
-        - Food
-        - Produce
-        - NFIngredient
-        tags:
-        - Ingredient
-      displayName: borg-placeholder-display-name-food-or-ingredients
+    hands: # Aurora's Song - Replace with upstream hands
+    - item: RollingPin
+    - item: KitchenKnife
+    - item: LargeBeaker
+      hand:
+        emptyLabel: borg-placeholder-display-name-cookware
+        emptyRepresentative: LargeBeaker
+        whitelist:
+          tags:
+          - GlassBeaker
+          - DrinkGlass
+          components:
+          - Utensil
+          - NFCookware
+    - hand:
+        emptyLabel: borg-placeholder-display-name-cookware
+        emptyRepresentative: FoodPlateTin
+        whitelist:
+          tags:
+          - GlassBeaker
+          - DrinkGlass
+          components:
+          - Utensil
+          - NFCookware
+    - hand:
+        emptyLabel: borg-placeholder-display-name-food-or-ingredients
+        emptyRepresentative: ReagentContainerFlour
+        whitelist:
+          components:
+          - Edible # Aurora's Song - Food>Edible
+          - Produce
+          - NFIngredient
+          tags:
+          - Ingredient
+    - hand:
+        emptyLabel: borg-placeholder-display-name-food-or-ingredients
+        emptyRepresentative: FoodApple
+        whitelist:
+          components:
+          - Edible # Aurora's Song - Food>Edible
+          - Produce
+          - NFIngredient
+          tags:
+          - Ingredient
   - type: BorgModuleIcon
     icon: { sprite: _NF/Interface/Actions/actions_borg.rsi, state: chef-module }

@@ -138,6 +138,7 @@
   - type: Sprite
     layers:
     - state: soaplet
+      map: ["enum.SolutionContainerLayers.Fill"] # Aurora's Song - Add missing map
       shader: unshaded
       color: red
   - type: StepTrigger
@@ -184,6 +185,7 @@
     sprite: _NF/Objects/Specific/Wizard/conjuredsoap.rsi
     layers:
     - state: soap-4
+      map: ["enum.SolutionContainerLayers.Fill"] # Aurora's Song - Add missing map
       shader: unshaded
       color: red
   - type: Appearance
@@ -241,6 +243,7 @@
     sprite: _NF/Objects/Specific/Wizard/conjuredsoap.rsi
     layers:
     - state: soap-4
+      map: ["enum.SolutionContainerLayers.Fill"] # Aurora's Song - Add missing map
       shader: unshaded
       color: red
   - type: CartridgeAmmo

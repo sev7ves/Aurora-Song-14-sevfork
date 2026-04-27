@@ -22,7 +22,7 @@
     whitelist:
       components:
         - Pill
-        - Hypospray
+        - Injector # Aurora's Song - Hypospray>Injector
       tags:
         - PillCanister
         - CentrifugeCompatible

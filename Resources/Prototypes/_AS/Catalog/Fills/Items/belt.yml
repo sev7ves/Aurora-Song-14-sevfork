@@ -4,12 +4,14 @@
   parent: ClothingBeltMilitaryWebbingMed
   suffix: Shana Filled
   components:
-  - type: StorageFill
-    contents:
-      - id: BaseChemistryEmptyVial
-        amount: 8
-      - id: CigPackBlue
-        amount: 1
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
+          amount: 8
+        - id: CigPackBlue
+          amount: 1
 
 - type: entity
   id: ChestRigTools
@@ -17,14 +19,16 @@
   name: chest rig (tools)
   suffix: Mercenary, Filled
   components:
-  - type: StorageFill
-    contents:
-      - id: CrowbarYellow
-      - id: Wrench
-      - id: Screwdriver
-      - id: Wirecutter
-      - id: Welder
-      - id: Multitool
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: CrowbarYellow
+        - id: Wrench
+        - id: Screwdriver
+        - id: Wirecutter
+        - id: Welder
+        - id: Multitool
 
 - type: entity
   id: MercWebTools
@@ -32,14 +36,16 @@
   name: mercenary webbing (tools)
   suffix: Mercenary, Filled
   components:
-  - type: StorageFill
-    contents:
-      - id: CrowbarYellow
-      - id: Wrench
-      - id: Screwdriver
-      - id: Wirecutter
-      - id: Welder
-      - id: Multitool
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: CrowbarYellow
+        - id: Wrench
+        - id: Screwdriver
+        - id: Wirecutter
+        - id: Welder
+        - id: Multitool
 
 - type: entity
   id: MedicRigTools
@@ -47,14 +53,16 @@
   name: medical chest rig (tools)
   suffix: Mercenary, Filled
   components:
-  - type: StorageFill
-    contents:
-      - id: CrowbarYellow
-      - id: Wrench
-      - id: Screwdriver
-      - id: Wirecutter
-      - id: Welder
-      - id: Multitool
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: CrowbarYellow
+        - id: Wrench
+        - id: Screwdriver
+        - id: Wirecutter
+        - id: Welder
+        - id: Multitool
 
 - type: entity
   id: MedicRigMedical
@@ -62,14 +70,16 @@
   name: medical chest rig (medicine)
   suffix: Mercenary, Filled, Medical
   components:
-  - type: StorageFill
-    contents:
-      - id: Brutepack
-      - id: Ointment
-      - id: Bloodpack
-      - id: Gauze
-      - id: EmergencyMedipen #You never know what people are going to latejoin into
-        amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: Brutepack
+        - id: Ointment
+        - id: Bloodpack
+        - id: Gauze
+        - id: EmergencyMedipen #You never know what people are going to latejoin into
+          amount: 3
 
 - type: entity
   id: ClothingBeltMilitaryWebbingSecurityFilled

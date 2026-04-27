@@ -10,7 +10,7 @@ ghost-gui-toggle-fov-popup = Toggled field-of-view.
 ghost-gui-respawn = Respawn
 ghost-gui-uncryo = Un-cryo
 
-ghost-gui-toggle-hearing-popup-on = You can now hear all messages.
+ghost-gui-toggle-hearing-popup-on = You can now hear all messages. User discretion is advised.
 ghost-gui-toggle-hearing-popup-off = You can now only hear radio and nearby messages.
 
 ghost-target-window-title = Ghost Warp

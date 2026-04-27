@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: BH Barada
   description: A compact, utilitarian gas freighter commissioned by Damascus.
-  price: 36500 # 33718 appraise, ~5% markup
+  price: 37000 # 33718 appraise, ~5% markup # Aurora's Song - Make slightly more expensive for arbitrage
   category: Small
   group: Damascus
   access: Engineering

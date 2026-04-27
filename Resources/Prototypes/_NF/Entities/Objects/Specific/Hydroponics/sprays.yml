@@ -6,7 +6,7 @@
   components:
   - type: SolutionContainerManager
     solutions:
-      spray:
+      drink: # Aurora's Song - Use correct solution
         reagents: []
         maxVol: 100
 
@@ -17,7 +17,7 @@
   components:
   - type: SolutionContainerManager
     solutions:
-      spray:
+      drink: # Aurora's Song - Use correct solution
         reagents: []
         maxVol: 50
 
@@ -28,6 +28,6 @@
   components:
   - type: SolutionContainerManager
     solutions:
-      spray:
+      drink: # Aurora's Song - Use correct solution
         reagents: []
         maxVol: 50

@@ -15,6 +15,7 @@
     ClothingHandsGlovesLatex: 2
     ClothingHeadsetMedical: 2
     ClothingOuterWinterChem: 2
+    ClothingEyesGlassesChemical: 2
     ClothingShoesBootsWinterChem: 2 #Delta V: Add departmental winter boots
   contrabandInventory:
     ToyFigurineChemist: 1

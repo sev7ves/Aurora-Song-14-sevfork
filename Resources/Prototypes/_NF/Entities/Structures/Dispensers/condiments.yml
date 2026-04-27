@@ -24,17 +24,19 @@
     sprite: _NF/Structures/smalldispensers.rsi
     drawdepth: SmallObjects
     state: icon
-  - type: StorageFill
-    contents:
-    - id: DrinkAstrotameJug
-    - id: DrinkBbqSauceJug
-    - id: DrinkColdsauceJug
-    - id: DrinkHorseradishSauceJug
-    - id: DrinkHotsauceJug
-    - id: DrinkKetchupJug
-    - id: DrinkMustardJug
-    - id: DrinkSoysauceJug
-    - id: DrinkMayoJug
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DrinkAstrotameJug
+        - id: DrinkBbqSauceJug
+        - id: DrinkColdsauceJug
+        - id: DrinkHorseradishSauceJug
+        - id: DrinkHotsauceJug
+        - id: DrinkKetchupJug
+        - id: DrinkMustardJug
+        - id: DrinkSoysauceJug
+        - id: DrinkMayoJug
   - type: Transform
     noRot: false
   - type: Machine

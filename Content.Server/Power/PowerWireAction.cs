@@ -3,7 +3,6 @@ using Content.Shared.Electrocution;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Wires;
-using Content.Shared.Emp; // Frontier: Upstream - #28984
 using Content.Shared.Power;
 using Content.Shared.Wires;
 
@@ -82,13 +81,6 @@ public sealed partial class PowerWireAction : BaseWireAction
             {
                 return;
             }
-
-            // Frontier: Upstream - #28984
-            if (EntityManager.HasComponent<EmpDisabledComponent>(owner))
-            {
-                return;
-            }
-            // End Frontier: Upstream - #28984
 
             receiverSys.SetPowerDisabled(owner, false, power);
         }

@@ -1,3 +1,5 @@
+# Aurora's Song - TODO: Look into #42200
+
 job-name-warden = Warden
 job-name-security = Security Officer
 job-name-cadet = Security Cadet

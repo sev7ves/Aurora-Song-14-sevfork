@@ -39,7 +39,10 @@
     - id: FoodMeatSheleg
       amount: 5
   - type: Bloodstream
-    bloodReagent: Cryoxadone
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Cryoxadone
+        Quantity: 300
   - type: MeleeWeapon
     soundHit:
       collection: Punch
@@ -86,7 +89,7 @@
     - reagents: [ Water, SpaceCleaner, SoapReagent ]
       methods: [ Touch ]
       effects:
-      - !type:WashCreamPieReaction
+      - !type:WashCreamPie # Aurora's Song - WashCreamPieReaction>WashCreamPie
     - reagents: [ Potassium ]
       methods: [ Touch ]
       effects:
@@ -113,11 +116,12 @@
         - MobLayer
   - type: Flammable # Ice skin, we cannot lower the firestacks as it will make them too powerfull to lava and other fires, but we should make it fade faster
     firestackFade: -0.2 # 2 times faster fade
-  - type: Temperature # TODO: Balance
-    heatDamageThreshold: 273.15
-    coldDamageThreshold: 0
+  - type: Temperature # Aurora's Song - Move temp out of TemperatureDamage
     currentTemperature: 100 # Opporozidone is 150
     specificHeat: 42
+  - type: TemperatureDamage # TODO: Balance # Aurora's Song - Temperature>TemperatureDamage
+    heatDamageThreshold: 273.15
+    coldDamageThreshold: 0
     heatDamage:
       types:
         Heat : 10 #per second, scales with temperature & other constants

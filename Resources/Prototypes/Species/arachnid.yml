@@ -7,7 +7,7 @@
   defaultSkinTone: "#385878"
   markingLimits: MobArachnidMarkingLimits
   dollPrototype: MobArachnidDummy
-  skinColoration: Hues
+  skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
   maleFirstNames: NamesArachnidFirst
   femaleFirstNames: NamesArachnidFirst
   lastNames: NamesArachnidLast
