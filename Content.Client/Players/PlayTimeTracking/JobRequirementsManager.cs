@@ -162,10 +162,7 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager // F
 
         // Check other role requirements
         // var reqs = _entManager.System<SharedRoleSystem>().GetRoleRequirements(job); // Aurora's Song
-        if (!CheckRoleRequirements(reqs, profile, out reason))
-            return false;
-
-        return true;
+        return CheckRoleRequirements(job, profile, out reason); // Aurora's Song - Revert to using JobPrototype version of check
     }
 
     /// <summary>
@@ -193,6 +190,37 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager // F
             return false;
 
         return true;
+    }
+
+    // Aurora's Song - Readd JobPrototype check
+    public bool CheckRoleRequirements(JobPrototype job, HumanoidCharacterProfile? profile, [NotNullWhen(false)] out FormattedMessage? reason)
+    {
+        var reqs = _entManager.System<SharedRoleSystem>().GetRoleRequirements(job);
+
+        //return CheckRoleRequirements(reqs, profile, out reason); // Frontier: old implementation
+
+        // Frontier: alternate role time checks
+        if (CheckRoleRequirements(reqs, profile, out reason))
+            return true;
+
+        var altReqs = _entManager.System<SharedRoleSystem>().GetAlternateJobRequirements(job);
+        if (altReqs != null)
+        {
+            foreach (var alternateSet in altReqs.Values)
+            {
+                // Suppress reasons on alternate requirement sets
+                if (CheckRoleRequirements(alternateSet, profile, out var altReason))
+                {
+                    return true;
+                }
+                reason.PushNewline();
+                reason.AddMarkupPermissive(Loc.GetString("role-requirement-alternative"));
+                reason.PushNewline();
+                reason.AddMarkupPermissive(altReason.ToMarkup());
+            }
+        }
+        return false;
+        // End Frontier: alternate role time checks
     }
 
     // This must be private so code paths can't accidentally skip requirement overrides. Call this through IsAllowed()

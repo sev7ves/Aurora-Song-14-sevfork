@@ -155,10 +155,10 @@
   - type: CargoSellBlacklist
   - type: PirateBountyItem
     id: Pda
-  - type: ToggleableGhostRole
-    wipeVerbText: pda-wipe-device-verb-text
-    wipeVerbPopup: pda-wiped-device
-    mindRoles: []
+#  - type: ToggleableGhostRole # Aurora's Song - we don't want items on people becoming sentient, might disrupt private scenes
+#    wipeVerbText: pda-wipe-device-verb-text
+#    wipeVerbPopup: pda-wiped-device
+#    mindRoles: []
   - type: ShipyardSellCondition
     preserveOnSale: true
   - type: DeletionCensusExempt

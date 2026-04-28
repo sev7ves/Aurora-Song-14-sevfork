@@ -69,7 +69,7 @@ public sealed class DeadStartupButtonSystem : SharedDeadStartupButtonSystem
             return;
 
         _lightning.ShootRandomLightnings(uid, 2, 4);
-        _powerCell.TryUseCharge(uid, _battery.GetCharge((uid, bateria)));
+        _powerCell.TryUseCharge(uid, _battery.GetCharge(bateria.Value.AsNullable())); // starcup
 
     }
 

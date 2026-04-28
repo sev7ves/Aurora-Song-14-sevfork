@@ -4598,3 +4598,38 @@ Entries:
   id: 9415
   time: '2026-04-26T22:50:01.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/945
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: NF Deep Fryer
+  id: 9416
+  time: '2026-04-28T04:35:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/986
+- author: GreyScaleHarlequin
+  changes:
+    - type: Fix
+      message: Silicon charge System updated to fix draw rate and prevent divide by 0
+    - type: Fix
+      message: IPC HUD battery indicator now shows correctly
+    - type: Fix
+      message: >-
+        NF canisters RSI adjusted to have labels - still need visual adjust,
+        prevents errors
+    - type: Fix
+      message: Medical rigs carry medkit slot again
+    - type: Remove
+      message: PDA Sentience Obliteration Arc (commented out on the base PDA)
+    - type: Fix
+      message: Reinforced Jugs made to use correct SolutionContainerManager
+    - type: Fix
+      message: Alternate role timers work again
+  id: 9417
+  time: '2026-04-28T04:53:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/987
+- author: Oberonics
+  changes:
+    - type: Fix
+      message: Gorlex match boxes are no longer worth 25 EC overall.
+  id: 9418
+  time: '2026-04-28T20:57:53.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/982

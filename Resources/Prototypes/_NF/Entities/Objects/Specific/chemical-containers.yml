@@ -354,7 +354,7 @@
     currentLabel: reagent-name-carbon
   - type: SolutionContainerManager
     solutions:
-      beaker:
+      drink:
         reagents:
         - ReagentId: Carbon
           Quantity: 400
@@ -369,7 +369,7 @@
     currentLabel: reagent-name-chlorine
   - type: SolutionContainerManager
     solutions:
-      beaker:
+      drink:
         reagents:
         - ReagentId: Chlorine
           Quantity: 400
@@ -384,7 +384,7 @@
     currentLabel: reagent-name-ethanol
   - type: SolutionContainerManager
     solutions:
-      beaker:
+      drink:
         reagents:
         - ReagentId: Ethanol
           Quantity: 400
@@ -399,7 +399,7 @@
     currentLabel: reagent-name-sugar
   - type: SolutionContainerManager
     solutions:
-      beaker:
+      drink:
         reagents:
         - ReagentId: Sugar
           Quantity: 400
@@ -414,7 +414,7 @@
     currentLabel: reagent-name-hydrogen
   - type: SolutionContainerManager
     solutions:
-      beaker:
+      drink:
         reagents:
         - ReagentId: Hydrogen
           Quantity: 400
@@ -429,7 +429,7 @@
     currentLabel: reagent-name-lithium
   - type: SolutionContainerManager
     solutions:
-      beaker:
+      drink:
         reagents:
         - ReagentId: Lithium
           Quantity: 400
@@ -444,7 +444,7 @@
     currentLabel: reagent-name-nitrogen
   - type: SolutionContainerManager
     solutions:
-      beaker:
+      drink:
         reagents:
         - ReagentId: Nitrogen
           Quantity: 400
@@ -459,7 +459,7 @@
     currentLabel: reagent-name-oxygen
   - type: SolutionContainerManager
     solutions:
-      beaker:
+      drink:
         reagents:
         - ReagentId: Oxygen
           Quantity: 400
@@ -474,7 +474,7 @@
     currentLabel: reagent-name-phosphorus
   - type: SolutionContainerManager
     solutions:
-      beaker:
+      drink:
         reagents:
         - ReagentId: Phosphorus
           Quantity: 400
@@ -489,7 +489,7 @@
     currentLabel: reagent-name-potassium
   - type: SolutionContainerManager
     solutions:
-      beaker:
+      drink:
         reagents:
         - ReagentId: Potassium
           Quantity: 400
@@ -504,7 +504,7 @@
     currentLabel: reagent-name-silicon
   - type: SolutionContainerManager
     solutions:
-      beaker:
+      drink:
         reagents:
         - ReagentId: Silicon
           Quantity: 400
