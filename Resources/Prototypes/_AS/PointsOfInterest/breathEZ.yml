@@ -5,7 +5,7 @@
   minimumDistance: 1650
   maximumDistance: 3400
   spawnGamePreset: [ NFAdventure, NFPirate ]
-  spawnGroup: RestStop
+  spawnGroup: Motel
   gridPath: /Maps/_AS/POI/breathEZ.yml
   addComponents:
   - type: StationTransit
