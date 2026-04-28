@@ -14,11 +14,20 @@
 - type: entity
   parent: [AirSensorFreezerBase, GasVentPump]
   id: GasVentPumpFreezer
+  components:
+  - type: Tag
+    tags:
+    - GasVent
+    - Unstackable
 
 - type: entity
   parent: [AirSensorFreezerBase, GasVentScrubber]
   id: GasVentScrubberFreezer
-
+  components:
+  - type: Tag
+    tags:
+      - GasVent
+      - Unstackable
 # air alarm proto with auto: false to prevent the automatic switching of modes overriding the default values
 - type: entity
   parent: AirAlarm

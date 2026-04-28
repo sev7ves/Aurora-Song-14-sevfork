@@ -206,6 +206,57 @@
     sprite: Clothing/Belt/militarywebbingmed.rsi
   - type: Clothing
     sprite: Clothing/Belt/militarywebbingmed.rsi
+  - type: ItemSlots # couldn't inherit from ASClothingSRigStorageHolsterMedkitBase due to already inheritiny from ASClothingRigStorageHolsterBase through military webbing, so added the medkit slot here
+    slots:
+      holster:
+        name: clothing-belt-sidearm
+        priority: 4 # higher number is higher priority
+        whitelist:
+          tags:
+          - Sidearm
+          - Knife # add knife to whitelist
+        ejectSound: #Aurora's Song - add unique holster sounds; originally made for Den
+          path: /Audio/_DEN/Weapons/pistol_unholster.ogg
+        insertOnInteract: true
+        insertSound: #Aurora's Song - add unique holster sounds; originally made for Den
+          path: /Audio/_DEN/Weapons/pistol_holster.ogg
+      medkit:
+        name: clothing-belt-medkit
+        priority: 3
+        whitelist:
+          tags:
+          - Medkit
+        insertOnInteract: true
+  - type: Appearance
+  - type: ItemMapper # add stowed medkit sprite
+    mapLayers:
+      baton_rig:
+        whitelist:
+          components:
+          - Stunbaton
+      gasgrenade:
+        whitelist:
+          tags:
+          - Grenade
+      slp_rig:
+        whitelist:
+          tags:
+          - Sidearm
+      knife_rig: # add knife sprite mapping
+        whitelist:
+          tags:
+          - Knife
+      medkit_rig:
+        whitelist:
+          tags:
+          - Medkit
+    sprite: _DV/Clothing/Belt/belt_overlay.rsi
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: [ ]
+      holster: !type:ContainerSlot { }
+      medkit: !type:ContainerSlot { }
 
 - type: entity
   parent: ClothingBeltMilitaryWebbing

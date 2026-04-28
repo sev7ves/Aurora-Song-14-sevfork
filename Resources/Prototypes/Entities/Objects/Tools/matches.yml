@@ -138,7 +138,7 @@
 
 - type: entity
   name: match stick
-  parent: [Matchstick, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [Matchstick, BaseC3SyndicateContrabandNoValue] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
   id: GorlexMatchstick
   description: A military grade match stick, used for lighting fine smokables and noncombatants alike.
   components:
