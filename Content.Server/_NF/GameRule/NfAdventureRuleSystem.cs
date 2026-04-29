@@ -12,6 +12,7 @@ using Content.Server.GameTicking;
 using Content.Server.GameTicking.Presets;
 using Content.Server.GameTicking.Rules;
 using Content.Server._NF.ShuttleRecords;
+using Content.Shared._AS.CCVar;
 using Content.Shared._NF.Bank;
 using Content.Shared._NF.Bank.Components;
 using Content.Shared._NF.CCVar;
@@ -214,6 +215,7 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
         List<PointOfInterestPrototype> marketProtos = new();
         List<PointOfInterestPrototype> requiredProtos = new();
         List<PointOfInterestPrototype> optionalProtos = new();
+        List<PointOfInterestPrototype> motelProtos = new();
         Dictionary<string, List<PointOfInterestPrototype>> remainingUniqueProtosBySpawnGroup = new();
 
         var currentPreset = _ticker.CurrentPreset?.ID ?? _fallbackPresetID;
@@ -232,6 +234,8 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
                 requiredProtos.Add(location);
             else if (location.SpawnGroup == "Optional")
                 optionalProtos.Add(location);
+            else if (location.SpawnGroup == "Motel")//AS: motel handling
+                motelProtos.Add(location);
             else // the remainder are done on a per-poi-per-group basis
             {
                 if (!remainingUniqueProtosBySpawnGroup.ContainsKey(location.SpawnGroup))
@@ -244,7 +248,7 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
         _poi.GenerateRequireds(mapUid, requiredProtos, out component.RequiredPois);
         _poi.GenerateOptionals(mapUid, optionalProtos, out component.OptionalPois);
         _poi.GenerateUniques(mapUid, remainingUniqueProtosBySpawnGroup, out component.UniquePois);
-
+        _poi.GenerateMultiples(mapUid, motelProtos,_cfg.GetCVar(ASCCVars.Motels), out component.Motels);//AS: motel handling
         base.Started(uid, component, gameRule, args);
 
         // Using invalid entity, we don't have a relevant entity to reference here.
