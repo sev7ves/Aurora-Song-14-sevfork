@@ -1,4 +1,5 @@
-﻿using Content.Server.GameTicking.Rules.VariationPass.Components;
+﻿using Content.Server._AS.GameTicking.Rules.Components;
+using Content.Server.GameTicking.Rules.VariationPass.Components;
 using Content.Server.Light.Components;
 using Content.Server.Light.EntitySystems;
 using Content.Shared.Light.Components;
@@ -13,6 +14,9 @@ public sealed class PoweredLightVariationPassSystem : VariationPassSystem<Powere
 
     protected override void ApplyVariation(Entity<PoweredLightVariationPassComponent> ent, ref StationVariationPassEvent args)
     {
+        if (TryComp<VariationPassExemptionComponent>(args.Station, out var exemption) && exemption.PoweredLightExemption)// AS
+            return;
+
         var query = AllEntityQuery<PoweredLightComponent, TransformComponent>();
         while (query.MoveNext(out var uid, out var comp, out var xform))
         {

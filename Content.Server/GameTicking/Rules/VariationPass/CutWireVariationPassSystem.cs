@@ -1,3 +1,4 @@
+using Content.Server._AS.GameTicking.Rules.Components;
 using Content.Server.GameTicking.Rules.VariationPass.Components;
 using Content.Server.Wires;
 using Content.Shared.Whitelist;
@@ -16,6 +17,9 @@ public sealed class CutWireVariationPassSystem : VariationPassSystem<CutWireVari
 
     protected override void ApplyVariation(Entity<CutWireVariationPassComponent> ent, ref StationVariationPassEvent args)
     {
+        if (TryComp<VariationPassExemptionComponent>(args.Station, out var exemption) && exemption.CutWireExemption)// AS
+            return;
+
         var wiresCut = 0;
         var query = AllEntityQuery<WiresComponent, TransformComponent>();
         while (query.MoveNext(out var uid, out _, out var transform))

@@ -26,3 +26,8 @@
         - type: StationJobs
           availableJobs: {}
         - type: StationDeadDropHintExempt
+        - type: VariationPassExemption
+          cutWireExemption: true
+          poweredLightExemption: true
+          puddleMessExemption: true
+          entitySpawnExemption: true
