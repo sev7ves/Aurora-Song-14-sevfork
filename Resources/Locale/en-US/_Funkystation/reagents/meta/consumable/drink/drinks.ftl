@@ -4,7 +4,10 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
 
 reagent-name-eggnog = eggnog
-reagent-desc-eggnog = The nonalcoholic variant, unfortunately.
+reagent-desc-eggnog = A rich, creamy drink made with rum, egg, and sugar.
+
+reagent-name-funky-eggnog = nonalcoholic eggnog
+reagent-desc-funky-eggnog = A creamy, nonalcoholic eggnog.
 
 reagent-name-peggnog = peggnog
 reagent-desc-peggnog = A vile combination of space cola and eggnog.

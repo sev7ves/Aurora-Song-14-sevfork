@@ -6,9 +6,9 @@
 
 - type: reagent
   id: FunkyEggnog
-  name: reagent-name-eggnog
+  name: reagent-name-funky-eggnog
   parent: BaseDrink
-  desc: reagent-desc-eggnog
+  desc: reagent-desc-funky-eggnog
   physicalDesc: reagent-physical-desc-creamy
   flavor: eggnog
   color: "#F5D695"
