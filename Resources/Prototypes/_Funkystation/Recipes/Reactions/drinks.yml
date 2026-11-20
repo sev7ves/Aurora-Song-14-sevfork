@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
 
 - type: reaction
-  id: Eggnog
+  id: FunkyEggnog
   requiredMixerCategories:
   - Shake
   reactants:
@@ -18,12 +18,12 @@
     Sugar:
       amount: 2
   products:
-    Eggnog: 10
+    FunkyEggnog: 10
 
 - type: reaction
   id: Peggnog
   reactants:
-   Eggnog:
+   FunkyEggnog:
      amount: 1
    Cola:
      amount: 2

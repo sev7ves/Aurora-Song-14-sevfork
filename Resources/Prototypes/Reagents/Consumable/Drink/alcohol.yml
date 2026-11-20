@@ -630,29 +630,6 @@
         amount: 0.2
 
 - type: reagent
-  id: Sake
-  name: reagent-name-sake
-  parent: BaseAlcohol
-  desc: reagent-desc-sake
-  physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: sake
-  color: "#DDDDDD"
-  metamorphicSprite:
-    sprite: Objects/Consumable/Drinks/sakeglass.rsi
-    state: icon_empty
-  metamorphicMaxFillLevels: 4
-  metamorphicFillBaseName: fill-
-  metamorphicChangeColor: false
-  metabolisms:
-    Drink:
-      effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.2
-
-- type: reagent
   id: Tequila
   name: reagent-name-tequila
   parent: BaseAlcohol

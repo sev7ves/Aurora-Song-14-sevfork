@@ -1448,20 +1448,6 @@
     Caipirinha: 4
 
 - type: reaction
-  id: Daiquiri
-  requiredMixerCategories:
-    - Stir
-  reactants:
-    Rum:
-      amount: 4
-    Sugar:
-      amount: 1
-    JuiceLime:
-      amount: 1
-  products:
-    Daiquiri: 6
-
-- type: reaction
   id: DeathInTheAfternoon
   reactants:
     Absinthe:

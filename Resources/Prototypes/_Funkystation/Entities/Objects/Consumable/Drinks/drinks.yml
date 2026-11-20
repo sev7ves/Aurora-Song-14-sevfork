@@ -14,7 +14,7 @@
       drink:
         maxVol: 30
         reagents:
-        - ReagentId: Eggnog
+        - ReagentId: FunkyEggnog
           Quantity: 30
 
 - type: entity
